@@ -1,0 +1,21 @@
+<div class="animated fadeIn">
+  <div *ngFor="let item of lessons" class="card">
+    <div class="card-header">
+      <button type="button" class="btn btn-info text-light"
+              (click)="item.openCollapse = !item.openCollapse">{{item.title}}
+      </button>
+      <div class="card-header-actions">
+        <button type="button" class="btn btn-success"
+              (click)="item.openCollapse = !item.openCollapse">Try it
+        </button>
+      </div>
+    </div>
+    <div class="card-body"
+         (collapsed)="collapsed($event)"
+         (expanded)="expanded($event)"
+         [collapse]="item.openCollapse">
+      <p [innerHTML]="item.description"></p>
+      <app-listen-read-content [contents]="item.contents"></app-listen-read-content>
+    </div>
+  </div>
+</div>

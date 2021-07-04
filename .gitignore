@@ -1,12 +1,45 @@
-################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-/.vs
-/.vs/config
-/.vs/WowzaSample/DesignTimeBuild
-/.vs/WowzaSample/v15
+# compiled output
+/dist
+/dist-server
+/tmp
+/out-tsc
 
-/SignalRCoreWebRTC/bin
-/SignalRCoreWebRTC/obj
-/SignalRCoreWebRTC/Properties/PublishProfiles
+# dependencies
+/node_modules
+package-lock.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
