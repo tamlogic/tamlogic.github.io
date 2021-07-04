@@ -1,19 +1,21 @@
-name: ASP.NET Core CI
- 
-    on: [push]
- 
-    jobs:
-    build:
- 
+name: eShopOnWeb Build and Test
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+
     runs-on: ubuntu-latest
- 
+
     steps:
-    - uses: actions/checkout@v1
-    - name: Setup .NET Core
-    uses: actions/setup-dotnet@v1
-    with:
-    dotnet-version: 3.1
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1'
+
     - name: Build with dotnet
-    run: dotnet build --configuration Release
-    - name: Publish with dotnet
-    run: dotnet build --configuration Release -r linux-x64 --self-contained
+      run: dotnet build ./eShopOnWeb.sln --configuration Release
+    
+    - name: Test with dotnet
+      run: dotnet test ./eShopOnWeb.sln --configuration Release
