@@ -18322,40 +18322,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "8Y7J");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "iInd");
-/* harmony import */ var _lesson_lesson_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lesson/lesson.component */ "5th+");
-/* harmony import */ var _firebase_demo_firebase_demo_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./firebase-demo/firebase-demo.component */ "LBOD");
-/* harmony import */ var _lesson_chat_chat_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./lesson/chat/chat.component */ "E110");
-
-
+/* harmony import */ var _lesson_chat_chat_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lesson/chat/chat.component */ "E110");
 
 
 
 
 const routes = [
-    {
-        path: 'lesson',
-        data: {
-            title: 'Lesson'
-        },
-        component: _lesson_lesson_component__WEBPACK_IMPORTED_MODULE_3__["LessonComponent"],
-        children: []
-    },
+    // {
+    //   path: 'lesson',
+    //   data: {
+    //     title: 'Lesson'
+    //   },
+    //   component: LessonComponent,
+    //   children: []
+    // },
     {
         path: 'chat',
         data: {
             title: 'Chat'
         },
-        component: _lesson_chat_chat_component__WEBPACK_IMPORTED_MODULE_5__["ChatComponent"],
+        component: _lesson_chat_chat_component__WEBPACK_IMPORTED_MODULE_3__["ChatComponent"],
         children: []
     },
-    {
-        path: 'firebase-demo',
-        data: {
-            title: 'Firebase demo'
-        },
-        component: _firebase_demo_firebase_demo_component__WEBPACK_IMPORTED_MODULE_4__["FirebaseDemoComponent"],
-        children: []
-    }
 ];
 let ProductRoutingModule = class ProductRoutingModule {
 };
@@ -48875,11 +48863,477 @@ let ListenReads = [
         title: 'Lesson 02 - People',
         name: `People`,
         displayOrder: `2`,
-        description: `Nói chuyện về gia đình, bạn bè, đồng nghiệp bằng tiếng Anh như thế nào?<br/>
-                  Trong Lesson 02 này, bạn sẽ được luyện tập:<br/>
-                  ✔️ Từ vựng về con người và các mối quan hệ,<br/>
-                  ✔️ Cách sử dụng các đại từ chỉ định (This, That, These, Those).`,
-        openCollapse: true
+        description: `MY NAME IS DAO DAO, this lesson is tell you about people.`,
+        openCollapse: true,
+        contents: [
+            {
+                case: `Day 1`,
+                title: `Nghe ngấm`,
+                content: [
+                    {
+                        title: `Topic 1: Jack’s Family Portrait`,
+                        audioLinkSlow: `assets/audio/LESSON 02 - PEOPLE/Recording 2.1 - Slow Speech - Topic 1 - Jack_s Family Portrait.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 02 - PEOPLE/Recording 2.2 - Native speech - Topic 1 - Jack_s family.mp3`,
+                        data: `<!-- #######  YAY, I AM THE SOURCE EDITOR! #########-->
+              <p>Lisa and Jack are talking about Jack&rsquo;s family portrait on the wall.</p>
+              <p><em>Lisa v&agrave; Jack đang n&oacute;i về bước ảnh ch&acirc;n dung gia đ&igrave;nh Jack treo tr&ecirc;n tường.</em></p>
+              <p><strong>Lisa</strong>: Oh, <strong>is this</strong> your family?</p>
+              <p><strong><em>Lisa</em></strong><em>: Ồ, <strong>đ&acirc;y c&oacute; phải l&agrave;</strong> gia đ&igrave;nh cậu kh&ocirc;ng?</em></p>
+              <p><strong>Jack</strong>: It is. <strong>These are</strong> my <strong>grandparents</strong> at their old hourse in Thailand.</p>
+              <p><strong><em>Jack</em></strong><em>: Đ&uacute;ng rồi. <strong>Đ&acirc;y l&agrave; &ocirc;ng b&agrave; t&ocirc;i</strong> ở nh&agrave; cũ của họ ở Th&aacute;i lan.</em></p>
+              <p><strong>Lisa</strong>: Do they live there?</p>
+              <p><strong><em>Lisa</em></strong><em>: Họ c&oacute; sống ở đ&oacute; kh&ocirc;ng?</em></p>
+              <p><strong>Jack</strong>: No, they were just visiting. They <strong>moved to</strong> the US when my dad and <strong>aunt</strong> were babies.</p>
+              <p><strong><em>Jack</em></strong><em>: Kh&ocirc;ng họ chỉ gh&eacute; thăm th&ocirc;i. Họ <strong>chuyển đến</strong> Mỹ khi bố v&agrave; <strong>c&ocirc; </strong>t&ocirc;i c&ograve;n nhỏ.</em></p>
+              <p><strong>Lisa</strong>: Who, I didn&rsquo;t know that.</p>
+              <p><strong><em>Lisa</em></strong><em>: Ch&agrave;, t&ocirc;i kh&ocirc;ng biết đấy.</em></p>
+              <p><strong>Jack</strong>: Yeah. My <strong>grandfather was a doctor</strong> in Thailand, but when they moved here, he had to <strong>work as a cleaner</strong>.</p>
+              <p><strong><em>Jack</em></strong><em>: Ừ<strong>. &Ocirc;ng t&ocirc;i l&agrave; b&aacute;c sĩ</strong> ở Th&aacute;i Lan, nhưng khi họ đến đ&acirc;y, &ocirc;ng phải <strong>l&agrave;m việc như một lao c&ocirc;ng</strong>.</em></p>
+              <p><strong>Lisa</strong>: Your dad&rsquo;s a doctor, right?</p>
+              <p><strong><em>Lisa</em></strong><em>: Bố cậu l&agrave; b&aacute;c sĩ, đ&uacute;ng kh&ocirc;ng?</em></p>
+              <p><strong>Jack</strong>: He is. He wanted to <strong>follow in his dad&rsquo;s footsteps</strong>. And those are my <strong>parents</strong>.</p>
+              <p><strong><em>Jack</em></strong><em>: Đ&uacute;ng rồi. &Ocirc;ng ấy muốn đi theo con đường của cha m&igrave;nh. V&agrave; đ&oacute; l&agrave; <strong>bố mẹ</strong> t&ocirc;i.</em></p>
+              <p><strong>Lisa</strong>: That&rsquo;s really <strong>inspiring</strong>.</p>
+              <p><strong><em>Lisa</em></strong><em>: Điều đ&oacute; thực sự <strong>truyền cảm hứng</strong> đấy.</em></p>
+              <p><strong>Jack</strong>: Yes, my sister and I wanna be doctors, too. I guess <strong>it&rsquo;s in our blood</strong>.</p>
+              <p><strong><em>Jack</em></strong><em>: Ừ, em g&aacute;i t&ocirc;i v&agrave; t&ocirc;i cũng muốn l&agrave; b&aacute;c sĩ. T&ocirc;i đo&aacute;n <strong>n&oacute; đ&atilde; ngấm v&agrave;o m&aacute;u của ch&uacute;ng t&ocirc;i</strong>.</em></p>
+              <p><strong>Lisa</strong>: Hey are you in the picture? Is this you?</p>
+              <p><strong><em>Lisa</em></strong><em>: N&agrave;y, cậu c&oacute; mặt trong bức ảnh n&agrave;y kh&ocirc;ng? Đ&acirc;y c&oacute; phải l&agrave; cậu kh&ocirc;ng?</em></p>
+              <p><strong>Jack</strong>: No, <strong>that&rsquo;s</strong> my <strong>cousin</strong>. I&rsquo;m over here.</p>
+              <p><strong><em>Jack</em></strong><em>: Kh&ocirc;ng, <strong>đ&oacute; l&agrave; anh họ</strong> của t&ocirc;i. T&ocirc;i ở đ&acirc;y cơ.</em></p>
+              <p><strong>Lisa</strong>: That&rsquo;s your mom!</p>
+              <p><strong><em>Lisa</em></strong><em>: Đ&oacute; l&agrave; mẹ cậu!</em></p>
+              <p><strong>Jack</strong>: Yep, <strong>pregnant with me!</strong></p>
+              <p><strong><em>Jack</em></strong><em>: Đ&uacute;ng, <strong>đang mang thai t&ocirc;i!</strong></em></p>
+              <p><em>Ghi ch&uacute;: Từ &ldquo;<strong>Pregnant</strong>&rdquo; trong t&igrave;nh huống h&agrave;i hước n&agrave;y của hoại thoại được ph&aacute;t &acirc;m với t&ocirc;ng cao hơn một ch&uacute;t so với c&aacute;ch đọc th&ocirc;ng thường. C&aacute;ch đọc theo từ điển sẽ được đề cập tại phần luyện từ v&agrave; mẫu chủ đạo của ng&agrave;y 09</em></p>`
+                    },
+                    {
+                        title: `Topic 2: A High School Reunion`,
+                        audioLinkSlow: `assets/audio/LESSON 02 - PEOPLE/Recording 2.3 - Slow Speech -Topic 2 - A High School Reunion.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 02 - PEOPLE/Recording 2.4 - Native Speech - Topic 2 - A High School Reunion.mp3`,
+                        data: `<!-- #######  YAY, I AM THE SOURCE EDITOR! #########-->
+              <p>Angela joins a high school reunion where she meets her two old school friends. They haven&rsquo;t met for more than 10 years.</p>
+              <p><em>Angela tham gia v&agrave;o một cuộc họp mặt trường trung học nơi c&ocirc; gặp hai người bạn học cũ của m&igrave;nh. Họ đ&atilde; kh&ocirc;ng gặp những hơn 10 năm.</em></p>
+              <p><strong>Angela</strong>: Rose? Is that you? Oh, <strong>you look fantastic!</strong></p>
+              <p><strong><em>Angela</em></strong><em>: Rose? L&agrave; cậu đ&uacute;ng kh&ocirc;ng? &Ocirc;i, <strong>tr&ocirc;ng cậu tuyệt qu&aacute;!</strong></em></p>
+              <p><strong>Rose</strong>: Angie! <strong>It&rsquo;s so good to see you!</strong> How long has it been, 15 years!</p>
+              <p><strong><em>Rose</em></strong><em>: Angie!(C&aacute;ch gọi th&acirc;n mật của Angela). <strong>Thật tốt khi gặp lại cậu</strong>! Đ&atilde; bao l&acirc;u rồi nhỉ,</em> <em>15 năm &agrave;?</em></p>
+              <p><strong>Angela</strong>: I feel like we were in calculus class just yesterday!</p>
+              <p><strong><em>Angela</em></strong><em>: T&ocirc;i cảm thấy như ch&uacute;ng ta ngồi l&agrave;m to&aacute;n với nhau chỉ mới h&ocirc;m qua th&ocirc;i!</em></p>
+              <p><strong>Angela</strong>: Edward, how are you doing? Time flies. I&rsquo;m so happy to see that you two <strong>got married!</strong> You are always such a good <strong>couple</strong>.</p>
+              <p><strong><em>Angela</em></strong><em>: Edward, cậu dạo n&agrave;y thế n&agrave;o? Thời gian tr&ocirc;i đi thật nhanh. T&ocirc; rất vui mừng khi thấy hai người <strong>đ&atilde; kết h&ocirc;n!</strong> Hai người lu&ocirc;n l&agrave; một <strong>cặp </strong>rất đẹp<strong> đ&ocirc;i.</strong></em></p>
+              <p><strong>Edward:</strong> Thank you.</p>
+              <p><strong><em>Edward</em></strong><em>: Cảm ơn cậu.</em></p>
+              <p><strong>Angela</strong>: Where is your daughter? She looks so cute in the pictures online.</p>
+              <p><strong><em>Angela</em></strong><em>: Con g&aacute;i cậu đ&acirc;u? C&ocirc; b&eacute; tr&ocirc;ng rất dễ thương trong mấy bức h&igrave;nh tr&ecirc;n mạng.</em></p>
+              <p><strong>Rose</strong>: She&rsquo;s at home tonight. Do you know if Nick is coming to the <strong>reunion?</strong> I remember you two were not just <strong>classmates</strong> but ... a couple in high school.</p>
+              <p><strong><em>Rose</em></strong><em>: Tối nay con b&eacute; ở nh&agrave;. Cậu c&oacute; biết l&agrave; liệu Nick c&oacute; đến <strong>cuộc họp mặt</strong> kh&ocirc;ng? T&ocirc;i nhớ hai người kh&ocirc;ng chỉ l&agrave; <strong>bạn học c&ugrave;ng lớp</strong>, m&agrave; c&ograve;n l&agrave; ... một cặp đ&ocirc;i ở trường học.</em></p>
+              <p><strong>Angela</strong>: Well, we didn&rsquo;t go to the gym.</p>
+              <p><strong><em>Angela</em></strong><em>: Xem n&agrave;o, ch&uacute;ng t&ocirc;i đ&atilde; kh&ocirc;ng đến ph&ograve;ng tập thể dục.</em></p>
+              <p><strong>Edward</strong>: ..Uh... huh?</p>
+              <p><strong><em>Edward</em></strong><em>: ..Ừ... hả?</em></p>
+              <p><strong>Angela</strong>: Our relationship didn&rsquo;t <strong>work out.</strong></p>
+              <p><strong><em>Angela</em></strong><em>: Mối quan hệ của ch&uacute;ng t&ocirc;i đ&atilde; <strong>kh&ocirc;ng đi đến đ&acirc;u.</strong></em></p>
+              <p><em>Trong trường hợp n&agrave;y, Angela d&ugrave;ng ph&eacute;p chơi chữ, n&oacute;i &ldquo;work out&rdquo; với 2 nghĩa:</em></p>
+              <ol>
+              <li><em>Tập thể dục</em></li>
+              <li><em>Tiến triển tốt, đến đ&acirc;u, tới đ&acirc;u</em></li>
+              </ol>`
+                    },
+                    {
+                        title: `Topic 3: Just In Time For the Company Trip`,
+                        audioLinkSlow: `assets/audio/LESSON 02 - PEOPLE/Recording 2.5 - Slow Speech -Topic 3 - Just In Time For the Company Trip.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 02 - PEOPLE/Recording 2.6 - Native Speech - Topic 3 - Just In Time For the Company Trip.mp3`,
+                        data: `<!-- #######  YAY, I AM THE SOURCE EDITOR! #########-->
+              <p>Howie and Top are going together, then they meet Jenny, a new staff in R&amp;D team. So, Howie introduces Jenny to Tom.</p>
+              <p><em>Howie v&agrave; Tom đang đi với nhau th&igrave; họ gặp Jenny, nh&acirc;n vi&ecirc;n mới trong nh&oacute;m Nghi&ecirc;n cứu v&agrave; Ph&aacute;t triển. V&igrave; vậy, Howie giới thiệu Jenny với Tom.</em></p>
+              <p>Howie: Hey Tom, have you met jenny? She just started two weeks ago.</p>
+              <p><em>Howie: N&agrave;y Tom, anh đ&atilde; gặp Jenny chưa? C&ocirc; ấy vừa mới bắt đầu l&agrave;m việc từ hai tuần trước.</em></p>
+              <p>Tom: Nice to meet you, Jenny. I work in sales. <strong>What department are you in?</strong></p>
+              <p><em>Tom: Rất vui được gặp em, Jenny. Anh l&agrave;m việc ở bộ phận b&aacute;n h&agrave;ng. <strong>Em thuộc bộ phận n&agrave;o?</strong></em></p>
+              <p>Jenny: Hello Tom, I&rsquo;m in <strong>R&amp;D</strong>.</p>
+              <p><em>Jenny: Ch&agrave;o Tom, em ở bộ phận <strong>Nghi&ecirc;n cứu v&agrave; Ph&aacute;t triển</strong>.</em></p>
+              <p>Tom: Are you going to join the company <strong>trip</strong> next week, Jenny?</p>
+              <p><em>T&ocirc;m: Em c&oacute; tham gia <strong>chuyến du lịch</strong> c&ocirc;ng ty v&agrave;o tuần tới kh&ocirc;ng, Jenny?</em></p>
+              <p>Jenny: I&rsquo;m not sure. <strong>Are newcomers allowed to</strong> come?</p>
+              <p><em>Jenny: Em kh&ocirc;ng chắc lắm. <strong>Người mới</strong> c&oacute; <strong>được ph&eacute;p</strong> đi kh&ocirc;ng?</em></p>
+              <p>Howie: Of course. We want everyone there for the <strong>team building</strong>.</p>
+              <p><em>Howie: Tất nhi&ecirc;n. Bọn anh muốn tất cả mọi người ở đ&oacute; để tham gia <strong>x&acirc;y dựng đội nh&oacute;m</strong>.</em></p>
+              <p>Jenny: Well, <strong>I am always up for</strong> a beach trip.</p>
+              <p><em>Jenny: V&acirc;ng, em lu&ocirc;n lu&ocirc;n muốn một chuyến du lịch biển.</em></p>
+              <p>Tom: It&rsquo;s going to be great. I think everybody <strong>is eager for</strong> a little <strong>relaxation</strong>.</p>
+              <p><em>Tom: N&oacute; sẽ rất tuyệt. Anh nghĩ rằng tất cả mọi người đều <strong>h&aacute;o hức cho</strong> một ch&uacute;t <strong>thư gi&atilde;n</strong>.</em></p>
+              <p>Jenny: Could I bring my husband with me?</p>
+              <p><em>Jenny: Em co thế đưa chồng đi c&ugrave;ng được kh&ocirc;ng?</em></p>
+              <p>Howie: What? You said you haven&rsquo;t got a boyfriend?</p>
+              <p><em>Howi: C&aacute;i g&igrave;? Em n&oacute;i em kh&ocirc;ng c&oacute; bạn trai?</em></p>
+              <p>Jenny: Yes, it&rsquo;s so true!</p>
+              <p><em>Jenny: Đ&uacute;ng, đ&oacute; l&agrave; sự thật.</em></p>`
+                    }
+                ]
+            },
+            {
+                case: `Day 2`,
+                title: `Nói đuổi`,
+                content: [
+                    {
+                        title: `Topic 1: Jack’s Family Portrait`,
+                        audioLinkSlow: `assets/audio/LESSON 02 - PEOPLE/Recording 2.1 - Slow Speech - Topic 1 - Jack_s Family Portrait.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 02 - PEOPLE/Recording 2.2 - Native speech - Topic 1 - Jack_s family.mp3`,
+                        data: `<!-- #######  YAY, I AM THE SOURCE EDITOR! #########-->
+              <p>Lisa and Jack are talking about Jack&rsquo;s family portrait on the wall.</p>
+              <p><em>Lisa v&agrave; Jack đang n&oacute;i về bước ảnh ch&acirc;n dung gia đ&igrave;nh Jack treo tr&ecirc;n tường.</em></p>
+              <p><strong>Lisa</strong>: Oh, <strong>is this</strong> your family?</p>
+              <p><strong><em>Lisa</em></strong><em>: Ồ, <strong>đ&acirc;y c&oacute; phải l&agrave;</strong> gia đ&igrave;nh cậu kh&ocirc;ng?</em></p>
+              <p><strong>Jack</strong>: It is. <strong>These are</strong> my <strong>grandparents</strong> at their old hourse in Thailand.</p>
+              <p><strong><em>Jack</em></strong><em>: Đ&uacute;ng rồi. <strong>Đ&acirc;y l&agrave; &ocirc;ng b&agrave; t&ocirc;i</strong> ở nh&agrave; cũ của họ ở Th&aacute;i lan.</em></p>
+              <p><strong>Lisa</strong>: Do they live there?</p>
+              <p><strong><em>Lisa</em></strong><em>: Họ c&oacute; sống ở đ&oacute; kh&ocirc;ng?</em></p>
+              <p><strong>Jack</strong>: No, they were just visiting. They <strong>moved to</strong> the US when my dad and <strong>aunt</strong> were babies.</p>
+              <p><strong><em>Jack</em></strong><em>: Kh&ocirc;ng họ chỉ gh&eacute; thăm th&ocirc;i. Họ <strong>chuyển đến</strong> Mỹ khi bố v&agrave; <strong>c&ocirc; </strong>t&ocirc;i c&ograve;n nhỏ.</em></p>
+              <p><strong>Lisa</strong>: Who, I didn&rsquo;t know that.</p>
+              <p><strong><em>Lisa</em></strong><em>: Ch&agrave;, t&ocirc;i kh&ocirc;ng biết đấy.</em></p>
+              <p><strong>Jack</strong>: Yeah. My <strong>grandfather was a doctor</strong> in Thailand, but when they moved here, he had to <strong>work as a cleaner</strong>.</p>
+              <p><strong><em>Jack</em></strong><em>: Ừ<strong>. &Ocirc;ng t&ocirc;i l&agrave; b&aacute;c sĩ</strong> ở Th&aacute;i Lan, nhưng khi họ đến đ&acirc;y, &ocirc;ng phải <strong>l&agrave;m việc như một lao c&ocirc;ng</strong>.</em></p>
+              <p><strong>Lisa</strong>: Your dad&rsquo;s a doctor, right?</p>
+              <p><strong><em>Lisa</em></strong><em>: Bố cậu l&agrave; b&aacute;c sĩ, đ&uacute;ng kh&ocirc;ng?</em></p>
+              <p><strong>Jack</strong>: He is. He wanted to <strong>follow in his dad&rsquo;s footsteps</strong>. And those are my <strong>parents</strong>.</p>
+              <p><strong><em>Jack</em></strong><em>: Đ&uacute;ng rồi. &Ocirc;ng ấy muốn đi theo con đường của cha m&igrave;nh. V&agrave; đ&oacute; l&agrave; <strong>bố mẹ</strong> t&ocirc;i.</em></p>
+              <p><strong>Lisa</strong>: That&rsquo;s really <strong>inspiring</strong>.</p>
+              <p><strong><em>Lisa</em></strong><em>: Điều đ&oacute; thực sự <strong>truyền cảm hứng</strong> đấy.</em></p>
+              <p><strong>Jack</strong>: Yes, my sister and I wanna be doctors, too. I guess <strong>it&rsquo;s in our blood</strong>.</p>
+              <p><strong><em>Jack</em></strong><em>: Ừ, em g&aacute;i t&ocirc;i v&agrave; t&ocirc;i cũng muốn l&agrave; b&aacute;c sĩ. T&ocirc;i đo&aacute;n <strong>n&oacute; đ&atilde; ngấm v&agrave;o m&aacute;u của ch&uacute;ng t&ocirc;i</strong>.</em></p>
+              <p><strong>Lisa</strong>: Hey are you in the picture? Is this you?</p>
+              <p><strong><em>Lisa</em></strong><em>: N&agrave;y, cậu c&oacute; mặt trong bức ảnh n&agrave;y kh&ocirc;ng? Đ&acirc;y c&oacute; phải l&agrave; cậu kh&ocirc;ng?</em></p>
+              <p><strong>Jack</strong>: No, <strong>that&rsquo;s</strong> my <strong>cousin</strong>. I&rsquo;m over here.</p>
+              <p><strong><em>Jack</em></strong><em>: Kh&ocirc;ng, <strong>đ&oacute; l&agrave; anh họ</strong> của t&ocirc;i. T&ocirc;i ở đ&acirc;y cơ.</em></p>
+              <p><strong>Lisa</strong>: That&rsquo;s your mom!</p>
+              <p><strong><em>Lisa</em></strong><em>: Đ&oacute; l&agrave; mẹ cậu!</em></p>
+              <p><strong>Jack</strong>: Yep, <strong>pregnant with me!</strong></p>
+              <p><strong><em>Jack</em></strong><em>: Đ&uacute;ng, <strong>đang mang thai t&ocirc;i!</strong></em></p>
+              <p><em>Ghi ch&uacute;: Từ &ldquo;<strong>Pregnant</strong>&rdquo; trong t&igrave;nh huống h&agrave;i hước n&agrave;y của hoại thoại được ph&aacute;t &acirc;m với t&ocirc;ng cao hơn một ch&uacute;t so với c&aacute;ch đọc th&ocirc;ng thường. C&aacute;ch đọc theo từ điển sẽ được đề cập tại phần luyện từ v&agrave; mẫu chủ đạo của ng&agrave;y 09</em></p>`
+                    },
+                    {
+                        title: `Topic 2: A High School Reunion`,
+                        audioLinkSlow: `assets/audio/LESSON 02 - PEOPLE/Recording 2.3 - Slow Speech -Topic 2 - A High School Reunion.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 02 - PEOPLE/Recording 2.4 - Native Speech - Topic 2 - A High School Reunion.mp3`,
+                        data: `<!-- #######  YAY, I AM THE SOURCE EDITOR! #########-->
+              <p>Angela joins a high school reunion where she meets her two old school friends. They haven&rsquo;t met for more than 10 years.</p>
+              <p><em>Angela tham gia v&agrave;o một cuộc họp mặt trường trung học nơi c&ocirc; gặp hai người bạn học cũ của m&igrave;nh. Họ đ&atilde; kh&ocirc;ng gặp những hơn 10 năm.</em></p>
+              <p><strong>Angela</strong>: Rose? Is that you? Oh, <strong>you look fantastic!</strong></p>
+              <p><strong><em>Angela</em></strong><em>: Rose? L&agrave; cậu đ&uacute;ng kh&ocirc;ng? &Ocirc;i, <strong>tr&ocirc;ng cậu tuyệt qu&aacute;!</strong></em></p>
+              <p><strong>Rose</strong>: Angie! <strong>It&rsquo;s so good to see you!</strong> How long has it been, 15 years!</p>
+              <p><strong><em>Rose</em></strong><em>: Angie!(C&aacute;ch gọi th&acirc;n mật của Angela). <strong>Thật tốt khi gặp lại cậu</strong>! Đ&atilde; bao l&acirc;u rồi nhỉ,</em> <em>15 năm &agrave;?</em></p>
+              <p><strong>Angela</strong>: I feel like we were in calculus class just yesterday!</p>
+              <p><strong><em>Angela</em></strong><em>: T&ocirc;i cảm thấy như ch&uacute;ng ta ngồi l&agrave;m to&aacute;n với nhau chỉ mới h&ocirc;m qua th&ocirc;i!</em></p>
+              <p><strong>Angela</strong>: Edward, how are you doing? Time flies. I&rsquo;m so happy to see that you two <strong>got married!</strong> You are always such a good <strong>couple</strong>.</p>
+              <p><strong><em>Angela</em></strong><em>: Edward, cậu dạo n&agrave;y thế n&agrave;o? Thời gian tr&ocirc;i đi thật nhanh. T&ocirc; rất vui mừng khi thấy hai người <strong>đ&atilde; kết h&ocirc;n!</strong> Hai người lu&ocirc;n l&agrave; một <strong>cặp </strong>rất đẹp<strong> đ&ocirc;i.</strong></em></p>
+              <p><strong>Edward:</strong> Thank you.</p>
+              <p><strong><em>Edward</em></strong><em>: Cảm ơn cậu.</em></p>
+              <p><strong>Angela</strong>: Where is your daughter? She looks so cute in the pictures online.</p>
+              <p><strong><em>Angela</em></strong><em>: Con g&aacute;i cậu đ&acirc;u? C&ocirc; b&eacute; tr&ocirc;ng rất dễ thương trong mấy bức h&igrave;nh tr&ecirc;n mạng.</em></p>
+              <p><strong>Rose</strong>: She&rsquo;s at home tonight. Do you know if Nick is coming to the <strong>reunion?</strong> I remember you two were not just <strong>classmates</strong> but ... a couple in high school.</p>
+              <p><strong><em>Rose</em></strong><em>: Tối nay con b&eacute; ở nh&agrave;. Cậu c&oacute; biết l&agrave; liệu Nick c&oacute; đến <strong>cuộc họp mặt</strong> kh&ocirc;ng? T&ocirc;i nhớ hai người kh&ocirc;ng chỉ l&agrave; <strong>bạn học c&ugrave;ng lớp</strong>, m&agrave; c&ograve;n l&agrave; ... một cặp đ&ocirc;i ở trường học.</em></p>
+              <p><strong>Angela</strong>: Well, we didn&rsquo;t go to the gym.</p>
+              <p><strong><em>Angela</em></strong><em>: Xem n&agrave;o, ch&uacute;ng t&ocirc;i đ&atilde; kh&ocirc;ng đến ph&ograve;ng tập thể dục.</em></p>
+              <p><strong>Edward</strong>: ..Uh... huh?</p>
+              <p><strong><em>Edward</em></strong><em>: ..Ừ... hả?</em></p>
+              <p><strong>Angela</strong>: Our relationship didn&rsquo;t <strong>work out.</strong></p>
+              <p><strong><em>Angela</em></strong><em>: Mối quan hệ của ch&uacute;ng t&ocirc;i đ&atilde; <strong>kh&ocirc;ng đi đến đ&acirc;u.</strong></em></p>
+              <p><em>Trong trường hợp n&agrave;y, Angela d&ugrave;ng ph&eacute;p chơi chữ, n&oacute;i &ldquo;work out&rdquo; với 2 nghĩa:</em></p>
+              <ol>
+              <li><em>Tập thể dục</em></li>
+              <li><em>Tiến triển tốt, đến đ&acirc;u, tới đ&acirc;u</em></li>
+              </ol>`
+                    },
+                    {
+                        title: `Topic 3: Just In Time For the Company Trip`,
+                        audioLinkSlow: `assets/audio/LESSON 02 - PEOPLE/Recording 2.5 - Slow Speech -Topic 3 - Just In Time For the Company Trip.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 02 - PEOPLE/Recording 2.6 - Native Speech - Topic 3 - Just In Time For the Company Trip.mp3`,
+                        data: `<!-- #######  YAY, I AM THE SOURCE EDITOR! #########-->
+              <p>Howie and Top are going together, then they meet Jenny, a new staff in R&amp;D team. So, Howie introduces Jenny to Tom.</p>
+              <p><em>Howie v&agrave; Tom đang đi với nhau th&igrave; họ gặp Jenny, nh&acirc;n vi&ecirc;n mới trong nh&oacute;m Nghi&ecirc;n cứu v&agrave; Ph&aacute;t triển. V&igrave; vậy, Howie giới thiệu Jenny với Tom.</em></p>
+              <p>Howie: Hey Tom, have you met jenny? She just started two weeks ago.</p>
+              <p><em>Howie: N&agrave;y Tom, anh đ&atilde; gặp Jenny chưa? C&ocirc; ấy vừa mới bắt đầu l&agrave;m việc từ hai tuần trước.</em></p>
+              <p>Tom: Nice to meet you, Jenny. I work in sales. <strong>What department are you in?</strong></p>
+              <p><em>Tom: Rất vui được gặp em, Jenny. Anh l&agrave;m việc ở bộ phận b&aacute;n h&agrave;ng. <strong>Em thuộc bộ phận n&agrave;o?</strong></em></p>
+              <p>Jenny: Hello Tom, I&rsquo;m in <strong>R&amp;D</strong>.</p>
+              <p><em>Jenny: Ch&agrave;o Tom, em ở bộ phận <strong>Nghi&ecirc;n cứu v&agrave; Ph&aacute;t triển</strong>.</em></p>
+              <p>Tom: Are you going to join the company <strong>trip</strong> next week, Jenny?</p>
+              <p><em>T&ocirc;m: Em c&oacute; tham gia <strong>chuyến du lịch</strong> c&ocirc;ng ty v&agrave;o tuần tới kh&ocirc;ng, Jenny?</em></p>
+              <p>Jenny: I&rsquo;m not sure. <strong>Are newcomers allowed to</strong> come?</p>
+              <p><em>Jenny: Em kh&ocirc;ng chắc lắm. <strong>Người mới</strong> c&oacute; <strong>được ph&eacute;p</strong> đi kh&ocirc;ng?</em></p>
+              <p>Howie: Of course. We want everyone there for the <strong>team building</strong>.</p>
+              <p><em>Howie: Tất nhi&ecirc;n. Bọn anh muốn tất cả mọi người ở đ&oacute; để tham gia <strong>x&acirc;y dựng đội nh&oacute;m</strong>.</em></p>
+              <p>Jenny: Well, <strong>I am always up for</strong> a beach trip.</p>
+              <p><em>Jenny: V&acirc;ng, em lu&ocirc;n lu&ocirc;n muốn một chuyến du lịch biển.</em></p>
+              <p>Tom: It&rsquo;s going to be great. I think everybody <strong>is eager for</strong> a little <strong>relaxation</strong>.</p>
+              <p><em>Tom: N&oacute; sẽ rất tuyệt. Anh nghĩ rằng tất cả mọi người đều <strong>h&aacute;o hức cho</strong> một ch&uacute;t <strong>thư gi&atilde;n</strong>.</em></p>
+              <p>Jenny: Could I bring my husband with me?</p>
+              <p><em>Jenny: Em co thế đưa chồng đi c&ugrave;ng được kh&ocirc;ng?</em></p>
+              <p>Howie: What? You said you haven&rsquo;t got a boyfriend?</p>
+              <p><em>Howi: C&aacute;i g&igrave;? Em n&oacute;i em kh&ocirc;ng c&oacute; bạn trai?</em></p>
+              <p>Jenny: Yes, it&rsquo;s so true!</p>
+              <p><em>Jenny: Đ&uacute;ng, đ&oacute; l&agrave; sự thật.</em></p>`
+                    }
+                ]
+            },
+            {
+                case: `Day 3`,
+                title: `Phản xạ đa chiều - Introducing a Friend`,
+                content: [
+                    {
+                        title: `Topic 1: The Triathlete`,
+                        audioLinkSlow: `assets/audio/LESSON 03 - TIME/Recording 3.1 - Slow Speech - Topic 1 - The Triathlete.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 03 - TIME/Recording 3.2 - Native Speech - Topic 1 - The Triathlete.mp3`,
+                        data: `<!-- #######  YAY, I AM THE SOURCE EDITOR! #########-->
+               <p>Janet was very surprised at Jackson&rsquo;s plan to complete in a triathlon next week. She&rsquo;s also curious about his triathlon training schedule.</p>
+              <p><em>Janet rất ngạc nhi&ecirc;n với kế hoạch thi đấu ở cuộc thi ba m&ocirc;n phối hợp v&agrave;o tuần tới của Jackson. C&ocirc; cũng t&ograve; m&ograve; về lịch tập luyện ba m&ocirc;n phối hợp của anh ấy.</em></p>
+              <p><strong>Janet</strong>: I can&rsquo;t believe you&rsquo;re really <strong>doing a triathlon</strong> next week! How are you training for it?</p>
+              <p><strong><em>Janet</em></strong><em>: T&ocirc;i kh&ocirc;ng thể tin được l&agrave; cậu thực sự sẽ <strong>tham gia một cuộc thi ba m&ocirc;n phối hợp</strong> v&agrave;o tuần tới! Cậu tập luyện cho cuộc thi thế n&agrave;o?</em></p>
+              <p><strong>Jackson</strong>: I <strong>get up</strong> early everyday to run. Usually I&rsquo;m <strong>awake</strong> by 4:30 or 5:00, and then I run 10 miles.</p>
+              <p><strong><em>Jackson</em></strong><em>: T&ocirc;i <strong>dậy</strong> sớm mỗi ng&agrave;y để chạy. Th&ocirc;ng thường t&ocirc;i <strong>thức dậy</strong> l&uacute;c 4:30 hoặc 5:00 v&agrave; sau đ&oacute; t&ocirc;i chạy 10 dặm.</em></p>
+              <p><strong>Janet</strong>: Wow. <strong>What time do you</strong> finish running?</p>
+              <p><strong><em>Janet</em></strong><em>: Woa. <strong>Mấy giờ th&igrave; cậu</strong> chạy xong?</em></p>
+              <p><strong>Jackson</strong>: I run for about an hour, and then I swim util <strong>it&rsquo;s time to</strong> go to work.</p>
+              <p><strong><em>Jackson</em></strong><em>: T&ocirc;i chạy trong khoảng một giờ, v&agrave; sau đ&oacute; t&ocirc;i bơi cho tới khi <strong>đến giờ</strong> đi l&agrave;m.</em></p>
+              <p><strong>Janet</strong>: Where do you swim?</p>
+              <p><strong><em>Janet</em></strong><em>: Cậu bơi ở đ&acirc;u?</em></p>
+              <p><strong>Jackson</strong>: <strong>Thankfully</strong>, there&rsquo;s a pool near my office, so I use that.</p>
+              <p><strong><em>Jackson</em></strong><em>: <strong>Thật may mắn</strong>, c&oacute; một hồ bơi gần văn ph&ograve;ng của t&ocirc;i n&ecirc;n t&ocirc;i sử dụng n&oacute;.</em></p>
+              <p><strong>Janet</strong>: What about<strong> cycling?</strong></p>
+              <p><strong><em>Janet</em></strong><em>: C&ograve;n m&ocirc;n <strong>đạp xe</strong> th&igrave; sao?</em></p>
+              <p><strong>Jackson</strong>: I cycle <strong>on the weekends.</strong> <strong>I spend</strong> pretty much all of Saturday and Sunday cycling around my <strong>neighborhood</strong>.</p>
+              <p><strong><em>Jackson</em></strong><em>: T&ocirc;i đạp xe v&agrave;o <strong>những ng&agrave;y cuối tuần.</strong> T&ocirc;i <strong>d&agrave;nh</strong> gần như cả ng&agrave;y thứ bảy v&agrave; chủ nhật để đạp xe đạp quanh <strong>khu nh&agrave; m&igrave;nh</strong>.</em></p>
+              <p><strong>Janet</strong>: What if it rains?</p>
+              <p><strong><em>Janet</em></strong><em>: Thế nếu trời mưa th&igrave; sao?</em></p>
+              <p><strong>Jackson</strong>: Well, I go to the <strong>gym</strong> and use an exercise bike on <strong>rainy</strong> days.</p>
+              <p><strong><em>Jackson</em></strong><em>: Ồ, t&ocirc;i đến <strong>ph&ograve;ng tập thể dục</strong> v&agrave; sử dụng xe đạp thể dục v&agrave;o những ng&agrave;y <strong>mưa</strong>.</em></p>
+              <p><strong>Janet</strong>: Wow, <strong>good luck</strong> Jackson!</p>
+              <p><strong><em>Janet</em></strong><em>: Wow, <strong>ch&uacute;c may mắn</strong> nh&eacute; Jackson!</em></p>
+              <p><strong>Jackson</strong>: Why don&rsquo;t you join me next time? It would be fun to have a workout buddy!</p>
+              <p><strong>Jackson</strong>: Sao cậu kh&ocirc;ng tham gia c&ugrave;ng với t&ocirc;i trong lần tới nhỉ? Sẽ rất th&uacute; vị khi c&oacute; một người bạn tập đ&oacute;!</p>
+              <p><strong>Janet</strong>: Sure, just let me know if they ever start my kind of triathlon: sleeping, eating and binge watching TV. Because I&rsquo;m already in perfect shape for that!</p>
+              <p><strong>Janet</strong>: Chắc chắn rồi, h&atilde;y cho t&ocirc;i biết khi n&agrave;o bạn bắt đầu cuộc thi ba m&ocirc;n phối hợp theo kiểu của t&ocirc;i: ngủ, ăn v&agrave; say sưa xem tivi. Bởi v&igrave; t&ocirc;i đ&atilde; ở trạng th&aacute;i ho&agrave;n hảo cho cuộc thi đ&oacute; rồi!</p>`
+                    },
+                    {
+                        title: `Topic 2: Invitation to What`,
+                        audioLinkSlow: `assets/audio/LESSON 03 - TIME/Recording 3.3 - Slow Speech -Topic 2 - Invitation to What.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 03 - TIME/Recording 3.4 -Native Speech - Topic 2 - Invitation to What.mp3`,
+                        data: `<!-- #######  YAY, I AM THE SOURCE EDITOR! #########-->
+               <p>Robert wants to invite Sharon to his party. Unfortunately, she has another appointment at that time.</p>
+              <p>Robert muốn mời Sharon đến bữa tiệc của anh ấy. Thật kh&ocirc;ng may, c&ocirc; ấy c&oacute; một cuộc hẹn kh&aacute;c v&agrave;o thời điểm đ&oacute;.</p>
+              <p><strong>Robert</strong>: Hey Sharon, what time will you be at the <strong>party</strong>?</p>
+              <p><strong><em>Robert</em></strong><em>: Ch&agrave;o Sharon, mấy giờ cậu sẽ c&oacute; mặt ở <strong>bữa tiệc?</strong></em></p>
+              <p><strong>Sharon</strong>: Party? What party?</p>
+              <p><strong><em>Sharon</em></strong><em>: Bữa tiệc? Bữa tiệc n&agrave;o nhỉ?</em></p>
+              <p><strong>Robert</strong>: My party. It&rsquo;s at 8:00 PM tomorrow night. Me, you, an Italian restaurant. <strong>Are you free?</strong></p>
+              <p><strong><em>Robert</em></strong><em>: Bữa tiệc của t&ocirc;i. L&uacute;c 8:00 tối mai. T&ocirc;i, cậu, tại một nh&agrave; h&agrave;ng &Yacute;. <strong>Cậu c&oacute; r&atilde;nh kh&ocirc;ng?</strong></em></p>
+              <p><strong>Sharon</strong>: Is this a party ... or ... are you <strong>inviting</strong> me to dinner, Robert?</p>
+              <p><strong><em>Sharon</em></strong><em>: Đ&oacute; c&oacute; phải l&agrave; một bữa tiệc ... hay .... l&agrave; cậu <strong>đang</strong> <strong>mời</strong> t&ocirc;i đi ăn tối, Robert?</em></p>
+              <p><strong>Robert</strong>: It&rsquo;s a party, I&rsquo;ll <strong>pick you up</strong> at seven, okay?</p>
+              <p><strong><em>Robert</em></strong><em>: Đ&oacute; l&agrave; một bữa tiệc. T&ocirc;i sẽ <strong>đ&oacute;n cậu v&agrave;o l&uacute;c</strong> 7 giờ, được chứ?</em></p>
+              <p><strong>Sharon</strong>: Uhhhhhh...</p>
+              <p><strong><em>Sharon</em></strong><em>: Uhhhhhh...</em></p>
+              <p><strong>Robert</strong>: That sounds like a yes. Is that ... that a yes?</p>
+              <p><strong><em>Robert</em></strong><em>: C&oacute; vẻ đ&oacute; l&agrave; một lời đồng &yacute;. L&agrave; ... l&agrave; đồng &yacute; đ&uacute;ng kh&ocirc;ng?</em></p>
+              <p><strong>Sharon</strong>: Thanks, but <strong>I&rsquo;m afraid I&rsquo;m busy tomorrow.</strong> I&rsquo;m going to a real party.</p>
+              <p><strong><em>Sharon</em></strong><em>: Cảm ơn, nhưng <strong>t&ocirc;i e l&agrave; ng&agrave;y mai t&ocirc;i bận rồi.</strong> T&ocirc;i sẽ tham gia một bữa tiệc thật sự.</em></p>
+              <p><strong>Robert</strong>: Oh... Okay. Well, call me later, or something...</p>
+              <p><strong><em>Robert</em></strong><em>: Ồ... Được rồi. Vậy, h&atilde;y gọi cho t&ocirc;i sau, hay g&igrave; đ&oacute;...</em></p>
+              <p><strong>Sharon</strong>: It&rsquo;s kind of short notice, ya know...</p>
+              <p><strong><em>Sharon</em></strong><em>: Đ&oacute; l&agrave; một lời b&aacute;o mời hơi gấp, cậu biết đấy...</em></p>
+              <p><strong>Robert</strong>: Yeah, no. I understand. <strong>May be another time.</strong></p>
+              <p><strong><em>Robert</em></strong><em>: Ừ, t&ocirc;i hiểu. <strong>C&oacute; lẽ để lần kh&aacute;c vậy.</strong></em></p>
+              <p><strong>Sharon</strong>: Well... <strong>Would you like to come with me?</strong></p>
+              <p><strong><em>Sharon</em></strong><em>: M&agrave;... <strong>Cậu c&oacute; muốn đi với t&ocirc;i kh&ocirc;ng?</strong></em></p>
+              <p><strong>Robert</strong>: <strong>You bet!</strong> What time? ... And ... where?</p>
+              <p><strong><em>Robert</em></strong><em>: <strong>Chắc chắn rồi!</strong> Mấy giờ? ... V&agrave; ... ở đ&acirc;u?</em></p>
+              <p><strong>Sharon</strong>: Let&rsquo;s meet here tomorrow at noon. Bring something to grill. <strong>How&rsquo;s that sound?</strong></p>
+              <p><strong><em>Sharon</em></strong><em>: Ch&uacute;ng ta h&atilde;y gặp nhau ở đ&acirc;y v&agrave;o trưa mai nh&eacute;. Mang theo v&agrave;i thứ để nướng. <strong>Nghe &yacute; đ&oacute; thế n&agrave;o?</strong></em></p>
+              <p><strong>Robert</strong>: That sounds great! Should I wear a suit?</p>
+              <p><strong><em>Robert</em></strong><em>: Nghe tuyệt đấy! T&ocirc;i c&oacute; n&ecirc;n mặc một bộ vest?</em></p>
+              <p><strong>Sharon</strong>: Uhm... A swimsuit. There&rsquo;s a pool.</p>
+              <p><strong><em>Sharon</em></strong><em>: Uhm... Một bộ đồ bơi. C&oacute; một bể bơi ở đ&oacute;.</em></p>
+              <p><strong>Robert</strong>: <strong>Got it! I&rsquo;m looking forward to it!</strong></p>
+              <p><strong><em>Robert</em></strong><em>: <strong>T&ocirc;i hiểu rổi! T&ocirc;i rất mong đợi</strong> bữa tiệc đấy!</em></p>
+              <p><strong>Sharon</strong>: Yeah, same! ... Oops! <strong>What time is it?</strong></p>
+              <p><strong><em>Sharon</em></strong><em>: Ừ, t&ocirc;i cũng thế! ... Ối! <strong>Mấy giờ rồi?</strong></em></p>
+              <p><strong>Robert</strong>: <strong>It&rsquo;s 10:30</strong>.</p>
+              <p><strong><em>Robert</em></strong><em>: <strong>B&acirc;y giờ l&agrave; 10:30</strong>.</em></p>
+              <p><strong>Sharon</strong>: <strong>Oh, I&rsquo;ve gotta go</strong>. See ya.</p>
+              <p><strong><em>Sharon</em></strong><em>: <strong>Ồ, t&ocirc;i phải đi đ&acirc;y</strong>. Hẹn gặp lại.</em></p>`
+                    },
+                    {
+                        title: `Topic 3: Why Didn_t You Come to My Party`,
+                        audioLinkSlow: `assets/audio/LESSON 03 - TIME/Recording 3.5 - Slow Speech-Topic 3- Why Didn_t You Come to My Party.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 03 - TIME/Recording 3.6 - Native Speech - Topic 3 - Why Didn_t You Come to My Party.mp3`,
+                        data: `<!-- #######  YAY, I AM THE SOURCE EDITOR! #########-->
+               <p>Three friends are talking about how they want to celebrate their birthdays.</p>
+              <p>Ba người bạn đang n&oacute;i về c&aacute;ch họ muốn tổ chức sinh nhật của m&igrave;nh.</p>
+              <p><strong>Christina</strong>: Tom, isn&rsquo;t your <strong>birthday coming up</strong> soon?</p>
+              <p><strong><em>Christina</em></strong><em>: Tom, kh&ocirc;ng phải l&agrave; <strong>sinh nhật</strong> cậu <strong>sắp tới</strong> sao?</em></p>
+              <p><strong>Tom</strong>: Yeah, it&rsquo;s March 21<sup>st</sup>.</p>
+              <p><strong><em>Tom</em></strong><em>: Đ&uacute;ng, v&agrave;o ng&agrave;y 21 th&aacute;ng 3.</em></p>
+              <p><strong>Christina</strong>: And you&rsquo;re turning... 43?</p>
+              <p><strong><em>Christina</em></strong><em>: V&agrave; cậu đang bước sang tuổi ... 43?</em></p>
+              <p><strong>Tom</strong>: 37. I <strong>was born in</strong> 1981.</p>
+              <p><strong><em>Tom</em></strong><em>: 37. <strong>T&ocirc;i sinh năm</strong> 1981.</em></p>
+              <p><strong>Christina</strong>: Well, are going to have a big party?</p>
+              <p><strong><em>Christina</em></strong><em>: Vậy, ch&uacute;ng ta sẽ c&oacute; một bữa tiệc party?</em></p>
+              <p><strong>Tom</strong>: No, I think this year my girlfriend and I are going to the beach for a <strong>romantic</strong> weekend <strong>together</strong>.</p>
+              <p><strong><em>Tom</em></strong><em>: Kh&ocirc;ng, t&ocirc;i nghĩ năm nay t&ocirc;i v&agrave; bạn g&aacute;i sẽ đi biển cho một cuối tuần <strong>l&atilde;ng mạn b&ecirc;n nhau.</strong></em></p>
+              <p><strong>Christina</strong>: Oh, okay! ... Liam, when is your birthday again?</p>
+              <p><strong><em>Christina</em></strong><em>: Ồ, được rồi! ... Liam, khi n&agrave;o sinh nhật cậu ấy nhỉ?</em></p>
+              <p><strong>Liam</strong>: It&rsquo;s on February 19<sup>th</sup>, so about <strong>a month away</strong>.</p>
+              <p><strong><em>Liam</em></strong><em>: Ng&agrave;y 19 th&aacute;ng 2, vậy khoảng <strong>một th&aacute;ng nữa</strong>.</em></p>
+              <p><strong>Christina</strong>: Awesome! How are we going to <strong>celebrate</strong>?</p>
+              <p><strong><em>Christina</em></strong><em>: Tuyệt vời! Ch&uacute;ng ta sẽ <strong>ch&uacute;c mừng</strong> như thế n&agrave;o đ&acirc;y?</em></p>
+              <p><strong>Liam</strong>: I always just celebrate my birthday with my family. I don&rsquo;t like big parties or bars.</p>
+              <p><strong><em>Liam</em></strong><em>: T&ocirc;i lu&ocirc;n lu&ocirc;n chỉ tổ chức sinh nhật với gia đ&igrave;nh m&igrave;nh. T&ocirc;i kh&ocirc;ng th&iacute;ch những bữa tiệc lớn hay c&aacute;c qu&aacute;n bar.</em></p>
+              <p><strong>Christina</strong>: <strong>No offense</strong>, but you guys are <strong>boring</strong>. I always <strong>throw a huge party</strong> for my birthday!</p>
+              <p><strong><em>Christina</em></strong><em>: <strong>Kh&ocirc;ng c&oacute; &yacute; g&igrave; đ&acirc;u</strong>, nhưng c&aacute;c cậu thật <strong>nh&agrave;m ch&aacute;n</strong>. T&ocirc;i lu&ocirc;n lu&ocirc;n <strong>tổ chức một bữa tiệc lớn</strong> cho sinh nhật của t&ocirc;i!</em></p>
+              <p><strong>Liam</strong>: When is your birthday, Christina?</p>
+              <p><strong><em>Liam</em></strong><em>: Khi n&agrave;o sinh nhật cậu, Christina?</em></p>
+              <p><strong>Christina</strong>: It was last week, the 10<sup>th</sup>.</p>
+              <p><strong><em>Christina</em></strong><em>: V&agrave;o tuần trước, ng&agrave;y m&ugrave;ng 10.</em></p>
+              <p><strong>Tom</strong>: The party was <strong>great</strong>, <strong>wasn&rsquo;t it</strong>?</p>
+              <p><strong><em>Tom</em></strong><em>: Bữa tiệc hẳn l&agrave; <strong>tuyệt vời phải kh&ocirc;ng?</strong></em></p>
+              <p><strong>Christina</strong>: No, it wasn&rsquo;t. Nobody <strong>showed up</strong>.</p>
+              <p><strong><em>Christina</em></strong><em>: Kh&ocirc;ng, kh&ocirc;ng hề. Kh&ocirc;ng ai xuất hiện cả.</em></p>`
+                    }
+                ]
+            },
+            {
+                case: `Day 4`,
+                title: `Phản xạ đa chiều - Where Do You Live?`,
+                content: [
+                    {
+                        title: `Topic 1: Apartment Hunting`,
+                        audioLinkSlow: `assets/audio/LESSON 04 - RENTING AND SHOPPING/Recording 4.1 - Slow Speech - Topic 1 - Apartment Hunting.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 04 - RENTING AND SHOPPING/Recording 4.2 - Native Speech - topic 1 - Apartment Hunting.mp3`,
+                        data: `<!-- #######  YAY, I AM THE SOURCE EDITOR! #########--> <p>Mary and Howard like an apartment. The Realty Agent takes them round the apartment before they decide to rent it.</p>
+              <p><em>Mary v&agrave; Howard th&iacute;ch một căn hộ. Chuy&ecirc;n vi&ecirc;n Bất động sản (BĐS) đưa họ đi xem căn hộ trước khi họ quyết định thu&ecirc; n&oacute;.</em></p>
+              <p><strong>Realty Agent:</strong> This is the <strong>living room.</strong> It has <strong>a nice view of</strong> the part from that window.</p>
+              <p><strong><em>Realty Agent:</em></strong><em> Đ&acirc;y l&agrave; <strong>ph&ograve;ng kh&aacute;ch.</strong> N&oacute; c&oacute; <strong>một tầm nh&igrave;n đẹp ra</strong> c&ocirc;ng vi&ecirc;n từ cửa sổ đ&oacute;.</em></p>
+              <p><strong>Mary</strong>: How nice, our cats would love it. Oh, <strong>by the way,</strong> are <strong>pets allowed?</strong></p>
+              <p><strong><em>Mary</em></strong><em>: Thật tuyệt l&agrave;m sao, mấy ch&uacute; m&egrave;o của ch&uacute;ng t&ocirc;i sẽ th&iacute;ch n&oacute;. &Agrave;, <strong>nh&acirc;n tiện</strong>, <strong>th&uacute; cưng</strong> c&oacute; <strong>được ph&eacute;p</strong> nu&ocirc;i kh&ocirc;ng?</em></p>
+              <p><strong>Realty Agent:</strong> Of course, but you need to pay an <strong>extra fee</strong> of 50 dollars per month.</p>
+              <p><strong><em>Realty Agent:</em></strong><em> Tất nhi&ecirc;n, nhưng anh chị cần phải trả một khoản <strong>phụ ph&iacute;</strong> l&agrave; 50 đ&ocirc; la mỗi th&aacute;ng.</em></p>
+              <p><strong>Howard</strong>: That sounds <strong>doable</strong>. Is the <strong>neighborthood safe?</strong></p>
+              <p><strong><em>Howard</em></strong><em>: Nghe c&oacute; vẻ thực hiện được. <strong>Khu d&acirc;n cư</strong> c&oacute; <strong>an to&agrave;n</strong> kh&ocirc;ng?</em></p>
+              <p><strong>Realty Agent:</strong> There is some <strong>crime</strong> in the park, but nothing serious. Would you like to see the <strong>bedrooms</strong>?</p>
+              <p><strong><em>Realty Agent:</em></strong><em> Một số <strong>tội phạm</strong> ở c&ocirc;ng vi&ecirc;n, nhưng kh&ocirc;ng c&oacute; g&igrave; nghiệm trọng. Anh chị c&oacute; muốn xem <strong>c&aacute;c ph&ograve;ng ngủ</strong> kh&ocirc;ng?</em></p>
+              <p><strong>Mary:</strong> Yes, please!</p>
+              <p><strong><em>Mary:</em></strong><em> C&oacute;, cảm ơn anh!</em></p>
+              <p><strong>Realty Agent:</strong> Let&rsquo;s go upstairs then... This is the master bedroom, with is own bathroom.</p>
+              <p><strong><em>Realty Agent:</em></strong><em> H&atilde;y đi l&ecirc;n tầng tr&ecirc;n rồi... Đ&acirc;y l&agrave; ph&ograve;ng ngủ ch&iacute;nh, với ph&ograve;ng tắm ri&ecirc;ng.</em></p>
+              <p><strong>Mary</strong>: It&rsquo;s <strong>cozy.</strong></p>
+              <p><strong><em>Mary</em></strong><em>: Thật <strong>ấm c&uacute;ng.</strong></em></p>
+              <p><strong>Realty Agent:</strong> And this is the second bedroom. You could also use it as a <strong>home office.</strong></p>
+              <p><strong><em>Realty Agent:</em></strong><em> V&agrave; đ&acirc;y l&agrave; ph&ograve;ng ngủ thứ hai. Anh chị cũng c&oacute; thể sử dụng n&oacute; như l&agrave; một <strong>văn ph&ograve;ng tại nh&agrave;.</strong></em></p>
+              <p><strong>Mary:</strong> <strong>Where is the second bathroom?</strong></p>
+              <p><strong><em>Mary:</em></strong><em> <strong>Ph&ograve;ng tắm thứ hai ở đ&acirc;u.</strong></em></p>
+              <p><strong>Realty Agent:</strong> It&rsquo;s <strong>downstairs</strong>.</p>
+              <p><strong><em>Realty Agent:</em></strong><em> N&oacute; ở <strong>tầng dưới</strong>.</em></p>
+              <p><strong>Howard:</strong> And <strong>how much is the rent?</strong></p>
+              <p><strong><em>Howard:</em></strong><em> V&agrave; <strong>tiền thu&ecirc;</strong> nh&agrave; l&agrave; <strong>bao nhi&ecirc;u?</strong></em></p>
+              <p><strong>Realty Agent:</strong> <strong>It&rsquo;s $800 a month</strong>... plus $50, if you have pets.</p>
+              <p><strong><em>Realty Agent:</em></strong><em> <strong>800 đ&ocirc; la một th&aacute;ng</strong>... cộng với 50 đ&ocirc; la, nếu anh chị c&oacute; vật nu&ocirc;i.</em></p>
+              <p><strong>Howard</strong>: Sound good. Let&rsquo;s <strong>sign the lease.</strong></p>
+              <p><strong><em>Howard</em></strong><em>: Nghe c&oacute; vẻ tốt đấy. H&atilde;y <strong>k&yacute; hợp đồng thu&ecirc;</strong> th&ocirc;i.</em></p>
+              <p><strong>Mary (Sigh):</strong> Okey. My purse is like an onion, opening it makes me cry!!!</p>
+              <p><strong><em>Mary:</em></strong><em> Ok. V&iacute; của em giống như một củ h&agrave;nh, mở n&oacute; ra khiến em bật kh&oacute;c.</em></p>`
+                    },
+                    {
+                        title: `Topic 2: The Super Shopper`,
+                        audioLinkSlow: `assets/audio/LESSON 04 - RENTING AND SHOPPING/Recording 4.3 - Slow Speech - Topic 2 - The Super Shopper.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 04 - RENTING AND SHOPPING/Recording 4.4 - Native Speech - Topic 2 - The Super Shopper.mp3`,
+                        data: `<!-- #######  YAY, I AM THE SOURCE EDITOR! #########--> <p>Mary goes to a local supermarket. Unfortunately, she has to pay a little too much for what she wants to buy.</p>
+              <p>Mary đến một si&ecirc;u thị trong v&ugrave;ng. Thật kh&ocirc;ng may, c&ocirc; ấy phải trả qu&aacute; nhiều cho những g&igrave; c&ocirc; ấy muốn mua.</p>
+              <p><strong>Cashier</strong>: Your <strong>total</strong> will be seventy two. <strong>How would you like to pay?</strong></p>
+              <p><strong><em>Cashier</em></strong><em>: Của chị <strong>tổng cộng</strong> l&agrave; bảy mươi hai đ&ocirc; la. <strong>Chị muốn thanh to&aacute;n như thế n&agrave;o?</strong></em></p>
+              <p><strong>Mary</strong>: That&rsquo;s <strong>more than I expected.</strong> <strong>How much is</strong> that <strong>fancy jelly?</strong></p>
+              <p><strong><em>Mary</em></strong><em>: Số đ&oacute; <strong>nhiều hơn t&ocirc;i nghĩ.</strong> <strong>Lọ mứt nhiều m&agrave;u</strong> kia <strong>bao nhi&ecirc;u</strong> tiền?</em></p>
+              <p><strong>Cashier</strong>: The <strong>organic</strong> jelly is sixteen dollars.</p>
+              <p><strong><em>Cashier</em></strong><em>: Mứt <strong>hữu cơ</strong> c&oacute; gi&aacute; l&agrave; mười s&aacute;u đ&ocirc; la.</em></p>
+              <p><strong>Mary</strong>: Oh no. My daughter likes it, but that&rsquo;s too much. I&rsquo;ll have to <strong>put that back.</strong></p>
+              <p><strong><em>Mary</em></strong><em>: &Ocirc;i kh&ocirc;ng. Con g&aacute;i t&ocirc;i th&iacute;ch n&oacute;, nhưng n&oacute; qu&aacute; đắt. T&ocirc;i phải <strong>để n&oacute; lại.</strong></em></p>
+              <p><strong>Cashier</strong>: That&rsquo;s actually <strong>on sale</strong> now, <strong>buy one get one half off.</strong> Would you like to do that?</p>
+              <p><strong><em>Cashier</em></strong><em>: Thật ra th&igrave; c&aacute;i đ&oacute; đang được giảm gi&aacute;, mua một tặng một nửa. Chị c&oacute; muốn nhận ưu đ&atilde;i đ&oacute; kh&ocirc;ng?</em></p>
+              <p><strong>Mary</strong>: Well, sixteen dollars is a little <strong>steep</strong> for one, but twenty-four dollars for two might <strong>be worth</strong> it.</p>
+              <p><strong><em>Mary</em></strong><em>: Để xem, mười s&aacute;u đ&ocirc; la cho một lọ th&igrave; <strong>qu&aacute; đắt</strong>, nhưng hai tư đ&ocirc; la cho hai lọ th&igrave; <strong>đ&aacute;ng gi&aacute;.</strong></em></p>
+              <p><strong>Cashier</strong>: So your new total is eighty dollars.</p>
+              <p><strong><em>Cashier</em></strong><em>: Như vậy tổng số mới của chị l&agrave; t&aacute;m mươi đ&ocirc; la.</em></p>
+              <p><strong>Mary</strong>: And I have some <strong>coupons</strong>...</p>
+              <p><strong><em>Mary</em></strong><em>: V&agrave; t&ocirc;i c&oacute; v&agrave;i <strong>phiếu giảm gi&aacute;</strong>...</em></p>
+              <p><strong>Cashier</strong>: <strong>Would you like to</strong> use all of those?</p>
+              <p><strong><em>Cashier</em></strong><em>: <strong>Chị c&oacute; muốn</strong> sử dụng tất cả ch&uacute;ng kh&ocirc;ng?</em></p>
+              <p><strong>Mary</strong>: Yes.</p>
+              <p><strong><em>Mary</em></strong><em>: C&oacute;.</em></p>
+              <p><strong>Cashier</strong>: ... So your new total is ... 1 dollar. How would you like to pay? <strong>Cash</strong> or <strong>credit?</strong></p>
+              <p><strong><em>Cashier</em></strong><em>: ... Tổng số mới của chị l&agrave; ... 1 đ&ocirc; la. Chị muốn thanh to&aacute;n như thế n&agrave;o? <strong>Tiền mặt</strong> hay <strong>thẻ t&iacute;n dụng?</strong></em></p>
+              <p><strong>Mary</strong>: Cash, please.</p>
+              <p><strong><em>Mary</em></strong><em>: Tiền mặt, l&agrave;m ơn.</em></p>`
+                    },
+                    {
+                        title: `Topic 3: What’s Your Style`,
+                        audioLinkSlow: `assets/audio/LESSON 04 - RENTING AND SHOPPING/Recording 4.5 - Slow Speech -Topic 3 - What’s Your Style.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 04 - RENTING AND SHOPPING/Recording 4.6 - Native Speech - Topic 3 - What_s Your Style.mp3`,
+                        data: `<!-- #######  YAY, I AM THE SOURCE EDITOR! #########--><p>Sonya and Alice are walking on the street, then they&rsquo;re attracted by a cute tomboy outfit in the window of a nearby shop.</p>
+              <p><em>Sonya v&agrave; Alice đang đi bộ tr&ecirc;n phố th&igrave; bị thu h&uacute;t bởi một bộ đồ kiểu tomboy dễ thương ở của sổ của một cửa h&agrave;ng gần đ&oacute;.</em></p>
+              <p><strong>Sonya</strong>: Oh my gosh, look at this <strong>outfit</strong>. Isn&rsquo;t it great?</p>
+              <p><strong><em>Sonya</em></strong><em>: &Ocirc;i trời ơi, nh&igrave;n <strong>bộ đồ</strong> n&agrave;y đi. Kh&ocirc;ng phải n&oacute; rất tuyệt sao?</em></p>
+              <p><strong>Alice</strong>: Maybe for a guy, but not girls.</p>
+              <p><strong><em>Alick</em></strong><em>: C&oacute; thể l&agrave; tuyệt với con trai, nhưng kh&ocirc;ng phải với con g&aacute;i.</em></p>
+              <p><strong>Sonya</strong>: What&rsquo;s wrong? You don&rsquo;t like the <strong>tomboy</strong> look?</p>
+              <p><strong><em>Sonya</em></strong><em>: Sao thế? Cậu kh&ocirc;ng th&iacute;ch phong c&aacute;ch <strong>tomboy</strong> &agrave;?</em></p>
+              <p><strong>Alice</strong>: Erm. I like the tomboy look like how I like fast food... And I don&rsquo;t eat fast food... It&rsquo;s <strong>trendy,</strong> but I think women should <strong>dress like women.</strong></p>
+              <p><strong><em>Alcie</em></strong><em>: Xem n&agrave;o. T&ocirc;i th&iacute;ch phong c&aacute;ch tomboy, giống như c&aacute;ch t&ocirc;i th&iacute;ch đồ ăn nhanh... V&agrave; t&ocirc;i kh&ocirc;ng ăn đồ ăn nhanh... N&oacute; <strong>hợp thời,</strong> nhưng t&ocirc;i nghĩ rằng phụ nữ th&igrave; n&ecirc;n <strong>mặc giống phụ nữ.</strong></em></p>
+              <p><strong>Sonya</strong>: I <strong>respect</strong> that. I think it&rsquo;s fun and cool to be a little <strong>different</strong> sometimes. Some guys like it, too.</p>
+              <p><strong><em>Sonya</em></strong><em>: T&ocirc;i <strong>t&ocirc;n trọng</strong> điều đ&oacute;. T&ocirc;i cho l&agrave; thỉnh thoảng <strong>thay đổi</strong> một ch&uacute;t cũng rất th&uacute; vị. Một v&agrave;i anh ch&agrave;ng cũng th&iacute;ch thế m&agrave;.</em></p>
+              <p><strong>Alice</strong>: You&rsquo;re right. But my <strong>shoulders</strong> are too wide to <strong>pull it off.</strong> I look like a man.</p>
+              <p><strong><em>Alice</em></strong><em>: Cậu n&oacute;i đ&uacute;ng. Nhưng <strong>vai</strong> của t&ocirc;i qu&aacute; rộng n&ecirc;n kh&ocirc;ng thể <strong>mặc c&aacute;i n&agrave;y đẹp được.</strong> Tr&ocirc;ng t&ocirc;i như một người đ&agrave;n &ocirc;ng vậy.</em></p>
+              <p><strong>Sonya</strong>: No! I <strong>wish</strong> I had your shoulders. Anyway, do you want to <strong>go shopping?</strong></p>
+              <p><strong><em>Sonya</em></strong><em>: Kh&ocirc;ng! T&ocirc;i <strong>ước</strong> t&ocirc;i c&oacute; đ&ocirc;i vai của cậu. D&ugrave; sao th&igrave;, cậu c&oacute; muốn <strong>đi mua sắm kh&ocirc;ng?</strong></em></p>
+              <p><strong>Alice</strong>: Yes. Maybe I&rsquo;ll <strong>try on</strong> some <strong>tomboy-ish</strong> stuff. Who knows, I might like it.</p>
+              <p><strong><em>Alice</em></strong><em>: C&oacute; chứ. C&oacute; lẽ t&ocirc;i sẽ <strong>thử</strong> v&agrave;i <strong>kiểu tomboy.</strong> Ai m&agrave; biết được c&oacute; thể t&ocirc;i sẽ th&iacute;ch.</em></p>
+              <p><strong>Sonya</strong>: <strong>It sounds like</strong> someone is going to have a whole new <strong>style</strong>!</p>
+              <p><strong><em>Sonya</em></strong><em>: <strong>Nghe c&oacute; vẻ như</strong> ai đ&oacute; sắp c&oacute; một phong c&aacute;ch ho&agrave;n to&agrave;n mới k&igrave;a!</em></p>`
+                    }
+                ]
+            },
+            {
+                case: `Day 5`,
+                title: `Phản xạ đa chiều - What is Your Job?`,
+                content: [
+                    {
+                        title: `Topic 3: Why Didn_t You Come to My Party`,
+                        audioLinkSlow: `assets/audio/LESSON 03 - TIME/Recording 3.5 - Slow Speech-Topic 3- Why Didn_t You Come to My Party.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 03 - TIME/Recording 3.6 - Native Speech - Topic 3 - Why Didn_t You Come to My Party.mp3`,
+                        data: `<!-- #######  YAY, I AM THE SOURCE EDITOR! #########-->`
+                    }
+                ]
+            },
+            {
+                case: `Day 6`,
+                title: `Thử thách`,
+                content: [
+                    {
+                        title: `Topic 3: What is your job`,
+                        // tslint:disable-next-line:max-line-length
+                        audioLinkReflection: `assets/audio/LESSON 01 - INTRODUCTION/Recording 1.11 - Production.mp3`,
+                        data: `
+              ✔️ Tải phần tài liệu production sau đây về máy – bấm vào đây để download (nếu bạn đang truy cập khóa học trên app, vui lòng vào web để tải trực tiếp tài liệu này) – Luyện tập từ 2-3 lần (Có thể nhìn phần dịch và từ điển nếu cần).<br/>
+              ✔️ Nghe Recording 1.11 và trả lời vào khoảng trống từ 3-5 lần<br/>
+              ✔️ Hãy tưởng tượng bạn vô tình gặp một người nước ngoài tại một địa điểm du lịch nào đó, bạn hãy chủ động là người hỏi chuyện và làm quen với người bạn đó.<br/>
+              ✔️ Hãy tạo ra một kịch bản từ 10 – 15 câu hỏi đáp và thực hành nói trước gương sao cho thật tự nhiên.<br/>
+              ✔️ Bạn cũng có thể tìm một người bạn để đối thoại cùng nhau như các nhân vật tại Lesson 01!<br/>
+              Bạn đã hoàn thành việc luyện tập Lesson 01 – Eng Breaking. Ngay bây giờ, hãy đến với bài Đánh giá (Assessment) để nâng cao kỹ năng và ôn luyện kiến thức ở Lesson 01.`
+                    }
+                ]
+            }
+        ]
     }
 ];
 
