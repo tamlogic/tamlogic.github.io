@@ -70,7 +70,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"animated fadeIn\">\n  <div *ngFor=\"let item of lessons\" class=\"card\">\n    <div class=\"card-header\">\n      <button type=\"button\" class=\"btn btn-info text-light\"\n              (click)=\"item.openCollapse = !item.openCollapse\">{{item.title}}\n      </button>\n      <div class=\"card-header-actions\">\n        <button type=\"button\" class=\"btn btn-success\"\n                (click)=\"item.openCollapse = !item.openCollapse\">Try it\n        </button>\n      </div>\n    </div>\n    <div class=\"card-body\"\n         (collapsed)=\"collapsed($event)\"\n         (expanded)=\"expanded($event)\"\n         [collapse]=\"item.openCollapse\">\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <div [innerHTML]=\"item.data\"></div>\n        </div>\n        <div class=\"col-4 text-right pt-2 d-flex flex-column text-right\">\n          <span class=\"badge badge-danger badge-pill p-1 mb-2\" style=\"position: static;\">Further practice</span>\n          <audio controls>\n            <source src=\"{{item.audioLink}}\" type=\"audio/mpeg\">\n          </audio>\n          <button type=\"button\" class=\"btn btn-info text-light p-1 mt-3\"\n                  (click)=\"stopAll()\">Reload all audio\n          </button>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"animated fadeIn\">\n  <div class=\"pb-3\">\n    <select style=\"width: 200px;\" [value]=\"selectedLesson\" (change)=\"onChangeLesson($event)\" class=\"form-control\">\n      <option [value]=\"1\">1</option>\n      <option [value]=\"2\">2</option>\n      <option [value]=\"3\">3</option>\n      <option [value]=\"4\">4</option>\n      <option [value]=\"5\">5</option>\n      <option [value]=\"6\">6</option>\n      <option [value]=\"7\">7</option>\n      <option [value]=\"8\">8</option>\n      <option [value]=\"9\">9</option>\n      <option [value]=\"10\">10</option>\n      <option [value]=\"11\">11</option>\n      <option [value]=\"12\">12</option>\n    </select>\n  </div>\n  <div *ngFor=\"let item of fakeLessons\" class=\"card\">\n    <div class=\"card-header\">\n      <button type=\"button\" class=\"btn btn-info text-light\"\n              (click)=\"item.openCollapse = !item.openCollapse\">{{item.title}}\n      </button>\n      <div class=\"card-header-actions\">\n        <button type=\"button\" class=\"btn btn-success\"\n                (click)=\"item.openCollapse = !item.openCollapse\">Try it\n        </button>\n      </div>\n    </div>\n    <div class=\"card-body\"\n         (collapsed)=\"collapsed($event)\"\n         (expanded)=\"expanded($event)\"\n         [collapse]=\"item.openCollapse\">\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <div [innerHTML]=\"item.data\"></div>\n        </div>\n        <div class=\"col-4 text-right pt-2 d-flex flex-column text-right\">\n          <span class=\"badge badge-danger badge-pill p-1 mb-2\" style=\"position: static;\">Further practice</span>\n          <audio controls>\n            <source src=\"{{item.audioLink}}\" type=\"audio/mpeg\">\n          </audio>\n          <button type=\"button\" class=\"btn btn-info text-light p-1 mt-3\"\n                  (click)=\"stopAll()\">Reload all audio\n          </button>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -83,7 +83,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (":host ::ng-deep .chat-custom > #ng-chat > ng-chat-friends-list > #ng-chat-people {\n  height: 600px !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFxsZXNzb24uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0U7RUFDRSx3QkFBQTtBQUFKIiwiZmlsZSI6Imxlc3Nvbi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjpob3N0IDo6bmctZGVlcCB7XG4gIC5jaGF0LWN1c3RvbT4jbmctY2hhdD5uZy1jaGF0LWZyaWVuZHMtbGlzdD4jbmctY2hhdC1wZW9wbGUge1xuICAgIGhlaWdodDogNjAwcHggIWltcG9ydGFudDtcbiAgfVxufVxuIl19 */");
+/* harmony default export */ __webpack_exports__["default"] = (":host ::ng-deep .chat-custom > #ng-chat > ng-chat-friends-list > #ng-chat-people {\n  height: 600px !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXC4uXFwuLlxcbGVzc29uLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNFO0VBQ0Usd0JBQUE7QUFBSiIsImZpbGUiOiJsZXNzb24uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCA6Om5nLWRlZXAge1xuICAuY2hhdC1jdXN0b20+I25nLWNoYXQ+bmctY2hhdC1mcmllbmRzLWxpc3Q+I25nLWNoYXQtcGVvcGxlIHtcbiAgICBoZWlnaHQ6IDYwMHB4ICFpbXBvcnRhbnQ7XG4gIH1cbn1cbiJdfQ== */");
 
 /***/ }),
 
@@ -108,9 +108,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ListenReadComponent = class ListenReadComponent {
-    constructor() { }
+    constructor() {
+        this.selectedLesson = '1';
+    }
     ngOnInit() {
         this.getLessons();
+        this.fakeLessons = this.lessons;
     }
     getLessons() {
         this.lessons = _listen_read__WEBPACK_IMPORTED_MODULE_4__["ListenReads"];
@@ -120,6 +123,10 @@ let ListenReadComponent = class ListenReadComponent {
     }
     expanded(event) {
         // console.log(event);
+    }
+    onChangeLesson(e) {
+        this.selectedLesson = e.target.value;
+        this.fakeLessons = this.lessons.filter(x => x.id === parseInt(this.selectedLesson, 10));
     }
 };
 ListenReadComponent.ctorParameters = () => [];
@@ -170,9 +177,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let GrammarComponent = class GrammarComponent {
-    constructor() { }
+    constructor() {
+        this.selectedLesson = '1';
+    }
     ngOnInit() {
         this.getLessons();
+        this.fakeLessons = this.lessons;
     }
     getLessons() {
         this.lessons = _grammar__WEBPACK_IMPORTED_MODULE_4__["Grammars"];
@@ -190,6 +200,10 @@ let GrammarComponent = class GrammarComponent {
     // Try to mute all video and audio elements on the page
     stopAll() {
         document.querySelectorAll(`video, audio`).forEach(elem => this.stopMe(elem));
+    }
+    onChangeLesson(e) {
+        this.selectedLesson = e.target.value;
+        this.fakeLessons = this.lessons.filter(x => x.id === parseInt(this.selectedLesson, 10));
     }
 };
 GrammarComponent.ctorParameters = () => [];
@@ -383,6 +397,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Grammars", function() { return Grammars; });
 let Grammars = [
     {
+        id: 1,
         title: 'Lesson 01 - Introduction',
         openCollapse: true,
         name: `Introduction`,
@@ -442,6 +457,7 @@ let Grammars = [
       </div>`
     },
     {
+        id: 2,
         title: 'Lesson 02 - People',
         openCollapse: true,
         name: `People`,
@@ -503,6 +519,7 @@ let Grammars = [
       </div>`
     },
     {
+        id: 3,
         title: 'Lesson 03 - Time',
         openCollapse: true,
         name: `Time`,
@@ -572,7 +589,8 @@ let Grammars = [
       </div>`,
     },
     {
-        title: 'Lesson 04 - RENTING AND SHOPPING',
+        id: 4,
+        title: 'Lesson 04 - Renting and shopping',
         openCollapse: true,
         name: `Renting and shopping`,
         displayOrder: 4,
@@ -650,6 +668,1021 @@ let Grammars = [
       </div>
       </div>
       </div>`
+    },
+    {
+        id: 5,
+        title: 'Lesson 05 - Hobbies',
+        openCollapse: true,
+        name: `Hobbies`,
+        displayOrder: 5,
+        audioLink: `assets/audio/LESSON 05 - HOBBIES/Recording 5.7 - Immersion.mp3`,
+        data: `<p><strong>Topic 01: You Listen to What?</strong></p>
+      <p><strong>Vocabulary</strong></p>
+      <ol>
+      <li>Cold: Lạnh // (adjective) &ndash; Wow! It&rsquo;s so <strong>cold</strong> here!</li>
+      <li>Promis: Hứa // (verb) &ndash; Yes, <strong>promise</strong> you won&rsquo;t tell anyone, okay?</li>
+      <li>Music: &Acirc;m nhạc // (noun) &ndash; Actually, K-pop is the only kind of <strong>music</strong> I listen to.</li>
+      <li>Listen: Nghe // (verb) &ndash; Actually, K-pop is the only kind of music I <strong>listen</strong></li>
+      <li>Idol: Thần tượng // (noun) &ndash; Youn Yojong is my <strong>idol</strong>.</li>
+      <li>Hip hop: Nhạc hip hop // (noun) &ndash; But please keep this a secret, all of my friends only listen to <strong>hip hop.</strong></li>
+      <li>Understand: Hiểu, nắm được &yacute; (của một người) // (verb) &ndash; I <strong>understand</strong> how you feel.</li>
+      <li>Feel: Cảm thấy, cảm gi&aacute;c // (verb) &ndash; I understand how you <strong>feel</strong>.</li>
+      <li>Folk music: Nhạc d&acirc;n ca // (noun) &ndash; I used to be embarrassed about liking <strong>folk music.</strong></li>
+      </ol>
+      <p><strong>Expression</strong></p>
+      <ol>
+      <li>Wow! I&rsquo;ts so cold here! &ndash; <strong>Wow! It&rsquo;s so cold here!</strong> &ndash; &lsquo;Cuz there&rsquo;re a lot of fans! Yeah!!</li>
+      </ol>
+      <p>Ch&agrave;! Ở đ&acirc;y lạnh qu&aacute;!</p>
+      <ol start="2">
+      <li>Are you into K-pop? &ndash; Oh my gosh, is that Black-Two? <strong>Are you into K-pop?</strong></li>
+      </ol>
+      <p>Cậu th&iacute;ch nhạc H&agrave;n Quốc &agrave;?</p>
+      <ol start="3">
+      <li>Promise you won&rsquo;t tell anyone &ndash; <strong>Promise you won&rsquo;t tell anyony, okay?</strong> &ndash; Of course. You&rsquo;re not the only one. I think K-pop is cool, too.</li>
+      </ol>
+      <p>Hứa l&agrave; cậu sẽ kh&ocirc;ng n&oacute;i cho ai biết.</p>
+      <ol start="4">
+      <li>What other kinds of music &ndash; I think K-pop is cool, too. <strong>What other kinds of music do you like?</strong></li>
+      </ol>
+      <p>Loại nhạc n&agrave;o kh&aacute;c.</p>
+      <ol start="5">
+      <li>I understand how you feel &ndash; <strong>I understand how you feel.</strong> I used to be embarrassed about liking folk music.</li>
+      </ol>
+      <p>T&ocirc;i hiểu cả gi&aacute;c của cậu.</p>
+      <ol start="6">
+      <li>I used to be embarrassed about liking folk music &ndash; I understand how you feel. <strong>I used to be embarrassed about liking folk music.</strong></li>
+      </ol>
+      <p>T&ocirc;i đ&atilde; từng thấy xấu hổ khi th&iacute;ch nhạc d&acirc;n ca.</p>
+      <ol start="7">
+      <li>What do you like about folk music? &ndash; Really? <strong>What do you like about folk music?</strong> &ndash; Folk music is really meaningful to me, and I think that it&rsquo;s beautiful.</li>
+      </ol>
+      <p>Cậu th&iacute;ch g&igrave; ở nhạc d&acirc;n ca?</p>
+      <ol start="8">
+      <li>Meaningful to me &ndash; Really? What do you like about folk music? &ndash; Folk music is really <strong>meaningful to me,</strong> and I think that it&rsquo;s beautiful.</li>
+      </ol>
+      <p>&Yacute; nghĩa với t&ocirc;i.</p>
+      <ol start="9">
+      <li>You think so? &ndash; Yeah, I feel the same way about K-pop... The whole meaningful thing &ndash; <strong>You think so?</strong></li>
+      </ol>
+      <p>Cậu nghĩ vậy &agrave;?</p>
+      <ol start="10">
+      <li>I&rsquo;ll have to listen to more of it &ndash; Maybe <strong>I&rsquo;ll have to listen to more of it</strong></li>
+      </ol>
+      <p>T&ocirc;i sẽ phải nghe n&oacute; nhiều hơn.</p>
+      <ol start="11">
+      <li>Put your hands up in the air &ndash; Okay now? <strong>Put your hands up in the air</strong>!!! Yeah!!!</li>
+      </ol>
+      <p>Ch&aacute;y hết m&igrave;nh th&ocirc;i n&agrave;o.</p>
+      <p>&nbsp;</p>
+      <p><strong>Topic 2: I Prefer Comedies</strong></p>
+      <p><strong>Vocabulary</strong></p>
+      <ol>
+      <li>Depend: Phụ thuộc, t&ugrave;y thuộc // (verb) &ndash; It <strong>depends</strong>. What movie are you talking about?</li>
+      <li>Scary: Đ&aacute;ng sợ, r&ugrave;ng rợn // (adjective) &ndash; That sounds a little too <strong>scary</strong> for me.</li>
+      <li>Comedies: Phim h&agrave;i // (noun) &ndash; No way! I just prefer <strong>comedies</strong>.</li>
+      <li>Dramas: Phim truyền h&igrave;nh // (noun) &ndash; Well What about <strong>dramas</strong>, do you like those?</li>
+      <li>Guess: Đo&aacute;n, nghĩ, chắc rằng // (verb) They-re okay, I <strong>guess</strong>.</li>
+      <li>Subtitles: Phụ đề // (noun) &ndash; A foreign film? So I&rsquo;ll have to read <strong>subtitles</strong> the whole time?</li>
+      <li>Movie theater: Rạp chiếu phim // (noun) &ndash; I know that a French one is showing at the little <strong>movie theater</strong></li>
+      <li>Downtown: Trung t&acirc;m th&agrave;nh phố // (noun) &ndash; I know that a French one is showing at the little movie theater <strong>downtown</strong>.</li>
+      </ol>
+      <p><strong>Expression</strong></p>
+      <ol>
+      <li>Do you like &ndash; Hey, Carl, <strong>do you like</strong> scary movies?</li>
+      </ol>
+      <p>Cậu c&oacute; th&iacute;ch.</p>
+      <ol start="2">
+      <li>I really want to see &ndash; Well, I <strong>really want to see</strong> The Ring, it just came out.</li>
+      </ol>
+      <p>T&ocirc;i rất muốn xem.</p>
+      <ol start="3">
+      <li>It just came out &ndash; Well, I really want to see The Ring, <strong>it just came out.</strong></li>
+      </ol>
+      <p>Vừa mới ra mắt.</p>
+      <ol start="4">
+      <li>That sounds a little too scary for me &ndash; Oh gosh, I don&rsquo;t know... <strong>that sounds a little too scary for me.</strong></li>
+      </ol>
+      <p>C&aacute;i đ&oacute; nghe hơi qu&aacute; đ&aacute;ng sợ với t&ocirc;i.</p>
+      <ol start="5">
+      <li>Are you a chicken? &ndash; Wait a second, <strong>are you a chicken?</strong></li>
+      </ol>
+      <p>Cậu nh&aacute;t gan thế &agrave;?</p>
+      <ol start="6">
+      <li>I just prefer comedies &ndash; No way! I <strong>just prefer comedies.</strong> To me, the whole point of movies is to make people laugh.</li>
+      </ol>
+      <p>Chỉ l&agrave; t&ocirc;i th&iacute;ch c&aacute;c phim h&agrave;i hơn.</p>
+      <ol start="7">
+      <li>The whole point of movies is to make people laugh. &ndash; No way! I just prefer comedies. To me, <strong>the whole point of movies is to make people laugh.</strong></li>
+      </ol>
+      <p>Mục đ&iacute;ch cuối c&ugrave;ng của c&aacute;c bộ phim l&agrave; để khiến mọi người cười.</p>
+      <ol start="8">
+      <li>What about dramas &ndash; Well <strong>what about dramas,</strong> do you like those?</li>
+      </ol>
+      <p>Thế những bộ phim truyền h&igrave;nh th&igrave; sao.</p>
+      <ol start="9">
+      <li>Out right now &ndash; They&rsquo;re okay, I guess. Are any good dramas <strong>out right now?</strong></li>
+      </ol>
+      <p>Đang chiếu.</p>
+      <ol start="10">
+      <li>Showing at &ndash; I know that a French one is <strong>showing at</strong> the little movie theater downtown.</li>
+      </ol>
+      <p>Đang chiếu tại.</p>
+      <ol start="11">
+      <li>Foreign film &ndash; <strong>A foreign film?</strong> So I&rsquo;ll have to read subtitles the whole time?</li>
+      </ol>
+      <p>Phim nước ngo&agrave;i.</p>
+      <p><strong>Topic 3: My Favorite Sport</strong></p>
+      <p><strong>Vocabulary</strong></p>
+      <ol>
+      <li>American football: B&oacute;ng bầu dục // (noun) &ndash; Some of my friends are really into <strong>American football.</strong></li>
+      <li>Badminton: Cầu l&ocirc;ng // (noun) &ndash; I have another friend, who&rsquo;s absolutely crazy about</li>
+      <li>Swimming: Bơi lội // (noun) &ndash; <strong>Swimming</strong> is fun &ndash; mostly, but it&rsquo;s challenging.</li>
+      <li>Gin Rummy: B&agrave;i Gin Rummy // (noun) &ndash; Maybe I&rsquo;ll just learn how to play <strong>Gin Rummy,</strong></li>
+      <li>Chasing: Đuổi, săn đuổi // (verb) &ndash; I, on the other hand, get bored out of my mid <strong>chasing</strong> a little &ldquo;birdie&rdquo; around the backyard.</li>
+      <li>Challenging: Kh&oacute; khăn, th&aacute;ch thức &ndash; Swimming is fun &ndash; mostly, but it&rsquo;s</li>
+      <li>Drowning: Chết đuối // (verb) &ndash; On the other hand, if I learn how to swim and someone else is <strong>drowning,</strong> I might be able to save a life.</li>
+      <li>Flail: Chạy quanh // (verb) &ndash; Although, now that I think about it, I&rsquo;d rather <strong>flail</strong> around the backyard chasing a little birdie...</li>
+      </ol>
+      <p><strong>Expression</strong></p>
+      <ol>
+      <li>Favorite sport &ndash; Someone asked me the other day, what my <strong>favorite sport</strong> is and I realized, I don&rsquo;t have a favorite sport.</li>
+      </ol>
+      <p>M&ocirc;n thể thao y&ecirc;u th&iacute;ch.</p>
+      <ol start="2">
+      <li>It&rsquo;s fun &ndash; I guess <strong>it&rsquo;s fun</strong> &ndash; if you like getting crushed by a guy who&rsquo;s the size of refrigerator.</li>
+      </ol>
+      <p>Vui, th&uacute; vị, hay đấy.</p>
+      <ol start="3">
+      <li>Getting crushed &ndash; I guess it&rsquo;s fun &ndash; if you like <strong>getting crushed</strong> by a guy who&rsquo;s the size of a refrigerator.</li>
+      </ol>
+      <p>Bị đ&egrave; bẹp.</p>
+      <ol start="4">
+      <li>Crazy about badminton &ndash; I have another friend, who&rsquo;s absolutely <strong>crazy about badminton.</strong></li>
+      </ol>
+      <p>Đi&ecirc;n cuồng v&igrave; cầu l&ocirc;ng.</p>
+      <ol start="5">
+      <li>Get bored out of my mind &ndash; I, on the other hand, <strong>get bored out of my mind</strong> chasing a little &ldquo;birdie&rdquo; around the backyard.</li>
+      </ol>
+      <p>Ch&aacute;n ngắt.</p>
+      <ol start="6">
+      <li>Save a life &ndash; On the other hand, if I learn how to swim and someone else is rowning, I might be able to <strong>save a life.</strong> That&rsquo;d be fun.</li>
+      </ol>
+      <p>Cứu một mạng sống.</p>
+      <ol start="7">
+      <li>Why complicate thing? &ndash; <strong>Why complicate things?</strong> Life&rsquo;s too sort for sports.</li>
+      </ol>
+      <p>Tại sai phải phức tạp h&oacute;a mọi thứ?</p>`
+    },
+    {
+        id: 6,
+        title: 'Lesson 06 - Food',
+        openCollapse: true,
+        name: `Food`,
+        displayOrder: 6,
+        audioLink: `assets/audio/LESSON 06 - FOOD/Recording 6.7 - Immersion.mp3`,
+        data: `<p><strong>Topic 1: I Have a Bit of a Sweet Tooth</strong></p>
+      <p><strong>Vocabulary</strong></p>
+      <ol>
+      <li>Menu: Thực đơn // (noun) &ndash; Would you like some time to look over the <strong>menu</strong>?</li>
+      <li>Appetizers: M&oacute;n khai vị // (noun) &ndash; Could we start with some <strong>appetizers</strong> for the table, please?</li>
+      <li>Weight: C&acirc;n nặng // (noun) I&rsquo;m watching my <strong>weight</strong>.</li>
+      <li>Portion: Khẩu phần ăn // (noun) &ndash; Do you think one <strong>portion</strong> is enough for everyone?</li>
+      <li>Hurt: G&acirc;y hại // (verb) &ndash; A little cake never <strong>hurt</strong>..</li>
+      <li>Slice: Miếng, l&aacute;t, phần // (verb) &ndash; Sorry, do you mean one <strong>slice</strong>?</li>
+      <li>Today&rsquo;s special: M&oacute;n đặc biệt của ng&agrave;y h&ocirc;m nay // (noun) &ndash; Of course, <strong>today&rsquo;s special</strong> is garlic bread. Would you like that?</li>
+      <li>Worried: Lo lắng // (adjective) &ndash; That&rsquo;s a good idea. But I&rsquo;m <strong>worried</strong> that&rsquo;s too much.</li>
+      <li>Dessert: M&oacute;n tr&aacute;ng miệng // (noun) &ndash; And if you&rsquo;re still hungry, you can always order <strong>dessert</strong>.</li>
+      <li>Family style: Phong c&aacute;ch, kiểu gia đ&igrave;nh // (noun) &ndash; How do you feel about ordering a few <strong>family style</strong> dishes?</li>
+      </ol>
+      <p><strong>Expression</strong></p>
+      <ol>
+      <li>Would you like some time to look over the menu? &ndash; Hi welcome to Mario&rsquo;s Italian Restaurant. <strong>Would you like some time to look over the menu?</strong></li>
+      </ol>
+      <p>Chị c&oacute; cần thời gian để xem qua thực đơn kh&ocirc;ng?</p>
+      <ol start="2">
+      <li>Could we start with some appertizers for the table, please? &ndash; We already know what we&rsquo;d like. <strong>Could we start with some appertizers for the table, please?</strong></li>
+      </ol>
+      <p>Ch&uacute;ng t&ocirc;i c&oacute; thể bắt đầu với c&aacute;c m&oacute;n khai vị được kh&ocirc;ng?</p>
+      <ol start="3">
+      <li>Do you think one portion is enough for everyone? &ndash; Yes, please. <strong>Do you think one portion is enough for everyone?</strong></li>
+      </ol>
+      <p>Anh c&oacute; nghĩ rằng một phần l&agrave; đủ cho tất cả mọi người kh&ocirc;ng?</p>
+      <ol start="4">
+      <li>Get a salad to share &ndash; It should be. If you&rsquo;d like, you could also <strong>get a salad to share.</strong></li>
+      </ol>
+      <p>Gọi một phần rau trộn để ăn chung với nhau.</p>
+      <ol start="5">
+      <li>Order a main dish &ndash; That&rsquo;s a good idea. But I&rsquo;m worried that&rsquo;s too much. We all want to <strong>order a main dish</strong> as well.</li>
+      </ol>
+      <p>Gọi một m&oacute;n ch&iacute;nh.</p>
+      <ol start="6">
+      <li>Take it home &ndash; How do you feel about ordering a few family style dishes? It it&rsquo;s too much you can <strong>take it home.</strong></li>
+      </ol>
+      <p>Mang về nh&agrave;.</p>
+      <ol start="7">
+      <li>Watching my weight &ndash; Oh no, I shouldn&rsquo;t eat any thing too sweet, I&rsquo;m <strong>watching my weight.</strong></li>
+      </ol>
+      <p>Giảm c&acirc;n.</p>
+      <ol start="8">
+      <li>A little cake never hurt anyone &ndash; Oh no, I shouldn&rsquo;t eat anything too sweet, I&rsquo;m watching my weight. &ndash; <strong>A little cake never hurt anyone...</strong></li>
+      </ol>
+      <p>Một ch&uacute;t b&aacute;nh sẽ kh&ocirc;ng g&acirc;y hại cho ai cả</p>
+      <ol start="9">
+      <li>That&rsquo;s a good idea &ndash; <strong>That&rsquo;s a good idea.</strong> But I&rsquo;m worried that&rsquo;s too much.</li>
+      </ol>
+      <p>Đ&oacute; l&agrave; một &yacute; kiến hay.</p>
+      <ol start="10">
+      <li>Thought of that &ndash; I hadn&rsquo;t <strong>thought of that.</strong> What do you all thinks?</li>
+      </ol>
+      <p>Nghĩ ra điều đ&oacute;.</p>
+      <p><strong>Topic 2: Home Cooking</strong></p>
+      <p><strong>Vocabulary</strong></p>
+      <ol>
+      <li>Dinner: Bữa tối // (noun) &ndash; We&rsquo;re about to have <strong>dinner</strong>.</li>
+      <li>Plans: Kế hoạch // (noun) &ndash; Sorry, I&rsquo;d like to stay Mom, but I have <strong>plans</strong> with a friend tonight.</li>
+      <li>Fast food: Thức ăn nhanh // (noun) &ndash; You&rsquo;ve been eating <strong>fast food</strong> way too often.</li>
+      <li>French fries: Khoai t&acirc;y chi&ecirc;n // (noun) &ndash; You know <strong>french fries</strong> are potatoes, and they&rsquo;re sort of healthy, too.</li>
+      </ol>
+      <p>&nbsp;</p>
+      <p><strong>Expression</strong></p>
+      <ol>
+      <li>We&rsquo;re about to have dinner &ndash; Where are you going? <strong>We&rsquo;re about to have dinner.</strong></li>
+      </ol>
+      <p>Ch&uacute;ng ta sắp ăn tối rồi.</p>
+      <ol start="2">
+      <li>Have plans &ndash; Sorry, I&rsquo;d like to stay Mom, but I <strong>have plans</strong> with a friend tonight.</li>
+      </ol>
+      <p>C&oacute; kế hoạch.</p>
+      <ol start="3">
+      <li>To work over dinner &ndash; Actually we&rsquo;re going <strong>to work over dinner.</strong></li>
+      </ol>
+      <p>L&agrave;m việc trong bữa tối.</p>
+      <ol start="4">
+      <li>Way too often &ndash; Burgers again? You&rsquo;ve been eating fast food <strong>way too often.</strong></li>
+      </ol>
+      <p>Một c&aacute;ch qu&aacute; thường xuy&ecirc;n.</p>
+      <ol start="5">
+      <li>No offense to you &ndash; Well <strong>no offense to you,</strong> but you&rsquo;re beginning to look like a McBurger.</li>
+      </ol>
+      <p>Kh&ocirc;ng c&oacute; &yacute; g&igrave; đ&acirc;u.</p>
+      <p><strong>Topic 3: Easy as Pie</strong></p>
+      <p><strong>Vocabulary</strong></p>
+      <ol>
+      <li>Disaster: Thảm họa // (noun) &ndash; Well that was a <strong>disaster</strong>.</li>
+      <li>Ordering: Gọi (m&oacute;n ăn, thức uống...), đặt (h&agrave;ng...) // (noun) &ndash; It turns out <strong>ordering</strong> out is a lot easier than cooking at home.</li>
+      <li>Easier: Dễ // (adjective) &ndash; It turns out ordering out is a lot <strong>easier</strong> than cooking at home.</li>
+      <li>Cooking: Nấu ăn // (verb) &ndash; It turns out ordering out is a lot easier than <strong>cooking</strong> at home.</li>
+      <li>A lot: Nhiều // (quantifier) &ndash; It turns out ordering out is <strong>a lot</strong> easier than cooking at home.</li>
+      <li>Difficult: Kh&oacute; khăn // (adjective) &ndash; And cooking is much more <strong>difficult</strong> than it looks in videos.</li>
+      <li>Tricky: Phức tạp, rắc rối // (adjective) &ndash; Thankfully, the icing wasn&rsquo;t <strong>tricky</strong>, so the cake didn&rsquo;t look that bad.</li>
+      </ol>
+      <p>&nbsp;</p>
+      <p><strong>Expression</strong></p>
+      <ol>
+      <li>Much more difficult than it looks &ndash; And cooking is <strong>much more difficult than it looks</strong> in videos.</li>
+      </ol>
+      <p>Kh&oacute; hơn nhiều so với l&uacute;c nh&igrave;n.</p>
+      <ol start="2">
+      <li>How complicated could it be? &ndash; <strong>How complicated could it be?</strong> It&rsquo;s just cake and icing, I thought.</li>
+      </ol>
+      <p>Phức tạp đến đ&acirc;u chứ.</p>
+      <ol start="3">
+      <li>Followed the video instructions &ndash; I put my phone on the kitchen counter and <strong>followed the video instructions.</strong></li>
+      </ol>
+      <p>L&agrave;m theo video hướng dẫn.</p>
+      <ol start="4">
+      <li>You&rsquo;re doing great! &ndash; The woman in the clip kept saying &ldquo;<strong>Your&rsquo;re doing great!</strong>&rdquo; and &ldquo;Doesn&rsquo;t that look delicious?&rdquo;</li>
+      </ol>
+      <p>Bạn đang l&agrave;m rất tốt!</p>
+      <ol start="5">
+      <li>Doesn&rsquo;t that look delicious? &ndash; The woman in the clip kept saying &ldquo;You&rsquo;re doing great!&rdquo; and &ldquo;<strong>Doesn&rsquo;t that look delicious?</strong>&rdquo;</li>
+      </ol>
+      <p>Tr&ocirc;ng n&oacute; kh&ocirc;ng ngon sao?</p>
+      <ol start="6">
+      <li>Scrunched up like he just bit into a lemon &ndash; But when my husband took the first bite, his face <strong>scrunched up like he just bit into a lemon.</strong></li>
+      </ol>
+      <p>Nhăn như vừa cắn phải miếng chanh (&ldquo;Nhăn như khỉ ăn ớt&rdquo;)</p>
+      <ol start="7">
+      <li>Took the first bite &ndash; But when my husband <strong>took the first bite,</strong> his face scrunched up like he just bit into a lemon.</li>
+      </ol>
+      <p>Thử miếng đầu ti&ecirc;n.</p>`
+    },
+    {
+        id: 7,
+        title: 'Lesson 07 - Guide',
+        openCollapse: true,
+        name: `Guide`,
+        displayOrder: 7,
+        audioLink: `assets/audio/LESSON 07 - GUIDE/Recording 7.7 - Immersion.mp3`,
+        data: `<p><strong>Topic 01: Wrong way!</strong></p>
+      <p><strong>Vocabulary</strong></p>
+      <ol>
+      <li>Town: Thị trấn // (noun) &ndash; Are you near <strong>town</strong>?</li>
+      <li>Behind: Sau, ph&iacute;a sau // (adverb, preposition) &ndash; Then my house is right after the park, <strong>behind</strong> the shopping center.</li>
+      <li>West: Ph&iacute;a t&acirc;y // (adverb) &ndash; Town&rsquo;s about fifteen minutes <strong>west</strong> from here.</li>
+      <li>A bit: Một ch&uacute;t // (quantifier) &ndash; I&rsquo;m on my way to your party but I&rsquo;m <strong>a bit</strong></li>
+      </ol>
+      <p><strong>Expression</strong></p>
+      <ol>
+      <li>On my way &ndash; I&rsquo;m <strong>on my way</strong> to your party but I&rsquo;m a bit lost. Can you help me?</li>
+      </ol>
+      <p><em>Đang tr&ecirc;n đường.</em></p>
+      <ol start="2">
+      <li>Where are you now? &ndash; Sure. <strong>Where are you now?</strong> Are you near town?</li>
+      </ol>
+      <p><em>Giờ cậu đang ở đ&acirc;u?</em></p>
+      <ol start="3">
+      <li>Excuse me, how far am I from town? &ndash; Um... I&rsquo;m not sure. Let me ask. <strong>Excuse me, how far am I from town?</strong></li>
+      </ol>
+      <p><em>Xin lỗi, t&ocirc;i c&aacute;ch thị trấn bao xa?</em></p>
+      <ol start="4">
+      <li>About fifteen minutes west from here &ndash; Excuse me, how far am I from town? Town&rsquo;s <strong>about fifteen minutes west from here.</strong> You&rsquo;re on I-95 now.</li>
+      </ol>
+      <p><em>Khoảng chứng mười lăm ph&uacute;t về ph&iacute;a t&acirc;y.</em></p>
+      <ol start="5">
+      <li>At the second tracffic light, take a left &ndash; Yes. You want to head west. <strong>At the second traffic light, take a left.</strong> Then my house is right after the park, behind the shopping center.</li>
+      </ol>
+      <p><em>Đến đ&egrave;n giao th&ocirc;ng thứ hai, rẽ tr&aacute;i.</em></p>
+      <ol start="6">
+      <li>Right after the park, behind the shopping center &ndash; Yes. You want to head west. At the second traffic light, take a left. Then my house is <strong>right after the park, behind the shopping center.</strong></li>
+      </ol>
+      <p><em>Ngay sau c&ocirc;ng vi&ecirc;n, ph&iacute;a sau trung t&acirc;m mua sắm.</em></p>
+      <ol start="7">
+      <li>Passing one traffic light &ndash; Okay, I&rsquo;m <strong>passing one traffic light</strong>... And here&rsquo;s the second one. You said turn left?</li>
+      </ol>
+      <p><em>Đang đi qua một đ&egrave;n giao th&ocirc;ng.</em></p>
+      <ol start="8">
+      <li>Turn left &ndash; Okay, I&rsquo;m passing one traffic light... And here&rsquo;s the second one. You said <strong>turn left?</strong></li>
+      </ol>
+      <p>Rẽ tr&aacute;i.</p>
+      <ol start="9">
+      <li>Turning right &ndash; Oh, okay. <strong>Turning right</strong>.. I&rsquo;ll see you soon! Bye!</li>
+      </ol>
+      <p><em>Rẽ phải.</em></p>
+      <ol start="10">
+      <li>You were supposed to &ndash; Wait! Don! Donald! <strong>You were supposed to</strong> turn left! Don! Oh gosh...</li>
+      </ol>
+      <p><em>Cậu đ&atilde; được dặn d&ograve;/ y&ecirc;u cầu.</em></p>
+      <ol start="11">
+      <li>Head west &ndash; Yes. You want to <strong>head west.</strong> At the second traffic light, take a left.</li>
+      </ol>
+      <p><em>Đi thẳng về ph&iacute;a T&acirc;y.</em></p>
+      <p><strong>Topic 2: Family Trip</strong></p>
+      <p><strong>Vocabulary</strong></p>
+      <ol>
+      <li>Carry-on: h&agrave;nh l&yacute; mang theo // (noun) &ndash; Every passenger is entitled to one <strong>carry-on</strong> and one checked bag of no more than twenty pounds for domestic flights.</li>
+      <li>Domestic: Nội địa // (adjective) &ndash; Every passenger is entitled to one carry-on and one checked bag of no more than twenty pounds for <strong>domestic</strong></li>
+      <li>Baggage: H&agrave;nh l&yacute; // (noun) &ndash; And what are your <strong>baggage</strong> requirements?</li>
+      <li>Requirements: Thủ tục, luật lệ, y&ecirc;u cầu // (noun) &ndash; And what are your baggage <strong>requirements</strong>?</li>
+      </ol>
+      <p><strong>Expression</strong></p>
+      <ol>
+      <li>I&rsquo;d like to ask about &ndash; Hi, <strong>I&rsquo;d like to ask about</strong> tickets from Philadelphia to Hawaii.</li>
+      </ol>
+      <p><em>T&ocirc;i muốn hỏi về (Phong c&aacute;ch lịch sự).</em></p>
+      <ol start="2">
+      <li>How many &ndash; And <strong>how</strong> <strong>many</strong> tickets would you like to purchase?</li>
+      </ol>
+      <p><em>Bao nhi&ecirc;u.</em></p>
+      <ol start="3">
+      <li>Economy, business class, or first class &ndash; And will those be <strong>economy, business class, or first class?</strong></li>
+      </ol>
+      <p><em>Phổ th&ocirc;ng tiết kiệm, thương gia hay hạng nhất?</em></p>
+      <ol start="4">
+      <li>Would you like to purchase &ndash; And <strong>would you like to purchase</strong> round trip tickets now?</li>
+      </ol>
+      <p><em>Bạn c&oacute; muốn mua.</em></p>
+      <ol start="5">
+      <li>Round trip &ndash; And would you like to purchase <strong>round trip</strong> tickets now?</li>
+      </ol>
+      <p><em>Khứ hồi.</em></p>
+      <ol start="6">
+      <li>Entitled to &ndash; Every passenger is <strong>entitled to</strong> one carry-on and on checked bag of no more than twenty pounds for domestic flights.</li>
+      </ol>
+      <p><em>Được quyền mang.</em></p>
+      <ol start="7">
+      <li>Checked bag &ndash; Every passenger is entitled to one carry-on and one <strong>checked bag</strong> of no more than twenty pounds for domestic flights.</li>
+      </ol>
+      <p><em>H&agrave;nh l&yacute; k&yacute; gửi.</em></p>
+      <p><strong>Topic 3: Rest Stop</strong></p>
+      <p><strong>Vocabulary</strong></p>
+      <ol>
+      <li>Trip: Chuyến đi // (noun) &ndash; My very first bus <strong>trip</strong> in a foreign country was an unforgettable experience.</li>
+      <li>Foreign: (thuộc) nước ngo&agrave;i // (adjective) &ndash; My very first bus trip in a <strong>foreign</strong> country was an unforgettable experience.</li>
+      <li>Language: Tiếng, ng&ocirc;n ngữ // (noun) &ndash; The thing is... I didn&rsquo;t speak the <strong>language</strong>, and no one could speak English.</li>
+      </ol>
+      <p><strong>Expression</strong></p>
+      <ol>
+      <li>Very first bus trip &ndash; My <strong>very first bus trip</strong> in a foreign country was an unforgettable experience.</li>
+      </ol>
+      <p><em>Chuyến đi xe bu&yacute;t đầu ti&ecirc;n.</em></p>
+      <ol start="2">
+      <li>Unforgettable experience &ndash; My very first bus trip in a foreign country was an <strong>unforgettable experience.</strong></li>
+      </ol>
+      <p><em>Trải nghiệm kh&oacute; qu&ecirc;n.</em></p>
+      <ol start="3">
+      <li>Decided to take the bus &ndash; And I wanted to get to the beach but I didn&rsquo;t have a lot of money, so I <strong>decided to take the bus</strong> instead of the train.</li>
+      </ol>
+      <p><em>Quyết định đi xe bu&yacute;t.</em></p>
+      <ol start="4">
+      <li>Really convenient &ndash; The bus picked me up at my hotel, which was <strong>really convenient,</strong> but as soon as we got on the highway, the trouble started.</li>
+      </ol>
+      <p><em>Thực sự tiện nghi.</em></p>
+      <ol start="5">
+      <li>As soon as we got the highway &ndash; The bus picked me up at my hotel, which was really convenient, but <strong>as soon as we got on the highway,</strong> the trouble started.</li>
+      </ol>
+      <p><em>Sau khi ch&uacute;ng t&ocirc;i l&ecirc;n đường cao tốc.</em></p>
+      <ol start="6">
+      <li>Unlike trains &ndash; I really needed to use the bathroom, and buses, <strong>unlike trains,</strong> don&rsquo;t have bathrooms.</li>
+      </ol>
+      <p><em>Kh&ocirc;ng giống như xe lửa.</em></p>
+      <ol start="7">
+      <li>Speak the language &ndash; The thing is... didn&rsquo;t <strong>speak the language</strong>, and no one could speak English.</li>
+      </ol>
+      <p><em>N&oacute;i ng&ocirc;n ngữ đ&oacute;.</em></p>
+      <ol start="8">
+      <li>Body language &ndash; She understood my problem by reading my <strong>body language</strong> and spoke to the bus driver for me.</li>
+      </ol>
+      <p><em>Ng&ocirc;n ngữ cơ thể.</em></p>
+      <ol start="9">
+      <li>Helped me out &ndash; To be honest, I had never spoken to anyone on a bus before, but this woman really <strong>helped me out.</strong></li>
+      </ol>
+      <p><em>Đ&atilde; gi&uacute;p đỡ t&ocirc;i.</em></p>
+      <ol start="10">
+      <li>Crisis averted &ndash; The bus driver sped to the next sto pand let me off for a few minutes. <strong>Crisis averted!</strong></li>
+      </ol>
+      <p><em>Khủng hoảng được ngăn chặn.</em></p>`
+    },
+    {
+        id: 8,
+        title: 'Lesson 08 - Travel',
+        openCollapse: true,
+        name: `Travel`,
+        displayOrder: 8,
+        audioLink: `assets/audio/LESSON 08 - TRAVEL/Recording 8.7 - Immersion.mp3`,
+        data: `<p><strong>Topic 01: The World Tour</strong></p>
+      <p><strong>Vocabulary</strong></p>
+      <ol>
+      <li>Passports: Hộ chiếu // (noun) &ndash; Charlotte and Daisy don&rsquo;t even have <strong>passports</strong>.</li>
+      <li>Birth certificates: Giấy khai sinh // (noun) &ndash; Do you know where their <strong>birth certificates</strong> are?</li>
+      <li>Book: Đặt chỗ // (verb) &ndash; Don&rsquo;t be silly! We can just book all the tickets online.</li>
+      <li>Online: Trực tuyến // (adjective) &ndash; Don&rsquo;t be silly! We can just book all the tickets</li>
+      <li>Awaits: Chờ, đợi // (verb) &ndash; Come on, let&rsquo;s go get those passports, Mongolia <strong>awaits</strong> us!</li>
+      </ol>
+      <p><strong>Expression</strong></p>
+      <ol>
+      <li>Aren&rsquo;t you getting a little ahead of yourself? &ndash; Haha &ldquo;world tour,&rdquo; really? <strong>Aren&rsquo;t you getting a little ahead of yourself?</strong> Charlotte and Daisy don&rsquo;t even have passports.</li>
+      </ol>
+      <p>Kh&ocirc;ng phải anh đang hơi qu&aacute; vội v&agrave;ng đấy chứ?</p>
+      <ol start="2">
+      <li>First stop &ndash; Okay, so the <strong>first stop</strong> is the post office! Do you know where their birth certificates are?</li>
+      </ol>
+      <p>Điểm dừng đầu ti&ecirc;n.</p>
+      <ol start="3">
+      <li>Travel agency &ndash; Yes dear, they&rsquo;re downstairs. And, after the post office? &ndash; Probably the <strong>travel agency</strong>...</li>
+      <li>Don&rsquo;t be silly! &ndash; <strong>Don&rsquo;t be silly! </strong>We can just book all the tickets online. But where should we go?</li>
+      </ol>
+      <p>Đừng ngốc nghếch như vậy.</p>
+      <ol start="5">
+      <li>Ancestors&rsquo; homeland &ndash; Well, seeing Europe would be neat. We could visit our <strong>ancestors&rsquo; homeland.</strong></li>
+      </ol>
+      <p>Qu&ecirc; hương tổ ti&ecirc;n.</p>
+      <ol start="6">
+      <li>Totally different culture &ndash; But is if safe? I&rsquo;d rather go to Asia so our kids can see a <strong>totally different culture.</strong></li>
+      </ol>
+      <p>Nền văn h&oacute;a ho&agrave;n to&agrave;n kh&aacute;c biệt.</p>
+      <ol start="7">
+      <li>Remote wilderness &ndash; We could go to Mongolia and camp in the<strong> remote wilderness.</strong> That would really open our kids&rsquo; eyes to the world.</li>
+      </ol>
+      <p>Chốn hoang d&atilde; xa x&ocirc;i.</p>
+      <ol start="8">
+      <li>Open our kids&rsquo; eye to the would &ndash; We could go to Mongolia and camp in the remote wilderness. That would really <strong>open our kids&rsquo; eyes to the world.</strong></li>
+      </ol>
+      <p>Mở mang tầm mắt của bọn trẻ với thế giới.</p>
+      <ol start="9">
+      <li>Don&rsquo;t worry so much &ndash; Oh, <strong>don&rsquo;t worry so much,</strong> it&rsquo;ll be fine. Anyway, I&rsquo;ve already booked the tickets.</li>
+      </ol>
+      <p>Đường lo lắng qu&aacute; nhiều.</p>
+      <p>&nbsp;</p>
+      <p><strong>Topic 2: Can I Upgrade, Please?</strong></p>
+      <p><strong>Vocabulary</strong></p>
+      <ol>
+      <li>Suite: Ph&ograve;ng hạng sang // (noun) &ndash; Currently the only room with a sea view that&rsquo;s available is a <strong>suite</strong>.</li>
+      <li>Upgrading: N&acirc;ng cấp // (verb) &ndash; I don&rsquo;t mind <strong>upgrading</strong>.</li>
+      <li>Overlooking: Quan s&aacute;t từ tr&ecirc;n cao xuống // (everb) &ndash; Yes. We were really hoping to have a sea view, but our window is <strong>overlooking</strong> the parking lot.</li>
+      <li>Pool: Bể bơi // (noun) &ndash; Would you like us to move your things there while you enjoy the <strong>pool</strong>?</li>
+      </ol>
+      <p><strong>Expression</strong></p>
+      <ol>
+      <li>How may I help you? &ndash; Good morning. This is Michelle speaking. <strong>How may I help you today?</strong></li>
+      </ol>
+      <p>T&ocirc;i c&oacute; thể gi&uacute;p g&igrave; cho &ocirc;ng.</p>
+      <ol start="2">
+      <li>Oh, I&rsquo;m so sorry to hear that &ndash; <strong>Oh, I&rsquo;m so sorry to hear that,</strong> I&rsquo;ll send someone up immediately!</li>
+      </ol>
+      <p>Ồ, t&ocirc;i rất tiếc khi nghe điều đ&oacute;.</p>
+      <ol start="3">
+      <li>Is there anything else I can help you? &ndash; Of course. <strong>Is there anything else I can help you?</strong> &ndash; Yes. We were really hoping to have a sea view, but our window is overlooking the parking lot.</li>
+      </ol>
+      <p>C&ograve;n điều g&igrave; kh&aacute;c t&ocirc;i c&oacute; thể gi&uacute;p &ocirc;ng kh&ocirc;ng?</p>
+      <ol start="4">
+      <li>Quite hot &ndash; Well, the air conditioner isn&rsquo;t working and the room&rsquo;s <strong>quite hot.</strong></li>
+      </ol>
+      <p>Kh&aacute; n&oacute;ng.</p>
+      <ol start="5">
+      <li>Parking lot &ndash; Yes. We were really hoping to have a sea view, but our window is overlooking the <strong>parking lot.</strong></li>
+      </ol>
+      <p>B&atilde;i đậu xe.</p>
+      <ol start="6">
+      <li>Sea view &ndash; Currently the only room with a <strong>sea view</strong> that&rsquo;s available is a suite.</li>
+      </ol>
+      <p>Tầm nh&igrave;n ra biển.</p>
+      <ol start="7">
+      <li>Please do &ndash; Yes <strong>please do.</strong> Thank you, Michelle.</li>
+      </ol>
+      <p>Xin vui l&ograve;ng.</p>
+      <p><strong>&nbsp;</strong></p>
+      <p><strong>Topic 3: A Tropical Hideaway</strong></p>
+      <p><strong>Vocabulary</strong></p>
+      <ol>
+      <li>Holiday: Kỳ nghỉ // (noun) &ndash; There I was, taking a long overdue <strong>holiday</strong>.</li>
+      <li>Balcony: Ban c&ocirc;ng // (noun) &ndash; Staying in a luxurious hotel with a picturesque landscape spanning every direction from my <strong>balcony</strong>.</li>
+      <li>Beach: B&atilde;i biển // (noun) &ndash; That&rsquo;s when she told me there was, in fact, a beautiful <strong>beach</strong>.</li>
+      <li>Cruisin&rsquo;: Đi chơi biển // (verb) &ndash; So I got directions, rented a bike, and started <strong>cruisin&rsquo;</strong> the coast.</li>
+      <li>Coast: Bờ biển // (noun) &ndash; So I got directions, rented a bike, and started cruisin&rsquo; the <strong>coast</strong>.</li>
+      <li>Destination: Điểm đến, đ&iacute;ch đến // (noun) &ndash; I was determined to reach my <strong>destination</strong>, though, and it was worth it.</li>
+      <li>Crystals: Tinh thể, pha l&ecirc;.</li>
+      <li>Shore: Bờ biển // (noun) &ndash; Dipping my toes into the clear cool water, I sat on the <strong>shore</strong>.</li>
+      <li>Horizon: Ch&acirc;n trời // (noun) &ndash; I watch the sun as it fell off the edge of the <strong>horizon</strong> and a crescent moon appeared from behind the shadows.</li>
+      <li>Crescent: H&igrave;nh lưỡi liềm // (adjective) - I watch the sun as it fell off the edge of the horizon and a <strong>crescent</strong> moon appeared from behind the shadows.</li>
+      <li>Breathtaking: Hấp dẫn, ngoạn mục // (adjective) &ndash; It was <strong>breathtaking</strong>, and I was in awe.</li>
+      </ol>
+      <p><strong>Expression</strong></p>
+      <ol>
+      <li>Luxurious hotel &ndash; There I was, taking a long overdue holiday, staying in a <strong>luxurious hotel</strong> with a picturesqure landscape spanning every direction from my balcony.</li>
+      <li>Kh&aacute;ch sạn sang trọng.</li>
+      <li>Picturesque landscape - There I was, taking a long overdue holiday, staying in a luxurious hotel with a <strong>picturesqure landscape</strong> spanning every direction from my balcony.</li>
+      <li>Cảnh quan đẹp như tranh vẽ.</li>
+      <li>Rocky beach &ndash; And all I could focus on was the trash filled, <strong>rocky beach</strong></li>
+      <li>B&atilde;i biển với đ&aacute; bao phủ.</li>
+      <li>Turns out &ndash; <strong>Turns out,</strong> the receptionist was right.</li>
+      <li>H&oacute;a ra (C&aacute;ch d&ugrave;ng tắt của It turns out)</li>
+      <li>Tropical scenery &ndash; If not for the lush <strong>tropical scenery,</strong> and a convenience store for replenishing food and water on my way, this would have been the bicycle ride from hell.</li>
+      <li>Cảnh quan nhiệt đới.</li>
+      <li>Was in awe &ndash; It was breathtaking, and I <strong>was in awe.</strong></li>
+      </ol>
+      <p>Đắm ch&igrave;m trong niềm kinh ngạc.</p>`
+    },
+    {
+        id: 9,
+        title: 'Lesson 09 - Emotion',
+        openCollapse: true,
+        name: `Emotion`,
+        displayOrder: 9,
+        audioLink: `assets/audio/LESSON 09 - EMOTION/Recording 9.7 - Immersion.mp3`,
+        data: `<p><strong>Topic 01: Woe is Me!</strong></p>
+      <p><strong>Vocabulary</strong></p>
+      <ol>
+      <li>Crying: kh&oacute;c // (verb) &ndash; What&rsquo;s wrong, Susan? You look miserable. Are you <strong>crying</strong>?</li>
+      <li>Terrible: Đau khổ // (adjective) &ndash; I have something <strong>terrible</strong> to tell you: I broke my Iphone.</li>
+      <li>Empty: Trống rỗng // (adjective) &ndash; No, Sarah, I feel <strong>empty</strong> inside! And my contact list is empty, too.</li>
+      <li>Trendy: S&agrave;nh điệu // (adjective) &ndash; If I buy a cheap phone, I won&rsquo;t be as <strong>trendy</strong>.</li>
+      <li>Surprised: Ngạc nhi&ecirc;n // (adjective) &ndash; I&rsquo;m <strong>surprised</strong> that you&rsquo;re worried about looking fashionable.</li>
+      <li>Fashionable: Hợp thời trang // (adjective) &ndash; I&rsquo;m surprised that you&rsquo;re worried about looking <strong>fashionable</strong>.</li>
+      </ol>
+      <p><strong>Expression</strong></p>
+      <ol>
+      <li>You look miserable &ndash; What wrong, Susan? <strong>You look miserable.</strong> Are you crying?</li>
+      </ol>
+      <p>Tr&ocirc;ng bạn đau khổ vậy.</p>
+      <ol start="2">
+      <li>Feel too bad &ndash; Well, don&rsquo;t <strong>feel too bad</strong> about that, Susan. You can take it to a store to have it fixed.</li>
+      </ol>
+      <p>Cảm thấy qu&aacute; tệ.</p>
+      <ol start="3">
+      <li>I&rsquo;m surprised &ndash; <strong>I&rsquo;m </strong>a little <strong>surprised</strong> you&rsquo;re being so dramatic, Susan. You know what they say, it&rsquo;s no use crying over spilled milk.</li>
+      </ol>
+      <p>T&ocirc;i thấy ngạc nhi&ecirc;n.</p>
+      <ol start="4">
+      <li>It&rsquo;s no use crying over spilled milk &ndash; I&rsquo;m a little surprised you&rsquo;re being so dramatic, Susan. You know what they say, <strong>it&rsquo;s no use crying over spilled milk.</strong></li>
+      </ol>
+      <p>Đừng tiếc rẻ con g&agrave; quạ tha.</p>
+      <ol start="5">
+      <li>Planning on wearing &ndash; Oh this is terrible! My shirt has a giant coffee stain on it! This is my favorite shirt, and I was <strong>planning on wearing</strong> it to dinner with John tonight!</li>
+      </ol>
+      <p>Dự định, c&oacute; kế hoạch mặc.</p>
+      <ol start="6">
+      <li>I feel empty &ndash; <strong>I feel empty.</strong> Everything I love is leaving me.</li>
+      </ol>
+      <p>T&ocirc;i cảm thấy trống rỗng.</p>
+      <ol start="7">
+      <li>Things are looking up. &ndash; You are still going to see John, tonight, right? &ndash; Oh. Suddlenly, <strong>things are looking up.</strong></li>
+      </ol>
+      <p>Mọi thứ s&aacute;ng sủa hẳng l&ecirc;n.</p>
+      <p><strong>Topic 02: Rock n&rsquo; Roll n&rsquo; Feelings</strong></p>
+      <p><strong>Vocabulary</strong></p>
+      <ol>
+      <li>Orchestra: D&agrave;n nhạc giao hưởng // (noun) &ndash; This makes playing in the <strong>orchestra</strong> especially difficult.</li>
+      <li>Personal: C&aacute; nh&acirc;n // (adjective) - ... but as long as everyone does their <strong>personal</strong> best for the sake of the music...</li>
+      <li>Music: &Acirc;m nhạc // (noun) - ... but as long as everyone does their personal best for the sake of the <strong>music</strong>...</li>
+      <li>Personalities: C&aacute; t&iacute;nh // (noun) - ...<strong>personalities</strong> can blend as beautifully and as naturally as the sounds of the instruments.</li>
+      <li>Sounds: &Acirc;m thanh // (noun) - ...personalities can blend as beautifully and as naturally as the <strong>sounds</strong> of the instruments.</li>
+      <li>Instruments: Những nhạc cụ // (noun) - ...personalities can blend as beautifully and as naturally as the sounds of the <strong>instruments</strong>.</li>
+      <li>Violin: Vĩ cầm // (noun) &ndash; Mick, for instance, plays first <strong>violin</strong>, which totally fits his personality.</li>
+      <li>Decisive: Quyết đo&aacute;n // (adjective) &ndash; He&rsquo;s extremely <strong>decisive</strong> and a little abrasive at times, but he&rsquo;s a perfectionist.</li>
+      <li>Abrasive: Th&ocirc; r&aacute;p // (adjective) - He&rsquo;s extremely decisive and a little <strong>abrasive</strong> at times, but he&rsquo;s a perfectionist.</li>
+      <li>Perfectionist: Người cầu to&agrave;n // (noun) &ndash; He&rsquo;s extremely decisive and a little abrasive at times, but he&rsquo;s a <strong>perfectionist</strong>.</li>
+      <li>Percussionists: Những người chơi trống // (noun) &ndash; Tommy is one of the best <strong>percussionists</strong> I&rsquo;ve ever heard.</li>
+      <li>Stubborn: Cứng đầu // (adjective) - ...but he is super <strong>stubborn</strong> and his inflexibility can be super annoying.</li>
+      <li>Rhythm: Nhịp điệu // (noun) - ...because music is so precise in <strong>rhythm</strong> and timing.</li>
+      <li>Timing: Thời gian // (noun) - ...because music is so precise in rhythm and <strong>timing</strong>.</li>
+      <li>Trombone: Chiếc k&egrave;n trombon // (noun) &ndash; Like the slide of his <strong>trombone</strong>, he&rsquo;s even-tempered and easy going, making everyone laugh when things get intense.</li>
+      <li>Intense: Căng thẳng // (adjective) - ...making everyone laugh when things get <strong>intense</strong>.</li>
+      <li>Emotional: T&igrave;nh cảm // (adjective) &ndash; She&rsquo;s like an <strong>emotional</strong> mind reader.</li>
+      <li>Sense: Cảm thấy // (noun) - ...she can <strong>sense</strong> our moods when we walk into the room.</li>
+      <li>Moods: Những t&acirc;m trạng // (noun) - ...she can sense our <strong>moods</strong> when we walk into the room.</li>
+      <li>Sensitive: Nhạy cảm // (adjective) &ndash; She&rsquo;s also incredibly <strong>sensitive</strong>, like me.</li>
+      <li>Agitated: Tức giận // (adjective) -One day, she sensed I was <strong>agitated</strong>.</li>
+      <li>Encouraged: Khuyến kh&iacute;ch // (verb) &ndash; She picked up on it right away and <strong>encouraged</strong> me not to take things so personally.</li>
+      <li>Ego: C&aacute;i t&ocirc;i // (noun) &ndash; It&rsquo;s about the music, get your <strong>ego</strong> out of the way and put your feelings into the music, the rest will take care of itself.</li>
+      <li>Feelings: Những cảm x&uacute;c // (noun) -It&rsquo;s about the music, get your ego out of the way and put your <strong>feelings</strong> into the music, the rest will take care of itself.</li>
+      </ol>
+      <p><strong>Expression</strong></p>
+      <ol>
+      <li>First chair &ndash; That probably explains why he&rsquo;s been <strong>first chair</strong></li>
+      </ol>
+      <p>Đội trưởng.</p>
+      <ol start="2">
+      <li>Balance all of us out &ndash; Billy, on the other hand, <strong>balances all of us out.</strong></li>
+      </ol>
+      <p>C&acirc;n bằng tất cả ch&uacute;ng ta.</p>
+      <ol start="3">
+      <li>Even-tempered &ndash; He&rsquo;s <strong>even-tempered</strong> and easy going, making everyone laugh when things get intense.</li>
+      </ol>
+      <p>Rất b&igrave;nh tĩnh.</p>
+      <ol start="4">
+      <li>Easy going &ndash; He&rsquo;s even-tempered and <strong>easy going,</strong> making everyone laugh when things get intense.</li>
+      </ol>
+      <p>Cởi mở.</p>
+      <ol start="5">
+      <li>Stay out of my head - ...reminding me to <strong>stay out of my head,</strong> she said: &ldquo;It&rsquo;s about the music, get your ego out of the way and put your feelings into the music, the rest will take care of itself&rdquo;.</li>
+      </ol>
+      <p>Đừng suy nghĩ nhiều.</p>
+      <p><strong>Topic 03: Social Media Depression</strong></p>
+      <p><strong>Vocabulary</strong></p>
+      <ol>
+      <li>Depression: Trầm cảm // (noun) &ndash; Some reasearchers have coined the term &ldquo;social media <strong>depression</strong>&rdquo;.</li>
+      <li>Jealousy: Ghen tị // (noun) - ...to describe the feelings of <strong>jealousy</strong> and guilt.</li>
+      <li>Guilt: Tội lỗi // (noun) - ...to describe the fellings of jealousy and <strong>guilt</strong>.</li>
+      <li>Jealous: Ghen tị // (adjective) &ndash; Instead of feeling more connected to people, we feel <strong>jealous</strong> and inadequate.</li>
+      <li>Inadequate: Thiếu thốn // (adjective) &ndash; Instead of feeling more connected to people, we feel jealous and <strong>inadequate</strong>.</li>
+      <li>Unrealistic: Kh&ocirc;ng thực tế // (adjective) &ndash; It creates <strong>unrealistic</strong> expections that lead to feelings of depression...</li>
+      <li>Disconnecting: Ngừng kết nối // (verb) - ...which then leads us to <strong>disconnecting</strong> and isolating more.</li>
+      <li>Isolating: C&ocirc; lập // (verb) - ...which then leads us to disconnecting and <strong>isolating</strong></li>
+      <li>Negative: Ti&ecirc;u cực // (adjective) &ndash; The key to overcoming this <strong>negative </strong>evolving state of mind is to trust that you are good enough and perfect, just the way you are.</li>
+      <li>Perfect: Ho&agrave;n hảo // (adjective) &ndash; The key to overcoming this negative evolving state of mind is to trust that you are good enough and <strong>perfect,</strong> just the way you are.</li>
+      </ol>
+      <p><strong>Expression</strong></p>
+      <ol>
+      <li>Coined the term &ndash; Some researchers have <strong>coined the term</strong> &ldquo; social media depression&rdquo;.</li>
+      </ol>
+      <p>Đặt ra thuật ngữ.</p>
+      <ol start="2">
+      <li>Personal relationships - ...we can center our minds on the things that matter most: our <strong>personal relationships.</strong></li>
+      </ol>
+      <p>Những mối quan hệ c&aacute; nh&acirc;n.</p>
+      <ol start="3">
+      <li>Snap out of it! &ndash; <strong>Snap out of it!</strong> Put your device down and ask a friend to meet you face-to-face for an ice cream so you can talk.</li>
+      </ol>
+      <p>H&atilde;y tr&uacute;t bỏ n&oacute; ra khỏi người!</p>
+      <ol start="4">
+      <li>State of mind &ndash; The key to overcoming this negative evolving <strong>state of mind</strong> is to trust that you are good enough and perfect.</li>
+      </ol>
+      <p>Trạng th&aacute;i (của suy nghĩ).</p>`
+    },
+    {
+        id: 10,
+        title: 'Lesson 10 - Work place',
+        openCollapse: true,
+        name: `Work place`,
+        displayOrder: 10,
+        audioLink: `assets/audio/LESSON 10 - WORK PLACE/Recording 10.7 - Immersion.mp3`,
+        data: `<div><h3>Topic 01: Knocking it Out of the Park</h3>
+      <p><strong>Vocabulary</strong></p>
+      <p>1. Presentation /ˌpreznˈteɪʃn/ (noun) - Hey Colin, do you want to finish our marketing <strong>presentation</strong> this afternoon?<br>
+      <span style="color:#7e8c8d"><em>Bài thuyết trình</em></span></p>
+      <p>2. Interested /ˈɪntrəstɪd/ (adjective) - Everyone is <strong>interested</strong> in what we have to say.<br>
+      <span style="color:#7e8c8d"><em>Quan tâm, thích thú</em></span></p>
+      <p>3. Confused /kənˈfjuːzd/ (adjective) - What? I’m <strong>confused</strong>. I thought you knew.<br>
+      <span style="color:#7e8c8d"><em>Bối rối</em></span></p>
+      <p>4. Panicking /ˈpænɪkɪŋ/ (verb) - I’m <strong>panicking</strong> a little bit.<br>
+      <span style="color:#7e8c8d"><em>Hoảng sợ</em></span></p>
+      <p>5. Polished /ˈpɑːlɪʃt/ (adjective) - We need to make a <strong>polished</strong> and exciting marketing plan in… one day.<br>
+      <span style="color:#7e8c8d"><em>Trau chuốt</em></span></p>
+      <p>6. Exciting /ɪkˈsaɪtɪŋ/ (adjective) - We need to make a polished and <strong>exciting</strong> marketing plan in… one day.<br>
+      <span style="color:#7e8c8d"><em>Thú vị</em></span></p>
+      <p>7. Thrilling /ˈθrɪlɪŋ/ (adjective) - And we need to make a <strong>thrilling</strong> presentation.<br>
+      <span style="color:#7e8c8d"><em>Hấp dẫn</em></span></p>
+      <p>8. Boring /ˈbɔːrɪŋ/ (adjective) - If our presentation is <strong>boring</strong>, we’re going to get fired.<br>
+      <span style="color:#7e8c8d"><em>Nhàm chán</em></span></p>
+      <p>9. Relaxed /rɪˈlækst/ (adjective) - Look <strong>relaxed</strong>!<br>
+      <span style="color:#7e8c8d"><em>Thoải mái</em></span></p>
+      <p>10. Stressed /strest/ (adjective) - I can’t look relaxed when I feel so <strong>stressed</strong>!<br>
+      <span style="color:#7e8c8d"><em>Căng thẳng</em></span></p>
+      <p>11. Support /səˈpɔːrt/ (noun) - Do you need any <strong>support</strong> from IT?<br>
+      <span style="color:#7e8c8d"><em>Sự hỗ trợ</em></span></p>
+      <p><strong>Expression</strong></p>
+      <p>1. That’s a good idea - <strong>That’s a good idea.</strong> Actually, are you free to talk about it now?<br>
+      <span style="color:#7e8c8d"><em>Đó là một ý hay</em></span></p>
+      <p>2. Are you free to talk about it now? - That’s a good idea. Actually, <strong>are you free to talk about it now?</strong><br>
+      <span style="color:#7e8c8d"><em>Bây giờ bạn có rảnh để nói về nó không?</em></span></p>
+      <p>3. I’m really worried about this – Sure. <strong>I’m really worried about this</strong>. – We’ll be fine. Everyone is interested in what we have to say.<br>
+      <span style="color:#7e8c8d"><em>Tôi thực sự lo lắng về chuyện này</em></span></p>
+      <p>4. We’ll be fine – Sure. I’m really worried about this.– <strong>We’ll be fine</strong>. Everyone is interested in what we have to say.<br>
+      <span style="color:#7e8c8d"><em>Chúng ta sẽ ổn thôi</em></span></p>
+      <p>5. That’s a good point - <strong>That’s a good point.</strong> But can I ask you one thing?<br>
+      <span style="color:#7e8c8d"><em>Đó là một điểm tốt</em></span></p>
+      <p>6. Go ahead! – That’s a good point. But can I ask you one thing? – <strong>Go ahead!</strong><br>
+      <span style="color:#7e8c8d"><em>Cứ hỏi đi!</em></span><br>
+      <span style="color:#7e8c8d"><em>Nghĩa khác: Tiến hành đi</em></span></p>
+      <p>7. Going to be - Okay. Don’t panic. We’re<strong> going to be</strong> fine.<br>
+      <span style="color:#7e8c8d"><em>Sẽ (Dự định, dự tính chắc chắn xảy ra)</em></span></p>
+      <p>8. Comes down to - Great to hear. I think our entire quarter <strong>comes down to</strong> your marketing plan, and everyone feels the same way.<br>
+      <span style="color:#7e8c8d"><em>Trông đợi vào</em></span></p>
+      <p>9. Feels the same way - Great to hear. I think our entire quarter comes down to your marketing plan, and everyone <strong>feels the same way</strong>.<br>
+      <span style="color:#7e8c8d"><em>Đều cảm thấy như vậy</em></span></p>
+      <p>10. Knock it out of the park - Great to hear. I think our entire quarter comes down to your marketing plan, and everyone feels the same way. I hope you guys <strong>knock it out of the park</strong> this afternoon.<br>
+      <span style="color:#7e8c8d"><em>Thể hiện thật xuất sắc</em></span></p>
+      <p>11. I hope you don’t mind. - Oh, we decided to move it up a bit. <strong>I hope you don’t mind.</strong><br>
+      <span style="color:#7e8c8d"><em>Tôi hy vọng bạn không phiền</em></span></p>
+      <p>12. All set - Nope, we’re<strong> all set.</strong><br>
+      <span style="color:#7e8c8d"><em>Tất cả đều đã sẵn sàng</em></span></p>
+      <h3>Topic 02: Not “Management Material”</h3>
+      <p><strong>Vocabulary</strong></p>
+      <p>1. Manager /ˈmænɪdʒər/ (noun) - “You son, are an idiot!” Said the <strong>manager</strong> to the ‘managee.’ “You’re fired!”.<br>
+      <span style="color:#7e8c8d"><em>Người quản lý</em></span></p>
+      <p>2. Managee /ˈmænɪdʒiː/ (noun) - “You son, are an idiot!” Said the manager to the ‘<strong>managee</strong>.’ “You’re fired!”.<br>
+      <span style="color:#7e8c8d"><em>Người bị quản lý</em></span></p>
+      <p>3. Motivate /ˈməʊtɪveɪt/ (verb) - How does a leader <strong>motivate</strong> employees to do their work best…<br>
+      <span style="color:#7e8c8d"><em>Thúc đẩy</em></span></p>
+      <p>4. Micromanage /ˈmaɪkrəʊmænɪdʒ/ (verb) - …he’s constantly in my face, trying to <strong>micromanage</strong> everything I do.<br>
+      <span style="color:#7e8c8d"><em>Kiểm soát từng chi tiết nhỏ</em></span></p>
+      <p>5. Stapler /ˈsteɪplər/ (noun) - …but all I have, is the lousy <strong>stapler</strong> on my desk.<br>
+      <span style="color:#7e8c8d"><em>Cái dập ghim</em></span></p>
+      <p>6. Report /rɪˈpɔːrt/ (verb) - He has to <strong>report</strong> to his boss, the same way I have to report to him.<br>
+      <span style="color:#7e8c8d"><em>Báo cáo</em></span></p>
+      <p>7. Sacrifices /ˈsækrɪfaɪs/ (noun) - …but I know I need to make some <strong>sacrifices</strong> if I want to move up in the world.<br>
+      <span style="color:#7e8c8d"><em>Hy sinh&nbsp;</em></span></p>
+      <p>8. Bossy /ˈbɔːsi/ (adjective) - I want to be a friend to my colleagues, not a <strong>bossy</strong> one either.<br>
+      <span style="color:#7e8c8d"><em>Hách dịch</em></span></p>
+      <p><strong>Expression</strong></p>
+      <p>1. Quick-witted - If only we could all be as <strong>quick-witted</strong> as Steve Martin’s Clouseau in the Pink Panther, when it comes to our managers at work.<br>
+      <span style="color:#7e8c8d"><em>Nhanh trí</em></span></p>
+      <p>2. Under a lot of pressure - I know he’s <strong>under a lot of pressure</strong>. He has to report to his boss, the same way I have to report to him.<br>
+      <span style="color:#7e8c8d"><em>Chịu rất nhiều áp lực</em></span></p>
+      <p>3. I’ve never really thought about this before - <strong>I’ve never really thought about this before</strong>, but I know I need to make some sacrifices if I want to move up in the world.<br>
+      <span style="color:#7e8c8d"><em>Tôi chưa bao giờ thực sự nghĩ về điều này trước đây</em></span></p>
+      <p>4. Move up in the world - I’ve never really thought about this before, but I know I need to make some sacrifices if I want to<strong> move up in the world</strong>.<br>
+      <span style="color:#7e8c8d"><em>Thăng tiến trong thế giới này</em></span></p>
+      <p>5. There’s no doubt - <strong>There’s no doubt</strong> in my mind that I can, or that I will, but one thing I know for sure is when I do?<br>
+      <span style="color:#7e8c8d"><em>Không nghi ngờ gì</em></span></p>
+      <p>6. Know for sure - There’s no doubt in my mind that I can, or that I will. But one thing I <strong>know for sure</strong> is when I do?<br>
+      <span style="color:#7e8c8d"><em>Biết chắc chắn</em></span></p>
+      <h3>Topic 03: Office Gossip: It’s Not All Bad</h3>
+      <p><strong>Vocabulary</strong></p>
+      <p>1. Gossip /ˈɡɑːsɪp/ (noun) - Is it <strong>gossip</strong>, or authentic assessment?<br>
+      <span style="color:#7e8c8d"><em>Thị phi</em></span></p>
+      <p>2. Meetings /ˈmiːtɪŋz/ (noun) - …like company e-mails or staff <strong>meetings</strong>, can be beneficial.<br>
+      <span style="color:#7e8c8d"><em>Các cuộc họp</em></span></p>
+      <p>3. Frustrating /ˈfrʌstreɪtɪŋ/ (adjective) - While gossip is <strong>frustrating</strong> and fraught with negative consequences…<br>
+      <span style="color:#7e8c8d"><em>Gây khó chịu</em></span></p>
+      <p>4. Fraught /frɔːt/ (adjective) - While gossip is frustrating and <strong>fraught</strong> with negative consequences…<br>
+      <span style="color:#7e8c8d"><em>Đầy rẫy</em></span></p>
+      <p>5. Negative /ˈneɡətɪv/ (adjective) - While gossip is frustrating and fraught with <strong>negative</strong> consequences…<br>
+      <span style="color:#7e8c8d"><em>Tiêu cực</em></span></p>
+      <p>6. Disgruntled /dɪsˈɡrʌntld/ (adjective) - Is it just a <strong>disgruntled</strong> co-worker who’s mean?<br>
+      <span style="color:#7e8c8d"><em>Bất bình</em></span></p>
+      <p>7. Mean /miːn/ (adjective) - Is it just a disgruntled co-worker who’s <strong>mean</strong>?<br>
+      <span style="color:#7e8c8d"><em>Hẹp hòi</em></span></p>
+      <p>8. Legendary /ˈledʒənderi/ (adjective) - …a <strong>legendary</strong> story that offers valuable insight for navigating your life?<br>
+      <span style="color:#7e8c8d"><em>Huyền thoại</em></span></p>
+      <p>9. Insight /ˈɪnsaɪt/ (noun) - …a legendary story that offers valuable <strong>insight</strong> for navigating your life?<br>
+      <span style="color:#7e8c8d"><em>Cái nhìn sâu sắc</em></span></p>
+      <p>10. Navigating /ˈnævɪɡeɪtɪŋ/ (verb) - …a legendary story that offers valuable insight for <strong>navigating</strong> your life?<br>
+      <span style="color:#7e8c8d"><em>Định hướng</em></span></p>
+      <p>11. Authentic /ɔːˈθentɪk/ (adjective) - Is it gossip, or <strong>authentic</strong> assessment?<br>
+      <span style="color:#7e8c8d"><em>Chân thực</em></span></p>
+      <p>12. Assessment /əˈsesmənt/ (noun) - Is it gossip, or authentic <strong>assessment</strong>?<br>
+      <span style="color:#7e8c8d"><em>Sự đánh giá</em></span></p>
+      <p><strong>Expression</strong></p>
+      <p>1. Rumor mill - It’s true, no one likes a gossiper, but research shows that the <strong>rumor mill</strong> is a good place for passing out information.<br>
+      <span style="color:#7e8c8d"><em>Phạm vi tin đồn</em></span></p>
+      <p>2. Water cooler - Or, is the <strong>water cooler</strong> talk you’re hearing, a legendary story that offers valuable insight for navigating your life?<br>
+      <span style="color:#7e8c8d"><em>Chuyện phiếm</em></span></p>
+      </div>
+`
+    },
+    {
+        id: 11,
+        title: 'Lesson 11 - Life experience',
+        openCollapse: true,
+        name: `Life experience`,
+        displayOrder: 11,
+        audioLink: `assets/audio/LESSON 11 - LIFE EXPERIENCE/Recording 11.7 - Immersion.mp3`,
+        data: `<div><h3>Topic 01: Why don’t You Try Writing a Bucket List?</h3>
+      <p><strong>Vocabulary</strong></p>
+      <p>1. Fulfilled /fʊlˈfɪld/ (adjective) - I’ve felt way more <strong>fulfilled</strong> since I started writing my goals down.<br>
+      <span style="color:#7e8c8d"><em>Thỏa mãn</em></span></p>
+      <p>2. Goal /ɡəʊl/ (noun) - My biggest <strong>goal</strong> is to become the most famous singer in the world!<br>
+      <span style="color:#7e8c8d"><em>Mục tiêu</em></span></p>
+      <p><strong>Expression</strong></p>
+      <p>1. I’m so jealous - Ugh. Did you see Dave’s pictures from India? <strong>I’m so jealous!</strong><br>
+      <span style="color:#7e8c8d"><em>Tôi thật ghen tị!</em></span></p>
+      <p>2. You’ve also done lots of cool stuff - Don’t be jealous, <strong>you’ve also done lots of cool stuff.</strong><br>
+      <span style="color:#7e8c8d"><em>Bạn đã làm được rất nhiều việc hay ho</em></span></p>
+      <p>3. The most interesting place I’ve ever been is - I wish. <strong>The most interesting place I’ve ever been is…</strong> work.<br>
+      <span style="color:#7e8c8d"><em>Nơi thú vị nhất tôi từng đến là</em></span></p>
+      <p>4. If you want to - Well, <strong>if you want to</strong> do more interesting things, you should make a bucket list. That way you can keep track of your goals.<br>
+      <span style="color:#7e8c8d"><em>Nếu bạn muốn</em></span></p>
+      <p>5. You should - Well, if you want to do more interesting things, <strong>you should</strong> make a bucket list. That way you can keep track of your goals.<br>
+      <span style="color:#7e8c8d"><em>Bạn nên</em></span></p>
+      <p>6. That way - Well, if you want to do more interesting things, you should make a bucket list. <strong>That way</strong> you can keep track of your goals.<br>
+      <span style="color:#7e8c8d"><em>Bằng cách đó</em></span></p>
+      <p>7. Interesting idea - That’s an <strong>interesting idea</strong>. How has it changed you?<br>
+      <span style="color:#7e8c8d"><em>Ý tưởng thú vị</em></span></p>
+      <p>8. For one thing, I wasted less time - <strong>For one thing</strong>, I wasted less time. I knew that I wanted to write a book, so I worked harder on that goal. Do you have any big goals like that?<br>
+      <span style="color:#7e8c8d"><em>Trước hết, tôi lãng phí thời gian ít hơn</em></span></p>
+      <p>9. Biggest goal - My <strong>biggest goal</strong> is to become the most famous singer in the world!<br>
+      <span style="color:#7e8c8d"><em>Mục tiêu lớn nhất</em></span></p>
+      <p>10. The most famous singer - My biggest goal is to become<strong> the most famous singer</strong> in the world!<br>
+      <span style="color:#7e8c8d"><em>Ca sĩ nổi tiếng nhất</em></span></p>
+      <p>11. If I were you - Hmm… <strong>If I were you</strong>, I would start with a slightly smaller goal. For example, have you ever sung in front of anyone before?<br>
+      <span style="color:#7e8c8d"><em>Nếu tôi là bạn</em></span></p>
+      <p>12. A slightly smaller - Hmm… If I were you, I would start with <strong>a slightly smaller</strong> goal. For example, have you ever sung in front of anyone before?<br>
+      <span style="color:#7e8c8d"><em>Nhỏ hơn một chút</em></span></p>
+      <p>13. Maybe you can try - So<strong> maybe you can try</strong> to sing in a local show first.<br>
+      <span style="color:#7e8c8d"><em>Có lẽ bạn có thể cố gắng</em></span></p>
+      <p>14. The most important thing - So maybe you can try to sing in a local show first. But <strong>the most important thing </strong>to do is to work on your goal a little bit every day.<br>
+      <span style="color:#7e8c8d"><em>Điều quan trọng nhất</em></span></p>
+      <p>15. That’s not as exciting as - Ugh, but <strong>that’s not as exciting as</strong> being the most famous singer in the world!<br>
+      <span style="color:#7e8c8d"><em>Điều đó không thú vị như</em></span></p>
+      <p>16. It’s always good to - You’re right, but <strong>it’s always good to</strong> start small, right?<br>
+      <span style="color:#7e8c8d"><em>Lúc nào cũng tốt</em></span></p>
+      <h3>Topic 02: The Most Unforgettable Summer</h3>
+      <p><strong>Vocabulary</strong></p>
+      <p>1. Raising /ˈreɪzɪŋ/ (verb) - Even so, all of them had gone on such incredible journeys, which included: <strong>raising</strong> kids, learning skills, and overcoming challenges.<br>
+      <span style="color:#7e8c8d"><em>Nuôi nấng</em></span></p>
+      <p>2. Volunteering /ˌvɑːlənˈtɪrɪŋ/ (verb) - Ideally, what I’d like to do is helping other people, so I’m <strong>volunteering</strong> at an old folks’ home.<br>
+      <span style="color:#7e8c8d"><em>Đi tình nguyện</em></span></p>
+      <p><strong>Expression</strong></p>
+      <p>1. More adventurous than - All of my friends are <strong>more adventurous than</strong> I am.<br>
+      <span style="color:#7e8c8d"><em>Thích phiêu lưu, thích khám phá hơn</em></span></p>
+      <p>2. I’d like to travel with them - So even though<strong> I’d like to travel with them</strong> this summer, I’m going to stay home.<br>
+      <span style="color:#7e8c8d"><em>Tôi rất muốn đi du lịch với họ</em></span></p>
+      <p>3. Ideally, what I’d like to do is -<strong> Ideally, what I’d like to do is</strong> helping other people, so I’m volunteering at an old folks’ home.<br>
+      <span style="color:#7e8c8d"><em>Lý tưởng nhất, điều tôi muốn làm là</em></span></p>
+      <p>4. The most unforgettable experience of my life - So far, this summer has been <strong>the most unforgettable experience of my life</strong>.<br>
+      <span style="color:#7e8c8d"><em>Trải nghiệm khó quên nhất trong cuộc đời tôi</em></span></p>
+      <p>5. Spending time - At first I just visited once a week, but <strong>spending time</strong> with the elderly was the most interesting thing I had ever done.<br>
+      <span style="color:#7e8c8d"><em>Dành thời gian</em></span></p>
+      <p>6. The most interesting thing I had ever done - At first I just visited once a week, but spending time with the elderly was<strong> the most interesting thing I had ever done.</strong><br>
+      <span style="color:#7e8c8d"><em>Điều thú vị nhất tôi từng làm</em></span></p>
+      <p>7. Wound up - …but spending time with the elderly was the most interesting thing I had ever done, so I <strong>wound up</strong> going every day!<br>
+      <span style="color:#7e8c8d"><em>Rốt cục là</em></span></p>
+      <p>8. I had been longing for - <strong>I had been longing for</strong> a meaningful experience, and I finally found it there.<br>
+      <span style="color:#7e8c8d"><em>Tôi đang khao khát có</em></span></p>
+      <p>9. What I really loved about going there was - <strong>What I really loved about going there was</strong> talking about all sorts of things with the people I met<br>
+      <span style="color:#7e8c8d"><em>Điều tôi thực sự thích khi đến đây là</em></span></p>
+      <p>10. Journeys - Even so, all of them had gone on such incredible <strong>journeys</strong>, which included: raising kids, learning skills, and overcoming challenges.<br>
+      <span style="color:#7e8c8d"><em>Những chặng đường,những hành trình/em></span></p>
+      <h3>Topic 03: What is a Gap Year?</h3>
+      <p><strong>Vocabulary</strong></p>
+      <p>1. Venture /ˈventʃər/ (verb) - Don’t be afraid to <strong>venture</strong> into the unknown or explore the landscape of your imagination.<br>
+      <span style="color:#7e8c8d"><em>Phiêu lưu</em></span></p>
+      <p><strong>Expression</strong></p>
+      <p>1. Taking a year off - Each year, in fact, more and more students are <strong>taking a year off</strong> between high school and college.<br>
+      <span style="color:#7e8c8d"><em>Nghỉ học một năm</em></span></p>
+      <p>2. Gap year&nbsp;- …more and more students are taking a year off between high school and college to enjoy a “<strong>gap year</strong>,” and you can too!<br>
+      <span style="color:#7e8c8d"><em>Năm học thứ mười ba (Năm cách quãng giữa phổ thông và đại học)</em></span></p>
+      <p>3. Make a difference - See the world NOW, while you’re still young, beautiful and determined to <strong>make a difference</strong>.<br>
+      <span style="color:#7e8c8d"><em>Tạo nên sự khác biệt</em></span></p>
+      <p>4. Questions to ask yourself - There are several important<strong> questions to ask yourself</strong> before pulling the trigger.<br>
+      <span style="color:#7e8c8d"><em>Những câu hỏi để hỏi bản thân bạn</em></span></p>
+      <p>5. Pulling the trigger - There are several important questions to ask yourself before<strong> pulling the trigger</strong>.<br>
+      <span style="color:#7e8c8d"><em>Kéo cò súng (chốt quyết định)</em></span></p>
+      <p>6. Here’s to - <strong>Here’s to</strong> minding the gap and making a difference.<br>
+      <span style="color:#7e8c8d"><em>Trên đây là</em></span></p>
+      </div>
+`
+    },
+    {
+        id: 12,
+        title: 'Lesson 12 - Future goal',
+        openCollapse: true,
+        name: `Future goal`,
+        displayOrder: 12,
+        audioLink: `assets/audio/LESSON 12 - FUTURE GOAL/Recording 12.7 - Immersion.mp3`,
+        data: `<div><h3>Topic 01: What are You Planning?</h3>
+      <p><strong>Vocabulary</strong></p>
+      <p>1. Decided /dɪˈsaɪdɪd/ (Verb) -&nbsp;Okay. Have you <strong>decided</strong> what you’re doing it on yet?<br>
+      <span style="color:#7e8c8d"><em>Quyết định</em></span></p>
+      <p><strong>Expression</strong></p>
+      <p>1. I’d like to ask you some questions and get your opinion about - What can I help you with? – <strong>I’d like to ask you some questions and get your opinion about</strong> my final research project.<br>
+      <span style="color:#7e8c8d"><em>Tôi muốn hỏi bạn một số câu hỏi và xin ý kiến của bạn về</em></span></p>
+      <p>2. I’m torn between doing something on - To be honest, Professor,<strong> I’m torn between doing something on</strong> the banking industry or the hospitality industry.<br>
+      <span style="color:#7e8c8d"><em>Tôi đang bị giằng xé giữa làm một việc gì đó về</em></span></p>
+      <p>3. Banking industry - To be honest, Professor, I’m torn between doing something on the <strong>banking industry</strong> or the hospitality industry.<br>
+      <span style="color:#7e8c8d"><em>Ngành ngân hàng</em></span></p>
+      <p>4. Hospitality industry - To be honest, Professor, I’m torn between doing something on the banking industry or the <strong>hospitality industry</strong>.<br>
+      <span style="color:#7e8c8d"><em>Ngành khách sạn</em></span></p>
+      <p>5. Have you thought about - <strong>Have you thought about</strong> your long and short-term goals?<br>
+      <span style="color:#7e8c8d"><em>Bạn đã nghĩ về</em></span></p>
+      <p>6. My short-term goal is - Well, <strong>my short-term goal is</strong> to work at a bank and go to graduate school, but long-term, I want to open up my own hotel.<br>
+      <span style="color:#7e8c8d"><em>Mục tiêu ngắn hạn của tôi là</em></span></p>
+      <p>7. Graduate school - What do you want to study in <strong>graduate school</strong>?<br>
+      <span style="color:#7e8c8d"><em>Trường sau đại học</em></span></p>
+      <p>8. Hospitality Management – What do you want to study in graduate school? – <strong>Hospitality Management</strong>, of course.<br>
+      <span style="color:#7e8c8d"><em>Quản lý khách sạn</em></span></p>
+      <p>9. How do you plan on - Hmm, you wanna work at a bank to learn how to save money… <strong>How do you plan on</strong> paying for grad school?<br>
+      <span style="color:#7e8c8d"><em>Bạn định lên kế hoạch như thế nào cho?</em></span></p>
+      <p>10. Take out - Uhhh, I hadn’t thought about that… I guess I’ll have to <strong>take out</strong> some loans.<br>
+      <span style="color:#7e8c8d"><em>Gánh, chấp nhận (khoản vay ngân hàng)</em></span></p>
+      <p>11. Ultimate goal - You want to work at a bank to save some money, to eventually go to graduate school, where you’ll study Hospitality Management, your <strong>ultimate goal.</strong><br>
+      <span style="color:#7e8c8d"><em>Mục tiêu cuối cùng</em></span></p>
+      <p>12. That makes a lot of sense - Wow! <strong>That makes a lot of sense</strong>, actually.<br>
+      <span style="color:#7e8c8d"><em>Điều đó thực sự rất có ý nghĩa</em></span></p>
+      <p>13. My door’s always open - Now, back to your research project. You can come see me anytime.<strong> My door’s always open</strong>.<br>
+      <span style="color:#7e8c8d"><em>Cánh cửa của tôi luôn rộng mở.</em></span></p>
+      <h3>Topic 02: Time Management</h3>
+      <p><strong>Vocabulary</strong></p>
+      <p>1. Overwhelmed /ˌəʊvərˈwelmd/ (Verb) -&nbsp;Then, I feel completely <strong>overwhelmed</strong>.<br>
+      <span style="color:#7e8c8d"><em>Choáng ngợp, tràn ngập</em></span></p>
+      <p>2. Calendar /ˈkælɪndər/ (Noun) -&nbsp;A good friend once suggested that I keep a <strong>calendar</strong>.<br>
+      <span style="color:#7e8c8d"><em>Lịch,</em></span></p>
+      <p>3. Alerts /əˈlɜːrts/ (Noun) - I can actually add <strong>alerts</strong> to it so they go off accordingly, reminding me to stop what I’m doing and move on.<br>
+      <span style="color:#7e8c8d"><em>Báo thức, cảnh báo.</em></span></p>
+      <p>4. Reminding /rɪˈmaɪndɪŋ/ (Verb) -&nbsp;I can actually add alerts to it so they go off accordingly, <strong>reminding</strong> me to stop what I’m doing and move on.<br>
+      <span style="color:#7e8c8d"><em>Nhắc nhở</em></span></p>
+      <p>5. Extra /ˈekstrə/ (Adjective) -&nbsp;… but it was worth taking a little <strong>extra</strong> time to plan.<br>
+      <span style="color:#7e8c8d"><em>Thêm, hơn thường lệ</em></span></p>
+      <p>6. Efficient /ɪˈfɪʃnt/ (Adjective) -&nbsp;It actually saves me tons of time because I’m more <strong>efficient</strong> now!<br>
+      <span style="color:#7e8c8d"><em>Hiệu quả, năng suất cao</em></span></p>
+      <p>7. Arranging /əˈreɪndʒɪŋ/ (Verb) -&nbsp;And, <strong>arranging</strong> and prioritizing all the things I have to do.<br>
+      <span style="color:#7e8c8d"><em>Sắp xếp</em></span></p>
+      <p>8. Prioritizing /praɪˈɔːrətaɪzɪŋ/ (Verb) -&nbsp;And, arranging and <strong>prioritizing</strong> all the things I have to do.<br>
+      <span style="color:#7e8c8d"><em>Phân loại ưu tiên</em></span></p>
+      <p>9. Productivity /ˌprəʊdʌkˈtɪvəti/ (/ˌprɑːdʌkˈtɪvəti/) (Noun) - …and in control of my choices and my <strong>productivity</strong>.<br>
+      <span style="color:#7e8c8d"><em>Năng suất</em></span></p>
+      <p>10. Hectic /ˈhektɪk/ (Adjective) - For instance, I know that Mondays are usually really <strong>hectic</strong> at work.<br>
+      <span style="color:#7e8c8d"><em>Rất bận rộn, tất bật</em></span></p>
+      <p>11. Workout /ˈwɜːrkaʊt/ (Noun) -&nbsp;So I put “<strong>Workout</strong>” on my calendar every Monday morning because I generally work late.<br>
+      <span style="color:#7e8c8d"><em>Sự tập luyện (thể dục thể thao)</em></span></p>
+      <p>12. Light /laɪt/ (Adjective) -&nbsp;Wednesdays are usually <strong>light</strong> work days.<br>
+      <span style="color:#7e8c8d"><em>Nhẹ, nhẹ nhàng, nhạt</em></span></p>
+      <p><strong>Expression</strong></p>
+      <p>1. Time management - I have really been struggling with <strong>time management</strong>, lately.<br>
+      <span style="color:#7e8c8d"><em>Quản lý thời gian</em></span></p>
+      <p>2. Spread myself too thin - Constantly racing, I<strong> spread myself too thin</strong>, doing nothing well.<br>
+      <span style="color:#7e8c8d"><em>Chia bản thân mình ra quá nhiều</em></span></p>
+      <p>3. Jack of all trades and a master of none - Like I’m a <strong>jack of all trades and a master of none</strong>.<br>
+      <span style="color:#7e8c8d"><em>Một nghề sống đống nghề chết</em></span></p>
+      <p>4. Hang out - Wednesdays are usually light work days, so I leave Tuesday nights open to<strong> hang out</strong> with friends.<br>
+      <span style="color:#7e8c8d"><em>Đi chơi</em></span></p>
+      <p>5. Block off - I also <strong>block off</strong> several hours on the weekends to work on my true passion: painting.<br>
+      <span style="color:#7e8c8d"><em>Để trống</em></span></p>
+      <p>6. Take a break - I’m always more energized and inspired if I set an alert to stop and <strong>take a break.</strong><br>
+      <span style="color:#7e8c8d"><em>Nghỉ ngơi</em></span></p>
+      <h3>Topic 03: The Obstacle in our Path</h3>
+      <p><strong>Vocabulary</strong></p>
+      <p>1. Ambitions /æmˈbɪʃnz/ (Noun) -&nbsp;Concerned about the <strong>ambitions</strong> of his courtiers, he placed a big boulder in the middle of the road leading to the palace.<br>
+      <span style="color:#7e8c8d"><em>Sự tham vọng, Sự cầu toàn</em></span></p>
+      <p>2. Courtiers /ˈkɔːrtiərz/ (Noun) - Concerned about the ambitions of his <strong>courtiers</strong>, he placed a big boulder in the middle of the road leading to the palace.<br>
+      <span style="color:#7e8c8d"><em>Quan lại, triều thần</em></span></p>
+      <p>3. Boulder /ˈbəʊld ər/(Noun) - Concerned about the ambitions of his courtiers, he placed a big <strong>boulder</strong> in the middle of the road leading to the palace.<br>
+      <span style="color:#7e8c8d"><em>Tảng đá</em></span></p>
+      <p>4. Merchants /ˈmɜːrtʃənts/ (Noun) -&nbsp;The first people to stumble upon it were some of the King’s richest <strong>merchants</strong>.<br>
+      <span style="color:#7e8c8d"><em>Thương gia, người buôn bán</em></span></p>
+      <p>5. Roadblock /ˈrəʊdblɑːk/ (Noun) -&nbsp;Curious to see what this <strong>roadblock</strong> would do to their days’ journeys …<br>
+      <span style="color:#7e8c8d"><em>Chướng ngại vật, vật cản</em></span></p>
+      <p>6. Obstacle /ˈɑːbstəkl/ (Noun) -&nbsp;… he hid nearby to see if anyone would stop to remove the <strong>obstacle</strong> from the road.<br>
+      <span style="color:#7e8c8d"><em>Khó khăn, trở ngại</em></span></p>
+      <p>7. Peasant /ˈpeznt/ (Noun) -&nbsp;Finally, a <strong>peasant</strong>, whose arms were burdened with heavy vegetables that would later become part of the King’s feast, came upon the obstacle in his path.<br>
+      <span style="color:#7e8c8d"><em>Tá điền, nông dân phải thuê ruộng đất.</em></span></p>
+      <p>8. Weariness /ˈwɪrinəs/ (Noun) -&nbsp;It was an extraordinary achievement for any man, let alone this one, and his <strong>weariness</strong> showed.<br>
+      <span style="color:#7e8c8d"><em>Sự kiệt sức</em></span></p>
+      <p>9. Satchel /ˈsætʃəl/ (Noun) -&nbsp;Gathering up the King’s feast, he continued on his way when he saw a <strong>satchel</strong> in the road where the boulder had been.<br>
+      <span style="color:#7e8c8d"><em>Chiếc túi đeo</em></span></p>
+      <p>10. Doth /dɔ:θ/ (Verb) -&nbsp;To the man who <strong>doth</strong> pass on a golden opportunity …<br>
+      <span style="color:#7e8c8d"><em>Từ cổ – Dạng cũ của từ “does”</em></span></p>
+      <p>11. Hath /hæθ/ (Verb) - … to the man who <strong>hath</strong> helped to improve the human condition, the riches of the kingdom will be yours forever more.<br>
+      <span style="color:#7e8c8d"><em>Từ cổ – Dạng cũ của từ “has”</em></span></p>
+      <p><strong>Expression</strong></p>
+      <p>1. Extraordinary achievement - It was an <strong>extraordinary achievement</strong> for any man, let alone this one, and his weariness showed.<br>
+      <span style="color:#7e8c8d"><em>Thành tựu phi thường</em></span></p>
+      <p>2. Blinded by the brilliance of something shiny - <strong>Blinded by the brilliance of something shiny</strong>, he found out it was stuffed with gold coins and a note from the King.<br>
+      <span style="color:#7e8c8d"><em>Bị lóa mắt bởi thứ gì đó sáng rực</em></span></p>
+      </div>`
     }
 ];
 
@@ -665,7 +1698,7 @@ let Grammars = [
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"animated fadeIn\">\n  <div *ngFor=\"let item of lessons\" class=\"card\">\n    <div class=\"card-header\">\n      <button type=\"button\" class=\"btn btn-info text-light\"\n              (click)=\"item.openCollapse = !item.openCollapse\">{{item.title}}\n      </button>\n      <div class=\"card-header-actions\">\n        <button type=\"button\" class=\"btn btn-success\"\n              (click)=\"item.openCollapse = !item.openCollapse\">Try it\n        </button>\n      </div>\n    </div>\n    <div class=\"card-body\"\n         (collapsed)=\"collapsed($event)\"\n         (expanded)=\"expanded($event)\"\n         [collapse]=\"item.openCollapse\">\n      <p [innerHTML]=\"item.description\"></p>\n      <app-listen-read-content [contents]=\"item.contents\"></app-listen-read-content>\n    </div>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"animated fadeIn\">\n  <div class=\"pb-3\">\n    <select style=\"width: 200px;\" [value]=\"selectedLesson\" (change)=\"onChangeLesson($event)\" class=\"form-control\">\n      <option [value]=\"1\">1</option>\n      <option [value]=\"2\">2</option>\n      <option [value]=\"3\">3</option>\n      <option [value]=\"4\">4</option>\n      <option [value]=\"5\">5</option>\n      <option [value]=\"6\">6</option>\n      <option [value]=\"7\">7</option>\n      <option [value]=\"8\">8</option>\n      <option [value]=\"9\">9</option>\n      <option [value]=\"10\">10</option>\n      <option [value]=\"11\">11</option>\n      <option [value]=\"12\">12</option>\n    </select>\n  </div>\n  <div *ngFor=\"let item of fakeLessons\" class=\"card\">\n    <div class=\"card-header\">\n      <button type=\"button\" class=\"btn btn-info text-light\"\n              (click)=\"item.openCollapse = !item.openCollapse\">{{item.title}}\n      </button>\n      <div class=\"card-header-actions\">\n        <button type=\"button\" class=\"btn btn-success\"\n              (click)=\"item.openCollapse = !item.openCollapse\">Try it\n        </button>\n      </div>\n    </div>\n    <div class=\"card-body\"\n         (collapsed)=\"collapsed($event)\"\n         (expanded)=\"expanded($event)\"\n         [collapse]=\"item.openCollapse\">\n      <p [innerHTML]=\"item.description\"></p>\n      <app-listen-read-content [contents]=\"item.contents\"></app-listen-read-content>\n    </div>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -5140,10 +6173,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListenReads", function() { return ListenReads; });
 let ListenReads = [
     {
+        id: 1,
         title: 'Lesson 01 - Introduction',
         openCollapse: true,
         name: `Introduction`,
-        displayOrder: `1`,
+        displayOrder: 1,
         description: `Lesson 01 sẽ hướng dẫn bạn:<br/>
                   ✔️ Chào hỏi, chào tạm biệt.<br/>
                   ✔️ Giới thiệu thông tin cơ bản.<br/>
@@ -5382,9 +6416,10 @@ let ListenReads = [
         ]
     },
     {
+        id: 2,
         title: 'Lesson 02 - People',
         name: `People`,
-        displayOrder: `2`,
+        displayOrder: 2,
         description: `MY NAME IS DAO DAO, this lesson is tell you about people.`,
         openCollapse: true,
         contents: [
@@ -5608,14 +6643,53 @@ let ListenReads = [
             },
             {
                 case: `Day 3`,
-                title: `Phản xạ đa chiều - Introducing a Friend`,
+                title: `Phản xạ đa chiều - Jack’s Family Portrait`,
+            },
+            {
+                case: `Day 4`,
+                title: `Phản xạ đa chiều - A High School Reunion`,
+            },
+            {
+                case: `Day 5`,
+                title: `Phản xạ đa chiều - Just In Time For the Company Trip`,
+            },
+            {
+                case: `Day 6`,
+                title: `Thử thách`,
+                content: [
+                    {
+                        title: `Thử thách`,
+                        // tslint:disable-next-line:max-line-length
+                        audioLinkReflection: `assets/audio/LESSON 01 - INTRODUCTION/Recording 1.11 - Production.mp3`,
+                        data: `
+              ✔️ Tải phần tài liệu production sau đây về máy – bấm vào đây để download (nếu bạn đang truy cập khóa học trên app, vui lòng vào web để tải trực tiếp tài liệu này) – Luyện tập từ 2-3 lần (Có thể nhìn phần dịch và từ điển nếu cần).<br/>
+              ✔️ Nghe Recording 1.11 và trả lời vào khoảng trống từ 3-5 lần<br/>
+              ✔️ Hãy tưởng tượng bạn vô tình gặp một người nước ngoài tại một địa điểm du lịch nào đó, bạn hãy chủ động là người hỏi chuyện và làm quen với người bạn đó.<br/>
+              ✔️ Hãy tạo ra một kịch bản từ 10 – 15 câu hỏi đáp và thực hành nói trước gương sao cho thật tự nhiên.<br/>
+              ✔️ Bạn cũng có thể tìm một người bạn để đối thoại cùng nhau như các nhân vật tại Lesson 01!<br/>
+              Bạn đã hoàn thành việc luyện tập Lesson 01 – Eng Breaking. Ngay bây giờ, hãy đến với bài Đánh giá (Assessment) để nâng cao kỹ năng và ôn luyện kiến thức ở Lesson 01.`
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 3,
+        title: 'Lesson 03 - Time',
+        name: `Time`,
+        displayOrder: 3,
+        description: `MY NAME IS DAO DAO, this lesson is tell you about people.`,
+        openCollapse: true,
+        contents: [
+            {
+                case: `Day 1`,
+                title: `Nghe ngấm`,
                 content: [
                     {
                         title: `Topic 1: The Triathlete`,
                         audioLinkSlow: `assets/audio/LESSON 03 - TIME/Recording 3.1 - Slow Speech - Topic 1 - The Triathlete.mp3`,
                         audioLinkNative: `assets/audio/LESSON 03 - TIME/Recording 3.2 - Native Speech - Topic 1 - The Triathlete.mp3`,
-                        data: `<!-- #######  YAY, I AM THE SOURCE EDITOR! #########-->
-               <p>Janet was very surprised at Jackson&rsquo;s plan to complete in a triathlon next week. She&rsquo;s also curious about his triathlon training schedule.</p>
+                        data: `<p>Janet was very surprised at Jackson&rsquo;s plan to complete in a triathlon next week. She&rsquo;s also curious about his triathlon training schedule.</p>
               <p><em>Janet rất ngạc nhi&ecirc;n với kế hoạch thi đấu ở cuộc thi ba m&ocirc;n phối hợp v&agrave;o tuần tới của Jackson. C&ocirc; cũng t&ograve; m&ograve; về lịch tập luyện ba m&ocirc;n phối hợp của anh ấy.</em></p>
               <p><strong>Janet</strong>: I can&rsquo;t believe you&rsquo;re really <strong>doing a triathlon</strong> next week! How are you training for it?</p>
               <p><strong><em>Janet</em></strong><em>: T&ocirc;i kh&ocirc;ng thể tin được l&agrave; cậu thực sự sẽ <strong>tham gia một cuộc thi ba m&ocirc;n phối hợp</strong> v&agrave;o tuần tới! Cậu tập luyện cho cuộc thi thế n&agrave;o?</em></p>
@@ -5648,8 +6722,7 @@ let ListenReads = [
                         title: `Topic 2: Invitation to What`,
                         audioLinkSlow: `assets/audio/LESSON 03 - TIME/Recording 3.3 - Slow Speech -Topic 2 - Invitation to What.mp3`,
                         audioLinkNative: `assets/audio/LESSON 03 - TIME/Recording 3.4 -Native Speech - Topic 2 - Invitation to What.mp3`,
-                        data: `<!-- #######  YAY, I AM THE SOURCE EDITOR! #########-->
-               <p>Robert wants to invite Sharon to his party. Unfortunately, she has another appointment at that time.</p>
+                        data: `<p>Robert wants to invite Sharon to his party. Unfortunately, she has another appointment at that time.</p>
               <p>Robert muốn mời Sharon đến bữa tiệc của anh ấy. Thật kh&ocirc;ng may, c&ocirc; ấy c&oacute; một cuộc hẹn kh&aacute;c v&agrave;o thời điểm đ&oacute;.</p>
               <p><strong>Robert</strong>: Hey Sharon, what time will you be at the <strong>party</strong>?</p>
               <p><strong><em>Robert</em></strong><em>: Ch&agrave;o Sharon, mấy giờ cậu sẽ c&oacute; mặt ở <strong>bữa tiệc?</strong></em></p>
@@ -5693,11 +6766,10 @@ let ListenReads = [
               <p><strong><em>Sharon</em></strong><em>: <strong>Ồ, t&ocirc;i phải đi đ&acirc;y</strong>. Hẹn gặp lại.</em></p>`
                     },
                     {
-                        title: `Topic 3: Why Didn_t You Come to My Party`,
+                        title: `Topic 3: Why didn't you come to my party`,
                         audioLinkSlow: `assets/audio/LESSON 03 - TIME/Recording 3.5 - Slow Speech-Topic 3- Why Didn_t You Come to My Party.mp3`,
                         audioLinkNative: `assets/audio/LESSON 03 - TIME/Recording 3.6 - Native Speech - Topic 3 - Why Didn_t You Come to My Party.mp3`,
-                        data: `<!-- #######  YAY, I AM THE SOURCE EDITOR! #########-->
-               <p>Three friends are talking about how they want to celebrate their birthdays.</p>
+                        data: `<p>Three friends are talking about how they want to celebrate their birthdays.</p>
               <p>Ba người bạn đang n&oacute;i về c&aacute;ch họ muốn tổ chức sinh nhật của m&igrave;nh.</p>
               <p><strong>Christina</strong>: Tom, isn&rsquo;t your <strong>birthday coming up</strong> soon?</p>
               <p><strong><em>Christina</em></strong><em>: Tom, kh&ocirc;ng phải l&agrave; <strong>sinh nhật</strong> cậu <strong>sắp tới</strong> sao?</em></p>
@@ -5733,14 +6805,177 @@ let ListenReads = [
                 ]
             },
             {
+                case: `Day 2`,
+                title: `Nói đuổi`,
+                content: [
+                    {
+                        title: `Topic 1: The Triathlete`,
+                        audioLinkSlow: `assets/audio/LESSON 03 - TIME/Recording 3.1 - Slow Speech - Topic 1 - The Triathlete.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 03 - TIME/Recording 3.2 - Native Speech - Topic 1 - The Triathlete.mp3`,
+                        data: `<p>Janet was very surprised at Jackson&rsquo;s plan to complete in a triathlon next week. She&rsquo;s also curious about his triathlon training schedule.</p>
+              <p><em>Janet rất ngạc nhi&ecirc;n với kế hoạch thi đấu ở cuộc thi ba m&ocirc;n phối hợp v&agrave;o tuần tới của Jackson. C&ocirc; cũng t&ograve; m&ograve; về lịch tập luyện ba m&ocirc;n phối hợp của anh ấy.</em></p>
+              <p><strong>Janet</strong>: I can&rsquo;t believe you&rsquo;re really <strong>doing a triathlon</strong> next week! How are you training for it?</p>
+              <p><strong><em>Janet</em></strong><em>: T&ocirc;i kh&ocirc;ng thể tin được l&agrave; cậu thực sự sẽ <strong>tham gia một cuộc thi ba m&ocirc;n phối hợp</strong> v&agrave;o tuần tới! Cậu tập luyện cho cuộc thi thế n&agrave;o?</em></p>
+              <p><strong>Jackson</strong>: I <strong>get up</strong> early everyday to run. Usually I&rsquo;m <strong>awake</strong> by 4:30 or 5:00, and then I run 10 miles.</p>
+              <p><strong><em>Jackson</em></strong><em>: T&ocirc;i <strong>dậy</strong> sớm mỗi ng&agrave;y để chạy. Th&ocirc;ng thường t&ocirc;i <strong>thức dậy</strong> l&uacute;c 4:30 hoặc 5:00 v&agrave; sau đ&oacute; t&ocirc;i chạy 10 dặm.</em></p>
+              <p><strong>Janet</strong>: Wow. <strong>What time do you</strong> finish running?</p>
+              <p><strong><em>Janet</em></strong><em>: Woa. <strong>Mấy giờ th&igrave; cậu</strong> chạy xong?</em></p>
+              <p><strong>Jackson</strong>: I run for about an hour, and then I swim util <strong>it&rsquo;s time to</strong> go to work.</p>
+              <p><strong><em>Jackson</em></strong><em>: T&ocirc;i chạy trong khoảng một giờ, v&agrave; sau đ&oacute; t&ocirc;i bơi cho tới khi <strong>đến giờ</strong> đi l&agrave;m.</em></p>
+              <p><strong>Janet</strong>: Where do you swim?</p>
+              <p><strong><em>Janet</em></strong><em>: Cậu bơi ở đ&acirc;u?</em></p>
+              <p><strong>Jackson</strong>: <strong>Thankfully</strong>, there&rsquo;s a pool near my office, so I use that.</p>
+              <p><strong><em>Jackson</em></strong><em>: <strong>Thật may mắn</strong>, c&oacute; một hồ bơi gần văn ph&ograve;ng của t&ocirc;i n&ecirc;n t&ocirc;i sử dụng n&oacute;.</em></p>
+              <p><strong>Janet</strong>: What about<strong> cycling?</strong></p>
+              <p><strong><em>Janet</em></strong><em>: C&ograve;n m&ocirc;n <strong>đạp xe</strong> th&igrave; sao?</em></p>
+              <p><strong>Jackson</strong>: I cycle <strong>on the weekends.</strong> <strong>I spend</strong> pretty much all of Saturday and Sunday cycling around my <strong>neighborhood</strong>.</p>
+              <p><strong><em>Jackson</em></strong><em>: T&ocirc;i đạp xe v&agrave;o <strong>những ng&agrave;y cuối tuần.</strong> T&ocirc;i <strong>d&agrave;nh</strong> gần như cả ng&agrave;y thứ bảy v&agrave; chủ nhật để đạp xe đạp quanh <strong>khu nh&agrave; m&igrave;nh</strong>.</em></p>
+              <p><strong>Janet</strong>: What if it rains?</p>
+              <p><strong><em>Janet</em></strong><em>: Thế nếu trời mưa th&igrave; sao?</em></p>
+              <p><strong>Jackson</strong>: Well, I go to the <strong>gym</strong> and use an exercise bike on <strong>rainy</strong> days.</p>
+              <p><strong><em>Jackson</em></strong><em>: Ồ, t&ocirc;i đến <strong>ph&ograve;ng tập thể dục</strong> v&agrave; sử dụng xe đạp thể dục v&agrave;o những ng&agrave;y <strong>mưa</strong>.</em></p>
+              <p><strong>Janet</strong>: Wow, <strong>good luck</strong> Jackson!</p>
+              <p><strong><em>Janet</em></strong><em>: Wow, <strong>ch&uacute;c may mắn</strong> nh&eacute; Jackson!</em></p>
+              <p><strong>Jackson</strong>: Why don&rsquo;t you join me next time? It would be fun to have a workout buddy!</p>
+              <p><strong>Jackson</strong>: Sao cậu kh&ocirc;ng tham gia c&ugrave;ng với t&ocirc;i trong lần tới nhỉ? Sẽ rất th&uacute; vị khi c&oacute; một người bạn tập đ&oacute;!</p>
+              <p><strong>Janet</strong>: Sure, just let me know if they ever start my kind of triathlon: sleeping, eating and binge watching TV. Because I&rsquo;m already in perfect shape for that!</p>
+              <p><strong>Janet</strong>: Chắc chắn rồi, h&atilde;y cho t&ocirc;i biết khi n&agrave;o bạn bắt đầu cuộc thi ba m&ocirc;n phối hợp theo kiểu của t&ocirc;i: ngủ, ăn v&agrave; say sưa xem tivi. Bởi v&igrave; t&ocirc;i đ&atilde; ở trạng th&aacute;i ho&agrave;n hảo cho cuộc thi đ&oacute; rồi!</p>`
+                    },
+                    {
+                        title: `Topic 2: Invitation to What`,
+                        audioLinkSlow: `assets/audio/LESSON 03 - TIME/Recording 3.3 - Slow Speech -Topic 2 - Invitation to What.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 03 - TIME/Recording 3.4 -Native Speech - Topic 2 - Invitation to What.mp3`,
+                        data: `<p>Robert wants to invite Sharon to his party. Unfortunately, she has another appointment at that time.</p>
+              <p>Robert muốn mời Sharon đến bữa tiệc của anh ấy. Thật kh&ocirc;ng may, c&ocirc; ấy c&oacute; một cuộc hẹn kh&aacute;c v&agrave;o thời điểm đ&oacute;.</p>
+              <p><strong>Robert</strong>: Hey Sharon, what time will you be at the <strong>party</strong>?</p>
+              <p><strong><em>Robert</em></strong><em>: Ch&agrave;o Sharon, mấy giờ cậu sẽ c&oacute; mặt ở <strong>bữa tiệc?</strong></em></p>
+              <p><strong>Sharon</strong>: Party? What party?</p>
+              <p><strong><em>Sharon</em></strong><em>: Bữa tiệc? Bữa tiệc n&agrave;o nhỉ?</em></p>
+              <p><strong>Robert</strong>: My party. It&rsquo;s at 8:00 PM tomorrow night. Me, you, an Italian restaurant. <strong>Are you free?</strong></p>
+              <p><strong><em>Robert</em></strong><em>: Bữa tiệc của t&ocirc;i. L&uacute;c 8:00 tối mai. T&ocirc;i, cậu, tại một nh&agrave; h&agrave;ng &Yacute;. <strong>Cậu c&oacute; r&atilde;nh kh&ocirc;ng?</strong></em></p>
+              <p><strong>Sharon</strong>: Is this a party ... or ... are you <strong>inviting</strong> me to dinner, Robert?</p>
+              <p><strong><em>Sharon</em></strong><em>: Đ&oacute; c&oacute; phải l&agrave; một bữa tiệc ... hay .... l&agrave; cậu <strong>đang</strong> <strong>mời</strong> t&ocirc;i đi ăn tối, Robert?</em></p>
+              <p><strong>Robert</strong>: It&rsquo;s a party, I&rsquo;ll <strong>pick you up</strong> at seven, okay?</p>
+              <p><strong><em>Robert</em></strong><em>: Đ&oacute; l&agrave; một bữa tiệc. T&ocirc;i sẽ <strong>đ&oacute;n cậu v&agrave;o l&uacute;c</strong> 7 giờ, được chứ?</em></p>
+              <p><strong>Sharon</strong>: Uhhhhhh...</p>
+              <p><strong><em>Sharon</em></strong><em>: Uhhhhhh...</em></p>
+              <p><strong>Robert</strong>: That sounds like a yes. Is that ... that a yes?</p>
+              <p><strong><em>Robert</em></strong><em>: C&oacute; vẻ đ&oacute; l&agrave; một lời đồng &yacute;. L&agrave; ... l&agrave; đồng &yacute; đ&uacute;ng kh&ocirc;ng?</em></p>
+              <p><strong>Sharon</strong>: Thanks, but <strong>I&rsquo;m afraid I&rsquo;m busy tomorrow.</strong> I&rsquo;m going to a real party.</p>
+              <p><strong><em>Sharon</em></strong><em>: Cảm ơn, nhưng <strong>t&ocirc;i e l&agrave; ng&agrave;y mai t&ocirc;i bận rồi.</strong> T&ocirc;i sẽ tham gia một bữa tiệc thật sự.</em></p>
+              <p><strong>Robert</strong>: Oh... Okay. Well, call me later, or something...</p>
+              <p><strong><em>Robert</em></strong><em>: Ồ... Được rồi. Vậy, h&atilde;y gọi cho t&ocirc;i sau, hay g&igrave; đ&oacute;...</em></p>
+              <p><strong>Sharon</strong>: It&rsquo;s kind of short notice, ya know...</p>
+              <p><strong><em>Sharon</em></strong><em>: Đ&oacute; l&agrave; một lời b&aacute;o mời hơi gấp, cậu biết đấy...</em></p>
+              <p><strong>Robert</strong>: Yeah, no. I understand. <strong>May be another time.</strong></p>
+              <p><strong><em>Robert</em></strong><em>: Ừ, t&ocirc;i hiểu. <strong>C&oacute; lẽ để lần kh&aacute;c vậy.</strong></em></p>
+              <p><strong>Sharon</strong>: Well... <strong>Would you like to come with me?</strong></p>
+              <p><strong><em>Sharon</em></strong><em>: M&agrave;... <strong>Cậu c&oacute; muốn đi với t&ocirc;i kh&ocirc;ng?</strong></em></p>
+              <p><strong>Robert</strong>: <strong>You bet!</strong> What time? ... And ... where?</p>
+              <p><strong><em>Robert</em></strong><em>: <strong>Chắc chắn rồi!</strong> Mấy giờ? ... V&agrave; ... ở đ&acirc;u?</em></p>
+              <p><strong>Sharon</strong>: Let&rsquo;s meet here tomorrow at noon. Bring something to grill. <strong>How&rsquo;s that sound?</strong></p>
+              <p><strong><em>Sharon</em></strong><em>: Ch&uacute;ng ta h&atilde;y gặp nhau ở đ&acirc;y v&agrave;o trưa mai nh&eacute;. Mang theo v&agrave;i thứ để nướng. <strong>Nghe &yacute; đ&oacute; thế n&agrave;o?</strong></em></p>
+              <p><strong>Robert</strong>: That sounds great! Should I wear a suit?</p>
+              <p><strong><em>Robert</em></strong><em>: Nghe tuyệt đấy! T&ocirc;i c&oacute; n&ecirc;n mặc một bộ vest?</em></p>
+              <p><strong>Sharon</strong>: Uhm... A swimsuit. There&rsquo;s a pool.</p>
+              <p><strong><em>Sharon</em></strong><em>: Uhm... Một bộ đồ bơi. C&oacute; một bể bơi ở đ&oacute;.</em></p>
+              <p><strong>Robert</strong>: <strong>Got it! I&rsquo;m looking forward to it!</strong></p>
+              <p><strong><em>Robert</em></strong><em>: <strong>T&ocirc;i hiểu rổi! T&ocirc;i rất mong đợi</strong> bữa tiệc đấy!</em></p>
+              <p><strong>Sharon</strong>: Yeah, same! ... Oops! <strong>What time is it?</strong></p>
+              <p><strong><em>Sharon</em></strong><em>: Ừ, t&ocirc;i cũng thế! ... Ối! <strong>Mấy giờ rồi?</strong></em></p>
+              <p><strong>Robert</strong>: <strong>It&rsquo;s 10:30</strong>.</p>
+              <p><strong><em>Robert</em></strong><em>: <strong>B&acirc;y giờ l&agrave; 10:30</strong>.</em></p>
+              <p><strong>Sharon</strong>: <strong>Oh, I&rsquo;ve gotta go</strong>. See ya.</p>
+              <p><strong><em>Sharon</em></strong><em>: <strong>Ồ, t&ocirc;i phải đi đ&acirc;y</strong>. Hẹn gặp lại.</em></p>`
+                    },
+                    {
+                        title: `Topic 3: Why didn't you come to my party`,
+                        audioLinkSlow: `assets/audio/LESSON 03 - TIME/Recording 3.5 - Slow Speech-Topic 3- Why Didn_t You Come to My Party.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 03 - TIME/Recording 3.6 - Native Speech - Topic 3 - Why Didn_t You Come to My Party.mp3`,
+                        data: `<p>Three friends are talking about how they want to celebrate their birthdays.</p>
+              <p>Ba người bạn đang n&oacute;i về c&aacute;ch họ muốn tổ chức sinh nhật của m&igrave;nh.</p>
+              <p><strong>Christina</strong>: Tom, isn&rsquo;t your <strong>birthday coming up</strong> soon?</p>
+              <p><strong><em>Christina</em></strong><em>: Tom, kh&ocirc;ng phải l&agrave; <strong>sinh nhật</strong> cậu <strong>sắp tới</strong> sao?</em></p>
+              <p><strong>Tom</strong>: Yeah, it&rsquo;s March 21<sup>st</sup>.</p>
+              <p><strong><em>Tom</em></strong><em>: Đ&uacute;ng, v&agrave;o ng&agrave;y 21 th&aacute;ng 3.</em></p>
+              <p><strong>Christina</strong>: And you&rsquo;re turning... 43?</p>
+              <p><strong><em>Christina</em></strong><em>: V&agrave; cậu đang bước sang tuổi ... 43?</em></p>
+              <p><strong>Tom</strong>: 37. I <strong>was born in</strong> 1981.</p>
+              <p><strong><em>Tom</em></strong><em>: 37. <strong>T&ocirc;i sinh năm</strong> 1981.</em></p>
+              <p><strong>Christina</strong>: Well, are going to have a big party?</p>
+              <p><strong><em>Christina</em></strong><em>: Vậy, ch&uacute;ng ta sẽ c&oacute; một bữa tiệc party?</em></p>
+              <p><strong>Tom</strong>: No, I think this year my girlfriend and I are going to the beach for a <strong>romantic</strong> weekend <strong>together</strong>.</p>
+              <p><strong><em>Tom</em></strong><em>: Kh&ocirc;ng, t&ocirc;i nghĩ năm nay t&ocirc;i v&agrave; bạn g&aacute;i sẽ đi biển cho một cuối tuần <strong>l&atilde;ng mạn b&ecirc;n nhau.</strong></em></p>
+              <p><strong>Christina</strong>: Oh, okay! ... Liam, when is your birthday again?</p>
+              <p><strong><em>Christina</em></strong><em>: Ồ, được rồi! ... Liam, khi n&agrave;o sinh nhật cậu ấy nhỉ?</em></p>
+              <p><strong>Liam</strong>: It&rsquo;s on February 19<sup>th</sup>, so about <strong>a month away</strong>.</p>
+              <p><strong><em>Liam</em></strong><em>: Ng&agrave;y 19 th&aacute;ng 2, vậy khoảng <strong>một th&aacute;ng nữa</strong>.</em></p>
+              <p><strong>Christina</strong>: Awesome! How are we going to <strong>celebrate</strong>?</p>
+              <p><strong><em>Christina</em></strong><em>: Tuyệt vời! Ch&uacute;ng ta sẽ <strong>ch&uacute;c mừng</strong> như thế n&agrave;o đ&acirc;y?</em></p>
+              <p><strong>Liam</strong>: I always just celebrate my birthday with my family. I don&rsquo;t like big parties or bars.</p>
+              <p><strong><em>Liam</em></strong><em>: T&ocirc;i lu&ocirc;n lu&ocirc;n chỉ tổ chức sinh nhật với gia đ&igrave;nh m&igrave;nh. T&ocirc;i kh&ocirc;ng th&iacute;ch những bữa tiệc lớn hay c&aacute;c qu&aacute;n bar.</em></p>
+              <p><strong>Christina</strong>: <strong>No offense</strong>, but you guys are <strong>boring</strong>. I always <strong>throw a huge party</strong> for my birthday!</p>
+              <p><strong><em>Christina</em></strong><em>: <strong>Kh&ocirc;ng c&oacute; &yacute; g&igrave; đ&acirc;u</strong>, nhưng c&aacute;c cậu thật <strong>nh&agrave;m ch&aacute;n</strong>. T&ocirc;i lu&ocirc;n lu&ocirc;n <strong>tổ chức một bữa tiệc lớn</strong> cho sinh nhật của t&ocirc;i!</em></p>
+              <p><strong>Liam</strong>: When is your birthday, Christina?</p>
+              <p><strong><em>Liam</em></strong><em>: Khi n&agrave;o sinh nhật cậu, Christina?</em></p>
+              <p><strong>Christina</strong>: It was last week, the 10<sup>th</sup>.</p>
+              <p><strong><em>Christina</em></strong><em>: V&agrave;o tuần trước, ng&agrave;y m&ugrave;ng 10.</em></p>
+              <p><strong>Tom</strong>: The party was <strong>great</strong>, <strong>wasn&rsquo;t it</strong>?</p>
+              <p><strong><em>Tom</em></strong><em>: Bữa tiệc hẳn l&agrave; <strong>tuyệt vời phải kh&ocirc;ng?</strong></em></p>
+              <p><strong>Christina</strong>: No, it wasn&rsquo;t. Nobody <strong>showed up</strong>.</p>
+              <p><strong><em>Christina</em></strong><em>: Kh&ocirc;ng, kh&ocirc;ng hề. Kh&ocirc;ng ai xuất hiện cả.</em></p>`
+                    }
+                ]
+            },
+            {
+                case: `Day 3`,
+                title: `Phản xạ đa chiều - The Triathlete`,
+            },
+            {
                 case: `Day 4`,
-                title: `Phản xạ đa chiều - Where Do You Live?`,
+                title: `Phản xạ đa chiều - Invitation to What`,
+            },
+            {
+                case: `Day 5`,
+                title: `Phản xạ đa chiều - Why didn't you come to my party`,
+            },
+            {
+                case: `Day 6`,
+                title: `Thử thách`,
+                content: [
+                    {
+                        title: `Thử thách`,
+                        // tslint:disable-next-line:max-line-length
+                        audioLinkReflection: `assets/audio/LESSON 01 - INTRODUCTION/Recording 1.11 - Production.mp3`,
+                        data: `
+              ✔️ Tải phần tài liệu production sau đây về máy – bấm vào đây để download (nếu bạn đang truy cập khóa học trên app, vui lòng vào web để tải trực tiếp tài liệu này) – Luyện tập từ 2-3 lần (Có thể nhìn phần dịch và từ điển nếu cần).<br/>
+              ✔️ Nghe Recording 1.11 và trả lời vào khoảng trống từ 3-5 lần<br/>
+              ✔️ Hãy tưởng tượng bạn vô tình gặp một người nước ngoài tại một địa điểm du lịch nào đó, bạn hãy chủ động là người hỏi chuyện và làm quen với người bạn đó.<br/>
+              ✔️ Hãy tạo ra một kịch bản từ 10 – 15 câu hỏi đáp và thực hành nói trước gương sao cho thật tự nhiên.<br/>
+              ✔️ Bạn cũng có thể tìm một người bạn để đối thoại cùng nhau như các nhân vật tại Lesson 01!<br/>
+              Bạn đã hoàn thành việc luyện tập Lesson 01 – Eng Breaking. Ngay bây giờ, hãy đến với bài Đánh giá (Assessment) để nâng cao kỹ năng và ôn luyện kiến thức ở Lesson 01.`
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 4,
+        title: 'Lesson 04 - Renting and shopping',
+        name: `Renting and shopping`,
+        displayOrder: 4,
+        description: `MY NAME IS DAO DAO, this lesson is tell you about people.`,
+        openCollapse: true,
+        contents: [
+            {
+                case: `Day 1`,
+                title: `Nghe ngấm`,
                 content: [
                     {
                         title: `Topic 1: Apartment Hunting`,
                         audioLinkSlow: `assets/audio/LESSON 04 - RENTING AND SHOPPING/Recording 4.1 - Slow Speech - Topic 1 - Apartment Hunting.mp3`,
                         audioLinkNative: `assets/audio/LESSON 04 - RENTING AND SHOPPING/Recording 4.2 - Native Speech - topic 1 - Apartment Hunting.mp3`,
-                        data: `<!-- #######  YAY, I AM THE SOURCE EDITOR! #########--> <p>Mary and Howard like an apartment. The Realty Agent takes them round the apartment before they decide to rent it.</p>
+                        data: `<p>Mary and Howard like an apartment. The Realty Agent takes them round the apartment before they decide to rent it.</p>
               <p><em>Mary v&agrave; Howard th&iacute;ch một căn hộ. Chuy&ecirc;n vi&ecirc;n Bất động sản (BĐS) đưa họ đi xem căn hộ trước khi họ quyết định thu&ecirc; n&oacute;.</em></p>
               <p><strong>Realty Agent:</strong> This is the <strong>living room.</strong> It has <strong>a nice view of</strong> the part from that window.</p>
               <p><strong><em>Realty Agent:</em></strong><em> Đ&acirc;y l&agrave; <strong>ph&ograve;ng kh&aacute;ch.</strong> N&oacute; c&oacute; <strong>một tầm nh&igrave;n đẹp ra</strong> c&ocirc;ng vi&ecirc;n từ cửa sổ đ&oacute;.</em></p>
@@ -5777,7 +7012,7 @@ let ListenReads = [
                         title: `Topic 2: The Super Shopper`,
                         audioLinkSlow: `assets/audio/LESSON 04 - RENTING AND SHOPPING/Recording 4.3 - Slow Speech - Topic 2 - The Super Shopper.mp3`,
                         audioLinkNative: `assets/audio/LESSON 04 - RENTING AND SHOPPING/Recording 4.4 - Native Speech - Topic 2 - The Super Shopper.mp3`,
-                        data: `<!-- #######  YAY, I AM THE SOURCE EDITOR! #########--> <p>Mary goes to a local supermarket. Unfortunately, she has to pay a little too much for what she wants to buy.</p>
+                        data: `<p>Mary goes to a local supermarket. Unfortunately, she has to pay a little too much for what she wants to buy.</p>
               <p>Mary đến một si&ecirc;u thị trong v&ugrave;ng. Thật kh&ocirc;ng may, c&ocirc; ấy phải trả qu&aacute; nhiều cho những g&igrave; c&ocirc; ấy muốn mua.</p>
               <p><strong>Cashier</strong>: Your <strong>total</strong> will be seventy two. <strong>How would you like to pay?</strong></p>
               <p><strong><em>Cashier</em></strong><em>: Của chị <strong>tổng cộng</strong> l&agrave; bảy mươi hai đ&ocirc; la. <strong>Chị muốn thanh to&aacute;n như thế n&agrave;o?</strong></em></p>
@@ -5805,10 +7040,10 @@ let ListenReads = [
               <p><strong><em>Mary</em></strong><em>: Tiền mặt, l&agrave;m ơn.</em></p>`
                     },
                     {
-                        title: `Topic 3: What’s Your Style`,
+                        title: `Topic 3: Why didn_t you come to my party`,
                         audioLinkSlow: `assets/audio/LESSON 04 - RENTING AND SHOPPING/Recording 4.5 - Slow Speech -Topic 3 - What’s Your Style.mp3`,
                         audioLinkNative: `assets/audio/LESSON 04 - RENTING AND SHOPPING/Recording 4.6 - Native Speech - Topic 3 - What_s Your Style.mp3`,
-                        data: `<!-- #######  YAY, I AM THE SOURCE EDITOR! #########--><p>Sonya and Alice are walking on the street, then they&rsquo;re attracted by a cute tomboy outfit in the window of a nearby shop.</p>
+                        data: `<p>Sonya and Alice are walking on the street, then they&rsquo;re attacted by a cute tomboy outfit in the window of a nearby shop.</p>
               <p><em>Sonya v&agrave; Alice đang đi bộ tr&ecirc;n phố th&igrave; bị thu h&uacute;t bởi một bộ đồ kiểu tomboy dễ thương ở của sổ của một cửa h&agrave;ng gần đ&oacute;.</em></p>
               <p><strong>Sonya</strong>: Oh my gosh, look at this <strong>outfit</strong>. Isn&rsquo;t it great?</p>
               <p><strong><em>Sonya</em></strong><em>: &Ocirc;i trời ơi, nh&igrave;n <strong>bộ đồ</strong> n&agrave;y đi. Kh&ocirc;ng phải n&oacute; rất tuyệt sao?</em></p>
@@ -5816,8 +7051,8 @@ let ListenReads = [
               <p><strong><em>Alick</em></strong><em>: C&oacute; thể l&agrave; tuyệt với con trai, nhưng kh&ocirc;ng phải với con g&aacute;i.</em></p>
               <p><strong>Sonya</strong>: What&rsquo;s wrong? You don&rsquo;t like the <strong>tomboy</strong> look?</p>
               <p><strong><em>Sonya</em></strong><em>: Sao thế? Cậu kh&ocirc;ng th&iacute;ch phong c&aacute;ch <strong>tomboy</strong> &agrave;?</em></p>
-              <p><strong>Alice</strong>: Erm. I like the tomboy look like how I like fast food... And I don&rsquo;t eat fast food... It&rsquo;s <strong>trendy,</strong> but I think women should <strong>dress like women.</strong></p>
-              <p><strong><em>Alice</em></strong><em>: Xem n&agrave;o. T&ocirc;i th&iacute;ch phong c&aacute;ch tomboy, giống như c&aacute;ch t&ocirc;i th&iacute;ch đồ ăn nhanh... V&agrave; t&ocirc;i kh&ocirc;ng ăn đồ ăn nhanh... N&oacute; <strong>hợp thời,</strong> nhưng t&ocirc;i nghĩ rằng phụ nữ th&igrave; n&ecirc;n <strong>mặc giống phụ nữ.</strong></em></p>
+              <p><strong>Alcie</strong>: Erm. I like the tomboy look like how I like fast food... And I don&rsquo;t eat fast food... It&rsquo;s <strong>trendy,</strong> but I think women should <strong>dress like women.</strong></p>
+              <p><strong><em>Alcie</em></strong><em>: Xem n&agrave;o. T&ocirc;i th&iacute;ch phong c&aacute;ch tomboy, giống như c&aacute;ch t&ocirc;i th&iacute;ch đồ ăn nhanh... V&agrave; t&ocirc;i kh&ocirc;ng ăn đồ ăn nhanh... N&oacute; <strong>hợp thời,</strong> nhưng t&ocirc;i nghĩ rằng phụ nữ th&igrave; n&ecirc;n <strong>mặc giống phụ nữ.</strong></em></p>
               <p><strong>Sonya</strong>: I <strong>respect</strong> that. I think it&rsquo;s fun and cool to be a little <strong>different</strong> sometimes. Some guys like it, too.</p>
               <p><strong><em>Sonya</em></strong><em>: T&ocirc;i <strong>t&ocirc;n trọng</strong> điều đ&oacute;. T&ocirc;i cho l&agrave; thỉnh thoảng <strong>thay đổi</strong> một ch&uacute;t cũng rất th&uacute; vị. Một v&agrave;i anh ch&agrave;ng cũng th&iacute;ch thế m&agrave;.</em></p>
               <p><strong>Alice</strong>: You&rsquo;re right. But my <strong>shoulders</strong> are too wide to <strong>pull it off.</strong> I look like a man.</p>
@@ -5832,23 +7067,122 @@ let ListenReads = [
                 ]
             },
             {
-                case: `Day 5`,
-                title: `Phản xạ đa chiều - What is Your Job?`,
+                case: `Day 2`,
+                title: `Nói đuổi`,
                 content: [
                     {
-                        title: `Topic 3: Why Didn_t You Come to My Party`,
-                        audioLinkSlow: `assets/audio/LESSON 03 - TIME/Recording 3.5 - Slow Speech-Topic 3- Why Didn_t You Come to My Party.mp3`,
-                        audioLinkNative: `assets/audio/LESSON 03 - TIME/Recording 3.6 - Native Speech - Topic 3 - Why Didn_t You Come to My Party.mp3`,
-                        data: `<!-- #######  YAY, I AM THE SOURCE EDITOR! #########-->`
+                        title: `Topic 1: Apartment Hunting`,
+                        audioLinkSlow: `assets/audio/LESSON 04 - RENTING AND SHOPPING/Recording 4.1 - Slow Speech - Topic 1 - Apartment Hunting.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 04 - RENTING AND SHOPPING/Recording 4.2 - Native Speech - topic 1 - Apartment Hunting.mp3`,
+                        data: `<p>Mary and Howard like an apartment. The Realty Agent takes them round the apartment before they decide to rent it.</p>
+              <p><em>Mary v&agrave; Howard th&iacute;ch một căn hộ. Chuy&ecirc;n vi&ecirc;n Bất động sản (BĐS) đưa họ đi xem căn hộ trước khi họ quyết định thu&ecirc; n&oacute;.</em></p>
+              <p><strong>Realty Agent:</strong> This is the <strong>living room.</strong> It has <strong>a nice view of</strong> the part from that window.</p>
+              <p><strong><em>Realty Agent:</em></strong><em> Đ&acirc;y l&agrave; <strong>ph&ograve;ng kh&aacute;ch.</strong> N&oacute; c&oacute; <strong>một tầm nh&igrave;n đẹp ra</strong> c&ocirc;ng vi&ecirc;n từ cửa sổ đ&oacute;.</em></p>
+              <p><strong>Mary</strong>: How nice, our cats would love it. Oh, <strong>by the way,</strong> are <strong>pets allowed?</strong></p>
+              <p><strong><em>Mary</em></strong><em>: Thật tuyệt l&agrave;m sao, mấy ch&uacute; m&egrave;o của ch&uacute;ng t&ocirc;i sẽ th&iacute;ch n&oacute;. &Agrave;, <strong>nh&acirc;n tiện</strong>, <strong>th&uacute; cưng</strong> c&oacute; <strong>được ph&eacute;p</strong> nu&ocirc;i kh&ocirc;ng?</em></p>
+              <p><strong>Realty Agent:</strong> Of course, but you need to pay an <strong>extra fee</strong> of 50 dollars per month.</p>
+              <p><strong><em>Realty Agent:</em></strong><em> Tất nhi&ecirc;n, nhưng anh chị cần phải trả một khoản <strong>phụ ph&iacute;</strong> l&agrave; 50 đ&ocirc; la mỗi th&aacute;ng.</em></p>
+              <p><strong>Howard</strong>: That sounds <strong>doable</strong>. Is the <strong>neighborthood safe?</strong></p>
+              <p><strong><em>Howard</em></strong><em>: Nghe c&oacute; vẻ thực hiện được. <strong>Khu d&acirc;n cư</strong> c&oacute; <strong>an to&agrave;n</strong> kh&ocirc;ng?</em></p>
+              <p><strong>Realty Agent:</strong> There is some <strong>crime</strong> in the park, but nothing serious. Would you like to see the <strong>bedrooms</strong>?</p>
+              <p><strong><em>Realty Agent:</em></strong><em> Một số <strong>tội phạm</strong> ở c&ocirc;ng vi&ecirc;n, nhưng kh&ocirc;ng c&oacute; g&igrave; nghiệm trọng. Anh chị c&oacute; muốn xem <strong>c&aacute;c ph&ograve;ng ngủ</strong> kh&ocirc;ng?</em></p>
+              <p><strong>Mary:</strong> Yes, please!</p>
+              <p><strong><em>Mary:</em></strong><em> C&oacute;, cảm ơn anh!</em></p>
+              <p><strong>Realty Agent:</strong> Let&rsquo;s go upstairs then... This is the master bedroom, with is own bathroom.</p>
+              <p><strong><em>Realty Agent:</em></strong><em> H&atilde;y đi l&ecirc;n tầng tr&ecirc;n rồi... Đ&acirc;y l&agrave; ph&ograve;ng ngủ ch&iacute;nh, với ph&ograve;ng tắm ri&ecirc;ng.</em></p>
+              <p><strong>Mary</strong>: It&rsquo;s <strong>cozy.</strong></p>
+              <p><strong><em>Mary</em></strong><em>: Thật <strong>ấm c&uacute;ng.</strong></em></p>
+              <p><strong>Realty Agent:</strong> And this is the second bedroom. You could also use it as a <strong>home office.</strong></p>
+              <p><strong><em>Realty Agent:</em></strong><em> V&agrave; đ&acirc;y l&agrave; ph&ograve;ng ngủ thứ hai. Anh chị cũng c&oacute; thể sử dụng n&oacute; như l&agrave; một <strong>văn ph&ograve;ng tại nh&agrave;.</strong></em></p>
+              <p><strong>Mary:</strong> <strong>Where is the second bathroom?</strong></p>
+              <p><strong><em>Mary:</em></strong><em> <strong>Ph&ograve;ng tắm thứ hai ở đ&acirc;u.</strong></em></p>
+              <p><strong>Realty Agent:</strong> It&rsquo;s <strong>downstairs</strong>.</p>
+              <p><strong><em>Realty Agent:</em></strong><em> N&oacute; ở <strong>tầng dưới</strong>.</em></p>
+              <p><strong>Howard:</strong> And <strong>how much is the rent?</strong></p>
+              <p><strong><em>Howard:</em></strong><em> V&agrave; <strong>tiền thu&ecirc;</strong> nh&agrave; l&agrave; <strong>bao nhi&ecirc;u?</strong></em></p>
+              <p><strong>Realty Agent:</strong> <strong>It&rsquo;s $800 a month</strong>... plus $50, if you have pets.</p>
+              <p><strong><em>Realty Agent:</em></strong><em> <strong>800 đ&ocirc; la một th&aacute;ng</strong>... cộng với 50 đ&ocirc; la, nếu anh chị c&oacute; vật nu&ocirc;i.</em></p>
+              <p><strong>Howard</strong>: Sound good. Let&rsquo;s <strong>sign the lease.</strong></p>
+              <p><strong><em>Howard</em></strong><em>: Nghe c&oacute; vẻ tốt đấy. H&atilde;y <strong>k&yacute; hợp đồng thu&ecirc;</strong> th&ocirc;i.</em></p>
+              <p><strong>Mary (Sigh):</strong> Okey. My purse is like an onion, opening it makes me cry!!!</p>
+              <p><strong><em>Mary:</em></strong><em> Ok. V&iacute; của em giống như một củ h&agrave;nh, mở n&oacute; ra khiến em bật kh&oacute;c.</em></p>`
+                    },
+                    {
+                        title: `Topic 2: The Super Shopper`,
+                        audioLinkSlow: `assets/audio/LESSON 04 - RENTING AND SHOPPING/Recording 4.3 - Slow Speech - Topic 2 - The Super Shopper.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 04 - RENTING AND SHOPPING/Recording 4.4 - Native Speech - Topic 2 - The Super Shopper.mp3`,
+                        data: `<p>Mary goes to a local supermarket. Unfortunately, she has to pay a little too much for what she wants to buy.</p>
+              <p>Mary đến một si&ecirc;u thị trong v&ugrave;ng. Thật kh&ocirc;ng may, c&ocirc; ấy phải trả qu&aacute; nhiều cho những g&igrave; c&ocirc; ấy muốn mua.</p>
+              <p><strong>Cashier</strong>: Your <strong>total</strong> will be seventy two. <strong>How would you like to pay?</strong></p>
+              <p><strong><em>Cashier</em></strong><em>: Của chị <strong>tổng cộng</strong> l&agrave; bảy mươi hai đ&ocirc; la. <strong>Chị muốn thanh to&aacute;n như thế n&agrave;o?</strong></em></p>
+              <p><strong>Mary</strong>: That&rsquo;s <strong>more than I expected.</strong> <strong>How much is</strong> that <strong>fancy jelly?</strong></p>
+              <p><strong><em>Mary</em></strong><em>: Số đ&oacute; <strong>nhiều hơn t&ocirc;i nghĩ.</strong> <strong>Lọ mứt nhiều m&agrave;u</strong> kia <strong>bao nhi&ecirc;u</strong> tiền?</em></p>
+              <p><strong>Cashier</strong>: The <strong>organic</strong> jelly is sixteen dollars.</p>
+              <p><strong><em>Cashier</em></strong><em>: Mứt <strong>hữu cơ</strong> c&oacute; gi&aacute; l&agrave; mười s&aacute;u đ&ocirc; la.</em></p>
+              <p><strong>Mary</strong>: Oh no. My daughter likes it, but that&rsquo;s too much. I&rsquo;ll have to <strong>put that back.</strong></p>
+              <p><strong><em>Mary</em></strong><em>: &Ocirc;i kh&ocirc;ng. Con g&aacute;i t&ocirc;i th&iacute;ch n&oacute;, nhưng n&oacute; qu&aacute; đắt. T&ocirc;i phải <strong>để n&oacute; lại.</strong></em></p>
+              <p><strong>Cashier</strong>: That&rsquo;s actually <strong>on sale</strong> now, <strong>buy one get one half off.</strong> Would you like to do that?</p>
+              <p><strong><em>Cashier</em></strong><em>: Thật ra th&igrave; c&aacute;i đ&oacute; đang được giảm gi&aacute;, mua một tặng một nửa. Chị c&oacute; muốn nhận ưu đ&atilde;i đ&oacute; kh&ocirc;ng?</em></p>
+              <p><strong>Mary</strong>: Well, sixteen dollars is a little <strong>steep</strong> for one, but twenty-four dollars for two might <strong>be worth</strong> it.</p>
+              <p><strong><em>Mary</em></strong><em>: Để xem, mười s&aacute;u đ&ocirc; la cho một lọ th&igrave; <strong>qu&aacute; đắt</strong>, nhưng hai tư đ&ocirc; la cho hai lọ th&igrave; <strong>đ&aacute;ng gi&aacute;.</strong></em></p>
+              <p><strong>Cashier</strong>: So your new total is eighty dollars.</p>
+              <p><strong><em>Cashier</em></strong><em>: Như vậy tổng số mới của chị l&agrave; t&aacute;m mươi đ&ocirc; la.</em></p>
+              <p><strong>Mary</strong>: And I have some <strong>coupons</strong>...</p>
+              <p><strong><em>Mary</em></strong><em>: V&agrave; t&ocirc;i c&oacute; v&agrave;i <strong>phiếu giảm gi&aacute;</strong>...</em></p>
+              <p><strong>Cashier</strong>: <strong>Would you like to</strong> use all of those?</p>
+              <p><strong><em>Cashier</em></strong><em>: <strong>Chị c&oacute; muốn</strong> sử dụng tất cả ch&uacute;ng kh&ocirc;ng?</em></p>
+              <p><strong>Mary</strong>: Yes.</p>
+              <p><strong><em>Mary</em></strong><em>: C&oacute;.</em></p>
+              <p><strong>Cashier</strong>: ... So your new total is ... 1 dollar. How would you like to pay? <strong>Cash</strong> or <strong>credit?</strong></p>
+              <p><strong><em>Cashier</em></strong><em>: ... Tổng số mới của chị l&agrave; ... 1 đ&ocirc; la. Chị muốn thanh to&aacute;n như thế n&agrave;o? <strong>Tiền mặt</strong> hay <strong>thẻ t&iacute;n dụng?</strong></em></p>
+              <p><strong>Mary</strong>: Cash, please.</p>
+              <p><strong><em>Mary</em></strong><em>: Tiền mặt, l&agrave;m ơn.</em></p>`
+                    },
+                    {
+                        title: `Topic 3: Why didn_t you come to my party`,
+                        audioLinkSlow: `assets/audio/LESSON 04 - RENTING AND SHOPPING/Recording 4.5 - Slow Speech -Topic 3 - What’s Your Style.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 04 - RENTING AND SHOPPING/Recording 4.6 - Native Speech - Topic 3 - What_s Your Style.mp3`,
+                        data: `<p>Sonya and Alice are walking on the street, then they&rsquo;re attacted by a cute tomboy outfit in the window of a nearby shop.</p>
+              <p><em>Sonya v&agrave; Alice đang đi bộ tr&ecirc;n phố th&igrave; bị thu h&uacute;t bởi một bộ đồ kiểu tomboy dễ thương ở của sổ của một cửa h&agrave;ng gần đ&oacute;.</em></p>
+              <p><strong>Sonya</strong>: Oh my gosh, look at this <strong>outfit</strong>. Isn&rsquo;t it great?</p>
+              <p><strong><em>Sonya</em></strong><em>: &Ocirc;i trời ơi, nh&igrave;n <strong>bộ đồ</strong> n&agrave;y đi. Kh&ocirc;ng phải n&oacute; rất tuyệt sao?</em></p>
+              <p><strong>Alice</strong>: Maybe for a guy, but not girls.</p>
+              <p><strong><em>Alick</em></strong><em>: C&oacute; thể l&agrave; tuyệt với con trai, nhưng kh&ocirc;ng phải với con g&aacute;i.</em></p>
+              <p><strong>Sonya</strong>: What&rsquo;s wrong? You don&rsquo;t like the <strong>tomboy</strong> look?</p>
+              <p><strong><em>Sonya</em></strong><em>: Sao thế? Cậu kh&ocirc;ng th&iacute;ch phong c&aacute;ch <strong>tomboy</strong> &agrave;?</em></p>
+              <p><strong>Alcie</strong>: Erm. I like the tomboy look like how I like fast food... And I don&rsquo;t eat fast food... It&rsquo;s <strong>trendy,</strong> but I think women should <strong>dress like women.</strong></p>
+              <p><strong><em>Alcie</em></strong><em>: Xem n&agrave;o. T&ocirc;i th&iacute;ch phong c&aacute;ch tomboy, giống như c&aacute;ch t&ocirc;i th&iacute;ch đồ ăn nhanh... V&agrave; t&ocirc;i kh&ocirc;ng ăn đồ ăn nhanh... N&oacute; <strong>hợp thời,</strong> nhưng t&ocirc;i nghĩ rằng phụ nữ th&igrave; n&ecirc;n <strong>mặc giống phụ nữ.</strong></em></p>
+              <p><strong>Sonya</strong>: I <strong>respect</strong> that. I think it&rsquo;s fun and cool to be a little <strong>different</strong> sometimes. Some guys like it, too.</p>
+              <p><strong><em>Sonya</em></strong><em>: T&ocirc;i <strong>t&ocirc;n trọng</strong> điều đ&oacute;. T&ocirc;i cho l&agrave; thỉnh thoảng <strong>thay đổi</strong> một ch&uacute;t cũng rất th&uacute; vị. Một v&agrave;i anh ch&agrave;ng cũng th&iacute;ch thế m&agrave;.</em></p>
+              <p><strong>Alice</strong>: You&rsquo;re right. But my <strong>shoulders</strong> are too wide to <strong>pull it off.</strong> I look like a man.</p>
+              <p><strong><em>Alice</em></strong><em>: Cậu n&oacute;i đ&uacute;ng. Nhưng <strong>vai</strong> của t&ocirc;i qu&aacute; rộng n&ecirc;n kh&ocirc;ng thể <strong>mặc c&aacute;i n&agrave;y đẹp được.</strong> Tr&ocirc;ng t&ocirc;i như một người đ&agrave;n &ocirc;ng vậy.</em></p>
+              <p><strong>Sonya</strong>: No! I <strong>wish</strong> I had your shoulders. Anyway, do you want to <strong>go shopping?</strong></p>
+              <p><strong><em>Sonya</em></strong><em>: Kh&ocirc;ng! T&ocirc;i <strong>ước</strong> t&ocirc;i c&oacute; đ&ocirc;i vai của cậu. D&ugrave; sao th&igrave;, cậu c&oacute; muốn <strong>đi mua sắm kh&ocirc;ng?</strong></em></p>
+              <p><strong>Alice</strong>: Yes. Maybe I&rsquo;ll <strong>try on</strong> some <strong>tomboy-ish</strong> stuff. Who knows, I might like it.</p>
+              <p><strong><em>Alice</em></strong><em>: C&oacute; chứ. C&oacute; lẽ t&ocirc;i sẽ <strong>thử</strong> v&agrave;i <strong>kiểu tomboy.</strong> Ai m&agrave; biết được c&oacute; thể t&ocirc;i sẽ th&iacute;ch.</em></p>
+              <p><strong>Sonya</strong>: <strong>It sounds like</strong> someone is going to have a whole new <strong>style</strong>!</p>
+              <p><strong><em>Sonya</em></strong><em>: <strong>Nghe c&oacute; vẻ như</strong> ai đ&oacute; sắp c&oacute; một phong c&aacute;ch ho&agrave;n to&agrave;n mới k&igrave;a!</em></p>`
                     }
                 ]
+            },
+            {
+                case: `Day 3`,
+                title: `Phản xạ đa chiều - Introducing a Friend`,
+            },
+            {
+                case: `Day 4`,
+                title: `Phản xạ đa chiều - Where Do You Live?`,
+            },
+            {
+                case: `Day 5`,
+                title: `Phản xạ đa chiều - What is Your Job?`,
             },
             {
                 case: `Day 6`,
                 title: `Thử thách`,
                 content: [
                     {
-                        title: `Topic 3: What is your job`,
+                        title: `Thử thách`,
                         // tslint:disable-next-line:max-line-length
                         audioLinkReflection: `assets/audio/LESSON 01 - INTRODUCTION/Recording 1.11 - Production.mp3`,
                         data: `
@@ -5860,6 +7194,1746 @@ let ListenReads = [
               Bạn đã hoàn thành việc luyện tập Lesson 01 – Eng Breaking. Ngay bây giờ, hãy đến với bài Đánh giá (Assessment) để nâng cao kỹ năng và ôn luyện kiến thức ở Lesson 01.`
                     }
                 ]
+            }
+        ]
+    },
+    {
+        id: 5,
+        title: 'Lesson 05 - Hobbies',
+        name: `Hobbies`,
+        displayOrder: 5,
+        description: `MY NAME IS DAO DAO, this lesson is tell you about people.`,
+        openCollapse: true,
+        contents: [
+            {
+                case: `Day 1`,
+                title: `Nghe ngấm`,
+                content: [
+                    {
+                        title: `Topic 1: You Listen To What`,
+                        audioLinkSlow: `assets/audio/LESSON 05 - HOBBIES/Recording 5.1 - Slow Speech - Topic 1- You Listen To What.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 05 - HOBBIES/Recording 5.2 - Native Speech - Topic 1 - You Listen To What.mp3`,
+                        data: `<p>Roland invited Gemma to a &ldquo;secret&rdquo; music show.</p>
+              <p>Now, they&rsquo;re in the show. Period!</p>
+              <p><em>Roland mời Gemma tham gia một chương tr&igrave;nh &acirc;m nhạc &ldquo;b&iacute; mật&rdquo;.</em></p>
+              <p><em>B&acirc;y giờ, họ đang ở buổi biểu diễn. Chấm hết!</em></p>
+              <p><strong>Gemma</strong>: <strong>Wow! It&rsquo;s so cold here!</strong></p>
+              <p><strong><em>Gemma</em></strong><em>: <strong>Ch&agrave;! Ở đ&acirc;y lạnh qu&aacute;!</strong></em></p>
+              <p><strong>Roland</strong>: &lsquo;Cuz there&rsquo;re a lot of fans! Yeah!!</p>
+              <p><strong><em>Roland</em></strong><em>: Bởi v&igrave; c&oacute; rất nhiều quạt! Yeah!!</em></p>
+              <p><strong>Gemma</strong>: Oh my gosh, is that Black-Two? <strong>Are you into K-pop?</strong></p>
+              <p><strong><em>Gemma</em></strong><em>: Trời ơi, đ&oacute; l&agrave; Black-Two hả? <strong>Cậu th&iacute;ch nhạc H&agrave;n Quốc &agrave;?</strong></em></p>
+              <p><strong>Roland</strong>: Yes, <strong>promies you won&rsquo;t tell anyone,</strong> okey?</p>
+              <p><strong><em>Roland</em></strong><em>: Ừ, l&agrave;m ơn <strong>hứa l&agrave; cậu sẽ kh&ocirc;ng n&oacute;i cho ai biết</strong> nh&eacute;?</em></p>
+              <p><strong>Gemma</strong>: Of course. You&rsquo;re not the only one. I think K-pop is cool, too. <strong>What other kinds of music do you like?</strong></p>
+              <p><strong><em>Gemma</em></strong><em>: Tất nhi&ecirc;n rồi. Cậu kh&ocirc;ng phải l&agrave; người duy nhất. T&ocirc;i nghĩ l&agrave; nhạc H&agrave;n cũng tuyệt m&agrave;. <strong>Cậu c&oacute; th&iacute;ch loại nhạc n&agrave;o kh&aacute;c nữa kh&ocirc;ng?</strong></em></p>
+              <p><strong>Roland</strong>: Actually, K-pop is the only kind of <strong>music</strong> I <strong>listen</strong> to. Yoon Yojong is my <strong>idol</strong>. But please keep this a secret, all of my friends only listen to <strong>hip hop.</strong></p>
+              <p><strong><em>Roland</em></strong><em>: Thật ra th&igrave; K-pop l&agrave; loại <strong>nhạc</strong> duy nhất m&agrave; t&ocirc;i <strong>nghe</strong>. Yoon Yojong l&agrave; <strong>thần tượng</strong> của t&ocirc;i. Nhưng l&agrave;m ơn giữ b&iacute; mật nh&eacute;, tất cả bạn b&egrave; của t&ocirc;i chỉ nghe nhạc <strong>hip hop</strong> th&ocirc;i.</em></p>
+              <p><strong>Gemma</strong>: <strong>I understand how you feel. I used to embarrassed about liking folk music.</strong></p>
+              <p><strong><em>Gemma</em></strong><em>: <strong>T&ocirc;i hiểu cảm gi&aacute;c của cậu. T&ocirc;i đ&atilde; từng thấy xấu hổ khi th&iacute;ch nhạc d&acirc;n ca.</strong></em></p>
+              <p><strong>Roland</strong>: Really? <strong>What do you like about folk music?</strong></p>
+              <p><strong><em>Roland</em></strong><em>: Thật &aacute;? <strong>Cậu th&iacute;ch g&igrave; ở d&acirc;n ca?</strong></em></p>
+              <p><strong>Gemma</strong>: Folk music is really <strong>meaningful to me,</strong> and I think that it&rsquo;s beautiful.</p>
+              <p><strong><em>Gemma</em></strong><em>: Nhạc d&acirc;n ca rất <strong>&yacute; nghĩa với t&ocirc;i,</strong> v&agrave; t&ocirc;i thấy n&oacute; hay.</em></p>
+              <p><strong>Roland</strong>: Yeah, I feel the same way about K-pop... Tho whole meaningful thing.</p>
+              <p><strong><em>Roland</em></strong><em>: Đ&uacute;ng, t&ocirc;i cũng cảm thấy như vậy đối với nhạc H&agrave;n... Rất c&oacute; &yacute; nghĩa.</em></p>
+              <p><strong>Gemma</strong>: <strong>You think so?</strong></p>
+              <p><strong><em>Gemma</em></strong><em>: <strong>Cậu nghĩ thế &agrave;?</strong></em></p>
+              <p><strong>Roland</strong>: I know so.</p>
+              <p><strong><em>Roland</em></strong><em>: T&ocirc;i biết l&agrave; vậy.</em></p>
+              <p><strong>Gemma</strong>: Maybe <strong>I&rsquo;ll have to listen to more of it</strong> then.</p>
+              <p><strong><em>Gemma</em></strong><em>: C&oacute; lẽ sau n&agrave;y <strong>t&ocirc;i sẽ phải nghe n&oacute; nhiều hơn</strong> nữa.</em></p>
+              <p><strong>Roland</strong>: Okay now! <strong>Put your hands up in the air!!!</strong> Yeah!!!</p>
+              <p><strong><em>Roland</em></strong><em>: Được rồi! <strong>Giờ th&igrave; h&atilde;y ch&aacute;y hết m&igrave;nh th&ocirc;i n&agrave;o!!!</strong> Yeah!!!</em></p>
+              <p><em>Chơi chữ: Fan. 1. Quạt 2. Người h&acirc;m mộ.</em></p>`
+                    },
+                    {
+                        title: `Topic 2: Prefer Comedies`,
+                        audioLinkSlow: `assets/audio/LESSON 05 - HOBBIES/Recording 5.3 - Slow Speech -Topic 2- I Prefer Comedies.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 05 - HOBBIES/Recording 5.4 - Native Speech - Topic 2 - I Prefer Comedies.mp3`,
+                        data: `<p>Lauren invites Carl to go see The Ring, a new horror movie, but Carl isn&rsquo;t a fan of this genre.</p>
+              <p><em>Lauren mời Carl đi xem phim The Ring &ndash; V&ograve;ng tr&ograve;n định mệnh, một bộ phim kinh dị mới, nhưng Carl kh&ocirc;ng phải l&agrave; một fan h&acirc;m một của thể loại phim n&agrave;y.</em></p>
+              <p><strong>Lauren</strong>: Hey, Carl, <strong>do you like</strong> scary movies?</p>
+              <p><strong><em>Lauren</em></strong><em>: N&agrave;y, Carl, <strong>cậu c&oacute; th&iacute;ch</strong> phim kinh dị kh&ocirc;ng?</em></p>
+              <p><strong>Carl</strong>: It <strong>depends</strong>. What movie are you talking about?</p>
+              <p><strong><em>Carl</em></strong><em>: Cũng <strong>t&ugrave;y.</strong> Cậu đang n&oacute;i đến phim n&agrave;o?</em></p>
+              <p><strong>Lauren</strong>: Well, I <strong>really want to see</strong> The Ring, it <strong>just came out.</strong> Do you want to see it with me?</p>
+              <p><strong><em>Lauren</em></strong><em>: Xem n&agrave;o, t&ocirc;i <strong>thực sự muốn xem</strong> The Ring &ndash; <strong>phim vừa mới ra.</strong> Cậu c&oacute; muốn đi xem với t&ocirc;i kh&ocirc;ng?</em></p>
+              <p><strong>Carl</strong>: Oh gosh, I don&rsquo;t know... <strong>that sounds a little too scary for me.</strong></p>
+              <p><strong><em>Carl</em></strong><em>: Trời ơi, t&ocirc;i kh&ocirc;ng biết nữa... <strong>n&oacute; nghe hơi đ&aacute;ng sợ với t&ocirc;i.</strong></em></p>
+              <p><strong>Lauren</strong>: Wait a second, <strong>are you a chicken?</strong></p>
+              <p><strong><em>Lauren</em></strong><em>: Chờ ch&uacute;t, <strong>cậu nh&aacute;t gan thế sao?</strong></em></p>
+              <p><strong>Carl</strong>: No way! <strong>I</strong> <strong>just prefer comedies.</strong> To me, <strong>the whole point of movies is to make people laugh.</strong></p>
+              <p><strong><em>Carl</em></strong><em>: Kh&ocirc;ng đời n&agrave;o! <strong>Chỉ l&agrave; t&ocirc;i th&iacute;ch c&aacute;c bộ phim h&agrave;i hơn.</strong> Với t&ocirc;i, <strong>mục đ&iacute;ch cuối c&ugrave;ng của c&aacute;c bộ phim l&agrave; để khiến mọi người cười.</strong></em></p>
+              <p><strong>Lauren</strong>: Well <strong>what about dramas,</strong> do you like those?</p>
+              <p><strong><em>Lauren</em></strong><em>: <strong>Thế c&ograve;n những bộ phim truyền h&igrave;nh th&igrave; sao,</strong> cậu th&iacute;ch ch&uacute;ng kh&ocirc;ng?</em></p>
+              <p><strong>Carl</strong>: They&rsquo;re okay, I <strong>guess</strong>. Are there any good dramas <strong>out right now?</strong></p>
+              <p><strong><em>Carl</em></strong><em>: Cũng được, t&ocirc;i <strong>đo&aacute;n vậy.</strong> C&oacute; bộ phim truyền h&igrave;nh n&agrave;o hay <strong>đang chiếu</strong> kh&ocirc;ng?</em></p>
+              <p><strong>Lauren</strong>: I know that a French one is <strong>showing at</strong> the little <strong>movie theater downtown.</strong></p>
+              <p><strong><em>Lauren</em></strong><em>: T&ocirc;i thấy một bộ phim của Ph&aacute;p <strong>đang chiếu ở</strong> một rạp chiếu phim nhỏ chỗ <strong>trung t&acirc;m th&agrave;nh phố.</strong></em></p>
+              <p><strong>Carl</strong>: A <strong>foreign film?</strong> So I&rsquo;ll have to read <strong>subtitles</strong> the whole time? ... What time is the The Ring?</p>
+              <p><strong><em>Carl</em></strong><em>: <strong>Phim nước ngo&agrave;i</strong> &agrave;? Vậy l&agrave; t&ocirc;i sẽ phải đọc <strong>phụ đề</strong> suốt bộ phim? ... Mấy giờ chiếu The Ring?</em></p>`
+                    },
+                    {
+                        title: `Topic 3: My Favorite Sport`,
+                        audioLinkSlow: `assets/audio/LESSON 05 - HOBBIES/Recording 5.5 - Slow Speech - Topic 3 - My Favorite Sport.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 05 - HOBBIES/Recording 5.6 - Native Speech - Topic 3 - My Favorite Sport.mp3`,
+                        data: `<p>Someone asked me the other day, what my <strong>favorite sport</strong> is and I realized, I don&rsquo;t have a favorite sport.</p>
+              <p><em>Một ng&agrave;y nọ c&oacute; người hỏi t&ocirc;i, m&ocirc;n <strong>thế thao y&ecirc;u th&iacute;ch</strong> của t&ocirc;i l&agrave; g&igrave; v&agrave; t&ocirc;i nhận ra, t&ocirc;i kh&ocirc;ng c&oacute; một m&ocirc;n thể thao y&ecirc;u th&iacute;ch n&agrave;o cả.</em></p>
+              <p>Some of my friends are really into <strong>American football.</strong> I guess <strong>it&rsquo;s fun</strong> &ndash; if you like <strong>getting</strong> <strong>crushed</strong> by a guy who&rsquo;s the size of a refrigerator.</p>
+              <p><em>Một số bạn b&egrave; của t&ocirc;i cực kỳ th&iacute;ch <strong>b&oacute;ng đ&aacute; kiểu Mỹ</strong> (b&oacute;ng bầu dục Mỹ). T&ocirc;i nghĩ l&agrave; <strong>n&oacute; th&uacute; vị</strong> - nếu như bạn th&iacute;ch <strong>bị đ&egrave; bẹp</strong> bởi anh ch&agrave;ng to như c&aacute;i tủ lạnh.</em></p>
+              <p>I have another friend who&rsquo;s absolutely <strong>crazy about badminton.</strong> That&rsquo;s right, &ldquo;crazy&rdquo; about it, but it&rsquo;s true. The guy lives for badminton! I, on the other hand, <strong>get bored out of my mind chasing</strong> a little &ldquo;birdie&rdquo; around the backyard. Although, now that I think about it, I&rsquo;d rather <strong>flail</strong> around the backyard chasing a little birdie than become a birdbrain after getting crushed by a tank on the football field!</p>
+              <p><em>T&ocirc;i c&oacute; một người bạn kh&aacute;c th&igrave; <strong>đi&ecirc;n cuồng v&igrave; cầu l&ocirc;ng.</strong> Đ&uacute;ng vậy, &ldquo;ph&aacute;t đi&ecirc;n&rdquo; v&igrave; n&oacute;, nhưng đ&oacute; l&agrave; sự thật. Anh ch&agrave;ng đ&oacute; sống v&igrave; cầu l&ocirc;ng! T&ocirc;i, mặt kh&aacute;c, th&igrave; thấy <strong>ch&aacute;n ng&aacute;n khi phải chạy theo</strong> một &ldquo;ch&uacute; chim&rdquo; nhỏ (&yacute; n&oacute;i &ldquo;quả cầu l&ocirc;ng&rdquo;) ở s&acirc;n sau. D&ugrave; vậy, sau khi c&acirc;n nhắc, t&ocirc;i th&agrave; chạy quanh s&acirc;n sau <strong>đuổi</strong> theo một ch&uacute; chim nhỏ c&ograve;n hơn l&agrave; trở th&agrave;nh một kẻ ngốc sau khi bị một cỗ xe tăng tr&ecirc;n s&acirc;n b&oacute;ng (&yacute; n&oacute;i &ldquo;anh ch&agrave;ng to như c&aacute;i tủ lạnh&rdquo;) đ&egrave; bẹp!</em></p>
+              <p><em>(&Yacute; n&oacute;i: Người kể kh&ocirc;ng th&iacute;ch cầu l&ocirc;ng, nhưng th&agrave; chơi cầu l&ocirc;ng c&ograve;n hơn l&agrave; chơi b&oacute;ng bầu dục).</em></p>
+              <p><strong>Swimming</strong> is fun &ndash; mostly, but it&rsquo;s <strong>challenging</strong>. When it&rsquo;s not fun, I feel like I&rsquo;m <strong>drowning</strong>, that&rsquo;s no fun! On the other hand, if I learn how to swim and someone else is drowning, I might be able to <strong>save a life.</strong> That&rsquo;d be fun.</p>
+              <p><strong><em>Bơi lội</em></strong><em> hay đấy &ndash; n&oacute;i chung l&agrave; thế, nhưng cũng đầy <strong>th&aacute;ch thức.</strong> Khi m&agrave; bơi kh&ocirc;ng c&oacute; g&igrave; th&uacute; vị, t&ocirc;i cảm gi&aacute;c như m&igrave;nh sắp <strong>chết đuối,</strong> thế th&igrave; chẳng vui g&igrave; cả! Mặt kh&aacute;c, nếu t&ocirc;i học bơi v&agrave; c&oacute; ai đ&oacute; sắp chết đuối, t&ocirc;i c&oacute; thể <strong>cứu một mạng sống.</strong> Đ&oacute; sẽ l&agrave; niềm vui đấy.</em></p>
+              <p>Maybe I&rsquo;ll just learn how to play <strong>Gin Rummy,</strong> instead. Without the Rummy part, that is. <strong>Why complicate things?</strong> Life&rsquo;s too short for sports.</p>
+              <p><em>C&oacute; thể thay v&agrave;o đ&oacute; t&ocirc;i sẽ chỉ học c&aacute;ch chơi <strong>b&agrave;i Gin Rummy.</strong> Hoặc &yacute; t&ocirc;i l&agrave; bỏ phần &ldquo;Rummy&rdquo; đi. <strong>Tại sao phải phức tạp h&oacute;a mọi thứ?</strong> Cuộc sống qu&aacute; ngắn ngủi để chơi thể thao.</em></p>
+              <p><em>Trong trường hợp n&agrave;y, người kể n&oacute;i &ldquo;ch&uacute; chim nhỏ&rdquo; (birdie) ch&iacute;nh l&agrave; &ldquo;quả cầu l&ocirc;ng&rdquo;. Đ&acirc;y l&agrave; sự so s&aacute;nh v&iacute; von.</em></p>`
+                    }
+                ]
+            },
+            {
+                case: `Day 2`,
+                title: `Nói đuổi`,
+                content: [
+                    {
+                        title: `Topic 1: You Listen To What`,
+                        audioLinkSlow: `assets/audio/LESSON 05 - HOBBIES/Recording 5.1 - Slow Speech - Topic 1- You Listen To What.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 05 - HOBBIES/Recording 5.2 - Native Speech - Topic 1 - You Listen To What.mp3`,
+                        data: `<p>Roland invited Gemma to a &ldquo;secret&rdquo; music show.</p>
+              <p>Now, they&rsquo;re in the show. Period!</p>
+              <p><em>Roland mời Gemma tham gia một chương tr&igrave;nh &acirc;m nhạc &ldquo;b&iacute; mật&rdquo;.</em></p>
+              <p><em>B&acirc;y giờ, họ đang ở buổi biểu diễn. Chấm hết!</em></p>
+              <p><strong>Gemma</strong>: <strong>Wow! It&rsquo;s so cold here!</strong></p>
+              <p><strong><em>Gemma</em></strong><em>: <strong>Ch&agrave;! Ở đ&acirc;y lạnh qu&aacute;!</strong></em></p>
+              <p><strong>Roland</strong>: &lsquo;Cuz there&rsquo;re a lot of fans! Yeah!!</p>
+              <p><strong><em>Roland</em></strong><em>: Bởi v&igrave; c&oacute; rất nhiều quạt! Yeah!!</em></p>
+              <p><strong>Gemma</strong>: Oh my gosh, is that Black-Two? <strong>Are you into K-pop?</strong></p>
+              <p><strong><em>Gemma</em></strong><em>: Trời ơi, đ&oacute; l&agrave; Black-Two hả? <strong>Cậu th&iacute;ch nhạc H&agrave;n Quốc &agrave;?</strong></em></p>
+              <p><strong>Roland</strong>: Yes, <strong>promies you won&rsquo;t tell anyone,</strong> okey?</p>
+              <p><strong><em>Roland</em></strong><em>: Ừ, l&agrave;m ơn <strong>hứa l&agrave; cậu sẽ kh&ocirc;ng n&oacute;i cho ai biết</strong> nh&eacute;?</em></p>
+              <p><strong>Gemma</strong>: Of course. You&rsquo;re not the only one. I think K-pop is cool, too. <strong>What other kinds of music do you like?</strong></p>
+              <p><strong><em>Gemma</em></strong><em>: Tất nhi&ecirc;n rồi. Cậu kh&ocirc;ng phải l&agrave; người duy nhất. T&ocirc;i nghĩ l&agrave; nhạc H&agrave;n cũng tuyệt m&agrave;. <strong>Cậu c&oacute; th&iacute;ch loại nhạc n&agrave;o kh&aacute;c nữa kh&ocirc;ng?</strong></em></p>
+              <p><strong>Roland</strong>: Actually, K-pop is the only kind of <strong>music</strong> I <strong>listen</strong> to. Yoon Yojong is my <strong>idol</strong>. But please keep this a secret, all of my friends only listen to <strong>hip hop.</strong></p>
+              <p><strong><em>Roland</em></strong><em>: Thật ra th&igrave; K-pop l&agrave; loại <strong>nhạc</strong> duy nhất m&agrave; t&ocirc;i <strong>nghe</strong>. Yoon Yojong l&agrave; <strong>thần tượng</strong> của t&ocirc;i. Nhưng l&agrave;m ơn giữ b&iacute; mật nh&eacute;, tất cả bạn b&egrave; của t&ocirc;i chỉ nghe nhạc <strong>hip hop</strong> th&ocirc;i.</em></p>
+              <p><strong>Gemma</strong>: <strong>I understand how you feel. I used to embarrassed about liking folk music.</strong></p>
+              <p><strong><em>Gemma</em></strong><em>: <strong>T&ocirc;i hiểu cảm gi&aacute;c của cậu. T&ocirc;i đ&atilde; từng thấy xấu hổ khi th&iacute;ch nhạc d&acirc;n ca.</strong></em></p>
+              <p><strong>Roland</strong>: Really? <strong>What do you like about folk music?</strong></p>
+              <p><strong><em>Roland</em></strong><em>: Thật &aacute;? <strong>Cậu th&iacute;ch g&igrave; ở d&acirc;n ca?</strong></em></p>
+              <p><strong>Gemma</strong>: Folk music is really <strong>meaningful to me,</strong> and I think that it&rsquo;s beautiful.</p>
+              <p><strong><em>Gemma</em></strong><em>: Nhạc d&acirc;n ca rất <strong>&yacute; nghĩa với t&ocirc;i,</strong> v&agrave; t&ocirc;i thấy n&oacute; hay.</em></p>
+              <p><strong>Roland</strong>: Yeah, I feel the same way about K-pop... Tho whole meaningful thing.</p>
+              <p><strong><em>Roland</em></strong><em>: Đ&uacute;ng, t&ocirc;i cũng cảm thấy như vậy đối với nhạc H&agrave;n... Rất c&oacute; &yacute; nghĩa.</em></p>
+              <p><strong>Gemma</strong>: <strong>You think so?</strong></p>
+              <p><strong><em>Gemma</em></strong><em>: <strong>Cậu nghĩ thế &agrave;?</strong></em></p>
+              <p><strong>Roland</strong>: I know so.</p>
+              <p><strong><em>Roland</em></strong><em>: T&ocirc;i biết l&agrave; vậy.</em></p>
+              <p><strong>Gemma</strong>: Maybe <strong>I&rsquo;ll have to listen to more of it</strong> then.</p>
+              <p><strong><em>Gemma</em></strong><em>: C&oacute; lẽ sau n&agrave;y <strong>t&ocirc;i sẽ phải nghe n&oacute; nhiều hơn</strong> nữa.</em></p>
+              <p><strong>Roland</strong>: Okay now! <strong>Put your hands up in the air!!!</strong> Yeah!!!</p>
+              <p><strong><em>Roland</em></strong><em>: Được rồi! <strong>Giờ th&igrave; h&atilde;y ch&aacute;y hết m&igrave;nh th&ocirc;i n&agrave;o!!!</strong> Yeah!!!</em></p>
+              <p><em>Chơi chữ: Fan. 1. Quạt 2. Người h&acirc;m mộ.</em></p>`
+                    },
+                    {
+                        title: `Topic 2: Prefer Comedies`,
+                        audioLinkSlow: `assets/audio/LESSON 05 - HOBBIES/Recording 5.3 - Slow Speech -Topic 2- I Prefer Comedies.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 05 - HOBBIES/Recording 5.4 - Native Speech - Topic 2 - I Prefer Comedies.mp3`,
+                        data: `<p>Lauren invites Carl to go see The Ring, a new horror movie, but Carl isn&rsquo;t a fan of this genre.</p>
+              <p><em>Lauren mời Carl đi xem phim The Ring &ndash; V&ograve;ng tr&ograve;n định mệnh, một bộ phim kinh dị mới, nhưng Carl kh&ocirc;ng phải l&agrave; một fan h&acirc;m một của thể loại phim n&agrave;y.</em></p>
+              <p><strong>Lauren</strong>: Hey, Carl, <strong>do you like</strong> scary movies?</p>
+              <p><strong><em>Lauren</em></strong><em>: N&agrave;y, Carl, <strong>cậu c&oacute; th&iacute;ch</strong> phim kinh dị kh&ocirc;ng?</em></p>
+              <p><strong>Carl</strong>: It <strong>depends</strong>. What movie are you talking about?</p>
+              <p><strong><em>Carl</em></strong><em>: Cũng <strong>t&ugrave;y.</strong> Cậu đang n&oacute;i đến phim n&agrave;o?</em></p>
+              <p><strong>Lauren</strong>: Well, I <strong>really want to see</strong> The Ring, it <strong>just came out.</strong> Do you want to see it with me?</p>
+              <p><strong><em>Lauren</em></strong><em>: Xem n&agrave;o, t&ocirc;i <strong>thực sự muốn xem</strong> The Ring &ndash; <strong>phim vừa mới ra.</strong> Cậu c&oacute; muốn đi xem với t&ocirc;i kh&ocirc;ng?</em></p>
+              <p><strong>Carl</strong>: Oh gosh, I don&rsquo;t know... <strong>that sounds a little too scary for me.</strong></p>
+              <p><strong><em>Carl</em></strong><em>: Trời ơi, t&ocirc;i kh&ocirc;ng biết nữa... <strong>n&oacute; nghe hơi đ&aacute;ng sợ với t&ocirc;i.</strong></em></p>
+              <p><strong>Lauren</strong>: Wait a second, <strong>are you a chicken?</strong></p>
+              <p><strong><em>Lauren</em></strong><em>: Chờ ch&uacute;t, <strong>cậu nh&aacute;t gan thế sao?</strong></em></p>
+              <p><strong>Carl</strong>: No way! <strong>I</strong> <strong>just prefer comedies.</strong> To me, <strong>the whole point of movies is to make people laugh.</strong></p>
+              <p><strong><em>Carl</em></strong><em>: Kh&ocirc;ng đời n&agrave;o! <strong>Chỉ l&agrave; t&ocirc;i th&iacute;ch c&aacute;c bộ phim h&agrave;i hơn.</strong> Với t&ocirc;i, <strong>mục đ&iacute;ch cuối c&ugrave;ng của c&aacute;c bộ phim l&agrave; để khiến mọi người cười.</strong></em></p>
+              <p><strong>Lauren</strong>: Well <strong>what about dramas,</strong> do you like those?</p>
+              <p><strong><em>Lauren</em></strong><em>: <strong>Thế c&ograve;n những bộ phim truyền h&igrave;nh th&igrave; sao,</strong> cậu th&iacute;ch ch&uacute;ng kh&ocirc;ng?</em></p>
+              <p><strong>Carl</strong>: They&rsquo;re okay, I <strong>guess</strong>. Are there any good dramas <strong>out right now?</strong></p>
+              <p><strong><em>Carl</em></strong><em>: Cũng được, t&ocirc;i <strong>đo&aacute;n vậy.</strong> C&oacute; bộ phim truyền h&igrave;nh n&agrave;o hay <strong>đang chiếu</strong> kh&ocirc;ng?</em></p>
+              <p><strong>Lauren</strong>: I know that a French one is <strong>showing at</strong> the little <strong>movie theater downtown.</strong></p>
+              <p><strong><em>Lauren</em></strong><em>: T&ocirc;i thấy một bộ phim của Ph&aacute;p <strong>đang chiếu ở</strong> một rạp chiếu phim nhỏ chỗ <strong>trung t&acirc;m th&agrave;nh phố.</strong></em></p>
+              <p><strong>Carl</strong>: A <strong>foreign film?</strong> So I&rsquo;ll have to read <strong>subtitles</strong> the whole time? ... What time is the The Ring?</p>
+              <p><strong><em>Carl</em></strong><em>: <strong>Phim nước ngo&agrave;i</strong> &agrave;? Vậy l&agrave; t&ocirc;i sẽ phải đọc <strong>phụ đề</strong> suốt bộ phim? ... Mấy giờ chiếu The Ring?</em></p>`
+                    },
+                    {
+                        title: `Topic 3: My Favorite Sport`,
+                        audioLinkSlow: `assets/audio/LESSON 05 - HOBBIES/Recording 5.5 - Slow Speech - Topic 3 - My Favorite Sport.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 05 - HOBBIES/Recording 5.6 - Native Speech - Topic 3 - My Favorite Sport.mp3`,
+                        data: `<p>Someone asked me the other day, what my <strong>favorite sport</strong> is and I realized, I don&rsquo;t have a favorite sport.</p>
+              <p><em>Một ng&agrave;y nọ c&oacute; người hỏi t&ocirc;i, m&ocirc;n <strong>thế thao y&ecirc;u th&iacute;ch</strong> của t&ocirc;i l&agrave; g&igrave; v&agrave; t&ocirc;i nhận ra, t&ocirc;i kh&ocirc;ng c&oacute; một m&ocirc;n thể thao y&ecirc;u th&iacute;ch n&agrave;o cả.</em></p>
+              <p>Some of my friends are really into <strong>American football.</strong> I guess <strong>it&rsquo;s fun</strong> &ndash; if you like <strong>getting</strong> <strong>crushed</strong> by a guy who&rsquo;s the size of a refrigerator.</p>
+              <p><em>Một số bạn b&egrave; của t&ocirc;i cực kỳ th&iacute;ch <strong>b&oacute;ng đ&aacute; kiểu Mỹ</strong> (b&oacute;ng bầu dục Mỹ). T&ocirc;i nghĩ l&agrave; <strong>n&oacute; th&uacute; vị</strong> - nếu như bạn th&iacute;ch <strong>bị đ&egrave; bẹp</strong> bởi anh ch&agrave;ng to như c&aacute;i tủ lạnh.</em></p>
+              <p>I have another friend who&rsquo;s absolutely <strong>crazy about badminton.</strong> That&rsquo;s right, &ldquo;crazy&rdquo; about it, but it&rsquo;s true. The guy lives for badminton! I, on the other hand, <strong>get bored out of my mind chasing</strong> a little &ldquo;birdie&rdquo; around the backyard. Although, now that I think about it, I&rsquo;d rather <strong>flail</strong> around the backyard chasing a little birdie than become a birdbrain after getting crushed by a tank on the football field!</p>
+              <p><em>T&ocirc;i c&oacute; một người bạn kh&aacute;c th&igrave; <strong>đi&ecirc;n cuồng v&igrave; cầu l&ocirc;ng.</strong> Đ&uacute;ng vậy, &ldquo;ph&aacute;t đi&ecirc;n&rdquo; v&igrave; n&oacute;, nhưng đ&oacute; l&agrave; sự thật. Anh ch&agrave;ng đ&oacute; sống v&igrave; cầu l&ocirc;ng! T&ocirc;i, mặt kh&aacute;c, th&igrave; thấy <strong>ch&aacute;n ng&aacute;n khi phải chạy theo</strong> một &ldquo;ch&uacute; chim&rdquo; nhỏ (&yacute; n&oacute;i &ldquo;quả cầu l&ocirc;ng&rdquo;) ở s&acirc;n sau. D&ugrave; vậy, sau khi c&acirc;n nhắc, t&ocirc;i th&agrave; chạy quanh s&acirc;n sau <strong>đuổi</strong> theo một ch&uacute; chim nhỏ c&ograve;n hơn l&agrave; trở th&agrave;nh một kẻ ngốc sau khi bị một cỗ xe tăng tr&ecirc;n s&acirc;n b&oacute;ng (&yacute; n&oacute;i &ldquo;anh ch&agrave;ng to như c&aacute;i tủ lạnh&rdquo;) đ&egrave; bẹp!</em></p>
+              <p><em>(&Yacute; n&oacute;i: Người kể kh&ocirc;ng th&iacute;ch cầu l&ocirc;ng, nhưng th&agrave; chơi cầu l&ocirc;ng c&ograve;n hơn l&agrave; chơi b&oacute;ng bầu dục).</em></p>
+              <p><strong>Swimming</strong> is fun &ndash; mostly, but it&rsquo;s <strong>challenging</strong>. When it&rsquo;s not fun, I feel like I&rsquo;m <strong>drowning</strong>, that&rsquo;s no fun! On the other hand, if I learn how to swim and someone else is drowning, I might be able to <strong>save a life.</strong> That&rsquo;d be fun.</p>
+              <p><strong><em>Bơi lội</em></strong><em> hay đấy &ndash; n&oacute;i chung l&agrave; thế, nhưng cũng đầy <strong>th&aacute;ch thức.</strong> Khi m&agrave; bơi kh&ocirc;ng c&oacute; g&igrave; th&uacute; vị, t&ocirc;i cảm gi&aacute;c như m&igrave;nh sắp <strong>chết đuối,</strong> thế th&igrave; chẳng vui g&igrave; cả! Mặt kh&aacute;c, nếu t&ocirc;i học bơi v&agrave; c&oacute; ai đ&oacute; sắp chết đuối, t&ocirc;i c&oacute; thể <strong>cứu một mạng sống.</strong> Đ&oacute; sẽ l&agrave; niềm vui đấy.</em></p>
+              <p>Maybe I&rsquo;ll just learn how to play <strong>Gin Rummy,</strong> instead. Without the Rummy part, that is. <strong>Why complicate things?</strong> Life&rsquo;s too short for sports.</p>
+              <p><em>C&oacute; thể thay v&agrave;o đ&oacute; t&ocirc;i sẽ chỉ học c&aacute;ch chơi <strong>b&agrave;i Gin Rummy.</strong> Hoặc &yacute; t&ocirc;i l&agrave; bỏ phần &ldquo;Rummy&rdquo; đi. <strong>Tại sao phải phức tạp h&oacute;a mọi thứ?</strong> Cuộc sống qu&aacute; ngắn ngủi để chơi thể thao.</em></p>
+              <p><em>Trong trường hợp n&agrave;y, người kể n&oacute;i &ldquo;ch&uacute; chim nhỏ&rdquo; (birdie) ch&iacute;nh l&agrave; &ldquo;quả cầu l&ocirc;ng&rdquo;. Đ&acirc;y l&agrave; sự so s&aacute;nh v&iacute; von.</em></p>`
+                    }
+                ]
+            },
+            {
+                case: `Day 3`,
+                title: `Phản xạ đa chiều - Introducing a Friend`,
+            },
+            {
+                case: `Day 4`,
+                title: `Phản xạ đa chiều - Where Do You Live?`,
+            },
+            {
+                case: `Day 5`,
+                title: `Phản xạ đa chiều - What is Your Job?`,
+            },
+            {
+                case: `Day 6`,
+                title: `Thử thách`,
+                content: [
+                    {
+                        title: `Thử thách`,
+                        // tslint:disable-next-line:max-line-length
+                        audioLinkReflection: `assets/audio/LESSON 01 - INTRODUCTION/Recording 1.11 - Production.mp3`,
+                        data: `
+              ✔️ Tải phần tài liệu production sau đây về máy – bấm vào đây để download (nếu bạn đang truy cập khóa học trên app, vui lòng vào web để tải trực tiếp tài liệu này) – Luyện tập từ 2-3 lần (Có thể nhìn phần dịch và từ điển nếu cần).<br/>
+              ✔️ Nghe Recording 1.11 và trả lời vào khoảng trống từ 3-5 lần<br/>
+              ✔️ Hãy tưởng tượng bạn vô tình gặp một người nước ngoài tại một địa điểm du lịch nào đó, bạn hãy chủ động là người hỏi chuyện và làm quen với người bạn đó.<br/>
+              ✔️ Hãy tạo ra một kịch bản từ 10 – 15 câu hỏi đáp và thực hành nói trước gương sao cho thật tự nhiên.<br/>
+              ✔️ Bạn cũng có thể tìm một người bạn để đối thoại cùng nhau như các nhân vật tại Lesson 01!<br/>
+              Bạn đã hoàn thành việc luyện tập Lesson 01 – Eng Breaking. Ngay bây giờ, hãy đến với bài Đánh giá (Assessment) để nâng cao kỹ năng và ôn luyện kiến thức ở Lesson 01.`
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 6,
+        title: 'Lesson 06 - Food',
+        name: `Food`,
+        displayOrder: 6,
+        description: `MY NAME IS DAO DAO, this lesson is tell you about people.`,
+        openCollapse: true,
+        contents: [
+            {
+                case: `Day 1`,
+                title: `Nghe ngấm`,
+                content: [
+                    {
+                        title: `Topic 1: Have a Bit of a Sweet Tooth`,
+                        audioLinkSlow: `assets/audio/LESSON 06 - FOOD/Recording 6.1 - Slow Speech - Topic 1 - I Have a Bit of a Sweet Tooth.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 06 - FOOD/Recording 6.2 - Native Speech- Topic 1 - I Have a Bit of a Sweet Tooth.mp3`,
+                        data: `<p>There is a new family-owned restaurant near Kathy&rsquo;s house. She and her neighbors decide to have dinner there together.</p>
+              <p><em>C&oacute; một nh&agrave; h&agrave;ng gia đ&igrave;nh mới ở gần nh&agrave; của Kathy. C&ocirc; ấy v&agrave; mấy người h&agrave;ng x&oacute;m quyết định c&ugrave;ng nhau đi ăn tối ở đ&oacute;.</em></p>
+              <p><strong>Waiter</strong>: Hi, welcome to Mario&rsquo;s Italian Restaurant. <strong>Woutld you like some time to look over the menu?</strong></p>
+              <p><strong><em>Waiter</em></strong><em>: Ch&agrave;o mừng qu&yacute; kh&aacute;ch đến với nh&agrave; h&agrave;ng &Yacute; Mario&rsquo;s. <strong>Chị c&oacute; thời gian để xem qua thực đơn kh&ocirc;ng?</strong></em></p>
+              <p><strong>Kathy</strong>: No thanks. We already know what we&rsquo;d like. <strong>Could we start with some appetizers for the table, please?</strong></p>
+              <p><strong><em>Kathy</em></strong><em>: Kh&ocirc;ng cần đ&acirc;u, cảm ơn. Ch&uacute;ng t&ocirc;i đ&atilde; biết l&agrave; muốn ăn g&igrave; rồi. <strong>Ch&uacute;ng t&ocirc;i c&oacute; thể bắt đầu với c&aacute;c m&oacute;n khai vị được kh&ocirc;ng?</strong></em></p>
+              <p><strong>Waiter</strong>: Of course, <strong>today&rsquo;s special</strong> is garlic bread. Would you lie that?</p>
+              <p><strong><em>Waiter</em></strong><em>: Tất nhi&ecirc;n rồi, <strong>m&oacute;n đặc biệt của ng&agrave;y h&ocirc;m nay</strong> l&agrave; b&aacute;nh m&igrave; bơ tỏi. Chị c&oacute; muốn m&oacute;n đ&oacute; kh&ocirc;ng?</em></p>
+              <p><strong>Kathy</strong>: Yes, please. <strong>Do you think one portion is enough for everyone?</strong></p>
+              <p><strong><em>Kathy</em></strong><em>: C&oacute;, cảm ơn. <strong>Anh c&oacute; nghĩ rằng một phần l&agrave; đủ cho tất cả mọi người kh&ocirc;ng?</strong></em></p>
+              <p><strong>Waiter</strong>: It should be. If you&rsquo;d like, you could also <strong>get a salad to share.</strong></p>
+              <p><strong><em>Waiter</em></strong><em>: C&oacute; thể. Nếu chị muốn, chị c&oacute; thể <strong>gọi một phần rau trộn để ăn chung với nhau.</strong></em></p>
+              <p><strong>Kathy</strong>: <strong>That&rsquo;s a good idea.</strong> But I&rsquo;m <strong>worried</strong> that&rsquo;s too much. We all want to <strong>order a main dish</strong> as well.</p>
+              <p><strong><em>Kathy</em></strong><em>: <strong>Đ&oacute; l&agrave; một &yacute; hay.</strong> Nhưng t&ocirc;i <strong>lo lắng</strong> (e rằng) như vậy l&agrave; qu&aacute; nhiều. Ch&uacute;ng t&ocirc;i vẫn muốn <strong>gọi một m&oacute;n ch&iacute;nh.</strong></em></p>
+              <p><strong>Waiter</strong>: How do you feel about ordering a few <strong>family style</strong> dishes? If it&rsquo;s too much, you can <strong>take it home.</strong></p>
+              <p><strong><em>Waiter</em></strong><em>: Chị thấy sao nếu gọi v&agrave;i m&oacute;n ăn <strong>kiểu gia đ&igrave;nh</strong>? Nếu qu&aacute; nhiều, chị c&oacute; thể <strong>mang về nh&agrave;.</strong></em></p>
+              <p><strong>Kathy</strong>: I hadn&rsquo;t <strong>thought of that.</strong> What do you all think? Doees it sound like enough?</p>
+              <p><strong><em>Kathy</em></strong><em>: T&ocirc;i đ&atilde; kh&ocirc;ng <strong>nghĩ ra điều đ&oacute;.</strong> C&aacute;c cậu nghĩ sao? Như vậy c&oacute; vẻ đủ chưa?</em></p>
+              <p><strong>Waiter</strong>: And if you&rsquo;re still hungry, you can always order <strong>dessert.</strong> We have our famous cheesecake today.</p>
+              <p><strong><em>Waiter</em></strong><em>: V&agrave; nếu c&aacute;c chị vẫn c&ograve;n đ&oacute;i, chị lu&ocirc;n c&oacute; thể gọi <strong>m&oacute;n tr&aacute;ng miệng.</strong> H&ocirc;m nay ch&uacute;ng t&ocirc;i c&oacute; m&oacute;n b&aacute;nh ph&ocirc; mai nổi tiếng.</em></p>
+              <p><strong>Kathy</strong>: Oh no, I shouldn&rsquo;t eat anything too sweet, I&rsquo;m <strong>watching my weight.</strong></p>
+              <p><strong><em>Kathy</em></strong><em>: &Ocirc;i kh&ocirc;ng, t&ocirc;i kh&ocirc;ng n&ecirc;n ăn bất cứ thứ g&igrave; qu&aacute; ngọt, t&ocirc;i <strong>đang giảm c&acirc;n.</strong></em></p>
+              <p><strong>Waiter</strong>: <strong>A little cake never hurt anyone...</strong></p>
+              <p><strong><em>Waiter</em></strong><em>: <strong>Một ch&uacute;ng b&aacute;nh sẽ kh&ocirc;ng sao đ&acirc;u...</strong></em></p>
+              <p><strong>Kathy</strong>: You&rsquo;re right. Actually, let&rsquo;s start with dessert. I&rsquo;ll have one cheesecake, please.</p>
+              <p><strong><em>Kathy</em></strong><em>: Anh n&oacute;i đ&uacute;ng. Thực ra, ch&uacute;ng ta h&atilde;y bắt đầu với m&oacute;n tr&aacute;ng miệng. L&agrave;m ơn cho t&ocirc;i một b&aacute;nh ph&ocirc; mai.</em></p>
+              <p><strong>Waiter</strong>: Sorry, do you mean one <strong>slice</strong>?</p>
+              <p><strong><em>Waiter</em></strong><em>: Xin lỗi, &yacute; chị l&agrave; một <strong>l&aacute;t</strong> b&aacute;nh phải kh&ocirc;ng?</em></p>
+              <p><strong>Kathy</strong>: No. The whole thing.</p>
+              <p><strong><em>Kathy</em></strong><em>: Kh&ocirc;ng. Cả c&aacute;i b&aacute;nh.</em></p>`
+                    },
+                    {
+                        title: `Topic 2: Home Cooking`,
+                        audioLinkSlow: `assets/audio/LESSON 06 - FOOD/Recording 6.3 - Slow Speech - Topic 2 - Home Cooking.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 06 - FOOD/Recording 6.4 - Native Speech- Topic 2 - Home Cooking.mp3`,
+                        data: `<p>The mother spent hours preparing dinner for her family, but her son would like to eat out with his friend at McBurgers, which often serves junk foods.</p>
+              <p><em>Người mẹ đ&atilde; d&agrave;nh h&agrave;ng giờ để chuẩn bị bữa tối cho gia đ&igrave;nh, nhưng cậu con trai lại muốn ra ngo&agrave;i ăn với bạn b&egrave; của m&igrave;nh ở McBurgers, nơi thường phục vụ đồ ăn nhanh.</em></p>
+              <p><strong>Mom</strong>: Where are you going? <strong>We&rsquo;re about to have dinner.</strong></p>
+              <p><strong><em>Mom</em></strong><em>: Con đang đi đ&acirc;u thế? <strong>Ch&uacute;ng ta sắp ăn tối rồi.</strong></em></p>
+              <p><strong>Son</strong>: Sorry, I&rsquo;d like to stay Mom, but I <strong>have plans</strong> with a friend tonight.</p>
+              <p><strong><em>Son</em></strong><em>: Con xin lỗi, con muốn ở nh&agrave; mẹ ạ, nhưng con <strong>c&oacute; kế hoạch</strong> với một người bạn tối nay.</em></p>
+              <p><strong>Mom</strong>: Well you should at least eat a little before you go.</p>
+              <p><strong><em>Mom</em></strong><em>: Thế th&igrave; &iacute;t nhất con n&ecirc;n ăn một ch&uacute;t trước khi đi.</em></p>
+              <p><strong>Son</strong>: Actually we&rsquo;re going <strong>to work over dinner.</strong> Thanks, though.</p>
+              <p><strong><em>Son</em></strong><em>: Thực ra bọn con sẽ <strong>l&agrave;m việc trong bữa ăn tối.</strong> D&ugrave; sao th&igrave; cũng cảm ơn mẹ.</em></p>
+              <p><strong>Mom</strong>: Oh, where are you going?</p>
+              <p><strong><em>Mom</em></strong><em>: Ồ, con đi đ&acirc;u.</em></p>
+              <p><strong>Son</strong>: We&rsquo;re meeting at McBurgers.</p>
+              <p><strong><em>Son</em></strong><em>: Bọn con định gặp nhau ở McBurgers.</em></p>
+              <p><strong>Mom</strong>: Burgers again? You&rsquo;ve been eating <strong>fast food way too often.</strong> You know it&rsquo;s not good for you.</p>
+              <p><strong><em>Mom</em></strong><em>: Lại b&aacute;nh m&igrave; kẹp thịt sao? Con ăn <strong>đồ ăn nhanh một c&aacute;ch qu&aacute; thường xuy&ecirc;n</strong> rồi đấy. Con biết l&agrave; n&oacute; kh&ocirc;ng tốt cho con m&agrave;.</em></p>
+              <p><strong>Son</strong>: I know It&rsquo;s not good for me, but it tastes so good! Nothing can compare to McBurger... Mom. I like your food, too.</p>
+              <p><strong><em>Son</em></strong><em>: Con biết l&agrave; kh&ocirc;ng tốt cho con, nhưng n&oacute; lại rất ngon! Kh&ocirc;ng g&igrave; c&oacute; thể so s&aacute;nh được với McBurger... Mẹ. Con cũng th&iacute;ch đồ ăn mẹ nấu nữa.</em></p>
+              <p><strong>Mom</strong>: Well <strong>no offense to you,</strong> but you&rsquo;re beginning to look like a McBurger. If you eat junk food all the time, you will need to exercise more.</p>
+              <p><strong><em>Mom</em></strong><em>: Xem n&agrave;o, mẹ <strong>kh&ocirc;ng c&oacute; &yacute; g&igrave; đ&acirc;u</strong> nhưng con đang bắt đầu tr&ocirc;ng giống một chiếc McBurger. Nếu con cứ ăn đồ ăn nhanh suốt như thế, th&igrave; con sẽ phải tập thể dục nhiều hơn nữa.</em></p>
+              <p><strong>Son</strong>: Mom!</p>
+              <p><strong><em>Son</em></strong><em>: Mẹ!</em></p>
+              <p><strong>Mom</strong>: Really, when&rsquo;s the last time you ate a vegetable?</p>
+              <p><strong><em>Mom</em></strong><em>: Thật đấy, lần cuối con ăn rau l&agrave; khi n&agrave;o vậy?</em></p>
+              <p><strong>Son</strong>: Burgers have vegetables, like lettuce and tomatoes. You know <strong>french fries</strong> are potatoes, and they&rsquo;re sort of healthy, too. You should try it Mom, I bet you would like it.</p>
+              <p><strong><em>Son</em></strong><em>: B&aacute;nh m&igrave; kẹp thị c&oacute; c&aacute;c loại rau như x&agrave; l&aacute;ch v&agrave; c&agrave; chua. Mẹ biết l&agrave; <strong>khoai t&acirc;y</strong> chi&ecirc;n cũng l&agrave; khoai t&acirc;y, v&agrave; n&oacute; cũng tốt cho sức khỏe m&agrave;. Mẹ n&ecirc;n thử ăn đi, con c&aacute; l&agrave; mẹ sẽ th&iacute;ch n&oacute;.</em></p>
+              <p><strong>Mom</strong>: No thanks, all the salt and fat they use is bad for my skin.</p>
+              <p><strong><em>Mom</em></strong><em>: Kh&ocirc;ng, cảm ơn con, tất cả muối v&agrave; chất b&eacute;o họ sử dụng đều c&oacute; hại cho l&agrave;n da của mẹ.</em></p>
+              <p><strong>Son</strong>: How would you know if you&rsquo;ve never had it?</p>
+              <p><strong><em>Son</em></strong><em>: L&agrave;m sao mẹ biết nếu mẹ chưa bao giờ thử?</em></p>
+              <p><strong>Mom</strong>: Because I can see it on you! Now let&rsquo;s go eat and tell your friend to come here.</p>
+              <p><strong><em>Mom</em></strong><em>: Bởi v&igrave; mẹ c&oacute; thể nh&igrave;n thấy điều đ&oacute; ở con! B&acirc;y giờ h&atilde;y ngồi ăn v&agrave; bảo bạn con đến đ&acirc;y đi.</em></p>
+              <p><strong>Son</strong>: Okay...</p>
+              <p><strong><em>Son</em></strong><em>: V&acirc;ng...</em></p>`
+                    },
+                    {
+                        title: `Topic 3: Easy as Pie`,
+                        audioLinkSlow: `assets/audio/LESSON 06 - FOOD/Recording 6.5 - Slow Speech -Topic 3 - Easy as Pie.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 06 - FOOD/Recording 6.6 - Native Speech - Topic 3 - Easy as Pie.mp3`,
+                        data: `<p>Well that was <strong>disaster</strong>. It&nbsp; turns off <strong>ordering</strong> out is <strong>a lot easier</strong> than <strong>cooking</strong> at home. And cooking is <strong>much more difficult than it looks</strong> in videos. I wanted to make a cake for my hushband&rsquo;s birthday. <strong>How complicated could it be?</strong> It&rsquo;s just cake and icing. I thought.</p>
+              <p><em>V&acirc;ng, đ&oacute; l&agrave; một <strong>thảm họa.</strong> H&oacute;a ra <strong>việc gọi đồ</strong> ở b&ecirc;n ngo&agrave;i <strong>dễ hơn</strong> nấu ăn ở nh&agrave; <strong>nhiều</strong>. V&agrave; <strong>nấu ăn</strong> th&igrave; <strong>kh&oacute; hơn khi xem trong c&aacute;c video rất nhiều.</strong> T&ocirc;i muốn l&agrave;m một chiếc banh cho sinh nhật của chồng t&ocirc;i. <strong>C&oacute; thể phức tạp đến mức n&agrave;o chứ?</strong> Chỉ l&agrave; b&aacute;nh v&agrave; phủ kem th&ocirc;i, t&ocirc;i đ&atilde; nghĩ vậy.</em></p>
+              <p>I put my phone on the kitchen counter and <strong>followed the video instructions.</strong> The woman in the clip kept saying <strong>&ldquo;You&rsquo;re doing great!&rdquo;</strong> and <strong>&ldquo;Doesn&rsquo;t that look delicious?&rdquo;</strong> but my cake looked, and smelled, like rotten soup, and my kitchen&rsquo;s fire alarm went off!</p>
+              <p><em>T&ocirc;i đặt điện thoại l&ecirc;n kệ bếp v&agrave; <strong>l&agrave;m theo video hướng dẫn.</strong> Người phụ nữ trong clip lu&ocirc;n n&oacute;i rằng <strong>&ldquo;Bạn đang l&agrave;m rất tốt!&rdquo;</strong> v&agrave; <strong>&ldquo;Tr&ocirc;ng n&oacute; kh&ocirc;ng ngon sao?&rdquo;</strong> nhưng nh&igrave;n b&aacute;nh của t&ocirc;i, v&agrave; ngửi m&ugrave;i của n&oacute; đi, như thể s&uacute;p bị thiu, v&agrave; cả việc thiết bị b&aacute;o ch&aacute;y trong bếp đổ chu&ocirc;ng nữa!</em></p>
+              <p>Thankfully, the icing wasn&rsquo;t <strong>tricky</strong>, so the cake didn&rsquo;t look that bad. But when my husband <strong>took the first bite,</strong> his face scrunched up like he just bit into a lemon. Then he started laughing. &ldquo;Thank you so much for the cake!&rdquo; he said, &ldquo;I love it... but let&rsquo;s go get one from a bakery, yeah?&rdquo;.</p>
+              <p><em>May sao, phần kem phủ kh&ocirc;ng <strong>phức tạp</strong> cho lắm, thế n&ecirc;n c&aacute;i b&aacute;nh nh&igrave;n kh&ocirc;ng qu&aacute; tệ. Nhưng khi chồng t&ocirc;i <strong>thử miếng đầu ti&ecirc;n,</strong> mặt anh ấy <strong>nhăn như khỉ ăn ớt,</strong> v&agrave; sau đ&oacute; anh ấy bắt đầu cười ph&aacute; l&ecirc;n. &ldquo;Cảm ơn em rất nhiều về chiếc banh!&rdquo;, anh ấy n&oacute;i, &ldquo;Anh th&iacute;ch n&oacute;... Nhưng ch&uacute;ng m&igrave;nh h&atilde;y đi mua một c&aacute;i kh&aacute;c ở cửa h&agrave;ng b&aacute;nh được kh&ocirc;ng?&rdquo;.</em></p>`
+                    }
+                ]
+            },
+            {
+                case: `Day 2`,
+                title: `Nói đuổi`,
+                content: [
+                    {
+                        title: `Topic 1: Have a Bit of a Sweet Tooth`,
+                        audioLinkSlow: `assets/audio/LESSON 06 - FOOD/Recording 6.1 - Slow Speech - Topic 1 - I Have a Bit of a Sweet Tooth.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 06 - FOOD/Recording 6.2 - Native Speech- Topic 1 - I Have a Bit of a Sweet Tooth.mp3`,
+                        data: `<p>There is a new family-owned restaurant near Kathy&rsquo;s house. She and her neighbors decide to have dinner there together.</p>
+              <p><em>C&oacute; một nh&agrave; h&agrave;ng gia đ&igrave;nh mới ở gần nh&agrave; của Kathy. C&ocirc; ấy v&agrave; mấy người h&agrave;ng x&oacute;m quyết định c&ugrave;ng nhau đi ăn tối ở đ&oacute;.</em></p>
+              <p><strong>Waiter</strong>: Hi, welcome to Mario&rsquo;s Italian Restaurant. <strong>Woutld you like some time to look over the menu?</strong></p>
+              <p><strong><em>Waiter</em></strong><em>: Ch&agrave;o mừng qu&yacute; kh&aacute;ch đến với nh&agrave; h&agrave;ng &Yacute; Mario&rsquo;s. <strong>Chị c&oacute; thời gian để xem qua thực đơn kh&ocirc;ng?</strong></em></p>
+              <p><strong>Kathy</strong>: No thanks. We already know what we&rsquo;d like. <strong>Could we start with some appetizers for the table, please?</strong></p>
+              <p><strong><em>Kathy</em></strong><em>: Kh&ocirc;ng cần đ&acirc;u, cảm ơn. Ch&uacute;ng t&ocirc;i đ&atilde; biết l&agrave; muốn ăn g&igrave; rồi. <strong>Ch&uacute;ng t&ocirc;i c&oacute; thể bắt đầu với c&aacute;c m&oacute;n khai vị được kh&ocirc;ng?</strong></em></p>
+              <p><strong>Waiter</strong>: Of course, <strong>today&rsquo;s special</strong> is garlic bread. Would you lie that?</p>
+              <p><strong><em>Waiter</em></strong><em>: Tất nhi&ecirc;n rồi, <strong>m&oacute;n đặc biệt của ng&agrave;y h&ocirc;m nay</strong> l&agrave; b&aacute;nh m&igrave; bơ tỏi. Chị c&oacute; muốn m&oacute;n đ&oacute; kh&ocirc;ng?</em></p>
+              <p><strong>Kathy</strong>: Yes, please. <strong>Do you think one portion is enough for everyone?</strong></p>
+              <p><strong><em>Kathy</em></strong><em>: C&oacute;, cảm ơn. <strong>Anh c&oacute; nghĩ rằng một phần l&agrave; đủ cho tất cả mọi người kh&ocirc;ng?</strong></em></p>
+              <p><strong>Waiter</strong>: It should be. If you&rsquo;d like, you could also <strong>get a salad to share.</strong></p>
+              <p><strong><em>Waiter</em></strong><em>: C&oacute; thể. Nếu chị muốn, chị c&oacute; thể <strong>gọi một phần rau trộn để ăn chung với nhau.</strong></em></p>
+              <p><strong>Kathy</strong>: <strong>That&rsquo;s a good idea.</strong> But I&rsquo;m <strong>worried</strong> that&rsquo;s too much. We all want to <strong>order a main dish</strong> as well.</p>
+              <p><strong><em>Kathy</em></strong><em>: <strong>Đ&oacute; l&agrave; một &yacute; hay.</strong> Nhưng t&ocirc;i <strong>lo lắng</strong> (e rằng) như vậy l&agrave; qu&aacute; nhiều. Ch&uacute;ng t&ocirc;i vẫn muốn <strong>gọi một m&oacute;n ch&iacute;nh.</strong></em></p>
+              <p><strong>Waiter</strong>: How do you feel about ordering a few <strong>family style</strong> dishes? If it&rsquo;s too much, you can <strong>take it home.</strong></p>
+              <p><strong><em>Waiter</em></strong><em>: Chị thấy sao nếu gọi v&agrave;i m&oacute;n ăn <strong>kiểu gia đ&igrave;nh</strong>? Nếu qu&aacute; nhiều, chị c&oacute; thể <strong>mang về nh&agrave;.</strong></em></p>
+              <p><strong>Kathy</strong>: I hadn&rsquo;t <strong>thought of that.</strong> What do you all think? Doees it sound like enough?</p>
+              <p><strong><em>Kathy</em></strong><em>: T&ocirc;i đ&atilde; kh&ocirc;ng <strong>nghĩ ra điều đ&oacute;.</strong> C&aacute;c cậu nghĩ sao? Như vậy c&oacute; vẻ đủ chưa?</em></p>
+              <p><strong>Waiter</strong>: And if you&rsquo;re still hungry, you can always order <strong>dessert.</strong> We have our famous cheesecake today.</p>
+              <p><strong><em>Waiter</em></strong><em>: V&agrave; nếu c&aacute;c chị vẫn c&ograve;n đ&oacute;i, chị lu&ocirc;n c&oacute; thể gọi <strong>m&oacute;n tr&aacute;ng miệng.</strong> H&ocirc;m nay ch&uacute;ng t&ocirc;i c&oacute; m&oacute;n b&aacute;nh ph&ocirc; mai nổi tiếng.</em></p>
+              <p><strong>Kathy</strong>: Oh no, I shouldn&rsquo;t eat anything too sweet, I&rsquo;m <strong>watching my weight.</strong></p>
+              <p><strong><em>Kathy</em></strong><em>: &Ocirc;i kh&ocirc;ng, t&ocirc;i kh&ocirc;ng n&ecirc;n ăn bất cứ thứ g&igrave; qu&aacute; ngọt, t&ocirc;i <strong>đang giảm c&acirc;n.</strong></em></p>
+              <p><strong>Waiter</strong>: <strong>A little cake never hurt anyone...</strong></p>
+              <p><strong><em>Waiter</em></strong><em>: <strong>Một ch&uacute;ng b&aacute;nh sẽ kh&ocirc;ng sao đ&acirc;u...</strong></em></p>
+              <p><strong>Kathy</strong>: You&rsquo;re right. Actually, let&rsquo;s start with dessert. I&rsquo;ll have one cheesecake, please.</p>
+              <p><strong><em>Kathy</em></strong><em>: Anh n&oacute;i đ&uacute;ng. Thực ra, ch&uacute;ng ta h&atilde;y bắt đầu với m&oacute;n tr&aacute;ng miệng. L&agrave;m ơn cho t&ocirc;i một b&aacute;nh ph&ocirc; mai.</em></p>
+              <p><strong>Waiter</strong>: Sorry, do you mean one <strong>slice</strong>?</p>
+              <p><strong><em>Waiter</em></strong><em>: Xin lỗi, &yacute; chị l&agrave; một <strong>l&aacute;t</strong> b&aacute;nh phải kh&ocirc;ng?</em></p>
+              <p><strong>Kathy</strong>: No. The whole thing.</p>
+              <p><strong><em>Kathy</em></strong><em>: Kh&ocirc;ng. Cả c&aacute;i b&aacute;nh.</em></p>`
+                    },
+                    {
+                        title: `Topic 2: Home Cooking`,
+                        audioLinkSlow: `assets/audio/LESSON 06 - FOOD/Recording 6.3 - Slow Speech - Topic 2 - Home Cooking.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 06 - FOOD/Recording 6.4 - Native Speech- Topic 2 - Home Cooking.mp3`,
+                        data: `<p>The mother spent hours preparing dinner for her family, but her son would like to eat out with his friend at McBurgers, which often serves junk foods.</p>
+              <p><em>Người mẹ đ&atilde; d&agrave;nh h&agrave;ng giờ để chuẩn bị bữa tối cho gia đ&igrave;nh, nhưng cậu con trai lại muốn ra ngo&agrave;i ăn với bạn b&egrave; của m&igrave;nh ở McBurgers, nơi thường phục vụ đồ ăn nhanh.</em></p>
+              <p><strong>Mom</strong>: Where are you going? <strong>We&rsquo;re about to have dinner.</strong></p>
+              <p><strong><em>Mom</em></strong><em>: Con đang đi đ&acirc;u thế? <strong>Ch&uacute;ng ta sắp ăn tối rồi.</strong></em></p>
+              <p><strong>Son</strong>: Sorry, I&rsquo;d like to stay Mom, but I <strong>have plans</strong> with a friend tonight.</p>
+              <p><strong><em>Son</em></strong><em>: Con xin lỗi, con muốn ở nh&agrave; mẹ ạ, nhưng con <strong>c&oacute; kế hoạch</strong> với một người bạn tối nay.</em></p>
+              <p><strong>Mom</strong>: Well you should at least eat a little before you go.</p>
+              <p><strong><em>Mom</em></strong><em>: Thế th&igrave; &iacute;t nhất con n&ecirc;n ăn một ch&uacute;t trước khi đi.</em></p>
+              <p><strong>Son</strong>: Actually we&rsquo;re going <strong>to work over dinner.</strong> Thanks, though.</p>
+              <p><strong><em>Son</em></strong><em>: Thực ra bọn con sẽ <strong>l&agrave;m việc trong bữa ăn tối.</strong> D&ugrave; sao th&igrave; cũng cảm ơn mẹ.</em></p>
+              <p><strong>Mom</strong>: Oh, where are you going?</p>
+              <p><strong><em>Mom</em></strong><em>: Ồ, con đi đ&acirc;u.</em></p>
+              <p><strong>Son</strong>: We&rsquo;re meeting at McBurgers.</p>
+              <p><strong><em>Son</em></strong><em>: Bọn con định gặp nhau ở McBurgers.</em></p>
+              <p><strong>Mom</strong>: Burgers again? You&rsquo;ve been eating <strong>fast food way too often.</strong> You know it&rsquo;s not good for you.</p>
+              <p><strong><em>Mom</em></strong><em>: Lại b&aacute;nh m&igrave; kẹp thịt sao? Con ăn <strong>đồ ăn nhanh một c&aacute;ch qu&aacute; thường xuy&ecirc;n</strong> rồi đấy. Con biết l&agrave; n&oacute; kh&ocirc;ng tốt cho con m&agrave;.</em></p>
+              <p><strong>Son</strong>: I know It&rsquo;s not good for me, but it tastes so good! Nothing can compare to McBurger... Mom. I like your food, too.</p>
+              <p><strong><em>Son</em></strong><em>: Con biết l&agrave; kh&ocirc;ng tốt cho con, nhưng n&oacute; lại rất ngon! Kh&ocirc;ng g&igrave; c&oacute; thể so s&aacute;nh được với McBurger... Mẹ. Con cũng th&iacute;ch đồ ăn mẹ nấu nữa.</em></p>
+              <p><strong>Mom</strong>: Well <strong>no offense to you,</strong> but you&rsquo;re beginning to look like a McBurger. If you eat junk food all the time, you will need to exercise more.</p>
+              <p><strong><em>Mom</em></strong><em>: Xem n&agrave;o, mẹ <strong>kh&ocirc;ng c&oacute; &yacute; g&igrave; đ&acirc;u</strong> nhưng con đang bắt đầu tr&ocirc;ng giống một chiếc McBurger. Nếu con cứ ăn đồ ăn nhanh suốt như thế, th&igrave; con sẽ phải tập thể dục nhiều hơn nữa.</em></p>
+              <p><strong>Son</strong>: Mom!</p>
+              <p><strong><em>Son</em></strong><em>: Mẹ!</em></p>
+              <p><strong>Mom</strong>: Really, when&rsquo;s the last time you ate a vegetable?</p>
+              <p><strong><em>Mom</em></strong><em>: Thật đấy, lần cuối con ăn rau l&agrave; khi n&agrave;o vậy?</em></p>
+              <p><strong>Son</strong>: Burgers have vegetables, like lettuce and tomatoes. You know <strong>french fries</strong> are potatoes, and they&rsquo;re sort of healthy, too. You should try it Mom, I bet you would like it.</p>
+              <p><strong><em>Son</em></strong><em>: B&aacute;nh m&igrave; kẹp thị c&oacute; c&aacute;c loại rau như x&agrave; l&aacute;ch v&agrave; c&agrave; chua. Mẹ biết l&agrave; <strong>khoai t&acirc;y</strong> chi&ecirc;n cũng l&agrave; khoai t&acirc;y, v&agrave; n&oacute; cũng tốt cho sức khỏe m&agrave;. Mẹ n&ecirc;n thử ăn đi, con c&aacute; l&agrave; mẹ sẽ th&iacute;ch n&oacute;.</em></p>
+              <p><strong>Mom</strong>: No thanks, all the salt and fat they use is bad for my skin.</p>
+              <p><strong><em>Mom</em></strong><em>: Kh&ocirc;ng, cảm ơn con, tất cả muối v&agrave; chất b&eacute;o họ sử dụng đều c&oacute; hại cho l&agrave;n da của mẹ.</em></p>
+              <p><strong>Son</strong>: How would you know if you&rsquo;ve never had it?</p>
+              <p><strong><em>Son</em></strong><em>: L&agrave;m sao mẹ biết nếu mẹ chưa bao giờ thử?</em></p>
+              <p><strong>Mom</strong>: Because I can see it on you! Now let&rsquo;s go eat and tell your friend to come here.</p>
+              <p><strong><em>Mom</em></strong><em>: Bởi v&igrave; mẹ c&oacute; thể nh&igrave;n thấy điều đ&oacute; ở con! B&acirc;y giờ h&atilde;y ngồi ăn v&agrave; bảo bạn con đến đ&acirc;y đi.</em></p>
+              <p><strong>Son</strong>: Okay...</p>
+              <p><strong><em>Son</em></strong><em>: V&acirc;ng...</em></p>`
+                    },
+                    {
+                        title: `Topic 3: Easy as Pie`,
+                        audioLinkSlow: `assets/audio/LESSON 06 - FOOD/Recording 6.5 - Slow Speech -Topic 3 - Easy as Pie.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 06 - FOOD/Recording 6.6 - Native Speech - Topic 3 - Easy as Pie.mp3`,
+                        data: `<p>Well that was <strong>disaster</strong>. It&nbsp; turns off <strong>ordering</strong> out is <strong>a lot easier</strong> than <strong>cooking</strong> at home. And cooking is <strong>much more difficult than it looks</strong> in videos. I wanted to make a cake for my hushband&rsquo;s birthday. <strong>How complicated could it be?</strong> It&rsquo;s just cake and icing. I thought.</p>
+              <p><em>V&acirc;ng, đ&oacute; l&agrave; một <strong>thảm họa.</strong> H&oacute;a ra <strong>việc gọi đồ</strong> ở b&ecirc;n ngo&agrave;i <strong>dễ hơn</strong> nấu ăn ở nh&agrave; <strong>nhiều</strong>. V&agrave; <strong>nấu ăn</strong> th&igrave; <strong>kh&oacute; hơn khi xem trong c&aacute;c video rất nhiều.</strong> T&ocirc;i muốn l&agrave;m một chiếc banh cho sinh nhật của chồng t&ocirc;i. <strong>C&oacute; thể phức tạp đến mức n&agrave;o chứ?</strong> Chỉ l&agrave; b&aacute;nh v&agrave; phủ kem th&ocirc;i, t&ocirc;i đ&atilde; nghĩ vậy.</em></p>
+              <p>I put my phone on the kitchen counter and <strong>followed the video instructions.</strong> The woman in the clip kept saying <strong>&ldquo;You&rsquo;re doing great!&rdquo;</strong> and <strong>&ldquo;Doesn&rsquo;t that look delicious?&rdquo;</strong> but my cake looked, and smelled, like rotten soup, and my kitchen&rsquo;s fire alarm went off!</p>
+              <p><em>T&ocirc;i đặt điện thoại l&ecirc;n kệ bếp v&agrave; <strong>l&agrave;m theo video hướng dẫn.</strong> Người phụ nữ trong clip lu&ocirc;n n&oacute;i rằng <strong>&ldquo;Bạn đang l&agrave;m rất tốt!&rdquo;</strong> v&agrave; <strong>&ldquo;Tr&ocirc;ng n&oacute; kh&ocirc;ng ngon sao?&rdquo;</strong> nhưng nh&igrave;n b&aacute;nh của t&ocirc;i, v&agrave; ngửi m&ugrave;i của n&oacute; đi, như thể s&uacute;p bị thiu, v&agrave; cả việc thiết bị b&aacute;o ch&aacute;y trong bếp đổ chu&ocirc;ng nữa!</em></p>
+              <p>Thankfully, the icing wasn&rsquo;t <strong>tricky</strong>, so the cake didn&rsquo;t look that bad. But when my husband <strong>took the first bite,</strong> his face scrunched up like he just bit into a lemon. Then he started laughing. &ldquo;Thank you so much for the cake!&rdquo; he said, &ldquo;I love it... but let&rsquo;s go get one from a bakery, yeah?&rdquo;.</p>
+              <p><em>May sao, phần kem phủ kh&ocirc;ng <strong>phức tạp</strong> cho lắm, thế n&ecirc;n c&aacute;i b&aacute;nh nh&igrave;n kh&ocirc;ng qu&aacute; tệ. Nhưng khi chồng t&ocirc;i <strong>thử miếng đầu ti&ecirc;n,</strong> mặt anh ấy <strong>nhăn như khỉ ăn ớt,</strong> v&agrave; sau đ&oacute; anh ấy bắt đầu cười ph&aacute; l&ecirc;n. &ldquo;Cảm ơn em rất nhiều về chiếc banh!&rdquo;, anh ấy n&oacute;i, &ldquo;Anh th&iacute;ch n&oacute;... Nhưng ch&uacute;ng m&igrave;nh h&atilde;y đi mua một c&aacute;i kh&aacute;c ở cửa h&agrave;ng b&aacute;nh được kh&ocirc;ng?&rdquo;.</em></p>`
+                    }
+                ]
+            },
+            {
+                case: `Day 3`,
+                title: `Phản xạ đa chiều - Have a Bit of a Sweet Tooth`,
+            },
+            {
+                case: `Day 4`,
+                title: `Phản xạ đa chiều - Home Cooking`,
+            },
+            {
+                case: `Day 5`,
+                title: `Phản xạ đa chiều - Easy as Pie`,
+            },
+            {
+                case: `Day 6`,
+                title: `Thử thách`,
+                content: [
+                    {
+                        title: `Thử thách`,
+                        // tslint:disable-next-line:max-line-length
+                        audioLinkReflection: `assets/audio/LESSON 01 - INTRODUCTION/Recording 1.11 - Production.mp3`,
+                        data: `
+              ✔️ Tải phần tài liệu production sau đây về máy – bấm vào đây để download (nếu bạn đang truy cập khóa học trên app, vui lòng vào web để tải trực tiếp tài liệu này) – Luyện tập từ 2-3 lần (Có thể nhìn phần dịch và từ điển nếu cần).<br/>
+              ✔️ Nghe Recording 1.11 và trả lời vào khoảng trống từ 3-5 lần<br/>
+              ✔️ Hãy tưởng tượng bạn vô tình gặp một người nước ngoài tại một địa điểm du lịch nào đó, bạn hãy chủ động là người hỏi chuyện và làm quen với người bạn đó.<br/>
+              ✔️ Hãy tạo ra một kịch bản từ 10 – 15 câu hỏi đáp và thực hành nói trước gương sao cho thật tự nhiên.<br/>
+              ✔️ Bạn cũng có thể tìm một người bạn để đối thoại cùng nhau như các nhân vật tại Lesson 01!<br/>
+              Bạn đã hoàn thành việc luyện tập Lesson 01 – Eng Breaking. Ngay bây giờ, hãy đến với bài Đánh giá (Assessment) để nâng cao kỹ năng và ôn luyện kiến thức ở Lesson 01.`
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 7,
+        title: 'Lesson 07 - Guide',
+        name: `Guide`,
+        displayOrder: 7,
+        description: `MY NAME IS DAO DAO, this lesson is tell you about people.`,
+        openCollapse: true,
+        contents: [
+            {
+                case: `Day 1`,
+                title: `Nghe ngấm`,
+                content: [
+                    {
+                        title: `Topic 1: Wrong Way`,
+                        audioLinkSlow: `assets/audio/LESSON 07 - GUIDE/Recording 7.1 - Slow Speech - Topic 1 - Wrong Way.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 07 - GUIDE/Recording 7.2 - Native Speech - Topic 1 - Wrong Way.mp3`,
+                        data: `<p>Don is on the way to Bernadette&rsquo;s house, but he seems to get lost and has to call Bernadette to ask for directions.</p>
+              <p><em>Don đang tr&ecirc;n đường đến nh&agrave; Bernadette, nhưng anh dường như bị lạc v&agrave; phải gọi cho Bernadette để hỏi đường.</em></p>
+              <p><strong>Don</strong>: Hey Bernadette, it&rsquo;s Don. I&rsquo;m <strong>on my way</strong> to your party but I&rsquo;m <strong>a bit</strong> lost. Can you help me?</p>
+              <p><strong><em>Don</em></strong><em>: Ch&agrave;o Bernadette, Don đ&acirc;y. T&ocirc;i <strong>đang tr&ecirc;n đường </strong>đến bữa tiệc của cậu, nhưng t&ocirc;i hơi lạc<strong> một ch&uacute;t</strong>. Cậu c&oacute; thể gi&uacute;p t&ocirc;i kh&ocirc;ng?</em></p>
+              <p><strong>Bernadette</strong>: Sure. <strong>Where are you now?</strong> Are you near <strong>town?</strong></p>
+              <p><strong><em>Bernadette</em></strong><em>: Chắn chắn rồi.<strong> Giờ cậu đang ở đ&acirc;u</strong>? C&oacute; gần thị trấn kh&ocirc;ng?</em></p>
+              <p><strong>Don</strong>: Um... I&rsquo;m not sure. Let me ask.<strong> Excuse me, how far am I from town?</strong></p>
+              <p><strong><em>Don: </em></strong><em>&nbsp;Ừm... t&ocirc;i kh&ocirc;ng chắc lắm. Để t&ocirc;i hỏi. <strong>xin lỗi, t&ocirc;i c&aacute;ch thị trấn bao xa?</strong></em></p>
+              <p><strong>Gas Station Attendant: </strong>Town&rsquo;s <strong>about fifteen minutes west from here.</strong> You&rsquo;re on the I-95 now.</p>
+              <p><strong><em>Gas Station Attendant:</em></strong><em> Thị trấn c&aacute;ch đ&acirc;y<strong> khoảng mười lăm ph&uacute;t về ph&iacute;a T&acirc;y. </strong>Giờ anh đang ở điểm I-95.</em></p>
+              <p><strong>Don</strong>: Did you hear that Bernadette?</p>
+              <p><strong><em>Don</em></strong><em>: Cậu đ&atilde; nghe thấy chứ Bernadette?</em></p>
+              <p><strong>Bernadette</strong>: Yes, You want to <strong>head west. At the second traffic light, take a left.</strong> Then my house is <strong>right after the park, behind the shopping center.</strong></p>
+              <p><strong><em>Bernadette: </em></strong><em>Rồi. Cậu h&atilde;y <strong>đi thẳng về ph&iacute;a T&acirc;y. Đến đ&egrave;n giao th&ocirc;ng thứ hai, rẽ tr&aacute;i. </strong>Sau đ&oacute; th&igrave; nh&agrave; t&ocirc;i ở<strong> ngay sau c&ocirc;ng vi&ecirc;n, ph&iacute;a sau Trung t&acirc;m mua sắm.</strong></em></p>
+              <p><strong>Don: </strong>Okey, I&rsquo;m <strong>passing one traffic light... </strong>and here&rsquo;s the second one. You said <strong>turn left?</strong></p>
+              <p><strong><em>Don: </em></strong><em>Được rồi, t&ocirc;i <strong>đang đi qua một đ&egrave;n giao th&ocirc;ng</strong>... v&agrave; đ&acirc;y l&agrave; c&aacute;i thứ hai. Cậu bảo <strong>rẽ tr&aacute;i</strong> phải kh&ocirc;ng?</em></p>
+              <p><strong>Bernadette</strong>: Right.</p>
+              <p><strong><em>Bernadette</em></strong><em>: Phải.</em></p>
+              <p><strong>Don</strong>: Oh, okay, <strong>Turning right</strong> now... I&rsquo;ll see you soon! Bye!</p>
+              <p><strong><em>Don</em></strong><em>: Ờ, được rồi. <strong>Rẽ phải</strong> đ&acirc;y... T&ocirc;i sẽ gặp cậu sớm! Tạm biệt!</em></p>
+              <p><strong>Bernadette</strong>: Wait! Don! Donald! <strong>You were supposed to </strong>turn left! Don! Oh gosh...</p>
+              <p><strong><em>Bernadette</em></strong><em>: Đợi đ&atilde;! Don! Donald! <strong>Cậu đ&atilde; được dặn </strong>l&agrave; rẽ tr&aacute;i cơ m&agrave;! Don! &Ocirc;i Ch&uacute;a ơi...</em></p>
+              <p><em>&ldquo;You want to head west&rdquo; = &ldquo;Head west&rdquo; (H&atilde;y đi về ph&iacute;a t&acirc;y)</em></p>
+              <p><em>C&aacute;ch n&oacute;i &ldquo;You want to do something&rdquo; Rất phổ biến trong c&aacute;c t&agrave;i liệu, kh&oacute;a học hướng dẫn của người nước ngo&agrave;i (Đặc biệt l&agrave; người Mỹ).</em></p>`
+                    },
+                    {
+                        title: `Topic 2: Family Trip`,
+                        audioLinkSlow: `assets/audio/LESSON 07 - GUIDE/Recording 7.3 - Slow Speech - Topic 2 - Family Trip.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 07 - GUIDE/Recording 7.4 - Native Speech - Topic 2 - Family Trip.mp3`,
+                        data: `<p>Sarah is booking flight tickets for her family trip to Hawaii.</p>
+              <p><em>Sarah đang đặt v&eacute; m&aacute;y bay cho chuyến đi gia đ&igrave;nh đến Hawaii.</em></p>
+              <p><strong>Sarah</strong>: Hi, <strong>I&rsquo;d like to ask about </strong>tickets from Philadelphia to Hawaii.</p>
+              <p><strong><em>Sarah</em></strong><em>: Xin ch&agrave;o, <strong>t&ocirc;i muốn hỏi về </strong>v&eacute; bay từ Philadelphia đến Hawaii.</em></p>
+              <p><strong>Clerk</strong>: Certainly, when are you traveling?</p>
+              <p><strong><em>Clerk</em></strong><em>: Chắc rồi, khi n&agrave;o chị đi du lịch?</em></p>
+              <p><strong>Sarah</strong>: This summer.</p>
+              <p><strong><em>Sarah</em></strong><em>: M&ugrave;a h&egrave; n&agrave;y.</em></p>
+              <p><strong>Clerk</strong>: And <strong>how many</strong> tickets would you like to purchase?</p>
+              <p><strong><em>Clerk</em></strong><em>: Vậy chị muốn mua <strong>bao nhi&ecirc;u</strong> v&eacute;?</em></p>
+              <p><strong>Sarah</strong>: Five. I&rsquo;m traveling with my family.</p>
+              <p><strong><em>Sarah</em></strong><em>: Năm v&eacute;. T&ocirc;i đi du lịch với gia đ&igrave;nh.</em></p>
+              <p><strong>Clerk</strong>: And will those be <strong>economy, business class, or first class?</strong></p>
+              <p><strong><em>Clerk</em></strong><em>: Vậy v&eacute; sẽ l&agrave; hạng <strong>phổ th&ocirc;ng tiết kiệm, thương gia hay hạng nhất?</strong></em></p>
+              <p><strong>Sarah: </strong>Hmm, could I have four economy tickets, and one first class, please?</p>
+              <p><strong><em>Sarah</em></strong><em>: Ừm, t&ocirc;i c&oacute; thể mua bốn v&eacute; phổ th&ocirc;ng, v&agrave; một v&eacute; hạng nhất được kh&ocirc;ng?</em></p>
+              <p><strong>Clerk</strong>: Centainly. And <strong>would you like to purchase round trip </strong>tickets now?</p>
+              <p><strong><em>Clerk</em></strong><em>: Tất nhi&ecirc;n rồi. V&agrave; <strong>&nbsp;chị muốn mua v&eacute; khứ hồi </strong>b&acirc;y giờ lu&ocirc;n chứ?</em></p>
+              <p><strong>Sarah</strong>: Actually... could you make that four round trip tickets and one one-way ticket?</p>
+              <p><strong><em>Sarah</em></strong><em>: Thực ra... Anh c&oacute; thể lấy cho t&ocirc;i bốn v&eacute; khứ hồi v&agrave; một v&eacute; một chiều được kh&ocirc;ng?</em></p>
+              <p><strong>Clerk</strong>: That&rsquo;s not a problem.</p>
+              <p><strong><em>Clerk</em></strong><em>: Kh&ocirc;ng vấn đề g&igrave;.</em></p>
+              <p><strong>Sarah</strong>: And what are your <strong>baggage requirements?</strong></p>
+              <p><strong><em>Sarah: </em></strong><em>Vậy <strong>y&ecirc;u cầu</strong> về <strong>h&agrave;nh l&yacute;</strong> của anh l&agrave; g&igrave;?</em></p>
+              <p><strong>Clerk</strong>: Every passenger is <strong>entitled to</strong> one <strong>carry-on</strong> and one <strong>checked bag</strong> of no more than twenty pounds for <strong>domestic</strong> flights.</p>
+              <p><strong><em>Cleck</em></strong><em>: Mỗi h&agrave;nh kh&aacute;ch <strong>được quyền mang </strong>một <strong>h&agrave;nh l&yacute; x&aacute;ch tay (mang theo)</strong> v&agrave; một <strong>h&agrave;nh l&yacute; k&yacute; gửi </strong>nặng kh&ocirc;ng qu&aacute; hai mươi pao cho c&aacute;c chuyến bay <strong>nội địa.</strong></em></p>
+              <p><strong>Sarah: </strong>Is there a fine for going over that? I&rsquo;m planning on bringing a lot with me...</p>
+              <p><strong><em>Sarah: </em></strong><em>&nbsp;Nếu vượt mức đ&oacute; c&oacute; bị phạt tiền kh&ocirc;ng? T&ocirc;i đang định mang theo rất nhiều đồ...</em></p>`
+                    },
+                    {
+                        title: `Topic 3: Rest Stops`,
+                        audioLinkSlow: `assets/audio/LESSON 07 - GUIDE/Recording 7.5 - Slow Speech - Topic 3 - Rest Stops.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 07 - GUIDE/Recording 7.6 - Native Speech - Topic 3 - Rest Stops.mp3`,
+                        data: `<p>My <strong>very first bus trip</strong> in a <strong>&nbsp;foreign </strong>contry was an <strong>unforgettable experience. </strong>&nbsp;I was in the mountains of Morocco, and I wanted to get to the beach but I didn&rsquo;t have a lot of money, so I <strong>decided to take the bus </strong>instead of the rain.</p>
+              <p><strong>Chuyến đi xe bu&yacute;t đầu ti&ecirc;n </strong>ở <strong>&nbsp;nước ngo&agrave;i </strong>cửa t&ocirc;i l&agrave; một <strong>trải nghiệm kh&oacute; qu&ecirc;n. </strong>T&ocirc;i đ&atilde; ở những ngọn n&uacute;i của Ma-Rốc, v&agrave; t&ocirc;i muốn đi ra biển, nhưng t&ocirc;i đ&atilde; kh&ocirc;ng c&oacute; nhiều tiền, v&igrave; vậy t&ocirc;i <strong>quyết định đi xe bu&yacute;t </strong>thay v&igrave; xe lửa.</p>
+              <p>The bus picked me up at my hotel, which was <strong>really convenient, </strong>but <strong>as soon as we got on the highway, </strong>the trouble started. I felt so sleepy... and meanwhile... I really needed to use the bathroom, and buses, <strong>unlike trains, </strong>don&rsquo;t have bathrooms.</p>
+              <p>Xe bu&yacute;t đ&oacute;n t&ocirc;i tại kh&aacute;ch sạn, nơi <strong>thực sự tiện nghi, </strong>nhưng <strong>sau khi ch&uacute;ng t&ocirc;i l&ecirc;n đường cao tốc, </strong>rắc rối bắt đầu ập đến. T&ocirc;i cảm thấy buồn ngủ... v&agrave; trong khi đ&oacute;... Tối rất cần sử dụng nh&agrave; vệ sinh, c&ograve;n xe bu&yacute;t, <strong>kh&ocirc;ng giống như xe lửa, </strong>kh&ocirc;ng c&oacute; nh&agrave; vệ sinh.</p>
+              <p>And you know? I&rsquo;m scared of seeing a bathroom in my dream. It&rsquo;s a trap! So... I had to solve my problem!</p>
+              <p>V&agrave; bạn biết kh&ocirc;ng? T&ocirc;i rất sợ nh&igrave;n thấy nh&agrave; vệ sinh trong giấc mơ của t&ocirc;i. Đ&oacute; l&agrave; một c&aacute;i bẫy! V&igrave; vậy... T&ocirc;i phải giải quyết vấn đề của m&igrave;nh!</p>
+              <p>The thing is... I didn&rsquo;t <strong>speak the language, </strong>and no one could speak English. Thankfully, the woman sitting next to me was very kind. She understood my probleam by reading my body language and spoke to the bus driver for me.</p>
+              <p>Vấn đề l&agrave;... T&ocirc;i kh&ocirc;ng biết <strong>n&oacute;i ng&ocirc;n ngữ đ&oacute;, </strong>v&agrave; kh&ocirc;ng ai c&oacute; thể n&oacute;i tiếng Anh cả. Rất may, người phụ nữ ngồi cạnh t&ocirc;i rất tốt bụng. C&ocirc; ấy hiểu vấn đề của t&ocirc;i qua v&agrave;i <strong>ng&ocirc;n ngữ cơ thể </strong>v&agrave; n&oacute;i với t&agrave;i xế gi&uacute;p t&ocirc;i.</p>
+              <p>To be honest, I had never spoken to anyone on a bus before, but this woman really <strong>helped me out. </strong>The bus driver sped to the next stop and let me off for a few minutes. <strong>Crisis averted!</strong></p>
+              <p>N&oacute;i thật, t&ocirc;i chưa bao giờ n&oacute;i chuyện với ai tr&ecirc;n xe bu&yacute;t trước đ&acirc;y, nhưng người phụ nữ n&agrave;y thực sự <strong>đ&atilde; gi&uacute;p đỡ t&ocirc;i. </strong>Người t&agrave;i xế xe bu&yacute;t tăng tốc đến điểm dừng tiếp theo v&agrave; cho t&ocirc;i xuống một v&agrave;i ph&uacute;t. <strong>Khủng hoảng đ&atilde; được ngăn chặn!</strong></p>`
+                    }
+                ]
+            },
+            {
+                case: `Day 2`,
+                title: `Nói đuổi`,
+                content: [
+                    {
+                        title: `Topic 1: Wrong Way`,
+                        audioLinkSlow: `assets/audio/LESSON 07 - GUIDE/Recording 7.1 - Slow Speech - Topic 1 - Wrong Way.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 07 - GUIDE/Recording 7.2 - Native Speech - Topic 1 - Wrong Way.mp3`,
+                        data: `<p>Don is on the way to Bernadette&rsquo;s house, but he seems to get lost and has to call Bernadette to ask for directions.</p>
+              <p><em>Don đang tr&ecirc;n đường đến nh&agrave; Bernadette, nhưng anh dường như bị lạc v&agrave; phải gọi cho Bernadette để hỏi đường.</em></p>
+              <p><strong>Don</strong>: Hey Bernadette, it&rsquo;s Don. I&rsquo;m <strong>on my way</strong> to your party but I&rsquo;m <strong>a bit</strong> lost. Can you help me?</p>
+              <p><strong><em>Don</em></strong><em>: Ch&agrave;o Bernadette, Don đ&acirc;y. T&ocirc;i <strong>đang tr&ecirc;n đường </strong>đến bữa tiệc của cậu, nhưng t&ocirc;i hơi lạc<strong> một ch&uacute;t</strong>. Cậu c&oacute; thể gi&uacute;p t&ocirc;i kh&ocirc;ng?</em></p>
+              <p><strong>Bernadette</strong>: Sure. <strong>Where are you now?</strong> Are you near <strong>town?</strong></p>
+              <p><strong><em>Bernadette</em></strong><em>: Chắn chắn rồi.<strong> Giờ cậu đang ở đ&acirc;u</strong>? C&oacute; gần thị trấn kh&ocirc;ng?</em></p>
+              <p><strong>Don</strong>: Um... I&rsquo;m not sure. Let me ask.<strong> Excuse me, how far am I from town?</strong></p>
+              <p><strong><em>Don: </em></strong><em>&nbsp;Ừm... t&ocirc;i kh&ocirc;ng chắc lắm. Để t&ocirc;i hỏi. <strong>xin lỗi, t&ocirc;i c&aacute;ch thị trấn bao xa?</strong></em></p>
+              <p><strong>Gas Station Attendant: </strong>Town&rsquo;s <strong>about fifteen minutes west from here.</strong> You&rsquo;re on the I-95 now.</p>
+              <p><strong><em>Gas Station Attendant:</em></strong><em> Thị trấn c&aacute;ch đ&acirc;y<strong> khoảng mười lăm ph&uacute;t về ph&iacute;a T&acirc;y. </strong>Giờ anh đang ở điểm I-95.</em></p>
+              <p><strong>Don</strong>: Did you hear that Bernadette?</p>
+              <p><strong><em>Don</em></strong><em>: Cậu đ&atilde; nghe thấy chứ Bernadette?</em></p>
+              <p><strong>Bernadette</strong>: Yes, You want to <strong>head west. At the second traffic light, take a left.</strong> Then my house is <strong>right after the park, behind the shopping center.</strong></p>
+              <p><strong><em>Bernadette: </em></strong><em>Rồi. Cậu h&atilde;y <strong>đi thẳng về ph&iacute;a T&acirc;y. Đến đ&egrave;n giao th&ocirc;ng thứ hai, rẽ tr&aacute;i. </strong>Sau đ&oacute; th&igrave; nh&agrave; t&ocirc;i ở<strong> ngay sau c&ocirc;ng vi&ecirc;n, ph&iacute;a sau Trung t&acirc;m mua sắm.</strong></em></p>
+              <p><strong>Don: </strong>Okey, I&rsquo;m <strong>passing one traffic light... </strong>and here&rsquo;s the second one. You said <strong>turn left?</strong></p>
+              <p><strong><em>Don: </em></strong><em>Được rồi, t&ocirc;i <strong>đang đi qua một đ&egrave;n giao th&ocirc;ng</strong>... v&agrave; đ&acirc;y l&agrave; c&aacute;i thứ hai. Cậu bảo <strong>rẽ tr&aacute;i</strong> phải kh&ocirc;ng?</em></p>
+              <p><strong>Bernadette</strong>: Right.</p>
+              <p><strong><em>Bernadette</em></strong><em>: Phải.</em></p>
+              <p><strong>Don</strong>: Oh, okay, <strong>Turning right</strong> now... I&rsquo;ll see you soon! Bye!</p>
+              <p><strong><em>Don</em></strong><em>: Ờ, được rồi. <strong>Rẽ phải</strong> đ&acirc;y... T&ocirc;i sẽ gặp cậu sớm! Tạm biệt!</em></p>
+              <p><strong>Bernadette</strong>: Wait! Don! Donald! <strong>You were supposed to </strong>turn left! Don! Oh gosh...</p>
+              <p><strong><em>Bernadette</em></strong><em>: Đợi đ&atilde;! Don! Donald! <strong>Cậu đ&atilde; được dặn </strong>l&agrave; rẽ tr&aacute;i cơ m&agrave;! Don! &Ocirc;i Ch&uacute;a ơi...</em></p>
+              <p><em>&ldquo;You want to head west&rdquo; = &ldquo;Head west&rdquo; (H&atilde;y đi về ph&iacute;a t&acirc;y)</em></p>
+              <p><em>C&aacute;ch n&oacute;i &ldquo;You want to do something&rdquo; Rất phổ biến trong c&aacute;c t&agrave;i liệu, kh&oacute;a học hướng dẫn của người nước ngo&agrave;i (Đặc biệt l&agrave; người Mỹ).</em></p>`
+                    },
+                    {
+                        title: `Topic 2: Family Trip`,
+                        audioLinkSlow: `assets/audio/LESSON 07 - GUIDE/Recording 7.3 - Slow Speech - Topic 2 - Family Trip.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 07 - GUIDE/Recording 7.4 - Native Speech - Topic 2 - Family Trip.mp3`,
+                        data: `<p>Sarah is booking flight tickets for her family trip to Hawaii.</p>
+              <p><em>Sarah đang đặt v&eacute; m&aacute;y bay cho chuyến đi gia đ&igrave;nh đến Hawaii.</em></p>
+              <p><strong>Sarah</strong>: Hi, <strong>I&rsquo;d like to ask about </strong>tickets from Philadelphia to Hawaii.</p>
+              <p><strong><em>Sarah</em></strong><em>: Xin ch&agrave;o, <strong>t&ocirc;i muốn hỏi về </strong>v&eacute; bay từ Philadelphia đến Hawaii.</em></p>
+              <p><strong>Clerk</strong>: Certainly, when are you traveling?</p>
+              <p><strong><em>Clerk</em></strong><em>: Chắc rồi, khi n&agrave;o chị đi du lịch?</em></p>
+              <p><strong>Sarah</strong>: This summer.</p>
+              <p><strong><em>Sarah</em></strong><em>: M&ugrave;a h&egrave; n&agrave;y.</em></p>
+              <p><strong>Clerk</strong>: And <strong>how many</strong> tickets would you like to purchase?</p>
+              <p><strong><em>Clerk</em></strong><em>: Vậy chị muốn mua <strong>bao nhi&ecirc;u</strong> v&eacute;?</em></p>
+              <p><strong>Sarah</strong>: Five. I&rsquo;m traveling with my family.</p>
+              <p><strong><em>Sarah</em></strong><em>: Năm v&eacute;. T&ocirc;i đi du lịch với gia đ&igrave;nh.</em></p>
+              <p><strong>Clerk</strong>: And will those be <strong>economy, business class, or first class?</strong></p>
+              <p><strong><em>Clerk</em></strong><em>: Vậy v&eacute; sẽ l&agrave; hạng <strong>phổ th&ocirc;ng tiết kiệm, thương gia hay hạng nhất?</strong></em></p>
+              <p><strong>Sarah: </strong>Hmm, could I have four economy tickets, and one first class, please?</p>
+              <p><strong><em>Sarah</em></strong><em>: Ừm, t&ocirc;i c&oacute; thể mua bốn v&eacute; phổ th&ocirc;ng, v&agrave; một v&eacute; hạng nhất được kh&ocirc;ng?</em></p>
+              <p><strong>Clerk</strong>: Centainly. And <strong>would you like to purchase round trip </strong>tickets now?</p>
+              <p><strong><em>Clerk</em></strong><em>: Tất nhi&ecirc;n rồi. V&agrave; <strong>&nbsp;chị muốn mua v&eacute; khứ hồi </strong>b&acirc;y giờ lu&ocirc;n chứ?</em></p>
+              <p><strong>Sarah</strong>: Actually... could you make that four round trip tickets and one one-way ticket?</p>
+              <p><strong><em>Sarah</em></strong><em>: Thực ra... Anh c&oacute; thể lấy cho t&ocirc;i bốn v&eacute; khứ hồi v&agrave; một v&eacute; một chiều được kh&ocirc;ng?</em></p>
+              <p><strong>Clerk</strong>: That&rsquo;s not a problem.</p>
+              <p><strong><em>Clerk</em></strong><em>: Kh&ocirc;ng vấn đề g&igrave;.</em></p>
+              <p><strong>Sarah</strong>: And what are your <strong>baggage requirements?</strong></p>
+              <p><strong><em>Sarah: </em></strong><em>Vậy <strong>y&ecirc;u cầu</strong> về <strong>h&agrave;nh l&yacute;</strong> của anh l&agrave; g&igrave;?</em></p>
+              <p><strong>Clerk</strong>: Every passenger is <strong>entitled to</strong> one <strong>carry-on</strong> and one <strong>checked bag</strong> of no more than twenty pounds for <strong>domestic</strong> flights.</p>
+              <p><strong><em>Cleck</em></strong><em>: Mỗi h&agrave;nh kh&aacute;ch <strong>được quyền mang </strong>một <strong>h&agrave;nh l&yacute; x&aacute;ch tay (mang theo)</strong> v&agrave; một <strong>h&agrave;nh l&yacute; k&yacute; gửi </strong>nặng kh&ocirc;ng qu&aacute; hai mươi pao cho c&aacute;c chuyến bay <strong>nội địa.</strong></em></p>
+              <p><strong>Sarah: </strong>Is there a fine for going over that? I&rsquo;m planning on bringing a lot with me...</p>
+              <p><strong><em>Sarah: </em></strong><em>&nbsp;Nếu vượt mức đ&oacute; c&oacute; bị phạt tiền kh&ocirc;ng? T&ocirc;i đang định mang theo rất nhiều đồ...</em></p>`
+                    },
+                    {
+                        title: `Topic 3: Rest Stops`,
+                        audioLinkSlow: `assets/audio/LESSON 07 - GUIDE/Recording 7.5 - Slow Speech - Topic 3 - Rest Stops.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 07 - GUIDE/Recording 7.6 - Native Speech - Topic 3 - Rest Stops.mp3`,
+                        data: `<p>My <strong>very first bus trip</strong> in a <strong>&nbsp;foreign </strong>contry was an <strong>unforgettable experience. </strong>&nbsp;I was in the mountains of Morocco, and I wanted to get to the beach but I didn&rsquo;t have a lot of money, so I <strong>decided to take the bus </strong>instead of the rain.</p>
+              <p><strong>Chuyến đi xe bu&yacute;t đầu ti&ecirc;n </strong>ở <strong>&nbsp;nước ngo&agrave;i </strong>cửa t&ocirc;i l&agrave; một <strong>trải nghiệm kh&oacute; qu&ecirc;n. </strong>T&ocirc;i đ&atilde; ở những ngọn n&uacute;i của Ma-Rốc, v&agrave; t&ocirc;i muốn đi ra biển, nhưng t&ocirc;i đ&atilde; kh&ocirc;ng c&oacute; nhiều tiền, v&igrave; vậy t&ocirc;i <strong>quyết định đi xe bu&yacute;t </strong>thay v&igrave; xe lửa.</p>
+              <p>The bus picked me up at my hotel, which was <strong>really convenient, </strong>but <strong>as soon as we got on the highway, </strong>the trouble started. I felt so sleepy... and meanwhile... I really needed to use the bathroom, and buses, <strong>unlike trains, </strong>don&rsquo;t have bathrooms.</p>
+              <p>Xe bu&yacute;t đ&oacute;n t&ocirc;i tại kh&aacute;ch sạn, nơi <strong>thực sự tiện nghi, </strong>nhưng <strong>sau khi ch&uacute;ng t&ocirc;i l&ecirc;n đường cao tốc, </strong>rắc rối bắt đầu ập đến. T&ocirc;i cảm thấy buồn ngủ... v&agrave; trong khi đ&oacute;... Tối rất cần sử dụng nh&agrave; vệ sinh, c&ograve;n xe bu&yacute;t, <strong>kh&ocirc;ng giống như xe lửa, </strong>kh&ocirc;ng c&oacute; nh&agrave; vệ sinh.</p>
+              <p>And you know? I&rsquo;m scared of seeing a bathroom in my dream. It&rsquo;s a trap! So... I had to solve my problem!</p>
+              <p>V&agrave; bạn biết kh&ocirc;ng? T&ocirc;i rất sợ nh&igrave;n thấy nh&agrave; vệ sinh trong giấc mơ của t&ocirc;i. Đ&oacute; l&agrave; một c&aacute;i bẫy! V&igrave; vậy... T&ocirc;i phải giải quyết vấn đề của m&igrave;nh!</p>
+              <p>The thing is... I didn&rsquo;t <strong>speak the language, </strong>and no one could speak English. Thankfully, the woman sitting next to me was very kind. She understood my probleam by reading my body language and spoke to the bus driver for me.</p>
+              <p>Vấn đề l&agrave;... T&ocirc;i kh&ocirc;ng biết <strong>n&oacute;i ng&ocirc;n ngữ đ&oacute;, </strong>v&agrave; kh&ocirc;ng ai c&oacute; thể n&oacute;i tiếng Anh cả. Rất may, người phụ nữ ngồi cạnh t&ocirc;i rất tốt bụng. C&ocirc; ấy hiểu vấn đề của t&ocirc;i qua v&agrave;i <strong>ng&ocirc;n ngữ cơ thể </strong>v&agrave; n&oacute;i với t&agrave;i xế gi&uacute;p t&ocirc;i.</p>
+              <p>To be honest, I had never spoken to anyone on a bus before, but this woman really <strong>helped me out. </strong>The bus driver sped to the next stop and let me off for a few minutes. <strong>Crisis averted!</strong></p>
+              <p>N&oacute;i thật, t&ocirc;i chưa bao giờ n&oacute;i chuyện với ai tr&ecirc;n xe bu&yacute;t trước đ&acirc;y, nhưng người phụ nữ n&agrave;y thực sự <strong>đ&atilde; gi&uacute;p đỡ t&ocirc;i. </strong>Người t&agrave;i xế xe bu&yacute;t tăng tốc đến điểm dừng tiếp theo v&agrave; cho t&ocirc;i xuống một v&agrave;i ph&uacute;t. <strong>Khủng hoảng đ&atilde; được ngăn chặn!</strong></p>`
+                    }
+                ]
+            },
+            {
+                case: `Day 3`,
+                title: `Phản xạ đa chiều - Introducing a Friend`,
+            },
+            {
+                case: `Day 4`,
+                title: `Phản xạ đa chiều - Where Do You Live?`,
+            },
+            {
+                case: `Day 5`,
+                title: `Phản xạ đa chiều - What is Your Job?`,
+            },
+            {
+                case: `Day 6`,
+                title: `Thử thách`,
+                content: [
+                    {
+                        title: `Thử thách`,
+                        // tslint:disable-next-line:max-line-length
+                        audioLinkReflection: `assets/audio/LESSON 01 - INTRODUCTION/Recording 1.11 - Production.mp3`,
+                        data: `
+              ✔️ Tải phần tài liệu production sau đây về máy – bấm vào đây để download (nếu bạn đang truy cập khóa học trên app, vui lòng vào web để tải trực tiếp tài liệu này) – Luyện tập từ 2-3 lần (Có thể nhìn phần dịch và từ điển nếu cần).<br/>
+              ✔️ Nghe Recording 1.11 và trả lời vào khoảng trống từ 3-5 lần<br/>
+              ✔️ Hãy tưởng tượng bạn vô tình gặp một người nước ngoài tại một địa điểm du lịch nào đó, bạn hãy chủ động là người hỏi chuyện và làm quen với người bạn đó.<br/>
+              ✔️ Hãy tạo ra một kịch bản từ 10 – 15 câu hỏi đáp và thực hành nói trước gương sao cho thật tự nhiên.<br/>
+              ✔️ Bạn cũng có thể tìm một người bạn để đối thoại cùng nhau như các nhân vật tại Lesson 01!<br/>
+              Bạn đã hoàn thành việc luyện tập Lesson 01 – Eng Breaking. Ngay bây giờ, hãy đến với bài Đánh giá (Assessment) để nâng cao kỹ năng và ôn luyện kiến thức ở Lesson 01.`
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 8,
+        title: 'LESSON 08 - TRAVEL',
+        name: `Travel`,
+        displayOrder: 8,
+        description: `MY NAME IS DAO DAO, this lesson is tell you about people.`,
+        openCollapse: true,
+        contents: [
+            {
+                case: `Day 1`,
+                title: `Nghe ngấm`,
+                content: [
+                    {
+                        title: `Topic 1: The World Tour`,
+                        audioLinkSlow: `assets/audio/LESSON 08 - TRAVEL/Recording 8.1 - Slow Speech - Topic 1 - The World Tour.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 08 - TRAVEL/Recording 8.2 - Native Speech - Topic 1 - The World Tour.mp3`,
+                        data: `<p>A husband and wife are planning their family&rsquo;s &ldquo;world tour&rdquo;. They both love traveling, but while se wants to go to Asia to enjoy some remote, rugged wilderness, he wants to sit street side and sip some bowl sized cappuccinos in &ldquo;Gay Paree&rdquo;.</p>
+              <p><em>Một người chồng v&agrave; một người vợ đang l&ecirc;n kế hoạch cho &ldquo;tour du lịch thế giới&rdquo; của gia đ&igrave;nh họ. Cả hai đều th&iacute;ch đi du lịch, nhưng trong khi c&ocirc; g&aacute;i muốn đi đến Ch&acirc;u &Aacute; để tận hưởng sự hoang d&atilde;, gồ ghề, xa x&ocirc;i, anh ấy lại muốn ngồi b&ecirc;n đường v&agrave; nh&acirc;m nhi một t&aacute;ch cappuccino cỡ c&aacute;i b&aacute;t ở &ldquo;Gay Paris&rdquo;.</em></p>
+              <p><strong>Marty</strong>: Alright, let&rsquo;s do this! Let&rsquo;s plan our world tour!</p>
+              <p><strong><em>Marty</em></strong><em>: Được rồi, h&atilde;y tiến h&agrave;nh th&ocirc;i! H&atilde;y l&ecirc;n kế hoạch cho tour thế giới của ch&uacute;ng ta!</em></p>
+              <p><strong>Amy</strong>: Haha, &ldquo;world tour&rdquo;, really? <strong>Aren&rsquo;t you getting a little ahead of yourself?</strong> Charlotte and Daisy don&rsquo;t event have <strong>passports.</strong></p>
+              <p><strong><em>Amy</em></strong><em>: Haha, &ldquo;tour thế giới&rdquo; thật sao? <strong>Kh&ocirc;ng phải anh đang hơi qu&aacute; vội v&agrave;ng đấy chứ?</strong> Charlotte v&agrave; Daisy thậm ch&iacute; c&ograve;n chưa c&oacute; <strong>hộ chiếu.</strong></em></p>
+              <p><strong>Marty</strong>: Okay, so <strong>the first stop</strong> is the post office! Do you know where their <strong>birth certificates</strong> are?</p>
+              <p><strong><em>Marty</em></strong><em>: Được rồi, vậy <strong>điểm dừng đầu ti&ecirc;n</strong> sẽ l&agrave; bưu điện! Em c&oacute; biết <strong>giấy khai sinh</strong> của ch&uacute;ng ta ở đ&acirc;u kh&ocirc;ng?</em></p>
+              <p><strong>Amy</strong>: Yes dear, they&rsquo;re downstairs. And, after the post office?</p>
+              <p><strong><em>Amy</em></strong><em>: C&oacute;, anh th&acirc;n y&ecirc;u, ch&uacute;ng ở tầng dưới. Vậy sau bưu điện th&igrave; sao?</em></p>
+              <p><strong>Marty</strong>: Probably the <strong>travel agency...</strong></p>
+              <p><strong><em>Marty</em></strong><em>: C&oacute; lẽ l&agrave; <strong>c&ocirc;ng ty du lịch...</strong></em></p>
+              <p><strong>Amy</strong>: <strong>Don&rsquo;t be silly! </strong>We can just <strong>book </strong>all the tickets <strong>online.</strong> But where should we go?</p>
+              <p><strong><em>Amy: Đừng ngốc nghếch như vậy!</em></strong><em> Ch&uacute;ng ta chỉ cần <strong>đặt</strong> tất cả v&eacute; <strong>trực tuyến.</strong> Nhưng ch&uacute;ng ta n&ecirc;n đi đ&acirc;u?</em></p>
+              <p><strong>Marty</strong>: Well, seeing Europe would be neat. We could visit our <strong>ancestors&rsquo; homeland.</strong></p>
+              <p><strong><em>Marty</em></strong><em>: Để xem, đi ch&acirc;u &Acirc;u sẽ rất đơn giản. Ch&uacute;ng ta c&oacute; thể gh&eacute; thăm <strong>qu&ecirc; hương tổ ti&ecirc;n.</strong></em></p>
+              <p><strong>Amy</strong>: But is it safe? I&rsquo;d rather go to Asia so our kids can see a <strong>totally different culture. </strong>We could go to Mongolia and camp in the <strong>remote wilderness. </strong>That would really <strong>open our kids&rsquo; eyes to the world.</strong></p>
+              <p><strong><em>Amy:</em></strong><em> Nhưng c&oacute; an to&agrave;n kh&ocirc;ng? Em muốn đi đến Ch&acirc;u &Aacute; hơn để con trẻ ch&uacute;ng ta c&oacute; thể thấy một <strong>nền văn h&oacute;a ho&agrave;n to&agrave;n kh&aacute;c biệt. </strong>Ch&uacute;ng ta sẽ c&oacute; thể đi đến M&ocirc;ng Cổ v&agrave; cắm trại ở <strong>chốn hoang d&atilde; xa x&ocirc;i. </strong>Điều đ&oacute; sẽ thực sự <strong>mở mang tầm mắt của bọn trẻ với thế giới.</strong></em></p>
+              <p><strong>Marty: </strong>You think that&rsquo;s safer than a little caf&eacute; in Paris?</p>
+              <p><strong><em>Marty</em></strong><em>: Em nghĩ rằng như thế an to&agrave;n hơn một ch&uacute;t caf&eacute; ở Paris sao?</em></p>
+              <p><strong>Amy</strong>: Oh, <strong>don&rsquo;t worry so much, </strong>it&rsquo;ll be fine. Anyway, I&rsquo;ve already booked the tickets.</p>
+              <p><strong><em>Amy</em></strong><em>: &Ocirc;i, <strong>đừng lo lắng qu&aacute; nhiều, </strong>mọi chuyện sẽ ổn th&ocirc;i. D&ugrave; sao th&igrave; em cũng đặt v&eacute; rồi.</em></p>
+              <p><strong>Marty</strong>: What?</p>
+              <p><strong><em>Marty</em></strong><em>: C&aacute;i g&igrave;?</em></p>
+              <p><strong>Amy</strong>: Come on, let&rsquo;s go get those passports, Mongolia <strong>awaits</strong> us!</p>
+              <p><strong><em>Amy</em></strong><em>: Th&ocirc;i n&agrave;o, h&atilde;y đi lấy hộ chiếu th&ocirc;i, M&ocirc;ng Cổ đang <strong>chờ đ&oacute;n</strong> ch&uacute;ng ta.</em></p>`
+                    },
+                    {
+                        title: `Topic 2: Can I Upgrade, Please`,
+                        audioLinkSlow: `assets/audio/LESSON 08 - TRAVEL/Recording 8.3 - Slow Speech - Topic 2 - Can I Upgrade, Please.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 08 - TRAVEL/Recording 8.4 - Native Speech - Topic 2 - Can I Upgrade, Please.mp3`,
+                        data: `<p>Fred and his som are traveling and staying at a hotel, but he&rsquo;s got some complaints about the room that need to be resolved. Fortunately, he knows that patience and kindness is always the best approach.</p>
+              <p>Fred v&agrave; con trai &ocirc;ng đang đi du lịch v&agrave; lưu tr&uacute; tại một kh&aacute;ch sạn, nhưng &ocirc;ng đ&atilde; c&oacute; một số khiếu nại về ph&ograve;ng cần được giải quyết. May mắn thay, &ocirc;ng biết rằng sự ki&ecirc;n nhẫn v&agrave; l&ograve;ng tốt lu&ocirc;n lu&ocirc;n l&agrave; phương ph&aacute;p tốt nhất.</p>
+              <p><strong>Reception</strong>: Good morning. This is Michelle speaking. <strong>How may I help you</strong> today?</p>
+              <p><strong><em>Reception</em></strong><em>: Xin ch&agrave;o, T&ocirc;i l&agrave; Michelle. <strong>T&ocirc;i c&oacute; thể gi&uacute;p g&igrave; cho &ocirc;ng</strong> h&ocirc;m nay?</em></p>
+              <p><strong>Fred</strong>: Hi Michelle. This is Fred Parker. I&rsquo;ve just checked into room 13 and I&rsquo;m already feeling a little unlucky.</p>
+              <p><strong><em>Fred</em></strong><em>: Ch&agrave;o Michelle. T&ocirc;i l&agrave; Fred Parker. T&ocirc;i vừa mới v&agrave;o ph&ograve;ng 13 v&agrave; t&ocirc;i thấy m&igrave;nh kh&ocirc;ng may mắn cho lắm.</em></p>
+              <p><strong>Reception</strong>: Oh... Well... Mr. Parker. What seems to be the problem?</p>
+              <p><strong><em>Reception</em></strong><em>: Ồ... V&acirc;ng... &Ocirc;ng Parker. C&oacute; vấn đề g&igrave; ạ?</em></p>
+              <p><strong>Fred</strong>: Well, the are conditioner isn&rsquo;t working and the room&rsquo;s quite hot.</p>
+              <p><strong><em>Fred</em></strong><em>: V&acirc;ng, điều h&ograve;a kh&ocirc;ng kh&iacute; kh&ocirc;ng hoạt động v&agrave; ph&ograve;ng kh&aacute; n&oacute;ng.</em></p>
+              <p><strong>Reception</strong>: <strong>Oh, I&rsquo;m so sorry to hear that,</strong> Sir. I&rsquo;ll send someone up imediately?</p>
+              <p><strong><em>Reception</em></strong><em>: <strong>Ồ, t&ocirc;i rất tiếc khi nghe điều đ&oacute;,</strong> Thư &ocirc;ng. T&ocirc;i sẽ đưa người l&ecirc;n đ&oacute; ngay lập tức!</em></p>
+              <p><strong>Fred</strong>: I would appreciate that. We&rsquo;re about to head to the pool, but we&rsquo;ll be back in an hour.</p>
+              <p><strong><em>Fred</em></strong><em>: T&ocirc;i đ&aacute;nh gi&aacute; cao điều đ&oacute;. Ch&uacute;ng t&ocirc;i dự định sẽ ra hồ bơi, nhưng ch&uacute;ng t&ocirc;i sẽ trở lại trong một giờ nữa.</em></p>
+              <p><strong>Michelle</strong>: I&rsquo;ll get right on it, Mr. Parket.</p>
+              <p><strong><em>Michelle</em></strong><em>: T&ocirc;i sẽ kh&aacute;c phục ngay, &ocirc;ng Parker.</em></p>
+              <p><strong>Fred</strong>: Thanks, Michelle. Oh, wait, wait... Michelle?</p>
+              <p><strong><em>Fred</em></strong><em>: Cảm ơn, Michelle, &Ocirc;, chờ đ&atilde;, chờ đ&atilde;,... Michelle?</em></p>
+              <p><strong>Michelle</strong>: Yes, Sir?</p>
+              <p><strong><em>Michelle</em></strong><em>: V&acirc;ng, thưa &ocirc;ng?</em></p>
+              <p><strong>Fred&rsquo;s</strong> <strong>son cries out from the bathroom:</strong> Dad! Dad! The toilet is overflowing!</p>
+              <p><strong><em>Fred&rsquo;s</em></strong><em> <strong>son cries out from the bathroom:</strong> Bố! Bố! Nh&agrave; vệ sinh đang tr&agrave;n!</em></p>
+              <p><strong>Fred</strong>: Uhhh, also... my son just told me that the toilet is overflowing.</p>
+              <p><strong><em>Fred</em></strong><em>: &Ocirc;i, lại nữa sao? Con trai t&ocirc;i vừa bảo nh&agrave; vệ sinh tr&agrave;n.</em></p>
+              <p><strong>Reception</strong>: I am so sorry. I&rsquo;ll make sure everything&rsquo;s fixed before you return from the pool.</p>
+              <p><strong><em>Reception</em></strong><em>: T&ocirc;i rất xin lỗi. T&ocirc;i sẽ đảm bảo tất cả mọi thứ sẽ được giải quyết trước khi &ocirc;ng ở hồ bơi về.</em></p>
+              <p><strong>Fred</strong>: Thank you.</p>
+              <p><strong><em>Fred</em></strong><em>: Cảm ơn.</em></p>
+              <p><strong>Reception</strong>: Of course. <strong>Is there anything else I can help you?</strong></p>
+              <p><strong><em>Reception</em></strong><em>: Tất nhi&ecirc;n rồi. <strong>C&ograve;n điều g&igrave; kh&aacute;c t&ocirc;i c&oacute; thể gi&uacute;p &ocirc;ng kh&ocirc;ng?</strong></em></p>
+              <p><strong>Fred</strong>: Yes. We were really hoping to have a sea view, but our window is <strong>overlooking</strong> the <strong>parking lot.</strong></p>
+              <p><strong><em>Fred</em></strong><em>: C&oacute;. Ch&uacute;ng t&ocirc;i đ&atilde; thực sự hy vọng c&oacute; một tầm nh&igrave;n ra biển, nhưng cửa sổ của ch&uacute;ng t&ocirc;i <strong>nh&igrave;n từ tr&ecirc;n cao xuống</strong> lại thấy <strong>b&atilde;i đậu xe.</strong></em></p>
+              <p><strong>Reception</strong>: I understand. Currently the only&nbsp; room with a <strong>sea view</strong> that&rsquo;s available is a <strong>suite.</strong></p>
+              <p><strong><em>Reception</em></strong><em>: T&ocirc;i hiểu. Hiện nay ph&ograve;ng duy nhất c&oacute; <strong>tầm nh&igrave;n ra biển</strong> m&agrave; ch&uacute;ng t&ocirc;i c&oacute; l&agrave; <strong>ph&ograve;ng hạng sang.</strong></em></p>
+              <p><strong>Fred</strong>: I don&rsquo;t mind <strong>upgrading</strong>.</p>
+              <p><strong><em>Fred</em></strong><em>: T&ocirc;i kh&ocirc;ng ngại phải <strong>n&acirc;ng cấp</strong>.</em></p>
+              <p><strong>Reception</strong>: Okay. It will be available in an hour. Would you like us to move your things there while you enjoy the <strong>pool</strong>?</p>
+              <p><strong><em>Reception</em></strong><em>: V&acirc;ng ng&agrave;i, ph&ograve;ng đ&oacute; sẽ sẵn s&agrave;ng phục vụ sau một giờ nữa. &Ocirc;ng c&oacute; muốn ch&uacute;ng t&ocirc;i đi chuyển đồ của &ocirc;ng tới đ&oacute;, trong khi &ocirc;ng thư gi&atilde;n ở <strong>bể bơi</strong> kh&ocirc;ng?</em></p>
+              <p><strong>Fred</strong>: Yes, <strong>please do.</strong> Thank you, Michelle.</p>
+              <p><strong><em>Fred</em></strong><em>: V&acirc;ng, <strong>xin vui l&ograve;ng.</strong> Cảm ơn chị, Michelle.</em></p>
+              <p><strong>Reception</strong>: My pleasure. It&rsquo;s the least we can do for your troubles today.</p>
+              <p><strong><em>Reception</em></strong><em>: Rất h&acirc;n hạnh. Đ&oacute; l&agrave; điều nhỏ nhất ch&uacute;ng t&ocirc;i c&oacute; thể l&agrave;m để khắc phục rắc rối cho &ocirc;ng h&ocirc;m nay.</em></p>`
+                    },
+                    {
+                        title: `Topic 3: A Tropical Hideaway`,
+                        audioLinkSlow: `assets/audio/LESSON 08 - TRAVEL/Recording 8.5 - Slow Speech -Topic 3 - A Tropical Hideaway.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 08 - TRAVEL/Recording 8.6 - Native Speech - Topic 3 - A Tropical Hideaway.mp3`,
+                        data: `<p>There I was, taking a long overdue <strong>holiday, </strong>staying in&nbsp; a <strong>luxurious hotel </strong>with a <strong>picturesque landscape </strong>spanning every direction from my <strong>balcony. </strong>And all I could focus on was the trash filled, <strong>rocky beach </strong>below. I felt like such a snob, but it made me feel bad for the environment and for me. This was not what I&rsquo;d planned for my once a year vacation. I asked the receptionist if there was another <strong>beach</strong> nearby that was better. That&rsquo;s when she told me there was, in fact, a beautiful beach, but it was difficult to reach. Well, I&rsquo;m not one to turn down a challenge, so I got directions, rented a bike and started <strong>cruisin&rsquo; the coast</strong>.</p>
+              <p>T&ocirc;i đ&atilde; ở đ&oacute;, tận hưởng <strong>kỳ nghỉ</strong> d&agrave;i ng&agrave;y, lưu tr&uacute; tại một <strong>kh&aacute;ch sạn sang trọng </strong>với một <strong>cảnh quan đẹp như tranh vẽ </strong>bao tr&ugrave;m mọi hướng từ <strong>ban c&ocirc;ng </strong>của t&ocirc;i, v&agrave; tất cả những g&igrave; t&ocirc;i c&oacute; thể tập trung v&agrave;o l&agrave; <strong>b&atilde;i biển </strong>đầy r&aacute;c, <strong>đ&aacute; bao phủ </strong>ở ph&iacute;a dưới. T&ocirc;i cảm gi&aacute;c như một t&ecirc;n ngốc, nhưng n&oacute; khiến t&ocirc;i cảm thấy thật tệ cho m&ocirc;i trường v&agrave; cho t&ocirc;i. Đ&acirc;y kh&ocirc;ng phải l&agrave; những g&igrave; t&ocirc;i đ&atilde; l&ecirc;n kế hoạch cho kỳ nghỉ một năm một lần, v&igrave; vậy t&ocirc;i hỏi nh&acirc;n vi&ecirc;n tiếp t&acirc;n xem c&oacute; b&atilde;i biển n&agrave;o kh&aacute;c gần m&agrave; tốt hơn kh&ocirc;ng. V&agrave; c&ocirc; ấy n&oacute;i với t&ocirc;i l&agrave; c&oacute;, thực ra, c&oacute; một <strong>b&atilde;i biển </strong>xinh đẹp, nhưng đ&oacute; l&agrave; một điểm rất kh&oacute; tới được. Xem n&agrave;o, t&ocirc;i kh&ocirc;ng phải người dễ từ chối th&aacute;ch thức, v&igrave; vậy t&ocirc;i đ&atilde; hỏi đường đi, thu&ecirc; một chiếc xe đạp v&agrave; bắt đầu <strong>dạo chơi </strong>dọc <strong>bờ biển.</strong></p>
+              <p><strong>Turns out, </strong>the receptionist was right. If not for the lush <strong>tropical scenery, </strong>and a convenience store for replenishing food and water on my way, this would have been the bicycle ride from hell.</p>
+              <p><strong>H&oacute;a ra, </strong>nh&acirc;n vi&ecirc;n lễ t&acirc;n đ&atilde; đ&uacute;ng. Nếu kh&ocirc;ng phải v&igrave; n&oacute; c&oacute; <strong>cảnh quan nhiệt đới</strong> tươi tốt, v&agrave; một của h&agrave;ng tiện lợi để bổ sung th&ecirc;m thức anh v&agrave; nước uống tr&ecirc;n đường, th&igrave; đ&acirc;y c&oacute; lẽ đ&atilde; l&agrave; chuyến đạp xe địa ngục.</p>
+              <p>I was determined to reach my <strong>destination</strong>, though, and it was worth it. Just as the sun was setting. The beach came into view. Sunlight danced across the sea and the grains of sand glistened like white <strong>crystals. </strong>It was calling my name, so I leaned my bike against a palm tree and walked to the water&rsquo;s edge. Dipping my toes into the clear cool water, I sat on the <strong>shore. </strong>I watched the sun as it fell off the edge of the <strong>horizon </strong>and a <strong>crescent </strong>moon appeared from behind the shadows. It was <strong>breathtaking, </strong>and I <strong>was in awe.</strong></p>
+              <p>T&ocirc;i đ&atilde; hạ quyết t&acirc;m tới được <strong>đ&iacute;ch đến, </strong>d&ugrave; sao đi chăng nữa, v&agrave; n&oacute; thật sự xứng đ&aacute;ng. Chỉ khi mặt trời vừa mới bắt đầu lặn, t&ocirc;i c&oacute; thể nh&igrave;n thấy b&atilde;i biễn ngay trước mắt m&igrave;nh. &Aacute;nh mặt trời rải khắp tr&ecirc;n biển v&agrave; c&aacute;c hạt c&aacute;t lấp l&aacute;nh tr&ecirc;n b&atilde;i biển như những tinh thể trắng. Biển đang gọi t&ecirc;n t&ocirc;i, n&ecirc;n t&ocirc;i để xe đạp tựa v&agrave;o một t&aacute;n c&acirc;y cọ v&agrave; bước đến m&eacute;p nước. V&ugrave;i những ng&oacute;n ch&acirc;n m&igrave;nh v&agrave;o l&agrave;n nước m&aacute;t rượi trong veo, t&ocirc;i ngồi b&ecirc;n tr&ecirc;n <strong>bờ biển, </strong>ngắm nh&igrave;n mặt trời dần biến mất khỏi <strong>đường ch&acirc;n trời </strong>v&agrave; <strong>mặt trăng lưỡi liềm </strong>xuất hiện từ ph&iacute;a sau b&oacute;ng tối. Cảnh tượng thật <strong>ngoạn mục, </strong>v&agrave; t&ocirc;i <strong>đắm ch&igrave;m trong niềm kinh ngạc.</strong></p>`
+                    }
+                ]
+            },
+            {
+                case: `Day 2`,
+                title: `Nói đuổi`,
+                content: [
+                    {
+                        title: `Topic 1: The World Tour`,
+                        audioLinkSlow: `assets/audio/LESSON 08 - TRAVEL/Recording 8.1 - Slow Speech - Topic 1 - The World Tour.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 08 - TRAVEL/Recording 8.2 - Native Speech - Topic 1 - The World Tour.mp3`,
+                        data: `<p>A husband and wife are planning their family&rsquo;s &ldquo;world tour&rdquo;. They both love traveling, but while se wants to go to Asia to enjoy some remote, rugged wilderness, he wants to sit street side and sip some bowl sized cappuccinos in &ldquo;Gay Paree&rdquo;.</p>
+              <p><em>Một người chồng v&agrave; một người vợ đang l&ecirc;n kế hoạch cho &ldquo;tour du lịch thế giới&rdquo; của gia đ&igrave;nh họ. Cả hai đều th&iacute;ch đi du lịch, nhưng trong khi c&ocirc; g&aacute;i muốn đi đến Ch&acirc;u &Aacute; để tận hưởng sự hoang d&atilde;, gồ ghề, xa x&ocirc;i, anh ấy lại muốn ngồi b&ecirc;n đường v&agrave; nh&acirc;m nhi một t&aacute;ch cappuccino cỡ c&aacute;i b&aacute;t ở &ldquo;Gay Paris&rdquo;.</em></p>
+              <p><strong>Marty</strong>: Alright, let&rsquo;s do this! Let&rsquo;s plan our world tour!</p>
+              <p><strong><em>Marty</em></strong><em>: Được rồi, h&atilde;y tiến h&agrave;nh th&ocirc;i! H&atilde;y l&ecirc;n kế hoạch cho tour thế giới của ch&uacute;ng ta!</em></p>
+              <p><strong>Amy</strong>: Haha, &ldquo;world tour&rdquo;, really? <strong>Aren&rsquo;t you getting a little ahead of yourself?</strong> Charlotte and Daisy don&rsquo;t event have <strong>passports.</strong></p>
+              <p><strong><em>Amy</em></strong><em>: Haha, &ldquo;tour thế giới&rdquo; thật sao? <strong>Kh&ocirc;ng phải anh đang hơi qu&aacute; vội v&agrave;ng đấy chứ?</strong> Charlotte v&agrave; Daisy thậm ch&iacute; c&ograve;n chưa c&oacute; <strong>hộ chiếu.</strong></em></p>
+              <p><strong>Marty</strong>: Okay, so <strong>the first stop</strong> is the post office! Do you know where their <strong>birth certificates</strong> are?</p>
+              <p><strong><em>Marty</em></strong><em>: Được rồi, vậy <strong>điểm dừng đầu ti&ecirc;n</strong> sẽ l&agrave; bưu điện! Em c&oacute; biết <strong>giấy khai sinh</strong> của ch&uacute;ng ta ở đ&acirc;u kh&ocirc;ng?</em></p>
+              <p><strong>Amy</strong>: Yes dear, they&rsquo;re downstairs. And, after the post office?</p>
+              <p><strong><em>Amy</em></strong><em>: C&oacute;, anh th&acirc;n y&ecirc;u, ch&uacute;ng ở tầng dưới. Vậy sau bưu điện th&igrave; sao?</em></p>
+              <p><strong>Marty</strong>: Probably the <strong>travel agency...</strong></p>
+              <p><strong><em>Marty</em></strong><em>: C&oacute; lẽ l&agrave; <strong>c&ocirc;ng ty du lịch...</strong></em></p>
+              <p><strong>Amy</strong>: <strong>Don&rsquo;t be silly! </strong>We can just <strong>book </strong>all the tickets <strong>online.</strong> But where should we go?</p>
+              <p><strong><em>Amy: Đừng ngốc nghếch như vậy!</em></strong><em> Ch&uacute;ng ta chỉ cần <strong>đặt</strong> tất cả v&eacute; <strong>trực tuyến.</strong> Nhưng ch&uacute;ng ta n&ecirc;n đi đ&acirc;u?</em></p>
+              <p><strong>Marty</strong>: Well, seeing Europe would be neat. We could visit our <strong>ancestors&rsquo; homeland.</strong></p>
+              <p><strong><em>Marty</em></strong><em>: Để xem, đi ch&acirc;u &Acirc;u sẽ rất đơn giản. Ch&uacute;ng ta c&oacute; thể gh&eacute; thăm <strong>qu&ecirc; hương tổ ti&ecirc;n.</strong></em></p>
+              <p><strong>Amy</strong>: But is it safe? I&rsquo;d rather go to Asia so our kids can see a <strong>totally different culture. </strong>We could go to Mongolia and camp in the <strong>remote wilderness. </strong>That would really <strong>open our kids&rsquo; eyes to the world.</strong></p>
+              <p><strong><em>Amy:</em></strong><em> Nhưng c&oacute; an to&agrave;n kh&ocirc;ng? Em muốn đi đến Ch&acirc;u &Aacute; hơn để con trẻ ch&uacute;ng ta c&oacute; thể thấy một <strong>nền văn h&oacute;a ho&agrave;n to&agrave;n kh&aacute;c biệt. </strong>Ch&uacute;ng ta sẽ c&oacute; thể đi đến M&ocirc;ng Cổ v&agrave; cắm trại ở <strong>chốn hoang d&atilde; xa x&ocirc;i. </strong>Điều đ&oacute; sẽ thực sự <strong>mở mang tầm mắt của bọn trẻ với thế giới.</strong></em></p>
+              <p><strong>Marty: </strong>You think that&rsquo;s safer than a little caf&eacute; in Paris?</p>
+              <p><strong><em>Marty</em></strong><em>: Em nghĩ rằng như thế an to&agrave;n hơn một ch&uacute;t caf&eacute; ở Paris sao?</em></p>
+              <p><strong>Amy</strong>: Oh, <strong>don&rsquo;t worry so much, </strong>it&rsquo;ll be fine. Anyway, I&rsquo;ve already booked the tickets.</p>
+              <p><strong><em>Amy</em></strong><em>: &Ocirc;i, <strong>đừng lo lắng qu&aacute; nhiều, </strong>mọi chuyện sẽ ổn th&ocirc;i. D&ugrave; sao th&igrave; em cũng đặt v&eacute; rồi.</em></p>
+              <p><strong>Marty</strong>: What?</p>
+              <p><strong><em>Marty</em></strong><em>: C&aacute;i g&igrave;?</em></p>
+              <p><strong>Amy</strong>: Come on, let&rsquo;s go get those passports, Mongolia <strong>awaits</strong> us!</p>
+              <p><strong><em>Amy</em></strong><em>: Th&ocirc;i n&agrave;o, h&atilde;y đi lấy hộ chiếu th&ocirc;i, M&ocirc;ng Cổ đang <strong>chờ đ&oacute;n</strong> ch&uacute;ng ta.</em></p>`
+                    },
+                    {
+                        title: `Topic 2: Can I Upgrade, Please`,
+                        audioLinkSlow: `assets/audio/LESSON 08 - TRAVEL/Recording 8.3 - Slow Speech - Topic 2 - Can I Upgrade, Please.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 08 - TRAVEL/Recording 8.4 - Native Speech - Topic 2 - Can I Upgrade, Please.mp3`,
+                        data: `<p>Fred and his som are traveling and staying at a hotel, but he&rsquo;s got some complaints about the room that need to be resolved. Fortunately, he knows that patience and kindness is always the best approach.</p>
+              <p>Fred v&agrave; con trai &ocirc;ng đang đi du lịch v&agrave; lưu tr&uacute; tại một kh&aacute;ch sạn, nhưng &ocirc;ng đ&atilde; c&oacute; một số khiếu nại về ph&ograve;ng cần được giải quyết. May mắn thay, &ocirc;ng biết rằng sự ki&ecirc;n nhẫn v&agrave; l&ograve;ng tốt lu&ocirc;n lu&ocirc;n l&agrave; phương ph&aacute;p tốt nhất.</p>
+              <p><strong>Reception</strong>: Good morning. This is Michelle speaking. <strong>How may I help you</strong> today?</p>
+              <p><strong><em>Reception</em></strong><em>: Xin ch&agrave;o, T&ocirc;i l&agrave; Michelle. <strong>T&ocirc;i c&oacute; thể gi&uacute;p g&igrave; cho &ocirc;ng</strong> h&ocirc;m nay?</em></p>
+              <p><strong>Fred</strong>: Hi Michelle. This is Fred Parker. I&rsquo;ve just checked into room 13 and I&rsquo;m already feeling a little unlucky.</p>
+              <p><strong><em>Fred</em></strong><em>: Ch&agrave;o Michelle. T&ocirc;i l&agrave; Fred Parker. T&ocirc;i vừa mới v&agrave;o ph&ograve;ng 13 v&agrave; t&ocirc;i thấy m&igrave;nh kh&ocirc;ng may mắn cho lắm.</em></p>
+              <p><strong>Reception</strong>: Oh... Well... Mr. Parker. What seems to be the problem?</p>
+              <p><strong><em>Reception</em></strong><em>: Ồ... V&acirc;ng... &Ocirc;ng Parker. C&oacute; vấn đề g&igrave; ạ?</em></p>
+              <p><strong>Fred</strong>: Well, the are conditioner isn&rsquo;t working and the room&rsquo;s quite hot.</p>
+              <p><strong><em>Fred</em></strong><em>: V&acirc;ng, điều h&ograve;a kh&ocirc;ng kh&iacute; kh&ocirc;ng hoạt động v&agrave; ph&ograve;ng kh&aacute; n&oacute;ng.</em></p>
+              <p><strong>Reception</strong>: <strong>Oh, I&rsquo;m so sorry to hear that,</strong> Sir. I&rsquo;ll send someone up imediately?</p>
+              <p><strong><em>Reception</em></strong><em>: <strong>Ồ, t&ocirc;i rất tiếc khi nghe điều đ&oacute;,</strong> Thư &ocirc;ng. T&ocirc;i sẽ đưa người l&ecirc;n đ&oacute; ngay lập tức!</em></p>
+              <p><strong>Fred</strong>: I would appreciate that. We&rsquo;re about to head to the pool, but we&rsquo;ll be back in an hour.</p>
+              <p><strong><em>Fred</em></strong><em>: T&ocirc;i đ&aacute;nh gi&aacute; cao điều đ&oacute;. Ch&uacute;ng t&ocirc;i dự định sẽ ra hồ bơi, nhưng ch&uacute;ng t&ocirc;i sẽ trở lại trong một giờ nữa.</em></p>
+              <p><strong>Michelle</strong>: I&rsquo;ll get right on it, Mr. Parket.</p>
+              <p><strong><em>Michelle</em></strong><em>: T&ocirc;i sẽ kh&aacute;c phục ngay, &ocirc;ng Parker.</em></p>
+              <p><strong>Fred</strong>: Thanks, Michelle. Oh, wait, wait... Michelle?</p>
+              <p><strong><em>Fred</em></strong><em>: Cảm ơn, Michelle, &Ocirc;, chờ đ&atilde;, chờ đ&atilde;,... Michelle?</em></p>
+              <p><strong>Michelle</strong>: Yes, Sir?</p>
+              <p><strong><em>Michelle</em></strong><em>: V&acirc;ng, thưa &ocirc;ng?</em></p>
+              <p><strong>Fred&rsquo;s</strong> <strong>son cries out from the bathroom:</strong> Dad! Dad! The toilet is overflowing!</p>
+              <p><strong><em>Fred&rsquo;s</em></strong><em> <strong>son cries out from the bathroom:</strong> Bố! Bố! Nh&agrave; vệ sinh đang tr&agrave;n!</em></p>
+              <p><strong>Fred</strong>: Uhhh, also... my son just told me that the toilet is overflowing.</p>
+              <p><strong><em>Fred</em></strong><em>: &Ocirc;i, lại nữa sao? Con trai t&ocirc;i vừa bảo nh&agrave; vệ sinh tr&agrave;n.</em></p>
+              <p><strong>Reception</strong>: I am so sorry. I&rsquo;ll make sure everything&rsquo;s fixed before you return from the pool.</p>
+              <p><strong><em>Reception</em></strong><em>: T&ocirc;i rất xin lỗi. T&ocirc;i sẽ đảm bảo tất cả mọi thứ sẽ được giải quyết trước khi &ocirc;ng ở hồ bơi về.</em></p>
+              <p><strong>Fred</strong>: Thank you.</p>
+              <p><strong><em>Fred</em></strong><em>: Cảm ơn.</em></p>
+              <p><strong>Reception</strong>: Of course. <strong>Is there anything else I can help you?</strong></p>
+              <p><strong><em>Reception</em></strong><em>: Tất nhi&ecirc;n rồi. <strong>C&ograve;n điều g&igrave; kh&aacute;c t&ocirc;i c&oacute; thể gi&uacute;p &ocirc;ng kh&ocirc;ng?</strong></em></p>
+              <p><strong>Fred</strong>: Yes. We were really hoping to have a sea view, but our window is <strong>overlooking</strong> the <strong>parking lot.</strong></p>
+              <p><strong><em>Fred</em></strong><em>: C&oacute;. Ch&uacute;ng t&ocirc;i đ&atilde; thực sự hy vọng c&oacute; một tầm nh&igrave;n ra biển, nhưng cửa sổ của ch&uacute;ng t&ocirc;i <strong>nh&igrave;n từ tr&ecirc;n cao xuống</strong> lại thấy <strong>b&atilde;i đậu xe.</strong></em></p>
+              <p><strong>Reception</strong>: I understand. Currently the only&nbsp; room with a <strong>sea view</strong> that&rsquo;s available is a <strong>suite.</strong></p>
+              <p><strong><em>Reception</em></strong><em>: T&ocirc;i hiểu. Hiện nay ph&ograve;ng duy nhất c&oacute; <strong>tầm nh&igrave;n ra biển</strong> m&agrave; ch&uacute;ng t&ocirc;i c&oacute; l&agrave; <strong>ph&ograve;ng hạng sang.</strong></em></p>
+              <p><strong>Fred</strong>: I don&rsquo;t mind <strong>upgrading</strong>.</p>
+              <p><strong><em>Fred</em></strong><em>: T&ocirc;i kh&ocirc;ng ngại phải <strong>n&acirc;ng cấp</strong>.</em></p>
+              <p><strong>Reception</strong>: Okay. It will be available in an hour. Would you like us to move your things there while you enjoy the <strong>pool</strong>?</p>
+              <p><strong><em>Reception</em></strong><em>: V&acirc;ng ng&agrave;i, ph&ograve;ng đ&oacute; sẽ sẵn s&agrave;ng phục vụ sau một giờ nữa. &Ocirc;ng c&oacute; muốn ch&uacute;ng t&ocirc;i đi chuyển đồ của &ocirc;ng tới đ&oacute;, trong khi &ocirc;ng thư gi&atilde;n ở <strong>bể bơi</strong> kh&ocirc;ng?</em></p>
+              <p><strong>Fred</strong>: Yes, <strong>please do.</strong> Thank you, Michelle.</p>
+              <p><strong><em>Fred</em></strong><em>: V&acirc;ng, <strong>xin vui l&ograve;ng.</strong> Cảm ơn chị, Michelle.</em></p>
+              <p><strong>Reception</strong>: My pleasure. It&rsquo;s the least we can do for your troubles today.</p>
+              <p><strong><em>Reception</em></strong><em>: Rất h&acirc;n hạnh. Đ&oacute; l&agrave; điều nhỏ nhất ch&uacute;ng t&ocirc;i c&oacute; thể l&agrave;m để khắc phục rắc rối cho &ocirc;ng h&ocirc;m nay.</em></p>`
+                    },
+                    {
+                        title: `Topic 3: A Tropical Hideaway`,
+                        audioLinkSlow: `assets/audio/LESSON 08 - TRAVEL/Recording 8.5 - Slow Speech -Topic 3 - A Tropical Hideaway.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 08 - TRAVEL/Recording 8.6 - Native Speech - Topic 3 - A Tropical Hideaway.mp3`,
+                        data: `<p>There I was, taking a long overdue <strong>holiday, </strong>staying in&nbsp; a <strong>luxurious hotel </strong>with a <strong>picturesque landscape </strong>spanning every direction from my <strong>balcony. </strong>And all I could focus on was the trash filled, <strong>rocky beach </strong>below. I felt like such a snob, but it made me feel bad for the environment and for me. This was not what I&rsquo;d planned for my once a year vacation. I asked the receptionist if there was another <strong>beach</strong> nearby that was better. That&rsquo;s when she told me there was, in fact, a beautiful beach, but it was difficult to reach. Well, I&rsquo;m not one to turn down a challenge, so I got directions, rented a bike and started <strong>cruisin&rsquo; the coast</strong>.</p>
+              <p>T&ocirc;i đ&atilde; ở đ&oacute;, tận hưởng <strong>kỳ nghỉ</strong> d&agrave;i ng&agrave;y, lưu tr&uacute; tại một <strong>kh&aacute;ch sạn sang trọng </strong>với một <strong>cảnh quan đẹp như tranh vẽ </strong>bao tr&ugrave;m mọi hướng từ <strong>ban c&ocirc;ng </strong>của t&ocirc;i, v&agrave; tất cả những g&igrave; t&ocirc;i c&oacute; thể tập trung v&agrave;o l&agrave; <strong>b&atilde;i biển </strong>đầy r&aacute;c, <strong>đ&aacute; bao phủ </strong>ở ph&iacute;a dưới. T&ocirc;i cảm gi&aacute;c như một t&ecirc;n ngốc, nhưng n&oacute; khiến t&ocirc;i cảm thấy thật tệ cho m&ocirc;i trường v&agrave; cho t&ocirc;i. Đ&acirc;y kh&ocirc;ng phải l&agrave; những g&igrave; t&ocirc;i đ&atilde; l&ecirc;n kế hoạch cho kỳ nghỉ một năm một lần, v&igrave; vậy t&ocirc;i hỏi nh&acirc;n vi&ecirc;n tiếp t&acirc;n xem c&oacute; b&atilde;i biển n&agrave;o kh&aacute;c gần m&agrave; tốt hơn kh&ocirc;ng. V&agrave; c&ocirc; ấy n&oacute;i với t&ocirc;i l&agrave; c&oacute;, thực ra, c&oacute; một <strong>b&atilde;i biển </strong>xinh đẹp, nhưng đ&oacute; l&agrave; một điểm rất kh&oacute; tới được. Xem n&agrave;o, t&ocirc;i kh&ocirc;ng phải người dễ từ chối th&aacute;ch thức, v&igrave; vậy t&ocirc;i đ&atilde; hỏi đường đi, thu&ecirc; một chiếc xe đạp v&agrave; bắt đầu <strong>dạo chơi </strong>dọc <strong>bờ biển.</strong></p>
+              <p><strong>Turns out, </strong>the receptionist was right. If not for the lush <strong>tropical scenery, </strong>and a convenience store for replenishing food and water on my way, this would have been the bicycle ride from hell.</p>
+              <p><strong>H&oacute;a ra, </strong>nh&acirc;n vi&ecirc;n lễ t&acirc;n đ&atilde; đ&uacute;ng. Nếu kh&ocirc;ng phải v&igrave; n&oacute; c&oacute; <strong>cảnh quan nhiệt đới</strong> tươi tốt, v&agrave; một của h&agrave;ng tiện lợi để bổ sung th&ecirc;m thức anh v&agrave; nước uống tr&ecirc;n đường, th&igrave; đ&acirc;y c&oacute; lẽ đ&atilde; l&agrave; chuyến đạp xe địa ngục.</p>
+              <p>I was determined to reach my <strong>destination</strong>, though, and it was worth it. Just as the sun was setting. The beach came into view. Sunlight danced across the sea and the grains of sand glistened like white <strong>crystals. </strong>It was calling my name, so I leaned my bike against a palm tree and walked to the water&rsquo;s edge. Dipping my toes into the clear cool water, I sat on the <strong>shore. </strong>I watched the sun as it fell off the edge of the <strong>horizon </strong>and a <strong>crescent </strong>moon appeared from behind the shadows. It was <strong>breathtaking, </strong>and I <strong>was in awe.</strong></p>
+              <p>T&ocirc;i đ&atilde; hạ quyết t&acirc;m tới được <strong>đ&iacute;ch đến, </strong>d&ugrave; sao đi chăng nữa, v&agrave; n&oacute; thật sự xứng đ&aacute;ng. Chỉ khi mặt trời vừa mới bắt đầu lặn, t&ocirc;i c&oacute; thể nh&igrave;n thấy b&atilde;i biễn ngay trước mắt m&igrave;nh. &Aacute;nh mặt trời rải khắp tr&ecirc;n biển v&agrave; c&aacute;c hạt c&aacute;t lấp l&aacute;nh tr&ecirc;n b&atilde;i biển như những tinh thể trắng. Biển đang gọi t&ecirc;n t&ocirc;i, n&ecirc;n t&ocirc;i để xe đạp tựa v&agrave;o một t&aacute;n c&acirc;y cọ v&agrave; bước đến m&eacute;p nước. V&ugrave;i những ng&oacute;n ch&acirc;n m&igrave;nh v&agrave;o l&agrave;n nước m&aacute;t rượi trong veo, t&ocirc;i ngồi b&ecirc;n tr&ecirc;n <strong>bờ biển, </strong>ngắm nh&igrave;n mặt trời dần biến mất khỏi <strong>đường ch&acirc;n trời </strong>v&agrave; <strong>mặt trăng lưỡi liềm </strong>xuất hiện từ ph&iacute;a sau b&oacute;ng tối. Cảnh tượng thật <strong>ngoạn mục, </strong>v&agrave; t&ocirc;i <strong>đắm ch&igrave;m trong niềm kinh ngạc.</strong></p>`
+                    }
+                ]
+            },
+            {
+                case: `Day 3`,
+                title: `Phản xạ đa chiều - Introducing a Friend`,
+            },
+            {
+                case: `Day 4`,
+                title: `Phản xạ đa chiều - Where Do You Live?`,
+            },
+            {
+                case: `Day 5`,
+                title: `Phản xạ đa chiều - What is Your Job?`,
+            },
+            {
+                case: `Day 6`,
+                title: `Thử thách`,
+                content: [
+                    {
+                        title: `Thử thách`,
+                        // tslint:disable-next-line:max-line-length
+                        audioLinkReflection: `assets/audio/LESSON 01 - INTRODUCTION/Recording 1.11 - Production.mp3`,
+                        data: `
+              ✔️ Tải phần tài liệu production sau đây về máy – bấm vào đây để download (nếu bạn đang truy cập khóa học trên app, vui lòng vào web để tải trực tiếp tài liệu này) – Luyện tập từ 2-3 lần (Có thể nhìn phần dịch và từ điển nếu cần).<br/>
+              ✔️ Nghe Recording 1.11 và trả lời vào khoảng trống từ 3-5 lần<br/>
+              ✔️ Hãy tưởng tượng bạn vô tình gặp một người nước ngoài tại một địa điểm du lịch nào đó, bạn hãy chủ động là người hỏi chuyện và làm quen với người bạn đó.<br/>
+              ✔️ Hãy tạo ra một kịch bản từ 10 – 15 câu hỏi đáp và thực hành nói trước gương sao cho thật tự nhiên.<br/>
+              ✔️ Bạn cũng có thể tìm một người bạn để đối thoại cùng nhau như các nhân vật tại Lesson 01!<br/>
+              Bạn đã hoàn thành việc luyện tập Lesson 01 – Eng Breaking. Ngay bây giờ, hãy đến với bài Đánh giá (Assessment) để nâng cao kỹ năng và ôn luyện kiến thức ở Lesson 01.`
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 9,
+        title: 'Lesson 09 - Emotion',
+        name: `Emotion`,
+        displayOrder: 9,
+        description: `MY NAME IS DAO DAO, this lesson is tell you about people.`,
+        openCollapse: true,
+        contents: [
+            {
+                case: `Day 1`,
+                title: `Nghe ngấm`,
+                content: [
+                    {
+                        title: `Topic 1: Woe is Me`,
+                        audioLinkSlow: `assets/audio/LESSON 09 - EMOTION/Recording 9.1 - Slow Speech -Topic 1 - Woe is Me.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 09 - EMOTION/Recording 9.2 - Native Speech - Topic 1 - Woe is Me.mp3`,
+                        data: `<p>Susan broke her iPhone on the way to Sarah&rsquo;s house, which made her really upset.</p>
+              <p><em>Susan đ&atilde; l&agrave;m vỡ iPhone của m&igrave;nh tr&ecirc;n đường đến nh&agrave; Sarah, điều ấy khiến c&ocirc; thực sự muộn phiền.</em></p>
+              <p><strong>Sarah</strong>: What&rsquo;s wrong, Susan? <strong>You look miserable.</strong> Are you <strong>crying</strong>?</p>
+              <p><strong><em>Sarah</em></strong>: <em>C&oacute; chuyện g&igrave; vậy, Susan? <strong>Tr&ocirc;ng cậu đau khổ vậy.</strong> Cậu đang <strong>kh&oacute;c</strong> đấy &agrave;?</em></p>
+              <p><strong>Susan</strong>: I have something <strong>terrible</strong> to tell you: I broke my iPhone.</p>
+              <p><strong><em>Susan</em></strong>:<em> T&ocirc;i c&oacute; một chuyện tồi tệ muốn kể với cậu: t&ocirc;i đ&atilde; l&agrave;m vỡ iPhone của m&igrave;nh rồi.</em></p>
+              <p><strong>Sarah</strong>: Well, don&rsquo;t <strong>feel too bad</strong> about that, Susan. You can take it to a store to have it fixed.</p>
+              <p><strong><em>Sarah</em></strong>:<em> Đừng cảm <strong>thấy qu&aacute; tệ</strong> về điều đ&oacute;, Susan. Cậu c&oacute; thể mang n&oacute; đến một cửa h&agrave;ng để sửa.</em></p>
+              <p><strong>Susan</strong>: No, Sarah, I feel <strong>empty</strong> inside! And my contact list is empty, too.</p>
+              <p><strong><em>Susan</em></strong>: <em>Kh&ocirc;ng, Sarah, t&ocirc;i cảm thấy <strong>trống rỗng</strong>! V&agrave; danh s&aacute;ch li&ecirc;n lạc của t&ocirc;i cũng trống rỗng lu&ocirc;n.</em></p>
+              <p><strong>Sarah</strong>: I&rsquo;m a little <strong>surprised</strong> you&rsquo;re being so dramatic, Susan. You know what they say, <strong>it&rsquo;s no use crying over spilled milk.</strong></p>
+              <p><strong><em>Sarah</em></strong>: <em>T&ocirc;i hơi <strong>ngạc nhi&ecirc;n</strong> khi thấy cậu lại sướt mướt như vậy, Susan. Cậu biết l&agrave; c&oacute; c&acirc;u, <strong>đừng tiếc rẻ con g&agrave; quạ tha.</strong></em></p>
+              <p><strong>Susan</strong>: This is not &ldquo;spilled milk,&rdquo; this is a dropped iPhone! And now I have to buy<br />a new one, but I&rsquo;ve been saving my money for a vacation to Bali!</p>
+              <p><strong><em>Susan</em></strong>: <em>Đ&acirc;y kh&ocirc;ng phải l&agrave; &ldquo;con g&agrave; quạ tha,&rdquo; đ&acirc;y l&agrave; một chiếc iPhone bị vỡ! V&agrave; b&acirc;y giờ t&ocirc;i phải mua một c&aacute;i mới, nhưng t&ocirc;i đang tiết kiệm tiền cho kỳ nghỉ ở Bali!</em></p>
+              <p><strong>Sarah: </strong>Well what about buying a less expensive phone?</p>
+              <p><strong><em>Sarah</em></strong>: <em>Vậy sao cậu kh&ocirc;ng mua một chiếc điện thoại rẻ hơn?</em></p>
+              <p><strong>Susan</strong>: Ew! No way! If I buy a cheap phone, I won&rsquo;t be as <strong>trendy</strong>.</p>
+              <p><strong><em>Susan</em></strong>: <em>Eo ơi! Kh&ocirc;ng đời n&agrave;o! Nếu t&ocirc;i mua một chiếc điện thoại gi&aacute; rẻ, t&ocirc;i sẽ kh&ocirc;ng <strong>s&agrave;nh điệu.</strong></em></p>
+              <p><strong><em>Sarah</em></strong><em>: </em>I&rsquo;m <strong>surprised</strong> that you&rsquo;re worried about looking <strong>fashionable.</strong></p>
+              <p><strong><em>Sarah</em></strong>: <em>T&ocirc;i <strong>ngạc nhi&ecirc;n</strong> l&agrave; cậu c&ograve;n lo lắng về việc tr&ocirc;ng <strong>hợp thời trang.</strong></em></p>
+              <p><strong>Susan</strong>: What do you mean? Why are you saying that?</p>
+              <p><strong><em>Susan</em></strong>: <em>&Yacute; cậu l&agrave; g&igrave;? Sao cậu lại n&oacute;i thế?</em></p>
+              <p><strong>Sarah</strong>: Susan, maybe you should check a mirror.</p>
+              <p><strong><em>Sarah</em></strong>: <em>Susan, c&oacute; lẽ cậu n&ecirc;n nh&igrave;n v&agrave;o gương xem.</em></p>
+              <p><strong>Susan</strong>: Oh this is terrible! My shirt has a giant coffee stain on it! This is my favorite<br />shirt, and I was <strong>planning on wearing</strong> it to dinner with John tonight!</p>
+              <p><strong><em>Susan</em></strong><strong>: </strong><em>&Ocirc;i thật l&agrave; kinh khủng! &Aacute;o sơ mi của t&ocirc;i c&oacute; một vết c&agrave; ph&ecirc; lớn tr&ecirc;n n&oacute;! Đ&acirc;y l&agrave; chiếc &aacute;o y&ecirc;u th&iacute;ch của t&ocirc;i, v&agrave; t&ocirc;i đ&atilde; <strong>dự định mặc</strong> n&oacute; cho bữa ăn với John tối nay!</em></p>
+              <p><strong>Sarah: </strong>Remember Susan, don&rsquo;t cry over spilled milk&hellip; coffee stains on shirts&hellip; or<br />iPhones.</p>
+              <p><strong><em>Sarah</em></strong><strong>: </strong><em>Nhớ n&agrave;y Susan, đừng tiếc rẻ con g&agrave; quạ tha&hellip; hoặc c&agrave; ph&ecirc; tr&ecirc;n &aacute;o sơ mi&hellip; hoặc iPhone.</em></p>
+              <p><strong>Susan</strong>: <strong>I feel empty.</strong> Everything I love is leaving me.</p>
+              <p><strong><em>Susan</em></strong>: <strong><em>T&ocirc;i cảm thấy trống rỗng</em></strong><em>. Tất cả mọi thứ t&ocirc;i y&ecirc;u th&iacute;ch đều bỏ t&ocirc;i m&agrave; đi.</em></p>
+              <p><strong>Sarah</strong>: You are still going to see John, tonight, right?</p>
+              <p><strong><em>Sarah</em></strong>: <em>Cậu vẫn sẽ gặp John tối nay, đ&uacute;ng kh&ocirc;ng?</em></p>
+              <p><strong>Susan</strong>: Oh. Suddenly, <strong>things are looking up.</strong></p>
+              <p><strong><em>Susan</em></strong>: <em>&Ocirc;i. Bỗng nhi&ecirc;n, <strong>mọi thứ s&aacute;ng sủa hẳn l&ecirc;n.</strong></em></p>`
+                    },
+                    {
+                        title: `Topic 2: Rock n_ Roll n_ Feelings`,
+                        audioLinkSlow: `assets/audio/LESSON 09 - EMOTION/Recording 9.3 - Slow Speech - Topic 2 - Rock n_ Roll n_ Feelings.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 09 - EMOTION/Recording 9.4 - Native speech - Topic 2 - Rock n Roll n Feeling.mp3`,
+                        data: `<p>Working together in groups is always challenging. There are as many personalities as there are people in the world. This makes playing in the <strong>orchestra</strong> especially difficult, but as long as everyone does their personal best for the sake of <strong>the music,</strong> <strong>personalities</strong> can blend as beautifully and as naturally as the <strong>sounds</strong> of the <strong>instruments</strong>.</p>
+              <p><em>L&agrave;m việc c&ugrave;ng nhau trong nh&oacute;m lu&ocirc;n lu&ocirc;n l&agrave; th&aacute;ch thức, c&oacute; bao nhi&ecirc;u người tr&ecirc;n thế giới th&igrave; c&oacute; bấy nhi&ecirc;u c&aacute; t&iacute;nh. Điều n&agrave;y khiến cho việc chơi trong <strong>d&agrave;n nhạc giao hưởng</strong> đặc biệt kh&oacute; khăn, nhưng miễn l&agrave; tất cả mọi người l&agrave;m tốt nhất phần c&aacute; nh&acirc;n của họ v&igrave; lợi &iacute;ch của <strong>&acirc;m nhạc, c&aacute; t&iacute;nh</strong> c&oacute; thể h&agrave;i h&ograve;a đẹp đẽ v&agrave; tự nhi&ecirc;n như <strong>&acirc;m thanh</strong> của những<strong> nhạc cụ.</strong></em></p>
+              <p>Mick, for instance, plays first <strong>violin</strong>, which totally fits his personality. He&rsquo;s extremely <strong>decisive</strong> and a little <strong>abrasive</strong> at times, but he&rsquo;s a <strong>perfectionist</strong>. That probably explains why he&rsquo;s been <strong>first chair</strong> forever.</p>
+              <p><em>Mick, v&iacute; dụ, chơi <strong>vĩ cầm</strong> ch&iacute;nh, n&oacute; ho&agrave;n to&agrave;n ph&ugrave; hợp với c&aacute; t&iacute;nh của anh ấy. Anh ấy v&ocirc; c&ugrave;ng <strong>quyết đo&aacute;n</strong> v&agrave; đ&ocirc;i khi hơi <strong>th&ocirc; r&aacute;p,</strong> nhưng anh ấy l&agrave; một người cầu to&agrave;n.<br />Điều đ&oacute; c&oacute; thể giải th&iacute;ch tại sao anh ấy l&agrave; <strong>đội trưởng</strong> m&atilde;i m&atilde;i.</em></p>
+              <p>Tommy is one of the best <strong>percussionists</strong> I&rsquo;ve ever heard, but he is super <strong>stubborn</strong> and his <strong>inflexibility</strong> can be super <strong>annoying</strong> because music is so precise in <strong>rhythm</strong> and <strong>timing</strong>. Billy, on the other hand, <strong>balances all of us out.</strong> Like the slide of his <strong>trombone,</strong> he&rsquo;s <strong>even-tempered</strong> and <strong>easy going,</strong> making everyone laugh when things get <strong>intense</strong>.</p>
+              <p><em>Tommy l&agrave; một trong những <strong>người chơi trống</strong> hay nhất t&ocirc;i từng nghe, nhưng anh ấy si&ecirc;u <strong>cứng đầu</strong> v&agrave; t&iacute;nh <strong>cứng nhắc</strong> của anh ấy c&oacute; thể l&agrave;m người kh&aacute;c si&ecirc;u <strong>kh&oacute; chịu</strong> v&igrave; &acirc;m nhạc ch&iacute;nh x&aacute;c đến từng <strong>nhịp điệu</strong> v&agrave; <strong>thời gian.</strong> Billy, mặt kh&aacute;c, lại <strong>c&acirc;n bằng tất cả ch&uacute;ng ta.</strong> Giống như mặt nghi&ecirc;ng của chiếc <strong>k&egrave;n trombon</strong> của anh ấy, anh ấy <strong>rất b&igrave;nh tĩnh</strong> v&agrave; <strong>cởi mở,</strong> khiến mọi người cười khi mọi việc trở n&ecirc;n <strong>căng thẳng.</strong></em></p>
+              <p>Fortunately, we have Mary, who feels more like a mom than an orchestra director. She&rsquo;s like an <strong>emotional</strong> mind reader, she can <strong>sense</strong> our <strong>moods</strong> when we walk into the room. No matter what kind of day we&rsquo;re having, she knows how to pull us all together and unite us in our music. She&rsquo;s also incredibly <strong>sensitive</strong>, like me. One day, she sensed I was <strong>agitated</strong>. I was. I&rsquo;ve been challenging Mick on the violin forever, but I&rsquo;ve never moved up to first chair. She picked up on it right away and <strong>encouraged</strong> me not to take things so personally. Reminding me to <strong>stay out of my head,</strong> she said: &ldquo;It&rsquo;s about the music, get your <strong>ego</strong> out of the way and put your <strong>feelings</strong> into the music, the rest will take care of itself.&rdquo;</p>
+              <p><em>May mắn thay, ch&uacute;ng ta c&oacute; Mary, người ch&uacute;ng t&ocirc;i cảm thấy như một người mẹ hơn l&agrave; một nhạc trưởng. C&ocirc; ấy giống như một người đọc t&acirc;m l&yacute; <strong>t&igrave;nh cảm,</strong> c&ocirc; ấy <strong>cảm nhận những t&acirc;m trạng</strong> của ch&uacute;ng t&ocirc;i ngay khi ch&uacute;ng t&ocirc;i bước v&agrave;o ph&ograve;ng. Cho d&ugrave; ng&agrave;y h&ocirc;m đ&oacute; của ch&uacute;ng t&ocirc;i diễn ra thế n&agrave;o, c&ocirc; ấy biết l&agrave;m thế n&agrave;o để k&eacute;o ch&uacute;ng<br />t&ocirc;i lại với nhau v&agrave; gắn kết ch&uacute;ng t&ocirc;i trong &acirc;m nhạc của ch&iacute;nh ch&uacute;ng t&ocirc;i. C&ocirc; ấy cũng<br />cực kỳ <strong>nhạy cảm,</strong> giống như t&ocirc;i. Một ng&agrave;y nọ, c&ocirc; ấy cảm thấy t&ocirc;i đang <strong>tức giận.</strong> Đ&uacute;ng vậy. T&ocirc;i đ&atilde; lu&ocirc;n lu&ocirc;n th&aacute;ch thức Mick về vĩ cầm, nhưng t&ocirc;i chưa bao giờ l&ecirc;n đến được chiếc ghế đội trưởng. C&ocirc; ấy nhận thấy điều đ&oacute; ngay lập tức v&agrave; <strong>khuyến kh&iacute;ch</strong> t&ocirc;i đừng suy nghĩ c&aacute; nh&acirc;n như vậy, nhắc nhở t&ocirc;i <strong>đừng suy nghĩ nhiều,</strong> c&ocirc; n&oacute;i: &ldquo;Điều quan trọng l&agrave; &acirc;m nhạc, h&atilde;y bỏ <strong>c&aacute;i t&ocirc;i</strong> của cậu ra v&agrave; đưa <strong>những cảm x&uacute;c</strong> của cậu v&agrave;o &acirc;m nhạc, điều g&igrave; phải đến cũng sẽ đến.&rdquo;</em></p>
+              <p>She was right. At the end of the day, I&rsquo;m proud of how well we work together as an orchestra. We&rsquo;ve also become better musicians and better people because of Mary, which is probably why we&rsquo;ve done so well as a group.</p>
+              <p><em>C&ocirc; ấy đ&atilde; đ&uacute;ng. V&agrave;o cuối ng&agrave;y, t&ocirc;i tự h&agrave;o về c&aacute;ch ch&uacute;ng t&ocirc;i h&ograve;a hợp như một d&agrave;n<br />nhạc. Ch&uacute;ng t&ocirc;i cũng trở th&agrave;nh những nhạc c&ocirc;ng tốt hơn v&agrave; con người tốt hơn nhờ Mary, m&agrave; c&oacute; lẽ cũng l&agrave; l&yacute; do tại sao ch&uacute;ng t&ocirc;i đ&atilde; l&agrave;m tốt như vậy với nhau như một nh&oacute;m.</em></p>`
+                    },
+                    {
+                        title: `Topic 3: Social Media Depression`,
+                        audioLinkSlow: `assets/audio/LESSON 09 - EMOTION/Recording 9.5 - Slow Speech - Topic 3 - Social Media Depression.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 09 - EMOTION/Recording 9.6 - Native Speech - Topic 3 - Social Media Depression.mp3`,
+                        data: `<p>Your old high school classmate is getting married, your college friend is vacationing<br />abroad, and you&rsquo;re at home looking at their pictures online&hellip;</p>
+              <p>... How do you feel?</p>
+              <p><em>Bạn c&ugrave;ng lớp trung học cũ của bạn đ&atilde; kết h&ocirc;n, bạn b&egrave; đại học của bạn th&igrave; đi nghỉ m&aacute;t ở nước ngo&agrave;i, v&agrave; bạn đang ở nh&agrave; nh&igrave;n ảnh của họ tr&ecirc;n mạng&hellip;<br />&hellip; Bạn cảm thấy thế n&agrave;o?</em></p>
+              <p>Some researchers have<strong> coined the term</strong> &ldquo;social media <strong>depression</strong>&rdquo;&hellip;<br />&hellip; to describe the feelings of <strong>jealousy</strong> and <strong>guilt</strong>&hellip;<br />&hellip; that some people feel when they use social media too much.</p>
+              <p><em>Một số nh&agrave; nghi&ecirc;n cứu đ&atilde; <strong>đặt ra thuật ngữ &ldquo;trầm cảm</strong> mạng x&atilde; hội&ldquo;&hellip;<br />&hellip; để m&ocirc; tả cảm gi&aacute;c <strong>ghen tị</strong> v&agrave; <strong>tội lỗi</strong>&hellip;<br />&hellip; m&agrave; một số người cảm thấy khi họ sử dụng phương tiện truyền th&ocirc;ng x&atilde; hội qu&aacute; nhiều.</em></p>
+              <p>Researchers have actually coined a new pop culture term that describes what happens to our emotional psyche from using SM too much.<br />It&rsquo;s called, &ldquo;social media depression.&rdquo;&hellip;<br />&hellip;Instead of feeling more connected to people, we feel <strong>jealous</strong> and <strong>inadequate</strong>. It creates <strong>unrealistic</strong> expectations that lead to feelings of depression, which then leads us to <strong>disconnecting</strong> and <strong>isolating</strong> more.</p>
+              <p><em>C&aacute;c nh&agrave; nghi&ecirc;n cứu đ&atilde; thực sự đặt ra một thuật ngữ văn h&oacute;a phổ biến mới m&ocirc; tả những g&igrave; sẽ xảy ra với thần kinh t&igrave;nh cảm của ch&uacute;ng ta khi sử dụng mạng x&atilde; hội qu&aacute; nhiều. </em></p>
+              <p><em>N&oacute; được gọi l&agrave;, &ldquo;trầm cảm mạng x&atilde; hội.&rdquo; </em></p>
+              <p><em>Thay v&igrave; cảm thấy kết nối nhiều hơn với mọi người, ch&uacute;ng ta cảm thấy <strong>ghen tị</strong> v&agrave; <strong>thiếu thốn.</strong> </em></p>
+              <p><em>N&oacute; tạo ra những kỳ vọng <strong>kh&ocirc;ng thực tế</strong> dẫn đến cảm gi&aacute;c trầm cảm, m&agrave; sau đ&oacute; khiến ch&uacute;ng ta để <strong>ngừng kết nối</strong> v&agrave; <strong>c&ocirc; lập</strong> nhiều hơn. </em></p>
+              <p>At least we&rsquo;re becoming aware of this now. More and more researchers are recommending that people turn off their devices, and social media altogether, they can get outside and connect with people face-to-face, or with nature.</p>
+              <p><em>&Iacute;t nhất ch&uacute;ng ta đang ng&agrave;y c&agrave;ng trở n&ecirc;n nhận thức được điều n&agrave;y cho đến nay.<br />Ng&agrave;y c&agrave;ng nhiều nh&agrave; nghi&ecirc;n cứu đề xuất rằng mọi người n&ecirc;n c&ugrave;ng nhau tắt thiết bị v&agrave; phương tiện truyền th&ocirc;ng x&atilde; hội để c&oacute; thể đi ra ngo&agrave;i v&agrave; kết nối với người kh&aacute;c mặt đối mặt, hoặc với thi&ecirc;n nhi&ecirc;n. </em></p>
+              <p>Daymond John (the CEO and founder of The Shark Group) even suggests we avoid checking social media for the first hour of the day, we can center our minds on the things that matter most:</p>
+              <p>&hellip; our <strong>personal relationships.</strong></p>
+              <p><em>Daymond John (Chủ tịch Hội đồng quản trị v&agrave; người s&aacute;ng lập của Tập đo&agrave;n Shark) thậm ch&iacute; gợi &yacute; rằng ch&uacute;ng ta n&ecirc;n tr&aacute;nh việc kiểm tra phương tiện truyền th&ocirc;ng x&atilde; hội trong giờ đầu ti&ecirc;n trong ng&agrave;y, để ch&uacute;ng ta c&oacute; thể tập trung t&acirc;m tr&iacute; v&agrave;o những điều quan trọng nhất: </em></p>
+              <p><em>... Những <strong>mối quan hệ c&aacute; nh&acirc;n.</strong> </em></p>
+              <p><strong>Snap out of it!</strong> Put your device down and ask a friend to meet you face-to-face for an ice cream&hellip; so you can talk.<br />The key to overcoming this <strong>negative</strong> evolving <strong>state of mind</strong> is &hellip;to trust that you are good enough and <strong>perfect</strong>&hellip; just the way you are.</p>
+              <p><strong><em>H&atilde;y tr&uacute;t bỏ n&oacute; ra khỏi người!</em></strong><em> Bỏ điện thoại xuống v&agrave; rủ một người bạn gặp bạn trực tiếp đi ăn kem. Sau đ&oacute;, bạn c&oacute; thể n&oacute;i chuyện.<br />Ch&igrave;a kh&oacute;a để vượt qua <strong>trạng th&aacute;i ti&ecirc;u cực</strong> tăng dần n&agrave;y l&agrave; bạn phải tin tưởng rằng bạn đủ tốt v&agrave; <strong>ho&agrave;n hảo, </strong>theo c&aacute;ch ri&ecirc;ng của m&igrave;nh.</em></p>`
+                    }
+                ]
+            },
+            {
+                case: `Day 2`,
+                title: `Nói đuổi`,
+                content: [
+                    {
+                        title: `Topic 1: Woe is Me`,
+                        audioLinkSlow: `assets/audio/LESSON 09 - EMOTION/Recording 9.1 - Slow Speech -Topic 1 - Woe is Me.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 09 - EMOTION/Recording 9.2 - Native Speech - Topic 1 - Woe is Me.mp3`,
+                        data: `<p>Susan broke her iPhone on the way to Sarah&rsquo;s house, which made her really upset.</p>
+              <p><em>Susan đ&atilde; l&agrave;m vỡ iPhone của m&igrave;nh tr&ecirc;n đường đến nh&agrave; Sarah, điều ấy khiến c&ocirc; thực sự muộn phiền.</em></p>
+              <p><strong>Sarah</strong>: What&rsquo;s wrong, Susan? <strong>You look miserable.</strong> Are you <strong>crying</strong>?</p>
+              <p><strong><em>Sarah</em></strong>: <em>C&oacute; chuyện g&igrave; vậy, Susan? <strong>Tr&ocirc;ng cậu đau khổ vậy.</strong> Cậu đang <strong>kh&oacute;c</strong> đấy &agrave;?</em></p>
+              <p><strong>Susan</strong>: I have something <strong>terrible</strong> to tell you: I broke my iPhone.</p>
+              <p><strong><em>Susan</em></strong>:<em> T&ocirc;i c&oacute; một chuyện tồi tệ muốn kể với cậu: t&ocirc;i đ&atilde; l&agrave;m vỡ iPhone của m&igrave;nh rồi.</em></p>
+              <p><strong>Sarah</strong>: Well, don&rsquo;t <strong>feel too bad</strong> about that, Susan. You can take it to a store to have it fixed.</p>
+              <p><strong><em>Sarah</em></strong>:<em> Đừng cảm <strong>thấy qu&aacute; tệ</strong> về điều đ&oacute;, Susan. Cậu c&oacute; thể mang n&oacute; đến một cửa h&agrave;ng để sửa.</em></p>
+              <p><strong>Susan</strong>: No, Sarah, I feel <strong>empty</strong> inside! And my contact list is empty, too.</p>
+              <p><strong><em>Susan</em></strong>: <em>Kh&ocirc;ng, Sarah, t&ocirc;i cảm thấy <strong>trống rỗng</strong>! V&agrave; danh s&aacute;ch li&ecirc;n lạc của t&ocirc;i cũng trống rỗng lu&ocirc;n.</em></p>
+              <p><strong>Sarah</strong>: I&rsquo;m a little <strong>surprised</strong> you&rsquo;re being so dramatic, Susan. You know what they say, <strong>it&rsquo;s no use crying over spilled milk.</strong></p>
+              <p><strong><em>Sarah</em></strong>: <em>T&ocirc;i hơi <strong>ngạc nhi&ecirc;n</strong> khi thấy cậu lại sướt mướt như vậy, Susan. Cậu biết l&agrave; c&oacute; c&acirc;u, <strong>đừng tiếc rẻ con g&agrave; quạ tha.</strong></em></p>
+              <p><strong>Susan</strong>: This is not &ldquo;spilled milk,&rdquo; this is a dropped iPhone! And now I have to buy<br />a new one, but I&rsquo;ve been saving my money for a vacation to Bali!</p>
+              <p><strong><em>Susan</em></strong>: <em>Đ&acirc;y kh&ocirc;ng phải l&agrave; &ldquo;con g&agrave; quạ tha,&rdquo; đ&acirc;y l&agrave; một chiếc iPhone bị vỡ! V&agrave; b&acirc;y giờ t&ocirc;i phải mua một c&aacute;i mới, nhưng t&ocirc;i đang tiết kiệm tiền cho kỳ nghỉ ở Bali!</em></p>
+              <p><strong>Sarah: </strong>Well what about buying a less expensive phone?</p>
+              <p><strong><em>Sarah</em></strong>: <em>Vậy sao cậu kh&ocirc;ng mua một chiếc điện thoại rẻ hơn?</em></p>
+              <p><strong>Susan</strong>: Ew! No way! If I buy a cheap phone, I won&rsquo;t be as <strong>trendy</strong>.</p>
+              <p><strong><em>Susan</em></strong>: <em>Eo ơi! Kh&ocirc;ng đời n&agrave;o! Nếu t&ocirc;i mua một chiếc điện thoại gi&aacute; rẻ, t&ocirc;i sẽ kh&ocirc;ng <strong>s&agrave;nh điệu.</strong></em></p>
+              <p><strong><em>Sarah</em></strong><em>: </em>I&rsquo;m <strong>surprised</strong> that you&rsquo;re worried about looking <strong>fashionable.</strong></p>
+              <p><strong><em>Sarah</em></strong>: <em>T&ocirc;i <strong>ngạc nhi&ecirc;n</strong> l&agrave; cậu c&ograve;n lo lắng về việc tr&ocirc;ng <strong>hợp thời trang.</strong></em></p>
+              <p><strong>Susan</strong>: What do you mean? Why are you saying that?</p>
+              <p><strong><em>Susan</em></strong>: <em>&Yacute; cậu l&agrave; g&igrave;? Sao cậu lại n&oacute;i thế?</em></p>
+              <p><strong>Sarah</strong>: Susan, maybe you should check a mirror.</p>
+              <p><strong><em>Sarah</em></strong>: <em>Susan, c&oacute; lẽ cậu n&ecirc;n nh&igrave;n v&agrave;o gương xem.</em></p>
+              <p><strong>Susan</strong>: Oh this is terrible! My shirt has a giant coffee stain on it! This is my favorite<br />shirt, and I was <strong>planning on wearing</strong> it to dinner with John tonight!</p>
+              <p><strong><em>Susan</em></strong><strong>: </strong><em>&Ocirc;i thật l&agrave; kinh khủng! &Aacute;o sơ mi của t&ocirc;i c&oacute; một vết c&agrave; ph&ecirc; lớn tr&ecirc;n n&oacute;! Đ&acirc;y l&agrave; chiếc &aacute;o y&ecirc;u th&iacute;ch của t&ocirc;i, v&agrave; t&ocirc;i đ&atilde; <strong>dự định mặc</strong> n&oacute; cho bữa ăn với John tối nay!</em></p>
+              <p><strong>Sarah: </strong>Remember Susan, don&rsquo;t cry over spilled milk&hellip; coffee stains on shirts&hellip; or<br />iPhones.</p>
+              <p><strong><em>Sarah</em></strong><strong>: </strong><em>Nhớ n&agrave;y Susan, đừng tiếc rẻ con g&agrave; quạ tha&hellip; hoặc c&agrave; ph&ecirc; tr&ecirc;n &aacute;o sơ mi&hellip; hoặc iPhone.</em></p>
+              <p><strong>Susan</strong>: <strong>I feel empty.</strong> Everything I love is leaving me.</p>
+              <p><strong><em>Susan</em></strong>: <strong><em>T&ocirc;i cảm thấy trống rỗng</em></strong><em>. Tất cả mọi thứ t&ocirc;i y&ecirc;u th&iacute;ch đều bỏ t&ocirc;i m&agrave; đi.</em></p>
+              <p><strong>Sarah</strong>: You are still going to see John, tonight, right?</p>
+              <p><strong><em>Sarah</em></strong>: <em>Cậu vẫn sẽ gặp John tối nay, đ&uacute;ng kh&ocirc;ng?</em></p>
+              <p><strong>Susan</strong>: Oh. Suddenly, <strong>things are looking up.</strong></p>
+              <p><strong><em>Susan</em></strong>: <em>&Ocirc;i. Bỗng nhi&ecirc;n, <strong>mọi thứ s&aacute;ng sủa hẳn l&ecirc;n.</strong></em></p>`
+                    },
+                    {
+                        title: `Topic 2: Rock n_ Roll n_ Feelings`,
+                        audioLinkSlow: `assets/audio/LESSON 09 - EMOTION/Recording 9.3 - Slow Speech - Topic 2 - Rock n_ Roll n_ Feelings.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 09 - EMOTION/Recording 9.4 - Native speech - Topic 2 - Rock n Roll n Feeling.mp3`,
+                        data: `<p>Working together in groups is always challenging. There are as many personalities as there are people in the world. This makes playing in the <strong>orchestra</strong> especially difficult, but as long as everyone does their personal best for the sake of <strong>the music,</strong> <strong>personalities</strong> can blend as beautifully and as naturally as the <strong>sounds</strong> of the <strong>instruments</strong>.</p>
+              <p><em>L&agrave;m việc c&ugrave;ng nhau trong nh&oacute;m lu&ocirc;n lu&ocirc;n l&agrave; th&aacute;ch thức, c&oacute; bao nhi&ecirc;u người tr&ecirc;n thế giới th&igrave; c&oacute; bấy nhi&ecirc;u c&aacute; t&iacute;nh. Điều n&agrave;y khiến cho việc chơi trong <strong>d&agrave;n nhạc giao hưởng</strong> đặc biệt kh&oacute; khăn, nhưng miễn l&agrave; tất cả mọi người l&agrave;m tốt nhất phần c&aacute; nh&acirc;n của họ v&igrave; lợi &iacute;ch của <strong>&acirc;m nhạc, c&aacute; t&iacute;nh</strong> c&oacute; thể h&agrave;i h&ograve;a đẹp đẽ v&agrave; tự nhi&ecirc;n như <strong>&acirc;m thanh</strong> của những<strong> nhạc cụ.</strong></em></p>
+              <p>Mick, for instance, plays first <strong>violin</strong>, which totally fits his personality. He&rsquo;s extremely <strong>decisive</strong> and a little <strong>abrasive</strong> at times, but he&rsquo;s a <strong>perfectionist</strong>. That probably explains why he&rsquo;s been <strong>first chair</strong> forever.</p>
+              <p><em>Mick, v&iacute; dụ, chơi <strong>vĩ cầm</strong> ch&iacute;nh, n&oacute; ho&agrave;n to&agrave;n ph&ugrave; hợp với c&aacute; t&iacute;nh của anh ấy. Anh ấy v&ocirc; c&ugrave;ng <strong>quyết đo&aacute;n</strong> v&agrave; đ&ocirc;i khi hơi <strong>th&ocirc; r&aacute;p,</strong> nhưng anh ấy l&agrave; một người cầu to&agrave;n.<br />Điều đ&oacute; c&oacute; thể giải th&iacute;ch tại sao anh ấy l&agrave; <strong>đội trưởng</strong> m&atilde;i m&atilde;i.</em></p>
+              <p>Tommy is one of the best <strong>percussionists</strong> I&rsquo;ve ever heard, but he is super <strong>stubborn</strong> and his <strong>inflexibility</strong> can be super <strong>annoying</strong> because music is so precise in <strong>rhythm</strong> and <strong>timing</strong>. Billy, on the other hand, <strong>balances all of us out.</strong> Like the slide of his <strong>trombone,</strong> he&rsquo;s <strong>even-tempered</strong> and <strong>easy going,</strong> making everyone laugh when things get <strong>intense</strong>.</p>
+              <p><em>Tommy l&agrave; một trong những <strong>người chơi trống</strong> hay nhất t&ocirc;i từng nghe, nhưng anh ấy si&ecirc;u <strong>cứng đầu</strong> v&agrave; t&iacute;nh <strong>cứng nhắc</strong> của anh ấy c&oacute; thể l&agrave;m người kh&aacute;c si&ecirc;u <strong>kh&oacute; chịu</strong> v&igrave; &acirc;m nhạc ch&iacute;nh x&aacute;c đến từng <strong>nhịp điệu</strong> v&agrave; <strong>thời gian.</strong> Billy, mặt kh&aacute;c, lại <strong>c&acirc;n bằng tất cả ch&uacute;ng ta.</strong> Giống như mặt nghi&ecirc;ng của chiếc <strong>k&egrave;n trombon</strong> của anh ấy, anh ấy <strong>rất b&igrave;nh tĩnh</strong> v&agrave; <strong>cởi mở,</strong> khiến mọi người cười khi mọi việc trở n&ecirc;n <strong>căng thẳng.</strong></em></p>
+              <p>Fortunately, we have Mary, who feels more like a mom than an orchestra director. She&rsquo;s like an <strong>emotional</strong> mind reader, she can <strong>sense</strong> our <strong>moods</strong> when we walk into the room. No matter what kind of day we&rsquo;re having, she knows how to pull us all together and unite us in our music. She&rsquo;s also incredibly <strong>sensitive</strong>, like me. One day, she sensed I was <strong>agitated</strong>. I was. I&rsquo;ve been challenging Mick on the violin forever, but I&rsquo;ve never moved up to first chair. She picked up on it right away and <strong>encouraged</strong> me not to take things so personally. Reminding me to <strong>stay out of my head,</strong> she said: &ldquo;It&rsquo;s about the music, get your <strong>ego</strong> out of the way and put your <strong>feelings</strong> into the music, the rest will take care of itself.&rdquo;</p>
+              <p><em>May mắn thay, ch&uacute;ng ta c&oacute; Mary, người ch&uacute;ng t&ocirc;i cảm thấy như một người mẹ hơn l&agrave; một nhạc trưởng. C&ocirc; ấy giống như một người đọc t&acirc;m l&yacute; <strong>t&igrave;nh cảm,</strong> c&ocirc; ấy <strong>cảm nhận những t&acirc;m trạng</strong> của ch&uacute;ng t&ocirc;i ngay khi ch&uacute;ng t&ocirc;i bước v&agrave;o ph&ograve;ng. Cho d&ugrave; ng&agrave;y h&ocirc;m đ&oacute; của ch&uacute;ng t&ocirc;i diễn ra thế n&agrave;o, c&ocirc; ấy biết l&agrave;m thế n&agrave;o để k&eacute;o ch&uacute;ng<br />t&ocirc;i lại với nhau v&agrave; gắn kết ch&uacute;ng t&ocirc;i trong &acirc;m nhạc của ch&iacute;nh ch&uacute;ng t&ocirc;i. C&ocirc; ấy cũng<br />cực kỳ <strong>nhạy cảm,</strong> giống như t&ocirc;i. Một ng&agrave;y nọ, c&ocirc; ấy cảm thấy t&ocirc;i đang <strong>tức giận.</strong> Đ&uacute;ng vậy. T&ocirc;i đ&atilde; lu&ocirc;n lu&ocirc;n th&aacute;ch thức Mick về vĩ cầm, nhưng t&ocirc;i chưa bao giờ l&ecirc;n đến được chiếc ghế đội trưởng. C&ocirc; ấy nhận thấy điều đ&oacute; ngay lập tức v&agrave; <strong>khuyến kh&iacute;ch</strong> t&ocirc;i đừng suy nghĩ c&aacute; nh&acirc;n như vậy, nhắc nhở t&ocirc;i <strong>đừng suy nghĩ nhiều,</strong> c&ocirc; n&oacute;i: &ldquo;Điều quan trọng l&agrave; &acirc;m nhạc, h&atilde;y bỏ <strong>c&aacute;i t&ocirc;i</strong> của cậu ra v&agrave; đưa <strong>những cảm x&uacute;c</strong> của cậu v&agrave;o &acirc;m nhạc, điều g&igrave; phải đến cũng sẽ đến.&rdquo;</em></p>
+              <p>She was right. At the end of the day, I&rsquo;m proud of how well we work together as an orchestra. We&rsquo;ve also become better musicians and better people because of Mary, which is probably why we&rsquo;ve done so well as a group.</p>
+              <p><em>C&ocirc; ấy đ&atilde; đ&uacute;ng. V&agrave;o cuối ng&agrave;y, t&ocirc;i tự h&agrave;o về c&aacute;ch ch&uacute;ng t&ocirc;i h&ograve;a hợp như một d&agrave;n<br />nhạc. Ch&uacute;ng t&ocirc;i cũng trở th&agrave;nh những nhạc c&ocirc;ng tốt hơn v&agrave; con người tốt hơn nhờ Mary, m&agrave; c&oacute; lẽ cũng l&agrave; l&yacute; do tại sao ch&uacute;ng t&ocirc;i đ&atilde; l&agrave;m tốt như vậy với nhau như một nh&oacute;m.</em></p>`
+                    },
+                    {
+                        title: `Topic 3: Social Media Depression`,
+                        audioLinkSlow: `assets/audio/LESSON 09 - EMOTION/Recording 9.5 - Slow Speech - Topic 3 - Social Media Depression.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 09 - EMOTION/Recording 9.6 - Native Speech - Topic 3 - Social Media Depression.mp3`,
+                        data: `<p>Your old high school classmate is getting married, your college friend is vacationing<br />abroad, and you&rsquo;re at home looking at their pictures online&hellip;</p>
+              <p>... How do you feel?</p>
+              <p><em>Bạn c&ugrave;ng lớp trung học cũ của bạn đ&atilde; kết h&ocirc;n, bạn b&egrave; đại học của bạn th&igrave; đi nghỉ m&aacute;t ở nước ngo&agrave;i, v&agrave; bạn đang ở nh&agrave; nh&igrave;n ảnh của họ tr&ecirc;n mạng&hellip;<br />&hellip; Bạn cảm thấy thế n&agrave;o?</em></p>
+              <p>Some researchers have<strong> coined the term</strong> &ldquo;social media <strong>depression</strong>&rdquo;&hellip;<br />&hellip; to describe the feelings of <strong>jealousy</strong> and <strong>guilt</strong>&hellip;<br />&hellip; that some people feel when they use social media too much.</p>
+              <p><em>Một số nh&agrave; nghi&ecirc;n cứu đ&atilde; <strong>đặt ra thuật ngữ &ldquo;trầm cảm</strong> mạng x&atilde; hội&ldquo;&hellip;<br />&hellip; để m&ocirc; tả cảm gi&aacute;c <strong>ghen tị</strong> v&agrave; <strong>tội lỗi</strong>&hellip;<br />&hellip; m&agrave; một số người cảm thấy khi họ sử dụng phương tiện truyền th&ocirc;ng x&atilde; hội qu&aacute; nhiều.</em></p>
+              <p>Researchers have actually coined a new pop culture term that describes what happens to our emotional psyche from using SM too much.<br />It&rsquo;s called, &ldquo;social media depression.&rdquo;&hellip;<br />&hellip;Instead of feeling more connected to people, we feel <strong>jealous</strong> and <strong>inadequate</strong>. It creates <strong>unrealistic</strong> expectations that lead to feelings of depression, which then leads us to <strong>disconnecting</strong> and <strong>isolating</strong> more.</p>
+              <p><em>C&aacute;c nh&agrave; nghi&ecirc;n cứu đ&atilde; thực sự đặt ra một thuật ngữ văn h&oacute;a phổ biến mới m&ocirc; tả những g&igrave; sẽ xảy ra với thần kinh t&igrave;nh cảm của ch&uacute;ng ta khi sử dụng mạng x&atilde; hội qu&aacute; nhiều. </em></p>
+              <p><em>N&oacute; được gọi l&agrave;, &ldquo;trầm cảm mạng x&atilde; hội.&rdquo; </em></p>
+              <p><em>Thay v&igrave; cảm thấy kết nối nhiều hơn với mọi người, ch&uacute;ng ta cảm thấy <strong>ghen tị</strong> v&agrave; <strong>thiếu thốn.</strong> </em></p>
+              <p><em>N&oacute; tạo ra những kỳ vọng <strong>kh&ocirc;ng thực tế</strong> dẫn đến cảm gi&aacute;c trầm cảm, m&agrave; sau đ&oacute; khiến ch&uacute;ng ta để <strong>ngừng kết nối</strong> v&agrave; <strong>c&ocirc; lập</strong> nhiều hơn. </em></p>
+              <p>At least we&rsquo;re becoming aware of this now. More and more researchers are recommending that people turn off their devices, and social media altogether, they can get outside and connect with people face-to-face, or with nature.</p>
+              <p><em>&Iacute;t nhất ch&uacute;ng ta đang ng&agrave;y c&agrave;ng trở n&ecirc;n nhận thức được điều n&agrave;y cho đến nay.<br />Ng&agrave;y c&agrave;ng nhiều nh&agrave; nghi&ecirc;n cứu đề xuất rằng mọi người n&ecirc;n c&ugrave;ng nhau tắt thiết bị v&agrave; phương tiện truyền th&ocirc;ng x&atilde; hội để c&oacute; thể đi ra ngo&agrave;i v&agrave; kết nối với người kh&aacute;c mặt đối mặt, hoặc với thi&ecirc;n nhi&ecirc;n. </em></p>
+              <p>Daymond John (the CEO and founder of The Shark Group) even suggests we avoid checking social media for the first hour of the day, we can center our minds on the things that matter most:</p>
+              <p>&hellip; our <strong>personal relationships.</strong></p>
+              <p><em>Daymond John (Chủ tịch Hội đồng quản trị v&agrave; người s&aacute;ng lập của Tập đo&agrave;n Shark) thậm ch&iacute; gợi &yacute; rằng ch&uacute;ng ta n&ecirc;n tr&aacute;nh việc kiểm tra phương tiện truyền th&ocirc;ng x&atilde; hội trong giờ đầu ti&ecirc;n trong ng&agrave;y, để ch&uacute;ng ta c&oacute; thể tập trung t&acirc;m tr&iacute; v&agrave;o những điều quan trọng nhất: </em></p>
+              <p><em>... Những <strong>mối quan hệ c&aacute; nh&acirc;n.</strong> </em></p>
+              <p><strong>Snap out of it!</strong> Put your device down and ask a friend to meet you face-to-face for an ice cream&hellip; so you can talk.<br />The key to overcoming this <strong>negative</strong> evolving <strong>state of mind</strong> is &hellip;to trust that you are good enough and <strong>perfect</strong>&hellip; just the way you are.</p>
+              <p><strong><em>H&atilde;y tr&uacute;t bỏ n&oacute; ra khỏi người!</em></strong><em> Bỏ điện thoại xuống v&agrave; rủ một người bạn gặp bạn trực tiếp đi ăn kem. Sau đ&oacute;, bạn c&oacute; thể n&oacute;i chuyện.<br />Ch&igrave;a kh&oacute;a để vượt qua <strong>trạng th&aacute;i ti&ecirc;u cực</strong> tăng dần n&agrave;y l&agrave; bạn phải tin tưởng rằng bạn đủ tốt v&agrave; <strong>ho&agrave;n hảo, </strong>theo c&aacute;ch ri&ecirc;ng của m&igrave;nh.</em></p>`
+                    }
+                ]
+            },
+            {
+                case: `Day 3`,
+                title: `Phản xạ đa chiều - Introducing a Friend`,
+            },
+            {
+                case: `Day 4`,
+                title: `Phản xạ đa chiều - Where Do You Live?`,
+            },
+            {
+                case: `Day 5`,
+                title: `Phản xạ đa chiều - What is Your Job?`,
+            },
+            {
+                case: `Day 6`,
+                title: `Thử thách`,
+                content: [
+                    {
+                        title: `Thử thách`,
+                        // tslint:disable-next-line:max-line-length
+                        audioLinkReflection: `assets/audio/LESSON 01 - INTRODUCTION/Recording 1.11 - Production.mp3`,
+                        data: `
+              ✔️ Tải phần tài liệu production sau đây về máy – bấm vào đây để download (nếu bạn đang truy cập khóa học trên app, vui lòng vào web để tải trực tiếp tài liệu này) – Luyện tập từ 2-3 lần (Có thể nhìn phần dịch và từ điển nếu cần).<br/>
+              ✔️ Nghe Recording 1.11 và trả lời vào khoảng trống từ 3-5 lần<br/>
+              ✔️ Hãy tưởng tượng bạn vô tình gặp một người nước ngoài tại một địa điểm du lịch nào đó, bạn hãy chủ động là người hỏi chuyện và làm quen với người bạn đó.<br/>
+              ✔️ Hãy tạo ra một kịch bản từ 10 – 15 câu hỏi đáp và thực hành nói trước gương sao cho thật tự nhiên.<br/>
+              ✔️ Bạn cũng có thể tìm một người bạn để đối thoại cùng nhau như các nhân vật tại Lesson 01!<br/>
+              Bạn đã hoàn thành việc luyện tập Lesson 01 – Eng Breaking. Ngay bây giờ, hãy đến với bài Đánh giá (Assessment) để nâng cao kỹ năng và ôn luyện kiến thức ở Lesson 01.`
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 10,
+        title: 'Lesson 10 - Work place',
+        name: `Work place`,
+        displayOrder: 10,
+        description: `MY NAME IS DAO DAO, this lesson is tell you about people.`,
+        openCollapse: true,
+        contents: [
+            {
+                case: `Day 1`,
+                title: `Nghe ngấm`,
+                content: [
+                    {
+                        title: `Topic 1 - Knocking it Out of the Park`,
+                        audioLinkSlow: `assets/audio/LESSON 10 - WORK PLACE/Recording 10.1 - Slow Speech - Topic 1 - Knocking it Out of the Park.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 10 - WORK PLACE/Recording 10.2 - Native Speech - Topic 1 - Knocking It Out of the Park.mp3`,
+                        data: `<div><p>Maya and Colin have to give an important marketing <strong>presentation</strong>. However, they haven’t finished it yet.<br>
+              <span style="color:#7e8c8d"><em>Maya và Colin phải thực hiện một<strong> bài thuyết trình</strong> tiếp thị quan trọng. Tuy nhiên, họ vẫn chưa hoàn thành nó.</em></span></p>
+              <p><strong>Maya:</strong> Hey Colin, do you want to finish our marketing presentation this afternoon?<br>
+              <span style="color:#7e8c8d"><em><strong>Maya:</strong> Này Colin, anh có muốn hoàn thành bài thuyết trình tiếp thị của chúng ta trong chiều nay không?</em></span></p>
+              <p><strong>Colin:</strong> <strong>That’s a good idea</strong>. Actually, <strong>are you free to talk about it now?</strong><br>
+              <span style="color:#7e8c8d"><em><strong>Colin:</strong> <strong>Đó là một ý hay</strong>. Thực ra, <strong>bây giờ chị có rảnh để nói về nó không?</strong></em></span></p>
+              <p><strong>Maya:</strong> Sure. <strong>I’m really worried about</strong> it.<br>
+              <span style="color:#7e8c8d"><em><strong>Maya:</strong> Chắc chắn rồi. <strong>Tôi thực sự lo lắng về chuyện này.</strong></em></span></p>
+              <p><strong>Colin:</strong> <strong>We’ll be fine</strong>. Everyone is <strong>interested</strong> in what we have to say.<br>
+              <span style="color:#7e8c8d"><em><strong>Colin:</strong> <strong>Chúng ta sẽ ổn thôi</strong>. Mọi người đều <strong>quan tâm</strong> tới những gì chúng ta nói.</em></span></p>
+              <p><strong>Maya:</strong> <strong>That’s a good point</strong>. But can I ask you one thing?<br>
+              <span style="color:#7e8c8d"><em><strong>Maya:</strong> <strong>Đó là một điểm tốt</strong>. Nhưng tôi có thể hỏi anh một điều không?</em></span></p>
+              <p><strong>Colin:</strong> <strong>Go ahead!</strong><br>
+              <span style="color:#7e8c8d"><em><strong>Colin: Cứ hỏi đi!</strong></em></span></p>
+              <p><strong>Maya:</strong> What is our marketing plan again?<br>
+              <span style="color:#7e8c8d"><em><strong>Maya:</strong> Kế hoạch tiếp thị của chúng ta là gì nhỉ?</em></span></p>
+              <p><strong>Colin:</strong> What? I’m <strong>confused</strong>. I thought you knew.<br>
+              <span style="color:#7e8c8d"><em><strong>Colin:</strong> Cái gì? Tôi <strong>bối rối</strong> đấy. Tôi nghĩ là chị biết.</em></span></p>
+              <p><strong>Maya:</strong> I’m confused, too, because I thought you knew. Oh no.<br>
+              <span style="color:#7e8c8d"><em><strong>Maya:</strong> Tôi cũng bối rối, vì tôi nghĩ anh biết. Ồ không.</em></span></p>
+              <p><strong>Colin:</strong> Okay. Don’t panic. We’re <strong>going to be</strong> fine.<br>
+              <span style="color:#7e8c8d"><em><strong>Colin:</strong> Ok. Đừng hoảng sợ. Chúng ta <strong>sẽ</strong> ổn thôi.</em></span></p>
+              <p><strong>Maya:</strong> I’m <strong>panicking</strong> a little bit. We need to make a <strong>polished</strong> and <strong>exciting</strong> marketing plan in… one day.<br>
+              <span style="color:#7e8c8d"><em><strong>Maya:</strong> Tôi hơi <strong>hoảng sợ</strong> một chút. Chúng ta cần phải làm ra một kế hoạch tiếp thị<strong> trau chuốt</strong> và <strong>thú vị</strong> trong vòng… một ngày.</em></span></p>
+              <p><strong>Colin:</strong> And we need to make a <strong>thrilling</strong> presentation. If our presentation is <strong>boring</strong>, we’re going to get fired.<br>
+              <span style="color:#7e8c8d"><em><strong>Colin:</strong> Còn về phần thuyết trình, chúng ta cần làm cho bài thuyết trình <strong>hấp dẫn</strong>. Nếu phần trình bày <strong>nhàm chán</strong>, chúng ta sẽ bị sa thải.</em></span></p>
+              <p><strong>Maya:</strong> That’s so true… Oh no, here comes the boss!<br>
+              <span style="color:#7e8c8d"><em><strong>Maya:</strong> Đó là sự thật… Ôi không, sếp đang đến!</em></span></p>
+              <p><strong>Colin:</strong> Look <strong>relaxed</strong>!<br>
+              <span style="color:#7e8c8d"><em><strong>Colin:</strong> Trông thật <strong>thoải mái</strong> vào!</em></span></p>
+              <p><strong>Maya:</strong> I can’t look relaxed when I feel so <strong>stressed</strong>!<br>
+              <span style="color:#7e8c8d"><em><strong>Maya:</strong> Tôi không thể tỏ ra thoải mái khi tôi đang rất <strong>căng thẳng</strong>!</em></span></p>
+              <p><strong>Boss:</strong> Hi you two, I’m looking forward to seeing your presentation!<br>
+              <span style="color:#7e8c8d"><em><strong>Boss:</strong> Chào hai người, tôi rất trông đợi vào phần trình bày của hai người đấy!</em></span></p>
+              <p><strong>Colin:</strong> Uh huh.<br>
+              <span style="color:#7e8c8d"><em><strong>Colin:</strong> Vâng.</em></span></p>
+              <p><strong>Boss:</strong> Do you need any <strong>support</strong> from IT?<br>
+              <span style="color:#7e8c8d"><em><strong>Boss:</strong> Hai người có cần bất cứ <strong>sự hỗ trợ</strong> nào về công nghệ không?</em></span></p>
+              <p><strong>Maya:</strong> Nope, we’re <strong>all set</strong>.<br>
+              <span style="color:#7e8c8d"><em><strong>Maya:</strong> Không, chúng tôi<strong> tất cả đều đã sẵn sàng</strong>.</em></span></p>
+              <p><strong>Boss:</strong> Great to hear. I think our entire quarter <strong>comes down to</strong> your marketing plan, and everyone<strong> feels the same way</strong>. I hope you guys<strong> knock it out of the park</strong> this afternoon.<br>
+              <span style="color:#7e8c8d"><em><strong>Boss:</strong> Tuyệt lắm. Tôi nghĩ rằng cả quý của chúng ta<strong> trông đợi vào</strong> kế hoạch tiếp thị của hai người, và tất cả mọi người <strong>đều cảm thấy như vậy</strong>. Tôi hy vọng hai người sẽ<strong> thể hiện thật xuất sắc</strong> buổi chiều nay.</em></span></p>
+              <p><strong>Colin:</strong> This afternoon?<br>
+              <span style="color:#7e8c8d"><em><strong>Colin:</strong> Chiều nay sao?</em></span></p>
+              <p><strong>Boss:</strong> Oh, we decided to move it up a bit.<strong> I</strong> <strong>hope you don’t mind</strong>.<br>
+              <span style="color:#7e8c8d"><em><strong>Boss:</strong> À,chúng tôi quyết định chuyển lịch lên một chút. <strong>Tôi hy vọng hai người không phiền</strong>.</em></span></p>
+              <p><strong>Colin:</strong> Nope. No problem at all…<br>
+              <span style="color:#7e8c8d"><em><strong>Colin:</strong> Không. Không có vấn đề gì…</em></span></p>
+              </div>`
+                    },
+                    {
+                        title: `Topic 2 - Not “Management Material”`,
+                        audioLinkSlow: `assets/audio/LESSON 10 - WORK PLACE/Recording 10.3 - Slow Speech - Topic 2 - Not “Management Material”.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 10 - WORK PLACE/Recording 10.4 - Native Speech - Topic 2 - Not Management Material.mp3`,
+                        data: `<div><p>“You son, are an idiot!” Said the <strong>manager</strong> to the ‘<strong>managee</strong>.’ “You’re fired!”<br>
+              “And you Sir, are an idiom!” Said the ‘managee.’ “You can’t fire me, I quit!”<br>
+              <span style="color:#7e8c8d"><em>“Con trai, cậu là đồ ngốc!” <strong>Người quản lý</strong> nói với “<strong>người bị quản lý</strong>”.’ “Anh bị sa thải!”</em></span><br>
+              <span style="color:#7e8c8d"><em>“Và thưa ông, ông cũng là đồ ngốc!” “Người bị quản lý” nói.’ “Ông không thể sa thải tôi, tôi bỏ việc!”</em></span></p>
+              <p>If only we could all be as <strong>quick-witted</strong> as Steve Martin’s Clouseau in the Pink Panther, when it comes to our managers at work.<br>
+              <span style="color:#7e8c8d"><em>Giá như tất cả chúng ta đều có thể <strong>nhanh trí</strong> như nhân vật Clouseau của Steve Martin trong hoạt hình Pink Panther, khi nhắc đến những người quản lý của chúng ta ở nơi làm việc.</em></span></p>
+              <p>I have no doubt that being a manager is a tough job. It’s a balancing act. How does a leader <strong>motivate</strong> employees to do their work best and still maintain professional boundaries and mutual respect? For example, my new manager is a nice guy, but instead of allowing me the time and space I need to do my job, he’s constantly in my face, trying to <strong>micromanage</strong> everything I do. To be honest, I’d like to smash him in the face with a frying pan. But all I have is a lousy <strong>stapler</strong> on my desk so I’m trying to figure out how I can staple his mouth shut before he comes back to hover again.<br>
+              <span style="color:#7e8c8d"><em>Tôi chắc chắn quản lý là một công việc khó khăn. Đó là một công việc cân bằng. Làm thế nào một nhà lãnh đạo <strong>thúc đẩy</strong> nhân viên làm việc tốt nhất mà vẫn duy trì sự chuyên nghiệp và tôn trọng lẫn nhau? Ví dụ, người quản lý mới của tôi là một người tốt, nhưng thay vì cho tôi thời gian và không gian để làm công việc của tôi, ông ta liên tục ở trước mặt tôi, cố gắng <strong>kiểm soát từng chi tiết nhỏ</strong> tất cả mọi thứ. Nói thật, tôi muốn đập vào mặt ông ta bằng một cái chảo, nhưng tôi chỉ có cái dập ghim rởm trên bàn làm việc, vì vậy tôi đang cố gắng tìm cách làm thế nào để có thể <strong>dập ghim</strong> cái miệng của ông ta lại trước khi ông ta lại lượn lờ lần nữa.</em></span></p>
+              <p>I know he’s <strong>under a lot of pressure</strong>. He has to <strong>report</strong> to his boss, the same way I have to report to him… but he got up and started grilling me about a report that wasn’t even due for three weeks. I couldn’t believe it. My head started spinning and I’m pretty sure my eyes were bulging out of my head too.<br>
+              <span style="color:#7e8c8d"><em>Tôi biết ông ấy đang<strong> chịu rất nhiều áp lực</strong>. Ông ấy phải <strong>báo cáo</strong> với sếp của mình, theo cùng một cách tôi phải báo cáo với ông ta… nhưng ông ấy đã đứng dậy và bắt đầu tra tấn tôi về cái báo cáo chưa đến hạn trong ba tuần nữa. Tôi không thể tin được. Đầu tôi bắt đầu quay cuồng và tôi khá chắc chắn rằng mắt tôi cũng muốn nhảy ra khỏi đầu của tôi quá.</em></span></p>
+              <p><strong>I’ve never really thought about this before</strong>, but I know I need to make some <strong>sacrifices</strong> if I want to<strong> move up in the world</strong>. <strong>There’s no doubt</strong> in my mind that I can, or that I will. But one thing I <strong>know for sure</strong> is when I do? I want to be a friend to my colleagues, not a <strong>bossy</strong> one either. I really feel bad for the guy’s dog.<br>
+              <span style="color:#7e8c8d"><em><strong>Tôi chưa bao giờ thực sự nghĩ về điều này trước đây</strong>, nhưng tôi biết tôi cần phải <strong>hy sinh</strong> một chút nếu tôi muốn <strong>thăng tiến trong thế giới này</strong>. Trong tâm trí tôi <strong>không nghi ngờ gì</strong> là tôi có thể, tôi sẽ làm được, nhưng một điều tôi <strong>biết chắc chắn</strong> là khi tôi làm được, là gì? Tôi muốn là một người bạn với đồng nghiệp của tôi, không phải là một người bạn <strong>hách dịch.</strong> Tôi thực sự cảm thấy tội cho con chó của ông ta.</em></span></p>
+              <p><span style="color:#7e8c8d"><em>You son, are an idiot! – And you Sir, are an idiom!”</em></span><br>
+              <span style="color:#7e8c8d"><em>+ Đây là cách chơi chữ của người viết! Cả 2 từ “Idiom” và “Idiot” đều có gốc từ: Idios.</em></span><br>
+              <span style="color:#7e8c8d"><em>+ Ở đây ông nhân viên không dám chửi mắng thẳng ông sếp là “đồ ngốc” nên đã nói lái đi!</em></span></p>
+              </div>`
+                    },
+                    {
+                        title: `Topic 3 - Office Gossip, It_s Not All Bad`,
+                        audioLinkSlow: `assets/audio/LESSON 10 - WORK PLACE/Recording 10.5 - Slow Speech -Topic 3 - Office Gossip, It_s Not All Bad.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 10 - WORK PLACE/Recording 10.6 - Native Speech - Topic 3 - Office Gossip It_s Not All Bad.mp3`,
+                        data: `<div><p>Is it <strong>gossip</strong>, or <strong>authentic assessment</strong>?<br>
+              <span style="color:#7e8c8d"><em>Có phải đó là<strong> thị phi</strong>, hay sự <strong>đánh giá chân thực</strong>?</em></span></p>
+              <p>It’s true, no one likes a gossiper, but research shows that the <strong>rumor mill</strong> is a good place for passing out information, especially if the rumor mill is your place of work. “Informal communication” that can help spread information more quickly than formal channels of communications, like company e-mails or staff meetings, can be beneficial.<br>
+              <span style="color:#7e8c8d"><em>Đó là sự thật, không ai thích một người đưa chuyện, nhưng nghiên cứu cho thấy rằng <strong>phạm vi tin đồn</strong> là một nơi tốt để truyền thông tin, đặc biệt nếu phạm vi tin đồn là ở nơi làm việc của bạn. “Giao tiếp không chính thức” có thể giúp lan truyền thông tin nhanh hơn so với các kênh truyền thông chính thức, như e-mails công ty hoặc các cuộc họp nhân viên, nó có thể có lợi.</em></span></p>
+              <p>I’m sure everybody has experienced this first-hand: a manager makes an important announcement, only to find out that half the company already knew about it. More likely, many knew, even before he did!<br>
+              <span style="color:#7e8c8d"><em>Tôi chắc rằng tất cả mọi người đã trải qua chuyện này: một người quản lý đưa ra thông báo quan trọng, chỉ để biết rằng một nửa công ty đã biết về nó. Khả năng là đã có nhiều người biết, thậm chí trước cả ông ấy!</em></span></p>
+              <p>While gossip is <strong>frustrating</strong> and <strong>fraught</strong> with <strong>negative</strong> consequences, it’s also a sign of what companies care about. So yes, pay attention, but ALWAYS consider your source. Ask yourself: What is the motivation behind the information being given? Is it just a <strong>disgruntled</strong> co-worker who’s <strong>mean</strong>? Or, is the <strong>water cooler</strong> talk you’re hearing, a <strong>legendary</strong> story that offers valuable <strong>insight</strong> for <strong>navigating</strong> your life?<br>
+              <span style="color:#7e8c8d"><em>Mặc dù buôn chuyện<strong> gây khó chịu</strong> và <strong>đầy rẫy</strong> những hậu quả <strong>tiêu cực</strong>, đó cũng là dấu hiệu của điều mà công ty quan tâm. Vì vậy, đúng, hãy chú ý, nhưng phải luôn cân nhắc nguồn của bạn. Hãy tự hỏi: động lực đằng sau các thông tin được đưa ra là gì? Nó chỉ là một đồng nghiệp <strong>bất bình</strong> đang trở nên<strong> hẹp hòi</strong>? Hay là câu <strong>chuyện phiếm</strong> mà bạn đang nghe, lại là một câu chuyện <strong>huyền thoại</strong> cho bạn cái <strong>nhìn sâu sắc</strong> đáng giá để<strong> định hướng</strong> cuộc sống của mình?</em></span></p>
+              </div>`
+                    }
+                ]
+            },
+            {
+                case: `Day 2`,
+                title: `Nói đuổi`,
+                content: [
+                    {
+                        title: `Topic 1 - Knocking it Out of the Park`,
+                        audioLinkSlow: `assets/audio/LESSON 10 - WORK PLACE/Recording 10.1 - Slow Speech - Topic 1 - Knocking it Out of the Park.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 10 - WORK PLACE/Recording 10.2 - Native Speech - Topic 1 - Knocking It Out of the Park.mp3`,
+                        data: `<div><p>Maya and Colin have to give an important marketing <strong>presentation</strong>. However, they haven’t finished it yet.<br>
+              <span style="color:#7e8c8d"><em>Maya và Colin phải thực hiện một<strong> bài thuyết trình</strong> tiếp thị quan trọng. Tuy nhiên, họ vẫn chưa hoàn thành nó.</em></span></p>
+              <p><strong>Maya:</strong> Hey Colin, do you want to finish our marketing presentation this afternoon?<br>
+              <span style="color:#7e8c8d"><em><strong>Maya:</strong> Này Colin, anh có muốn hoàn thành bài thuyết trình tiếp thị của chúng ta trong chiều nay không?</em></span></p>
+              <p><strong>Colin:</strong> <strong>That’s a good idea</strong>. Actually, <strong>are you free to talk about it now?</strong><br>
+              <span style="color:#7e8c8d"><em><strong>Colin:</strong> <strong>Đó là một ý hay</strong>. Thực ra, <strong>bây giờ chị có rảnh để nói về nó không?</strong></em></span></p>
+              <p><strong>Maya:</strong> Sure. <strong>I’m really worried about</strong> it.<br>
+              <span style="color:#7e8c8d"><em><strong>Maya:</strong> Chắc chắn rồi. <strong>Tôi thực sự lo lắng về chuyện này.</strong></em></span></p>
+              <p><strong>Colin:</strong> <strong>We’ll be fine</strong>. Everyone is <strong>interested</strong> in what we have to say.<br>
+              <span style="color:#7e8c8d"><em><strong>Colin:</strong> <strong>Chúng ta sẽ ổn thôi</strong>. Mọi người đều <strong>quan tâm</strong> tới những gì chúng ta nói.</em></span></p>
+              <p><strong>Maya:</strong> <strong>That’s a good point</strong>. But can I ask you one thing?<br>
+              <span style="color:#7e8c8d"><em><strong>Maya:</strong> <strong>Đó là một điểm tốt</strong>. Nhưng tôi có thể hỏi anh một điều không?</em></span></p>
+              <p><strong>Colin:</strong> <strong>Go ahead!</strong><br>
+              <span style="color:#7e8c8d"><em><strong>Colin: Cứ hỏi đi!</strong></em></span></p>
+              <p><strong>Maya:</strong> What is our marketing plan again?<br>
+              <span style="color:#7e8c8d"><em><strong>Maya:</strong> Kế hoạch tiếp thị của chúng ta là gì nhỉ?</em></span></p>
+              <p><strong>Colin:</strong> What? I’m <strong>confused</strong>. I thought you knew.<br>
+              <span style="color:#7e8c8d"><em><strong>Colin:</strong> Cái gì? Tôi <strong>bối rối</strong> đấy. Tôi nghĩ là chị biết.</em></span></p>
+              <p><strong>Maya:</strong> I’m confused, too, because I thought you knew. Oh no.<br>
+              <span style="color:#7e8c8d"><em><strong>Maya:</strong> Tôi cũng bối rối, vì tôi nghĩ anh biết. Ồ không.</em></span></p>
+              <p><strong>Colin:</strong> Okay. Don’t panic. We’re <strong>going to be</strong> fine.<br>
+              <span style="color:#7e8c8d"><em><strong>Colin:</strong> Ok. Đừng hoảng sợ. Chúng ta <strong>sẽ</strong> ổn thôi.</em></span></p>
+              <p><strong>Maya:</strong> I’m <strong>panicking</strong> a little bit. We need to make a <strong>polished</strong> and <strong>exciting</strong> marketing plan in… one day.<br>
+              <span style="color:#7e8c8d"><em><strong>Maya:</strong> Tôi hơi <strong>hoảng sợ</strong> một chút. Chúng ta cần phải làm ra một kế hoạch tiếp thị<strong> trau chuốt</strong> và <strong>thú vị</strong> trong vòng… một ngày.</em></span></p>
+              <p><strong>Colin:</strong> And we need to make a <strong>thrilling</strong> presentation. If our presentation is <strong>boring</strong>, we’re going to get fired.<br>
+              <span style="color:#7e8c8d"><em><strong>Colin:</strong> Còn về phần thuyết trình, chúng ta cần làm cho bài thuyết trình <strong>hấp dẫn</strong>. Nếu phần trình bày <strong>nhàm chán</strong>, chúng ta sẽ bị sa thải.</em></span></p>
+              <p><strong>Maya:</strong> That’s so true… Oh no, here comes the boss!<br>
+              <span style="color:#7e8c8d"><em><strong>Maya:</strong> Đó là sự thật… Ôi không, sếp đang đến!</em></span></p>
+              <p><strong>Colin:</strong> Look <strong>relaxed</strong>!<br>
+              <span style="color:#7e8c8d"><em><strong>Colin:</strong> Trông thật <strong>thoải mái</strong> vào!</em></span></p>
+              <p><strong>Maya:</strong> I can’t look relaxed when I feel so <strong>stressed</strong>!<br>
+              <span style="color:#7e8c8d"><em><strong>Maya:</strong> Tôi không thể tỏ ra thoải mái khi tôi đang rất <strong>căng thẳng</strong>!</em></span></p>
+              <p><strong>Boss:</strong> Hi you two, I’m looking forward to seeing your presentation!<br>
+              <span style="color:#7e8c8d"><em><strong>Boss:</strong> Chào hai người, tôi rất trông đợi vào phần trình bày của hai người đấy!</em></span></p>
+              <p><strong>Colin:</strong> Uh huh.<br>
+              <span style="color:#7e8c8d"><em><strong>Colin:</strong> Vâng.</em></span></p>
+              <p><strong>Boss:</strong> Do you need any <strong>support</strong> from IT?<br>
+              <span style="color:#7e8c8d"><em><strong>Boss:</strong> Hai người có cần bất cứ <strong>sự hỗ trợ</strong> nào về công nghệ không?</em></span></p>
+              <p><strong>Maya:</strong> Nope, we’re <strong>all set</strong>.<br>
+              <span style="color:#7e8c8d"><em><strong>Maya:</strong> Không, chúng tôi<strong> tất cả đều đã sẵn sàng</strong>.</em></span></p>
+              <p><strong>Boss:</strong> Great to hear. I think our entire quarter <strong>comes down to</strong> your marketing plan, and everyone<strong> feels the same way</strong>. I hope you guys<strong> knock it out of the park</strong> this afternoon.<br>
+              <span style="color:#7e8c8d"><em><strong>Boss:</strong> Tuyệt lắm. Tôi nghĩ rằng cả quý của chúng ta<strong> trông đợi vào</strong> kế hoạch tiếp thị của hai người, và tất cả mọi người <strong>đều cảm thấy như vậy</strong>. Tôi hy vọng hai người sẽ<strong> thể hiện thật xuất sắc</strong> buổi chiều nay.</em></span></p>
+              <p><strong>Colin:</strong> This afternoon?<br>
+              <span style="color:#7e8c8d"><em><strong>Colin:</strong> Chiều nay sao?</em></span></p>
+              <p><strong>Boss:</strong> Oh, we decided to move it up a bit.<strong> I</strong> <strong>hope you don’t mind</strong>.<br>
+              <span style="color:#7e8c8d"><em><strong>Boss:</strong> À,chúng tôi quyết định chuyển lịch lên một chút. <strong>Tôi hy vọng hai người không phiền</strong>.</em></span></p>
+              <p><strong>Colin:</strong> Nope. No problem at all…<br>
+              <span style="color:#7e8c8d"><em><strong>Colin:</strong> Không. Không có vấn đề gì…</em></span></p>
+              </div>`
+                    },
+                    {
+                        title: `Topic 2 - Not “Management Material”`,
+                        audioLinkSlow: `assets/audio/LESSON 10 - WORK PLACE/Recording 10.3 - Slow Speech - Topic 2 - Not “Management Material”.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 10 - WORK PLACE/Recording 10.4 - Native Speech - Topic 2 - Not Management Material.mp3`,
+                        data: `<div><p>“You son, are an idiot!” Said the <strong>manager</strong> to the ‘<strong>managee</strong>.’ “You’re fired!”<br>
+              “And you Sir, are an idiom!” Said the ‘managee.’ “You can’t fire me, I quit!”<br>
+              <span style="color:#7e8c8d"><em>“Con trai, cậu là đồ ngốc!” <strong>Người quản lý</strong> nói với “<strong>người bị quản lý</strong>”.’ “Anh bị sa thải!”</em></span><br>
+              <span style="color:#7e8c8d"><em>“Và thưa ông, ông cũng là đồ ngốc!” “Người bị quản lý” nói.’ “Ông không thể sa thải tôi, tôi bỏ việc!”</em></span></p>
+              <p>If only we could all be as <strong>quick-witted</strong> as Steve Martin’s Clouseau in the Pink Panther, when it comes to our managers at work.<br>
+              <span style="color:#7e8c8d"><em>Giá như tất cả chúng ta đều có thể <strong>nhanh trí</strong> như nhân vật Clouseau của Steve Martin trong hoạt hình Pink Panther, khi nhắc đến những người quản lý của chúng ta ở nơi làm việc.</em></span></p>
+              <p>I have no doubt that being a manager is a tough job. It’s a balancing act. How does a leader <strong>motivate</strong> employees to do their work best and still maintain professional boundaries and mutual respect? For example, my new manager is a nice guy, but instead of allowing me the time and space I need to do my job, he’s constantly in my face, trying to <strong>micromanage</strong> everything I do. To be honest, I’d like to smash him in the face with a frying pan. But all I have is a lousy <strong>stapler</strong> on my desk so I’m trying to figure out how I can staple his mouth shut before he comes back to hover again.<br>
+              <span style="color:#7e8c8d"><em>Tôi chắc chắn quản lý là một công việc khó khăn. Đó là một công việc cân bằng. Làm thế nào một nhà lãnh đạo <strong>thúc đẩy</strong> nhân viên làm việc tốt nhất mà vẫn duy trì sự chuyên nghiệp và tôn trọng lẫn nhau? Ví dụ, người quản lý mới của tôi là một người tốt, nhưng thay vì cho tôi thời gian và không gian để làm công việc của tôi, ông ta liên tục ở trước mặt tôi, cố gắng <strong>kiểm soát từng chi tiết nhỏ</strong> tất cả mọi thứ. Nói thật, tôi muốn đập vào mặt ông ta bằng một cái chảo, nhưng tôi chỉ có cái dập ghim rởm trên bàn làm việc, vì vậy tôi đang cố gắng tìm cách làm thế nào để có thể <strong>dập ghim</strong> cái miệng của ông ta lại trước khi ông ta lại lượn lờ lần nữa.</em></span></p>
+              <p>I know he’s <strong>under a lot of pressure</strong>. He has to <strong>report</strong> to his boss, the same way I have to report to him… but he got up and started grilling me about a report that wasn’t even due for three weeks. I couldn’t believe it. My head started spinning and I’m pretty sure my eyes were bulging out of my head too.<br>
+              <span style="color:#7e8c8d"><em>Tôi biết ông ấy đang<strong> chịu rất nhiều áp lực</strong>. Ông ấy phải <strong>báo cáo</strong> với sếp của mình, theo cùng một cách tôi phải báo cáo với ông ta… nhưng ông ấy đã đứng dậy và bắt đầu tra tấn tôi về cái báo cáo chưa đến hạn trong ba tuần nữa. Tôi không thể tin được. Đầu tôi bắt đầu quay cuồng và tôi khá chắc chắn rằng mắt tôi cũng muốn nhảy ra khỏi đầu của tôi quá.</em></span></p>
+              <p><strong>I’ve never really thought about this before</strong>, but I know I need to make some <strong>sacrifices</strong> if I want to<strong> move up in the world</strong>. <strong>There’s no doubt</strong> in my mind that I can, or that I will. But one thing I <strong>know for sure</strong> is when I do? I want to be a friend to my colleagues, not a <strong>bossy</strong> one either. I really feel bad for the guy’s dog.<br>
+              <span style="color:#7e8c8d"><em><strong>Tôi chưa bao giờ thực sự nghĩ về điều này trước đây</strong>, nhưng tôi biết tôi cần phải <strong>hy sinh</strong> một chút nếu tôi muốn <strong>thăng tiến trong thế giới này</strong>. Trong tâm trí tôi <strong>không nghi ngờ gì</strong> là tôi có thể, tôi sẽ làm được, nhưng một điều tôi <strong>biết chắc chắn</strong> là khi tôi làm được, là gì? Tôi muốn là một người bạn với đồng nghiệp của tôi, không phải là một người bạn <strong>hách dịch.</strong> Tôi thực sự cảm thấy tội cho con chó của ông ta.</em></span></p>
+              <p><span style="color:#7e8c8d"><em>You son, are an idiot! – And you Sir, are an idiom!”</em></span><br>
+              <span style="color:#7e8c8d"><em>+ Đây là cách chơi chữ của người viết! Cả 2 từ “Idiom” và “Idiot” đều có gốc từ: Idios.</em></span><br>
+              <span style="color:#7e8c8d"><em>+ Ở đây ông nhân viên không dám chửi mắng thẳng ông sếp là “đồ ngốc” nên đã nói lái đi!</em></span></p>
+              </div>`
+                    },
+                    {
+                        title: `Topic 3 - Office Gossip, It_s Not All Bad`,
+                        audioLinkSlow: `assets/audio/LESSON 10 - WORK PLACE/Recording 10.5 - Slow Speech -Topic 3 - Office Gossip, It_s Not All Bad.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 10 - WORK PLACE/Recording 10.6 - Native Speech - Topic 3 - Office Gossip It_s Not All Bad.mp3`,
+                        data: `<div><p>Is it <strong>gossip</strong>, or <strong>authentic assessment</strong>?<br>
+              <span style="color:#7e8c8d"><em>Có phải đó là<strong> thị phi</strong>, hay sự <strong>đánh giá chân thực</strong>?</em></span></p>
+              <p>It’s true, no one likes a gossiper, but research shows that the <strong>rumor mill</strong> is a good place for passing out information, especially if the rumor mill is your place of work. “Informal communication” that can help spread information more quickly than formal channels of communications, like company e-mails or staff meetings, can be beneficial.<br>
+              <span style="color:#7e8c8d"><em>Đó là sự thật, không ai thích một người đưa chuyện, nhưng nghiên cứu cho thấy rằng <strong>phạm vi tin đồn</strong> là một nơi tốt để truyền thông tin, đặc biệt nếu phạm vi tin đồn là ở nơi làm việc của bạn. “Giao tiếp không chính thức” có thể giúp lan truyền thông tin nhanh hơn so với các kênh truyền thông chính thức, như e-mails công ty hoặc các cuộc họp nhân viên, nó có thể có lợi.</em></span></p>
+              <p>I’m sure everybody has experienced this first-hand: a manager makes an important announcement, only to find out that half the company already knew about it. More likely, many knew, even before he did!<br>
+              <span style="color:#7e8c8d"><em>Tôi chắc rằng tất cả mọi người đã trải qua chuyện này: một người quản lý đưa ra thông báo quan trọng, chỉ để biết rằng một nửa công ty đã biết về nó. Khả năng là đã có nhiều người biết, thậm chí trước cả ông ấy!</em></span></p>
+              <p>While gossip is <strong>frustrating</strong> and <strong>fraught</strong> with <strong>negative</strong> consequences, it’s also a sign of what companies care about. So yes, pay attention, but ALWAYS consider your source. Ask yourself: What is the motivation behind the information being given? Is it just a <strong>disgruntled</strong> co-worker who’s <strong>mean</strong>? Or, is the <strong>water cooler</strong> talk you’re hearing, a <strong>legendary</strong> story that offers valuable <strong>insight</strong> for <strong>navigating</strong> your life?<br>
+              <span style="color:#7e8c8d"><em>Mặc dù buôn chuyện<strong> gây khó chịu</strong> và <strong>đầy rẫy</strong> những hậu quả <strong>tiêu cực</strong>, đó cũng là dấu hiệu của điều mà công ty quan tâm. Vì vậy, đúng, hãy chú ý, nhưng phải luôn cân nhắc nguồn của bạn. Hãy tự hỏi: động lực đằng sau các thông tin được đưa ra là gì? Nó chỉ là một đồng nghiệp <strong>bất bình</strong> đang trở nên<strong> hẹp hòi</strong>? Hay là câu <strong>chuyện phiếm</strong> mà bạn đang nghe, lại là một câu chuyện <strong>huyền thoại</strong> cho bạn cái <strong>nhìn sâu sắc</strong> đáng giá để<strong> định hướng</strong> cuộc sống của mình?</em></span></p>
+              </div>`
+                    }
+                ]
+            },
+            {
+                case: `Day 3`,
+                title: `Phản xạ đa chiều - Introducing a Friend`,
+            },
+            {
+                case: `Day 4`,
+                title: `Phản xạ đa chiều - Where Do You Live?`,
+            },
+            {
+                case: `Day 5`,
+                title: `Phản xạ đa chiều - What is Your Job?`,
+            },
+            {
+                case: `Day 6`,
+                title: `Thử thách`,
+            }
+        ]
+    },
+    {
+        id: 11,
+        title: 'LESSON 11 - Life experience',
+        name: `Life experience`,
+        displayOrder: 11,
+        description: `MY NAME IS DAO DAO, this lesson is tell you about people.`,
+        openCollapse: true,
+        contents: [
+            {
+                case: `Day 1`,
+                title: `Nghe ngấm`,
+                content: [
+                    {
+                        title: `Topic 1 - Why Dont you Try Writing a Bucket List`,
+                        audioLinkSlow: `assets/audio/LESSON 11 - LIFE EXPERIENCE/Recording 11.1 - Slow Speech - Topic 1 - Why Dont you Try Writing a Bucket List.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 11 - LIFE EXPERIENCE/Recording 11.2 - Native Speech - Topic 1 - Why Don_t You Try Writing a Bucket List.mp3`,
+                        data: `<div><p>Terry advises Liz to write her own bucket list, which starts with singing in a local show.<br>
+              <span style="color:#7e8c8d"><em>Terry khuyên Liz viết ra danh sách việc muốn làm của chính cô ấy, bắt đầu bằng việc hát trong một chương trình địa phương.</em></span></p>
+              <p><strong>Liz:</strong> Ugh. Did you see Dave’s pictures from India?<strong> I’m so jealous!</strong><br>
+              <span style="color:#7e8c8d"><em><strong>Liz:</strong> Ugh. Cậu có thấy ảnh của Dave ở Ấn Độ không? <strong>Tôi thật ghen tị!</strong></em></span></p>
+              <p><strong>Terry:</strong> Don’t be jealous, <strong>you’ve also done lots of cool stuff.</strong><br>
+              <span style="color:#7e8c8d"><em><strong>Terry:</strong> Đừng có ghen tị, <strong>cậu đã làm được rất nhiều việc hay ho.</strong></em></span></p>
+              <p><strong>Liz:</strong> I wish.<strong> The most interesting place I’ve ever been is…</strong> work.<br>
+              <span style="color:#7e8c8d"><em><strong>Liz:</strong> Giá mà được như vậy. <strong>Nơi thú vị nhất tôi từng đến là…</strong> chỗ làm.</em></span></p>
+              <p><strong>Terry:</strong> Well, <strong>if you want to</strong> do more interesting things,<strong> you should</strong> make a bucket list.<strong> That way</strong> you can keep track of your goals.<br>
+              <span style="color:#7e8c8d"><em><strong>Terry:</strong> Xem nào, <strong>nếu cậu muốn</strong> làm những điều thú vị hơn, <strong>cậu nên</strong> tạo một danh sách việc muốn làm, <strong>bằng cách đó</strong> cậu có thể theo dõi các mục tiêu của mình.</em></span></p>
+              <p><strong>Liz:</strong> A bucket list? Like a list of things I want to do?<br>
+              <span style="color:#7e8c8d"><em><strong>Liz:</strong> Một danh sách việc muốn làm? Giống như một danh sách viết ra những điều tôi muốn làm?</em></span></p>
+              <p><strong>Terry:</strong> Exactly. I’ve felt way more <strong>fulfilled</strong> since I started writing my goals down.<br>
+              <span style="color:#7e8c8d"><em><strong>Terry:</strong> Chính xác. Tôi cảm thấy<strong> thỏa mãn</strong> hơn mỗi ngày khi tôi bắt đầu ghi lại mục tiêu của mình.</em></span></p>
+              <p><strong>Liz:</strong> That’s an <strong>interesting idea</strong>. How has it changed you?<br>
+              <span style="color:#7e8c8d"><em><strong>Liz:</strong> Đó là một <strong>ý tưởng thú vị</strong>. Nó đã thay đổi cậu như thế nào?</em></span></p>
+              <p><strong>Terry:</strong> <strong>For one thing, I’ve wasted less time.</strong> I knew that I wanted to write a book, so I worked harder on that goal. Do you have any big goals like that?<br>
+              <span style="color:#7e8c8d"><em><strong>Terry:</strong> <strong>Trước hết, tôi lãng phí thời gian ít hơn</strong>. Tôi biết rằng tôi muốn viết một cuốn sách, vì vậy tôi đã làm việc chăm chỉ hơn với mục tiêu đó. Cậu có mục tiêu nào lớn như vậy không?</em></span></p>
+              <p><strong>Liz:</strong> My<strong> biggest goal</strong> is to become the most famous singer in the world!<br>
+              <span style="color:#7e8c8d"><em><strong>Liz:</strong> <strong>Mục tiêu lớn nhất</strong> của tôi là trở thành ca sĩ nổi tiếng nhất trên thế giới!</em></span></p>
+              <p><strong>Terry:</strong> Hmm… If<strong> I were you</strong>, I would start with <strong>a slightly smaller</strong> goal. For example, have you ever sung in front of anyone before?<br>
+              <span style="color:#7e8c8d"><em><strong>Terry:</strong> Hmm… <strong>Nếu tôi là cậu</strong>, tôi sẽ bắt đầu với mục tiêu <strong>nhỏ hơn một chút</strong>. Ví dụ, bạn đã bao giờ hát trước ai chưa?</em></span></p>
+              <p><strong>Liz:</strong> Not yet.<br>
+              <span style="color:#7e8c8d"><em><strong>Liz:</strong> Chưa.</em></span></p>
+              <p><strong>Terry:</strong> So <strong>maybe you can try</strong> to sing in a local show first. But <strong>the most important thing</strong> to do is to work on your goal a little bit every day.<br>
+              <span style="color:#7e8c8d"><em><strong>Terry:</strong> Vậy <strong>có lẽ cậu có thể cố gắng</strong> hát trong một buổi diễn ở địa phương trước. Nhưng<strong> điều quan trọng nhất</strong> cần làm là làm việc vì mục tiêu của cậu một chút mỗi ngày.</em></span></p>
+              <p><strong>Liz:</strong> Ugh, but <strong>that’s not as exciting as</strong> being<strong> the most famous singer</strong> in the world!<br>
+              <span style="color:#7e8c8d"><em><strong>Liz:</strong> Ugh, nhưng<strong> điều đó không thú vị như</strong> việc trở thành <strong>ca sĩ nổi tiếng nhất</strong> trên thế giới!</em></span></p>
+              <p><strong>Terry:</strong> You’re right, but<strong> it’s always good to </strong>start small, right?<br>
+              <span style="color:#7e8c8d"><em><strong>Terry:</strong> Cậu nói đúng, nhưng bắt đầu từ việc nhỏ <strong>lúc nào cũng tốt</strong> , phải không?</em></span></p>
+              <p><strong>Liz:</strong> I guess you’re right. OK, do you want to hear me sing?<br>
+              <span style="color:#7e8c8d"><em><strong>Liz:</strong> Tôi đoán là cậu nói đúng. Được rồi, cậu có muốn nghe tôi hát không?</em></span></p>
+              <p><strong>Terry:</strong> Um…<br>
+              <span style="color:#7e8c8d"><em><strong>Terry:</strong> Ừm…</em></span></p>
+              </div>`
+                    },
+                    {
+                        title: `Topic 2 - The Most Unforgettable Summer`,
+                        audioLinkSlow: `assets/audio/LESSON 11 - LIFE EXPERIENCE/Recording 11.3 - Slow Speech - Topic 2 - The Most Unforgettable Summer.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 11 - LIFE EXPERIENCE/Recording 11.4 - Native Speech- Topic 2 - The Most Unforgettable Summer.mp3`,
+                        data: `<div><p>All of my friends are<strong> more adventurous than</strong> I am, so even though <strong>I’d like</strong> to <strong>travel with them</strong> this summer, I’m going to stay home.<br>
+              <span style="color:#7e8c8d"><em>Tất cả bạn bè của tôi đều <strong>thích phiêu lưu hơn</strong> tôi, vì vậy, mặc dù <strong>tôi rất muốn đi du lịch</strong> với họ vào mùa hè này, nhưng tôi sẽ lại ở nhà.</em></span></p>
+              <p><strong>Ideally</strong>, <strong>what I’d like to do</strong> is helping other people, so I’m <strong>volunteering</strong> at an old folks’ home.<br>
+              <span style="color:#7e8c8d"><em><strong>Lý tưởng nhất</strong>, <strong>điều tôi muốn làm là</strong> giúp đỡ người khác, vì vậy tôi đi<strong> tình nguyện</strong> ở một nhà dưỡng lão.</em></span></p>
+              <p>So far, this summer has been <strong>the most unforgettable experience of my life</strong>.<br>
+              <span style="color:#7e8c8d"><em>Cho đến nay, mùa hè này là <strong>trải nghiệm khó quên nhất trong cuộc đời tôi.</strong></em></span></p>
+              <p>At first I just visited once a week, but<strong> spending time</strong> with the elderly was <strong>the most interesting thing I had ever done</strong>, so I <strong>wound up</strong> going every day!<br>
+              <span style="color:#7e8c8d"><em>Lúc đầu, tôi chỉ đến một lần một tuần, nhưng <strong>dành thời gian</strong> với người cao tuổi là <strong>điều thú vị nhất tôi từng làm</strong>, vì vậy tôi <strong>rốt cục là</strong> ngày nào cũng đến!</em></span></p>
+              <p><strong>I had been longing for</strong> a meaningful experience, and I finally found it there.<br>
+              <span style="color:#7e8c8d"><em><strong>Tôi đang khao khát</strong> <strong>có</strong> một trải nghiệm có ý nghĩa, và tôi cuối cùng đã tìm thấy ở đây.</em></span></p>
+              <p><strong>What I really loved about going there was</strong> talking about all sorts of things with the people I met.<br>
+              <span style="color:#7e8c8d"><em><strong>Điều tôi thực sự thích khi đến đây là</strong> được nói chuyện về tất cả mọi thứ với những người tôi đã gặp ở đây.</em></span></p>
+              <p>Some had traveled a lot and others had spent their whole lives in my little town. Even so, all of them had gone on such incredible <strong>journeys</strong>, which included: <strong>raising</strong> kids, learning skills, and overcoming challenges.<br>
+              <span style="color:#7e8c8d"><em>Một số người đã đi du lịch rất nhiều và những người khác thì dành toàn bộ cuộc đời của họ ở thị trấn nhỏ của tôi, nhưng tất cả bọn họ đã trải qua <strong>những chặng đường</strong> tuyệt vời như <strong>nuôi nấng</strong> con trẻ, học hỏi kỹ năng và vượt qua những thách thức.</em></span></p>
+              <p>To be honest, I’ve traveled to the farmost corners of the world and been on the most incredible journeys, through the stories that my friends have told me, both young and old. It’s both peaceful and fulfilling and I wouldn’t trade it for anything, neither would my friends because they know I’ll always be here for them when they return…<br>
+              <span style="color:#7e8c8d"><em>Thật lòng mà nói, tôi đã được đi du lịch đến các góc xa nhất của thế giới và đã trải qua những hành trình kỳ diệu nhất, thông qua những câu chuyện mà những người bạn ấy đã kể cho tôi, cả người già và người trẻ. Điều đó thật bình yên và thỏa mãn và tôi sẽ không đánh đổi nó cho bất cứ điều gì, các bạn của tôi cũng sẽ như vậy bởi vì họ biết tôi sẽ luôn luôn ở đây vì họ khi họ trở về…</em></span></p>
+              </div>`
+                    },
+                    {
+                        title: `Topic 3 - What is a Gap Year`,
+                        audioLinkSlow: `assets/audio/LESSON 11 - LIFE EXPERIENCE/Recording 11.5 - Slow Speech - Topic 3 - What is a Gap Year.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 11 - LIFE EXPERIENCE/Recording 11.6 - Native Speech - Topic 3 - What is A Gap Year.mp3`,
+                        data: `<div><p>Excited, but afraid to go to college because you’ve spent the last four years sleeping through classes?<br>
+              <span style="color:#7e8c8d"><em>Bạn háo hức, nhưng lại sợ đi học đại học bởi vì bạn đã dành bốn năm qua để ngủ ở các lớp học?</em></span></p>
+              <p>You’re not alone.<br>
+              <span style="color:#7e8c8d"><em>Không phải chỉ mình bạn đâu.</em></span></p>
+              <p>Everyone sleeps through classes, especially during senior year. Dreaming of lazy, hot summer days filled with friends, romance and tiny parasols garnishing your virgin banana daiquiri glass. There’s still time to fill in the gap!<br>
+              <span style="color:#7e8c8d"><em>Tất cả mọi người ai cũng ngủ trong các lớp học, đặc biệt là năm cuối cấp. Mộng mơ về những ngày hè nóng nực lười biếng, được lấp đầy bởi những người bạn, sự lãng mạn và những chiếc ô che nắng nhỏ bên cạnh ly cốc-tai chuối virgin daiquiri, vẫn còn thời gian để bạn lấp đầy khoảng trống đó!</em></span></p>
+              <p>Each year, in fact, more and more students are <strong>taking a year off</strong> between high school and college to enjoy a “<strong>gap year</strong>,” and you can too!<br>
+              <span style="color:#7e8c8d"><em>Mỗi năm, trong thực tế, ngày càng có nhiều học sinh đang <strong>nghỉ học một năm</strong> giữa trung học và đại học để tận hưởng một “<strong>năm học thứ mười ba</strong>“, và bạn cũng có thể!</em></span></p>
+              <p>To be honest, the world needs you, your dreams, your crazy imagination, your curiosity and your creative ideas. The world needs more artists and poets, who don’t know it.<br>
+              <span style="color:#7e8c8d"><em>Nói thật, thế giới cần bạn, cần ước mơ, trí tưởng tượng điên rồ, sự tò mò và những ý tưởng sáng tạo của bạn. Thế giới cần có thêm những nghệ sĩ và nhà thơ, những người không biết điều này.</em></span></p>
+              <p>Yes, college can wait, even your parents can wait, but the world cannot.<br>
+              <span style="color:#7e8c8d"><em>Đúng vậy, trường đại học có thể chờ đợi, thậm chí cha mẹ của bạn có thể chờ đợi, nhưng thế giới thì không thể.</em></span></p>
+              <p>See the world NOW, while you’re still young, beautiful and determined to make a difference.<br>
+              <span style="color:#7e8c8d"><em>Hãy đi ra thế giới NGAY BÂY GIỜ, trong khi bạn đang còn trẻ, đẹp và quyết tâm tạo nên sự khác biệt.</em></span></p>
+              <p>We all want to make a difference and feel like we belong. We all want to give our lives meaning. Don’t be afraid to <strong>venture</strong> into the unknown or explore the landscape of your imagination.<br>
+              <span style="color:#7e8c8d"><em>Tất cả chúng ta đều muốn tạo nên sự khác biệt và cảm thấy chúng ta thuộc về cái gì đó. Tất cả chúng ta đều muốn làm cho cuộc sống của mình có ý nghĩa. Đừng ngại <strong>phiêu lưu</strong> đến những nơi chưa từng ai biết hoặc khám phá thế giới tưởng tượng của chính bạn.</em></span></p>
+              <p>As exciting as a year off before college may sound, there are several important <strong>questions to ask yourself</strong> before<strong> pulling the trigger:</strong><br>
+              <span style="color:#7e8c8d"><em>Dù một năm nghỉ ngơi trước đại học nghe có thú vị đến đâu, có một số <strong>câu hỏi quan trọng để bạn tự hỏi mình</strong> trước khi <strong>“kéo cò súng”(chốt quyết định)</strong> :</em></span></p>
+              <p>● Will you independently design your gap year or use a professional service?<br>
+              <span style="color:#7e8c8d"><em>● Bạn sẽ tự thiết kế “năm học thứ mười ba” của mình hay sử dụng một dịch vụ chuyên nghiệp?</em></span></p>
+              <p>● Have you already been accepted by a college, or will you apply during/after your gap year?<br>
+              <span style="color:#7e8c8d"><em>● Bạn đã được trường đại học nào chấp nhận chưa, hay bạn sẽ đăng ký trong /sau “năm học thứ mười ba” của bạn?</em></span></p>
+              <p>● Can you earn college credits for your gap year?<br>
+              <span style="color:#7e8c8d"><em>● Bạn có thể tìm được tín chỉ đại học cho năm học thứ mười ba của bạn không?</em></span></p>
+              <p><strong>Here’s to</strong> minding the gap and to making a difference. It matters because YOU matter. You are the difference!<br>
+              <span style="color:#7e8c8d"><em><strong>Trên đây là</strong> những lưu ý để bạn chú ý trong năm này và tạo sự khác biệt. Nó quan trọng bởi vì bạn quan trọng. Bạn là sự khác biệt!</em></span></p>
+              <p>P.S. Don’t tell your parents I said they can wait!<br>
+              <span style="color:#7e8c8d"><em>PS: Đừng kể cho cha mẹ bạn rằng tôi nói họ có thể chờ đợi nhé!</em></span></p>
+              </div>`
+                    }
+                ]
+            },
+            {
+                case: `Day 2`,
+                title: `Nói đuổi`,
+                content: [
+                    {
+                        title: `Topic 1 - Why Dont you Try Writing a Bucket List`,
+                        audioLinkSlow: `assets/audio/LESSON 11 - LIFE EXPERIENCE/Recording 11.1 - Slow Speech - Topic 1 - Why Dont you Try Writing a Bucket List.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 11 - LIFE EXPERIENCE/Recording 11.2 - Native Speech - Topic 1 - Why Don_t You Try Writing a Bucket List.mp3`,
+                        data: `<div><p>Terry advises Liz to write her own bucket list, which starts with singing in a local show.<br>
+              <span style="color:#7e8c8d"><em>Terry khuyên Liz viết ra danh sách việc muốn làm của chính cô ấy, bắt đầu bằng việc hát trong một chương trình địa phương.</em></span></p>
+              <p><strong>Liz:</strong> Ugh. Did you see Dave’s pictures from India?<strong> I’m so jealous!</strong><br>
+              <span style="color:#7e8c8d"><em><strong>Liz:</strong> Ugh. Cậu có thấy ảnh của Dave ở Ấn Độ không? <strong>Tôi thật ghen tị!</strong></em></span></p>
+              <p><strong>Terry:</strong> Don’t be jealous, <strong>you’ve also done lots of cool stuff.</strong><br>
+              <span style="color:#7e8c8d"><em><strong>Terry:</strong> Đừng có ghen tị, <strong>cậu đã làm được rất nhiều việc hay ho.</strong></em></span></p>
+              <p><strong>Liz:</strong> I wish.<strong> The most interesting place I’ve ever been is…</strong> work.<br>
+              <span style="color:#7e8c8d"><em><strong>Liz:</strong> Giá mà được như vậy. <strong>Nơi thú vị nhất tôi từng đến là…</strong> chỗ làm.</em></span></p>
+              <p><strong>Terry:</strong> Well, <strong>if you want to</strong> do more interesting things,<strong> you should</strong> make a bucket list.<strong> That way</strong> you can keep track of your goals.<br>
+              <span style="color:#7e8c8d"><em><strong>Terry:</strong> Xem nào, <strong>nếu cậu muốn</strong> làm những điều thú vị hơn, <strong>cậu nên</strong> tạo một danh sách việc muốn làm, <strong>bằng cách đó</strong> cậu có thể theo dõi các mục tiêu của mình.</em></span></p>
+              <p><strong>Liz:</strong> A bucket list? Like a list of things I want to do?<br>
+              <span style="color:#7e8c8d"><em><strong>Liz:</strong> Một danh sách việc muốn làm? Giống như một danh sách viết ra những điều tôi muốn làm?</em></span></p>
+              <p><strong>Terry:</strong> Exactly. I’ve felt way more <strong>fulfilled</strong> since I started writing my goals down.<br>
+              <span style="color:#7e8c8d"><em><strong>Terry:</strong> Chính xác. Tôi cảm thấy<strong> thỏa mãn</strong> hơn mỗi ngày khi tôi bắt đầu ghi lại mục tiêu của mình.</em></span></p>
+              <p><strong>Liz:</strong> That’s an <strong>interesting idea</strong>. How has it changed you?<br>
+              <span style="color:#7e8c8d"><em><strong>Liz:</strong> Đó là một <strong>ý tưởng thú vị</strong>. Nó đã thay đổi cậu như thế nào?</em></span></p>
+              <p><strong>Terry:</strong> <strong>For one thing, I’ve wasted less time.</strong> I knew that I wanted to write a book, so I worked harder on that goal. Do you have any big goals like that?<br>
+              <span style="color:#7e8c8d"><em><strong>Terry:</strong> <strong>Trước hết, tôi lãng phí thời gian ít hơn</strong>. Tôi biết rằng tôi muốn viết một cuốn sách, vì vậy tôi đã làm việc chăm chỉ hơn với mục tiêu đó. Cậu có mục tiêu nào lớn như vậy không?</em></span></p>
+              <p><strong>Liz:</strong> My<strong> biggest goal</strong> is to become the most famous singer in the world!<br>
+              <span style="color:#7e8c8d"><em><strong>Liz:</strong> <strong>Mục tiêu lớn nhất</strong> của tôi là trở thành ca sĩ nổi tiếng nhất trên thế giới!</em></span></p>
+              <p><strong>Terry:</strong> Hmm… If<strong> I were you</strong>, I would start with <strong>a slightly smaller</strong> goal. For example, have you ever sung in front of anyone before?<br>
+              <span style="color:#7e8c8d"><em><strong>Terry:</strong> Hmm… <strong>Nếu tôi là cậu</strong>, tôi sẽ bắt đầu với mục tiêu <strong>nhỏ hơn một chút</strong>. Ví dụ, bạn đã bao giờ hát trước ai chưa?</em></span></p>
+              <p><strong>Liz:</strong> Not yet.<br>
+              <span style="color:#7e8c8d"><em><strong>Liz:</strong> Chưa.</em></span></p>
+              <p><strong>Terry:</strong> So <strong>maybe you can try</strong> to sing in a local show first. But <strong>the most important thing</strong> to do is to work on your goal a little bit every day.<br>
+              <span style="color:#7e8c8d"><em><strong>Terry:</strong> Vậy <strong>có lẽ cậu có thể cố gắng</strong> hát trong một buổi diễn ở địa phương trước. Nhưng<strong> điều quan trọng nhất</strong> cần làm là làm việc vì mục tiêu của cậu một chút mỗi ngày.</em></span></p>
+              <p><strong>Liz:</strong> Ugh, but <strong>that’s not as exciting as</strong> being<strong> the most famous singer</strong> in the world!<br>
+              <span style="color:#7e8c8d"><em><strong>Liz:</strong> Ugh, nhưng<strong> điều đó không thú vị như</strong> việc trở thành <strong>ca sĩ nổi tiếng nhất</strong> trên thế giới!</em></span></p>
+              <p><strong>Terry:</strong> You’re right, but<strong> it’s always good to </strong>start small, right?<br>
+              <span style="color:#7e8c8d"><em><strong>Terry:</strong> Cậu nói đúng, nhưng bắt đầu từ việc nhỏ <strong>lúc nào cũng tốt</strong> , phải không?</em></span></p>
+              <p><strong>Liz:</strong> I guess you’re right. OK, do you want to hear me sing?<br>
+              <span style="color:#7e8c8d"><em><strong>Liz:</strong> Tôi đoán là cậu nói đúng. Được rồi, cậu có muốn nghe tôi hát không?</em></span></p>
+              <p><strong>Terry:</strong> Um…<br>
+              <span style="color:#7e8c8d"><em><strong>Terry:</strong> Ừm…</em></span></p>
+              </div>`
+                    },
+                    {
+                        title: `Topic 2 - The Most Unforgettable Summer`,
+                        audioLinkSlow: `assets/audio/LESSON 11 - LIFE EXPERIENCE/Recording 11.3 - Slow Speech - Topic 2 - The Most Unforgettable Summer.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 11 - LIFE EXPERIENCE/Recording 11.4 - Native Speech- Topic 2 - The Most Unforgettable Summer.mp3`,
+                        data: `<div><p>All of my friends are<strong> more adventurous than</strong> I am, so even though <strong>I’d like</strong> to <strong>travel with them</strong> this summer, I’m going to stay home.<br>
+              <span style="color:#7e8c8d"><em>Tất cả bạn bè của tôi đều <strong>thích phiêu lưu hơn</strong> tôi, vì vậy, mặc dù <strong>tôi rất muốn đi du lịch</strong> với họ vào mùa hè này, nhưng tôi sẽ lại ở nhà.</em></span></p>
+              <p><strong>Ideally</strong>, <strong>what I’d like to do</strong> is helping other people, so I’m <strong>volunteering</strong> at an old folks’ home.<br>
+              <span style="color:#7e8c8d"><em><strong>Lý tưởng nhất</strong>, <strong>điều tôi muốn làm là</strong> giúp đỡ người khác, vì vậy tôi đi<strong> tình nguyện</strong> ở một nhà dưỡng lão.</em></span></p>
+              <p>So far, this summer has been <strong>the most unforgettable experience of my life</strong>.<br>
+              <span style="color:#7e8c8d"><em>Cho đến nay, mùa hè này là <strong>trải nghiệm khó quên nhất trong cuộc đời tôi.</strong></em></span></p>
+              <p>At first I just visited once a week, but<strong> spending time</strong> with the elderly was <strong>the most interesting thing I had ever done</strong>, so I <strong>wound up</strong> going every day!<br>
+              <span style="color:#7e8c8d"><em>Lúc đầu, tôi chỉ đến một lần một tuần, nhưng <strong>dành thời gian</strong> với người cao tuổi là <strong>điều thú vị nhất tôi từng làm</strong>, vì vậy tôi <strong>rốt cục là</strong> ngày nào cũng đến!</em></span></p>
+              <p><strong>I had been longing for</strong> a meaningful experience, and I finally found it there.<br>
+              <span style="color:#7e8c8d"><em><strong>Tôi đang khao khát</strong> <strong>có</strong> một trải nghiệm có ý nghĩa, và tôi cuối cùng đã tìm thấy ở đây.</em></span></p>
+              <p><strong>What I really loved about going there was</strong> talking about all sorts of things with the people I met.<br>
+              <span style="color:#7e8c8d"><em><strong>Điều tôi thực sự thích khi đến đây là</strong> được nói chuyện về tất cả mọi thứ với những người tôi đã gặp ở đây.</em></span></p>
+              <p>Some had traveled a lot and others had spent their whole lives in my little town. Even so, all of them had gone on such incredible <strong>journeys</strong>, which included: <strong>raising</strong> kids, learning skills, and overcoming challenges.<br>
+              <span style="color:#7e8c8d"><em>Một số người đã đi du lịch rất nhiều và những người khác thì dành toàn bộ cuộc đời của họ ở thị trấn nhỏ của tôi, nhưng tất cả bọn họ đã trải qua <strong>những chặng đường</strong> tuyệt vời như <strong>nuôi nấng</strong> con trẻ, học hỏi kỹ năng và vượt qua những thách thức.</em></span></p>
+              <p>To be honest, I’ve traveled to the farmost corners of the world and been on the most incredible journeys, through the stories that my friends have told me, both young and old. It’s both peaceful and fulfilling and I wouldn’t trade it for anything, neither would my friends because they know I’ll always be here for them when they return…<br>
+              <span style="color:#7e8c8d"><em>Thật lòng mà nói, tôi đã được đi du lịch đến các góc xa nhất của thế giới và đã trải qua những hành trình kỳ diệu nhất, thông qua những câu chuyện mà những người bạn ấy đã kể cho tôi, cả người già và người trẻ. Điều đó thật bình yên và thỏa mãn và tôi sẽ không đánh đổi nó cho bất cứ điều gì, các bạn của tôi cũng sẽ như vậy bởi vì họ biết tôi sẽ luôn luôn ở đây vì họ khi họ trở về…</em></span></p>
+              </div>`
+                    },
+                    {
+                        title: `Topic 3 - What is a Gap Year`,
+                        audioLinkSlow: `assets/audio/LESSON 11 - LIFE EXPERIENCE/Recording 11.5 - Slow Speech - Topic 3 - What is a Gap Year.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 11 - LIFE EXPERIENCE/Recording 11.6 - Native Speech - Topic 3 - What is A Gap Year.mp3`,
+                        data: `<div><p>Excited, but afraid to go to college because you’ve spent the last four years sleeping through classes?<br>
+              <span style="color:#7e8c8d"><em>Bạn háo hức, nhưng lại sợ đi học đại học bởi vì bạn đã dành bốn năm qua để ngủ ở các lớp học?</em></span></p>
+              <p>You’re not alone.<br>
+              <span style="color:#7e8c8d"><em>Không phải chỉ mình bạn đâu.</em></span></p>
+              <p>Everyone sleeps through classes, especially during senior year. Dreaming of lazy, hot summer days filled with friends, romance and tiny parasols garnishing your virgin banana daiquiri glass. There’s still time to fill in the gap!<br>
+              <span style="color:#7e8c8d"><em>Tất cả mọi người ai cũng ngủ trong các lớp học, đặc biệt là năm cuối cấp. Mộng mơ về những ngày hè nóng nực lười biếng, được lấp đầy bởi những người bạn, sự lãng mạn và những chiếc ô che nắng nhỏ bên cạnh ly cốc-tai chuối virgin daiquiri, vẫn còn thời gian để bạn lấp đầy khoảng trống đó!</em></span></p>
+              <p>Each year, in fact, more and more students are <strong>taking a year off</strong> between high school and college to enjoy a “<strong>gap year</strong>,” and you can too!<br>
+              <span style="color:#7e8c8d"><em>Mỗi năm, trong thực tế, ngày càng có nhiều học sinh đang <strong>nghỉ học một năm</strong> giữa trung học và đại học để tận hưởng một “<strong>năm học thứ mười ba</strong>“, và bạn cũng có thể!</em></span></p>
+              <p>To be honest, the world needs you, your dreams, your crazy imagination, your curiosity and your creative ideas. The world needs more artists and poets, who don’t know it.<br>
+              <span style="color:#7e8c8d"><em>Nói thật, thế giới cần bạn, cần ước mơ, trí tưởng tượng điên rồ, sự tò mò và những ý tưởng sáng tạo của bạn. Thế giới cần có thêm những nghệ sĩ và nhà thơ, những người không biết điều này.</em></span></p>
+              <p>Yes, college can wait, even your parents can wait, but the world cannot.<br>
+              <span style="color:#7e8c8d"><em>Đúng vậy, trường đại học có thể chờ đợi, thậm chí cha mẹ của bạn có thể chờ đợi, nhưng thế giới thì không thể.</em></span></p>
+              <p>See the world NOW, while you’re still young, beautiful and determined to make a difference.<br>
+              <span style="color:#7e8c8d"><em>Hãy đi ra thế giới NGAY BÂY GIỜ, trong khi bạn đang còn trẻ, đẹp và quyết tâm tạo nên sự khác biệt.</em></span></p>
+              <p>We all want to make a difference and feel like we belong. We all want to give our lives meaning. Don’t be afraid to <strong>venture</strong> into the unknown or explore the landscape of your imagination.<br>
+              <span style="color:#7e8c8d"><em>Tất cả chúng ta đều muốn tạo nên sự khác biệt và cảm thấy chúng ta thuộc về cái gì đó. Tất cả chúng ta đều muốn làm cho cuộc sống của mình có ý nghĩa. Đừng ngại <strong>phiêu lưu</strong> đến những nơi chưa từng ai biết hoặc khám phá thế giới tưởng tượng của chính bạn.</em></span></p>
+              <p>As exciting as a year off before college may sound, there are several important <strong>questions to ask yourself</strong> before<strong> pulling the trigger:</strong><br>
+              <span style="color:#7e8c8d"><em>Dù một năm nghỉ ngơi trước đại học nghe có thú vị đến đâu, có một số <strong>câu hỏi quan trọng để bạn tự hỏi mình</strong> trước khi <strong>“kéo cò súng”(chốt quyết định)</strong> :</em></span></p>
+              <p>● Will you independently design your gap year or use a professional service?<br>
+              <span style="color:#7e8c8d"><em>● Bạn sẽ tự thiết kế “năm học thứ mười ba” của mình hay sử dụng một dịch vụ chuyên nghiệp?</em></span></p>
+              <p>● Have you already been accepted by a college, or will you apply during/after your gap year?<br>
+              <span style="color:#7e8c8d"><em>● Bạn đã được trường đại học nào chấp nhận chưa, hay bạn sẽ đăng ký trong /sau “năm học thứ mười ba” của bạn?</em></span></p>
+              <p>● Can you earn college credits for your gap year?<br>
+              <span style="color:#7e8c8d"><em>● Bạn có thể tìm được tín chỉ đại học cho năm học thứ mười ba của bạn không?</em></span></p>
+              <p><strong>Here’s to</strong> minding the gap and to making a difference. It matters because YOU matter. You are the difference!<br>
+              <span style="color:#7e8c8d"><em><strong>Trên đây là</strong> những lưu ý để bạn chú ý trong năm này và tạo sự khác biệt. Nó quan trọng bởi vì bạn quan trọng. Bạn là sự khác biệt!</em></span></p>
+              <p>P.S. Don’t tell your parents I said they can wait!<br>
+              <span style="color:#7e8c8d"><em>PS: Đừng kể cho cha mẹ bạn rằng tôi nói họ có thể chờ đợi nhé!</em></span></p>
+              </div>`
+                    }
+                ]
+            },
+            {
+                case: `Day 3`,
+                title: `Phản xạ đa chiều - Introducing a Friend`,
+            },
+            {
+                case: `Day 4`,
+                title: `Phản xạ đa chiều - Where Do You Live?`,
+            },
+            {
+                case: `Day 5`,
+                title: `Phản xạ đa chiều - What is Your Job?`,
+            },
+            {
+                case: `Day 6`,
+                title: `Thử thách`,
+            }
+        ]
+    },
+    {
+        id: 12,
+        title: 'LESSON 12 - Future goal',
+        name: `Future goal`,
+        displayOrder: 12,
+        description: `MY NAME IS DAO DAO, this lesson is tell you about people.`,
+        openCollapse: true,
+        contents: [
+            {
+                case: `Day 1`,
+                title: `Nghe ngấm`,
+                content: [
+                    {
+                        title: `Topic 1: The Triathlete`,
+                        audioLinkSlow: `assets/audio/LESSON 12 - FUTURE GOAL/Recording 12.1 - Slow Speech - Topic 1 - What is A Gap Year.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 12 - FUTURE GOAL/Recording 12.2 - Native Speech - Topic 1 - What Are You Planning.mp3`,
+                        data: `<div><p>A student shares his long and short-term goals with his professor, about his plans to graduate and his plans for the future.<br>
+              <span style="color:#7e8c8d"><em>Một sinh viên chia sẻ mục tiêu dài và ngắn hạn của mình với giảng viên của anh ấy, về kế hoạch tốt nghiệp và kế hoạch cho tương lai.</em></span></p>
+              <p><strong>Student:</strong> Excuse me, sir … Sir? Excuse me.<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> Xin lỗi, thưa thầy… Thưa thầy? Xin lỗi.</em></span></p>
+              <p><strong>Professor:</strong> Oh, sorry, Paul. I didn’t hear you. I’m reading about anti-gravity and… well, it’s really hard to put it down. What can I help you with?<br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Oh, xin lỗi, Paul. Tôi không nghe thấy em. Tôi đang đọc về chống trọng lực và… thực là khó có thể đặt nó xuống. Tôi có thể giúp gì cho em?</em></span></p>
+              <p><strong>Student:</strong> <strong>I’d like to ask you some questions and get your opinion about</strong> my final research project.<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> <strong>Em muốn hỏi thầy một số câu hỏi và xin ý kiến của thầy về</strong> bài nghiên cứu cuối cùng của em.</em></span></p>
+              <p><strong>Professor:</strong> Okay. Have you <strong>decided</strong> what you’re doing it on yet?<br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Được thôi. Em đã <strong>quyết định</strong> chủ đề em làm chưa?</em></span></p>
+              <p><strong>Student:</strong> To be honest, Professor, <strong>I’m torn between doing something on</strong> the <strong>banking industry</strong> or the <strong>hospitality industry</strong>.<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> Thực ra, thưa thầy, <strong>em đang bị giằng xé giữa làm một việc gì đó về ngành ngân hàng</strong> hay làm một việc gì đó trong <strong>ngành khách sạn.</strong></em></span></p>
+              <p><strong>Professor:</strong> Oh? Well, those are two very different things.<strong> Have you thought about</strong> your long and short-term goals?<br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Hả? Đó là hai việc rất khác nhau. <strong>Em đã nghĩ về</strong> mục tiêu dài và ngắn hạn của mình chưa?</em></span></p>
+              <p><strong>Student:</strong> Well, <strong>my short-term goal</strong> is to work at a bank and go to graduate school, but long-term, I want to open up my own hotel.<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> Vâng,<strong> mục tiêu ngắn hạn</strong> của em là làm việc tại một ngân hàng và đi học sau đại học, nhưng về lâu dài, em muốn mở khách sạn riêng.</em></span></p>
+              <p><strong>Professor:</strong> What do you want to study in<strong> graduate school</strong>?<br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Em muốn theo học ngành gì ở <strong>trường sau đại học</strong>?</em></span></p>
+              <p><strong>Student:</strong> <strong>Hospitality Management</strong>, of course.<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> <strong>Quản lý khách sạn</strong>, tất nhiên rồi.</em></span></p>
+              <p><strong>Professor:</strong> Of course… Why do you wanna work at a bank?<br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Tất nhiên rồi… Sao em lại muốn làm việc ở một ngân hàng?</em></span></p>
+              <p><strong>Student:</strong> I can learn how to save money.<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> Em có thể học cách tiết kiệm tiền.</em></span></p>
+              <p><strong>Professor:</strong> Hmm, you wanna work at a bank to learn how to save money… <strong>How do you plan on</strong> paying for grad school?<br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Hmm, em muốn làm việc tại một ngân hàng để học cách tiết kiệm tiền… <strong>Em định lên kế hoạch về việc</strong> trả tiền cho trường sau đại học<strong> như thế nào</strong>?</em></span></p>
+              <p><strong>Student:</strong> Uhhh, I hadn’t thought about that… I guess I’ll have to <strong>take out</strong> some loans.<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> Dạ, em chưa nghĩ về điều đó… Em đoán em sẽ phải <strong>gánh</strong> một vài khoản vay.</em></span></p>
+              <p><strong>Professor:</strong> You want to work at a bank to save some money, to eventually go to graduate school, where you’ll study Hospitality Management, your <strong>ultimate goal</strong>.<br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Em muốn làm việc tại một ngân hàng để tiết kiệm một số tiền, để có thể trang trải – và đi học sau đại học – nơi em sẽ học ngành quản lý khách sạn, chính là <strong>mục tiêu cuối cùng</strong> của em.</em></span></p>
+              <p><strong>Student:</strong> Exactly!<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> Chính xác!</em></span></p>
+              <p><strong>Professor:</strong> So what if you look for a job in the hospitality industry, instead? The starting pay will be comparable to that of a bank. You can learn how to save money that way, and use the bank to keep it.<br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Xem nào, thay vào đó sao em không tìm một công việc trong ngành khách sạn? Lương khởi điểm sẽ tương đương với công việc ở ngân hàng. Em có thể học cách tiết kiệm bằng cách đó, và dùng ngân hàng để giữ tiền em kiếm được.</em></span></p>
+              <p><strong>Student:</strong> Wow! <strong>That makes a lot of sense</strong>, actually.<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> Chà! <strong>Điều đó</strong> thực sự <strong>rất có ý nghĩa</strong>.</em></span></p>
+              <p><strong>Professor:</strong> That’s why they pay me the big bucks, Paul.<br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Đó là lý do tại sao họ trả nhiều tiền cho tôi, Paul.</em></span></p>
+              <p><strong>Student:</strong> Thanks, Professor.<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> Cảm ơn giáo sư.</em></span></p>
+              <p><strong>Professor:</strong> Now, back to your research project. You can come see me anytime. <strong>My door’s always open.</strong><br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Bây giờ, quay lại bài nghiên cứu của em. Em có thể đến gặp tôi bất cứ lúc nào. <strong>Cánh cửa của tôi luôn rộng mở.</strong></em></span></p>
+              <p><strong>Student:</strong> Will do… Oh, and someday, when I do open my own hotel, be sure to mention my name. I’ll make sure you get a good discount.<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> Vâng… À, và một ngày nào đó, khi em mở khách sạn riêng, thầy chắc chắn phải nhắc tên em. Em đảm bảo thầy sẽ được giảm giá mạnh.</em></span></p>
+              <p><strong>Professor:</strong> (Laughing) Thanks, Paul. That’s quite hospitable of you.<br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Cảm ơn Paul. Em thật hiếu khách đấy.</em></span></p>
+              </div>`
+                    },
+                    {
+                        title: `Topic 2: Invitation to What`,
+                        audioLinkSlow: `assets/audio/LESSON 12 - FUTURE GOAL/Recording 12.3 - Slow Speech - Topic 2 - Time Management.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 12 - FUTURE GOAL/Recording 12.4 - Native Speech - Topic 2 - Time Management.mp3`,
+                        data: `<div><p>I have really been struggling with <strong>time management,</strong> lately. It seems like there aren’t enough hours in the day. Constantly racing, I <strong>spread myself too thin</strong>, doing nothing well. Then, I feel completely <strong>overwhelmed</strong>. Like I’m a<strong> jack of all trades and a master of none</strong>.<br>
+              <span style="color:#7e8c8d"><em>Gần đây, tôi đã thực sự đánh vật với việc <strong>quản lý thời gian</strong>. Cứ như thể không có đủ số giờ trong ngày. Tôi liên tục chạy đua, tôi <strong>chia bản thân mình ra quá nhiều</strong>, cũng không làm được gì tốt đẹp. Sau đó, tôi cảm thấy hoàn toàn bị <strong>choáng ngợp</strong>. Tôi cảm thấy tôi như là <strong>một nghề sống đống nghề chết</strong>.</em></span></p>
+              <p>A good friend once suggested that I keep a <strong>calendar</strong>. I had always been reluctant because it was one more thing on my to-do list, and, one more thing to carry around, but then she showed me how to use the calendar on my phone.<br>
+              <span style="color:#7e8c8d"><em>Một người bạn tốt đã một lần gợi ý rằng tôi nên lập một <strong>lịch</strong> công việc. Tôi đã luôn luôn do dự bởi vì đó là một việc nữa trên danh sách việc cần làm, và một điều nữa cần mang theo, nhưng sau đó, cô ấy đã chỉ cho tôi thấy cách sử dụng lịch trên điện thoại.</em></span></p>
+              <p>I can actually add <strong>alerts</strong> to it so they go off accordingly, <strong>reminding</strong> me to stop what I’m doing and move on. It’s the best thing ever. I never had the patience to set it up ’til now, or even to use an old- fashioned calendar because I was constantly racing against the clock, but it was worth taking a little <strong>extra</strong> time to plan. It actually saves me tons of time because I’m more <strong>efficient</strong> now!<br>
+              <span style="color:#7e8c8d"><em>Tôi thực sự có thể thêm <strong>chuông báo</strong> để nó đổ chuông cho phù hợp, <strong>nhắc nhở</strong> tôi ngừng làm gì và chuyển sang việc khác. Đó là điều tốt nhất trước nay. Tôi chưa bao giờ có kiên nhẫn để cài đặt nó cho đến bây giờ, hoặc thậm chí sử dụng một cái lịch kiểu cũ bởi vì tôi không ngừng chạy đua với thời gian, nhưng nó đúng là đáng để dành ra <strong>thêm</strong> một chút thời gian lên kế hoạch. Nó thực sự đã tiết kiệm cho tôi rất nhiều thời gian bởi vì giờ đây tôi làm việc<strong> hiệu quả</strong> hơn!</em></span></p>
+              <p>And, <strong>arranging</strong> and <strong>prioritizing</strong> all the things I have to do and all the things I want to do makes me feel so much happier and in control of my choices and my <strong>productivity</strong>. For instance, I know that Mondays are usually really <strong>hectic</strong> at work, so I put “<strong>Workout</strong>” on my calendar every Monday morning because I generally work late.<br>
+              <span style="color:#7e8c8d"><em>Còn nữa, việc <strong>sắp xếp</strong> và <strong>phân loại ưu tiên</strong> tất cả những điều tôi phải làm và tất cả những điều tôi muốn làm làm cho tôi cảm thấy hạnh phúc hơn rất nhiều cũng như kiểm soát sự lựa chọn và <strong>năng suất</strong> của mình. Ví dụ, tôi biết rằng thứ hai tôi thường vô cùng <strong>bận rộn</strong> công việc, vì vậy tôi đặt “<strong>sự tập luyện</strong>” trên lịch của mình mỗi buổi sáng thứ hai bởi vì tôi thường làm việc muộn.</em></span></p>
+              <p>On the other hand, Wednesdays are usually <strong>light</strong> work days, so I leave Tuesday nights open to<strong> hang out</strong> with friends. I also <strong>block off</strong> several hours on the weekends to work on my true passion: painting.<br>
+              <span style="color:#7e8c8d"><em>Mặt khác, thứ tư thường là ngày làm việc<strong> nhẹ nhàng</strong>, vì vậy tôi thường để các tối thứ ba trống để <strong>đi chơi</strong> với bạn bè. Tôi cũng <strong>để trống</strong> vài giờ vào cuối tuần để dành cho đam mê thật sự của tôi: vẽ tranh.</em></span></p>
+              <p>That’s when it’s really important to use my calendar though, because I can paint all day, everyday, without stopping. Even though painting is my passion, I’m always more energized and inspired if I set an alert to stop and<strong> take a break.</strong><br>
+              <span style="color:#7e8c8d"><em>Đó lại là khi việc sử dụng lịch rất quan trọng, bởi vì tôi có thể vẽ cả ngày, mỗi ngày, mà không phải dừng lại. Mặc dù vẽ tranh là niềm đam mê của tôi, tôi luôn cảm thấy tràn đầy sinh lực và cảm hứng nếu tôi đặt một chuông báo để tạm dừng và <strong>nghỉ ngơi.</strong></em></span></p>
+              <p>Oops, that’s my calendar alert. I have to stop writing and move on, but I’ll be back…<br>
+              <span style="color:#7e8c8d"><em>Ối, đó là chuông báo lịch của tôi. Tôi phải ngừng viết và làm việc khác đây, nhưng tôi sẽ trở lại…</em></span></p>
+              </div>`
+                    },
+                    {
+                        title: `Topic 3: Why didn_t you come to my party`,
+                        audioLinkSlow: `assets/audio/LESSON 12 - FUTURE GOAL/Recording 12.5 - Slow Speech -Topic 3 - The Obstacle in our Path.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 12 - FUTURE GOAL/Recording 12.6 - Native Speech - Topic 3 - The Obstacle in Our Path.mp3`,
+                        data: `<div><p>Once upon a time, there was a very wealthy, very kind King, who worried about the future expectations of his kingdom. Concerned about the <strong>ambitions</strong> of his <strong>courtiers</strong>, he placed a big <strong>boulder</strong> in the middle of the road leading to the palace. Curious to see what this <strong>roadblock</strong> would do to their days’ journeys, he hid nearby to see if anyone would stop to remove the <strong>obstacle</strong> from the road.<br>
+              <span style="color:#7e8c8d"><em>Ngày xửa ngày xưa, có một vị vua rất giàu có và tốt bụng, ngài luôn lo lắng về những kỳ vọng tương lai cho Vương Quốc của mình. Lo ngại về<strong> những tham vọng</strong> của <strong>các quan lại</strong> của mình, ông đặt một<strong> tảng đá</strong> lớn ở giữa con đường dẫn đến cung điện. Tò mò xem <strong>chướng ngại vật</strong> này sẽ ảnh hưởng gì đến chuyến đi ban ngày của họ, ông đã trốn gần đó để xem có ai sẽ dừng lại để bỏ <strong>chướng ngại</strong> ra khỏi con đường không.</em></span></p>
+              <p>The first people to stumble upon it were some of the King’s richest <strong>merchants</strong>, but instead of moving the boulder, they walked around it. A few, even laughed, blaming the King for not maintaining the roads properly. Not one of them, however, attempted to move it, making it easier for those who would surely stumble upon it later.<br>
+              <span style="color:#7e8c8d"><em>Những người đầu tiên vấp ngã lên nó là một số<strong> thương gia</strong> giàu có nhất của nhà vua, nhưng thay vì di chuyển tảng đá, họ đi vòng quanh nó. Một số ít, thậm chí còn cười, đổ lỗi cho nhà vua không bảo trì tốt các con đường. Tuy nhiên, không một ai trong số họ, cố gắng di chuyển nó, để khiến mọi thứ dễ dàng hơn cho những người chắc chắn sẽ vấp ngã vào nó sau này.</em></span></p>
+              <p>Finally, a <strong>peasant</strong> whose arms were burdened with heavy vegetables that would later become part of the King’s feast, came upon the obstacle in his path. Putting his vegetables gently to the side of the road, he made a noble attempt to remove it. It was an <strong>extraordinary</strong> <strong>achievement</strong> for any man, let alone this one, and his <strong>weariness</strong> showed. Gathering up the King’s feast, he continued on his way when he saw a satchel in the road where the boulder had been. Covered in dirt, he wiped it clean and looked inside. <strong>Blinded by the brilliance of something shiny</strong>, he found out it was stuffed with gold coins and a note from the King that read: “To the man who <strong>doth</strong> pass on a golden opportunity, he has lost his way in the world, to the man who <strong>hath</strong> helped to improve the human condition, the riches of the kingdom will be yours forever more.<br>
+              Love,</p>
+              <p>The King”<br>
+              <span style="color:#7e8c8d"><em>Cuối cùng, một <strong>nông dân</strong>, cánh tay ông ấy đang gánh nặng với đầy rau quả, chúng sẽ trở thành một phần bữa ăn của nhà vua, cũng gặp phải trở ngại trên con đường của mình. Đặt chỗ rau của mình nhẹ nhàng bên đường, ông ấy đã thực hiện một nỗ lực cao quý để bê nó ra. Đó là một <strong>thành tựu phi thường</strong> cho bất cứ ai, chưa nói đến người này, và <strong>sự kiệt sức</strong> của ông ấy lộ rõ. Bê lại thức ăn của nhà vua, ông tiếp tục đi trên con đường của mình và nhìn thấy một <strong>chiếc túi đeo</strong> trên đường ở chỗ cũ của tảng đá. Chiếc túi phủ đầy bụi đất, ông lau sạch và nhìn vào bên trong. <strong>Bị lóa mắt bởi thứ gì đó sáng rực</strong>, ông phát hiện ra rằng nó được nhồi đầy các đồng tiền vàng và lời nhắn từ nhà vua nói rằng: “Gửi đến người đàn ông đã bỏ qua cơ hội vàng này, ông đã lạc lối trong thế giới này, gửi đến người đàn ông đã giúp cải thiện tình trạng của con người, sự giàu sang của Vương Quốc này sẽ ở bên ông mãi mãi.”</em></span><br>
+              <span style="color:#7e8c8d"><em>Trân trọng,</em></span></p>
+              <p><span style="color:#7e8c8d"><em>Nhà vua”</em></span></p>
+              </div>`
+                    }
+                ]
+            },
+            {
+                case: `Day 2`,
+                title: `Nói đuổi`,
+                content: [
+                    {
+                        title: `Topic 1: The Triathlete`,
+                        audioLinkSlow: `assets/audio/LESSON 12 - FUTURE GOAL/Recording 12.1 - Slow Speech - Topic 1 - What is A Gap Year.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 12 - FUTURE GOAL/Recording 12.2 - Native Speech - Topic 1 - What Are You Planning.mp3`,
+                        data: `<div><p>A student shares his long and short-term goals with his professor, about his plans to graduate and his plans for the future.<br>
+              <span style="color:#7e8c8d"><em>Một sinh viên chia sẻ mục tiêu dài và ngắn hạn của mình với giảng viên của anh ấy, về kế hoạch tốt nghiệp và kế hoạch cho tương lai.</em></span></p>
+              <p><strong>Student:</strong> Excuse me, sir … Sir? Excuse me.<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> Xin lỗi, thưa thầy… Thưa thầy? Xin lỗi.</em></span></p>
+              <p><strong>Professor:</strong> Oh, sorry, Paul. I didn’t hear you. I’m reading about anti-gravity and… well, it’s really hard to put it down. What can I help you with?<br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Oh, xin lỗi, Paul. Tôi không nghe thấy em. Tôi đang đọc về chống trọng lực và… thực là khó có thể đặt nó xuống. Tôi có thể giúp gì cho em?</em></span></p>
+              <p><strong>Student:</strong> <strong>I’d like to ask you some questions and get your opinion about</strong> my final research project.<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> <strong>Em muốn hỏi thầy một số câu hỏi và xin ý kiến của thầy về</strong> bài nghiên cứu cuối cùng của em.</em></span></p>
+              <p><strong>Professor:</strong> Okay. Have you <strong>decided</strong> what you’re doing it on yet?<br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Được thôi. Em đã <strong>quyết định</strong> chủ đề em làm chưa?</em></span></p>
+              <p><strong>Student:</strong> To be honest, Professor, <strong>I’m torn between doing something on</strong> the <strong>banking industry</strong> or the <strong>hospitality industry</strong>.<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> Thực ra, thưa thầy, <strong>em đang bị giằng xé giữa làm một việc gì đó về ngành ngân hàng</strong> hay làm một việc gì đó trong <strong>ngành khách sạn.</strong></em></span></p>
+              <p><strong>Professor:</strong> Oh? Well, those are two very different things.<strong> Have you thought about</strong> your long and short-term goals?<br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Hả? Đó là hai việc rất khác nhau. <strong>Em đã nghĩ về</strong> mục tiêu dài và ngắn hạn của mình chưa?</em></span></p>
+              <p><strong>Student:</strong> Well, <strong>my short-term goal</strong> is to work at a bank and go to graduate school, but long-term, I want to open up my own hotel.<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> Vâng,<strong> mục tiêu ngắn hạn</strong> của em là làm việc tại một ngân hàng và đi học sau đại học, nhưng về lâu dài, em muốn mở khách sạn riêng.</em></span></p>
+              <p><strong>Professor:</strong> What do you want to study in<strong> graduate school</strong>?<br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Em muốn theo học ngành gì ở <strong>trường sau đại học</strong>?</em></span></p>
+              <p><strong>Student:</strong> <strong>Hospitality Management</strong>, of course.<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> <strong>Quản lý khách sạn</strong>, tất nhiên rồi.</em></span></p>
+              <p><strong>Professor:</strong> Of course… Why do you wanna work at a bank?<br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Tất nhiên rồi… Sao em lại muốn làm việc ở một ngân hàng?</em></span></p>
+              <p><strong>Student:</strong> I can learn how to save money.<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> Em có thể học cách tiết kiệm tiền.</em></span></p>
+              <p><strong>Professor:</strong> Hmm, you wanna work at a bank to learn how to save money… <strong>How do you plan on</strong> paying for grad school?<br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Hmm, em muốn làm việc tại một ngân hàng để học cách tiết kiệm tiền… <strong>Em định lên kế hoạch về việc</strong> trả tiền cho trường sau đại học<strong> như thế nào</strong>?</em></span></p>
+              <p><strong>Student:</strong> Uhhh, I hadn’t thought about that… I guess I’ll have to <strong>take out</strong> some loans.<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> Dạ, em chưa nghĩ về điều đó… Em đoán em sẽ phải <strong>gánh</strong> một vài khoản vay.</em></span></p>
+              <p><strong>Professor:</strong> You want to work at a bank to save some money, to eventually go to graduate school, where you’ll study Hospitality Management, your <strong>ultimate goal</strong>.<br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Em muốn làm việc tại một ngân hàng để tiết kiệm một số tiền, để có thể trang trải – và đi học sau đại học – nơi em sẽ học ngành quản lý khách sạn, chính là <strong>mục tiêu cuối cùng</strong> của em.</em></span></p>
+              <p><strong>Student:</strong> Exactly!<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> Chính xác!</em></span></p>
+              <p><strong>Professor:</strong> So what if you look for a job in the hospitality industry, instead? The starting pay will be comparable to that of a bank. You can learn how to save money that way, and use the bank to keep it.<br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Xem nào, thay vào đó sao em không tìm một công việc trong ngành khách sạn? Lương khởi điểm sẽ tương đương với công việc ở ngân hàng. Em có thể học cách tiết kiệm bằng cách đó, và dùng ngân hàng để giữ tiền em kiếm được.</em></span></p>
+              <p><strong>Student:</strong> Wow! <strong>That makes a lot of sense</strong>, actually.<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> Chà! <strong>Điều đó</strong> thực sự <strong>rất có ý nghĩa</strong>.</em></span></p>
+              <p><strong>Professor:</strong> That’s why they pay me the big bucks, Paul.<br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Đó là lý do tại sao họ trả nhiều tiền cho tôi, Paul.</em></span></p>
+              <p><strong>Student:</strong> Thanks, Professor.<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> Cảm ơn giáo sư.</em></span></p>
+              <p><strong>Professor:</strong> Now, back to your research project. You can come see me anytime. <strong>My door’s always open.</strong><br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Bây giờ, quay lại bài nghiên cứu của em. Em có thể đến gặp tôi bất cứ lúc nào. <strong>Cánh cửa của tôi luôn rộng mở.</strong></em></span></p>
+              <p><strong>Student:</strong> Will do… Oh, and someday, when I do open my own hotel, be sure to mention my name. I’ll make sure you get a good discount.<br>
+              <span style="color:#7e8c8d"><em><strong>Student:</strong> Vâng… À, và một ngày nào đó, khi em mở khách sạn riêng, thầy chắc chắn phải nhắc tên em. Em đảm bảo thầy sẽ được giảm giá mạnh.</em></span></p>
+              <p><strong>Professor:</strong> (Laughing) Thanks, Paul. That’s quite hospitable of you.<br>
+              <span style="color:#7e8c8d"><em><strong>Professor:</strong> Cảm ơn Paul. Em thật hiếu khách đấy.</em></span></p>
+              </div>`
+                    },
+                    {
+                        title: `Topic 2: Invitation to What`,
+                        audioLinkSlow: `assets/audio/LESSON 12 - FUTURE GOAL/Recording 12.3 - Slow Speech - Topic 2 - Time Management.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 12 - FUTURE GOAL/Recording 12.4 - Native Speech - Topic 2 - Time Management.mp3`,
+                        data: `<div><p>I have really been struggling with <strong>time management,</strong> lately. It seems like there aren’t enough hours in the day. Constantly racing, I <strong>spread myself too thin</strong>, doing nothing well. Then, I feel completely <strong>overwhelmed</strong>. Like I’m a<strong> jack of all trades and a master of none</strong>.<br>
+              <span style="color:#7e8c8d"><em>Gần đây, tôi đã thực sự đánh vật với việc <strong>quản lý thời gian</strong>. Cứ như thể không có đủ số giờ trong ngày. Tôi liên tục chạy đua, tôi <strong>chia bản thân mình ra quá nhiều</strong>, cũng không làm được gì tốt đẹp. Sau đó, tôi cảm thấy hoàn toàn bị <strong>choáng ngợp</strong>. Tôi cảm thấy tôi như là <strong>một nghề sống đống nghề chết</strong>.</em></span></p>
+              <p>A good friend once suggested that I keep a <strong>calendar</strong>. I had always been reluctant because it was one more thing on my to-do list, and, one more thing to carry around, but then she showed me how to use the calendar on my phone.<br>
+              <span style="color:#7e8c8d"><em>Một người bạn tốt đã một lần gợi ý rằng tôi nên lập một <strong>lịch</strong> công việc. Tôi đã luôn luôn do dự bởi vì đó là một việc nữa trên danh sách việc cần làm, và một điều nữa cần mang theo, nhưng sau đó, cô ấy đã chỉ cho tôi thấy cách sử dụng lịch trên điện thoại.</em></span></p>
+              <p>I can actually add <strong>alerts</strong> to it so they go off accordingly, <strong>reminding</strong> me to stop what I’m doing and move on. It’s the best thing ever. I never had the patience to set it up ’til now, or even to use an old- fashioned calendar because I was constantly racing against the clock, but it was worth taking a little <strong>extra</strong> time to plan. It actually saves me tons of time because I’m more <strong>efficient</strong> now!<br>
+              <span style="color:#7e8c8d"><em>Tôi thực sự có thể thêm <strong>chuông báo</strong> để nó đổ chuông cho phù hợp, <strong>nhắc nhở</strong> tôi ngừng làm gì và chuyển sang việc khác. Đó là điều tốt nhất trước nay. Tôi chưa bao giờ có kiên nhẫn để cài đặt nó cho đến bây giờ, hoặc thậm chí sử dụng một cái lịch kiểu cũ bởi vì tôi không ngừng chạy đua với thời gian, nhưng nó đúng là đáng để dành ra <strong>thêm</strong> một chút thời gian lên kế hoạch. Nó thực sự đã tiết kiệm cho tôi rất nhiều thời gian bởi vì giờ đây tôi làm việc<strong> hiệu quả</strong> hơn!</em></span></p>
+              <p>And, <strong>arranging</strong> and <strong>prioritizing</strong> all the things I have to do and all the things I want to do makes me feel so much happier and in control of my choices and my <strong>productivity</strong>. For instance, I know that Mondays are usually really <strong>hectic</strong> at work, so I put “<strong>Workout</strong>” on my calendar every Monday morning because I generally work late.<br>
+              <span style="color:#7e8c8d"><em>Còn nữa, việc <strong>sắp xếp</strong> và <strong>phân loại ưu tiên</strong> tất cả những điều tôi phải làm và tất cả những điều tôi muốn làm làm cho tôi cảm thấy hạnh phúc hơn rất nhiều cũng như kiểm soát sự lựa chọn và <strong>năng suất</strong> của mình. Ví dụ, tôi biết rằng thứ hai tôi thường vô cùng <strong>bận rộn</strong> công việc, vì vậy tôi đặt “<strong>sự tập luyện</strong>” trên lịch của mình mỗi buổi sáng thứ hai bởi vì tôi thường làm việc muộn.</em></span></p>
+              <p>On the other hand, Wednesdays are usually <strong>light</strong> work days, so I leave Tuesday nights open to<strong> hang out</strong> with friends. I also <strong>block off</strong> several hours on the weekends to work on my true passion: painting.<br>
+              <span style="color:#7e8c8d"><em>Mặt khác, thứ tư thường là ngày làm việc<strong> nhẹ nhàng</strong>, vì vậy tôi thường để các tối thứ ba trống để <strong>đi chơi</strong> với bạn bè. Tôi cũng <strong>để trống</strong> vài giờ vào cuối tuần để dành cho đam mê thật sự của tôi: vẽ tranh.</em></span></p>
+              <p>That’s when it’s really important to use my calendar though, because I can paint all day, everyday, without stopping. Even though painting is my passion, I’m always more energized and inspired if I set an alert to stop and<strong> take a break.</strong><br>
+              <span style="color:#7e8c8d"><em>Đó lại là khi việc sử dụng lịch rất quan trọng, bởi vì tôi có thể vẽ cả ngày, mỗi ngày, mà không phải dừng lại. Mặc dù vẽ tranh là niềm đam mê của tôi, tôi luôn cảm thấy tràn đầy sinh lực và cảm hứng nếu tôi đặt một chuông báo để tạm dừng và <strong>nghỉ ngơi.</strong></em></span></p>
+              <p>Oops, that’s my calendar alert. I have to stop writing and move on, but I’ll be back…<br>
+              <span style="color:#7e8c8d"><em>Ối, đó là chuông báo lịch của tôi. Tôi phải ngừng viết và làm việc khác đây, nhưng tôi sẽ trở lại…</em></span></p>
+              </div>`
+                    },
+                    {
+                        title: `Topic 3: Why didn_t you come to my party`,
+                        audioLinkSlow: `assets/audio/LESSON 12 - FUTURE GOAL/Recording 12.5 - Slow Speech -Topic 3 - The Obstacle in our Path.mp3`,
+                        audioLinkNative: `assets/audio/LESSON 12 - FUTURE GOAL/Recording 12.6 - Native Speech - Topic 3 - The Obstacle in Our Path.mp3`,
+                        data: `<div><p>Once upon a time, there was a very wealthy, very kind King, who worried about the future expectations of his kingdom. Concerned about the <strong>ambitions</strong> of his <strong>courtiers</strong>, he placed a big <strong>boulder</strong> in the middle of the road leading to the palace. Curious to see what this <strong>roadblock</strong> would do to their days’ journeys, he hid nearby to see if anyone would stop to remove the <strong>obstacle</strong> from the road.<br>
+              <span style="color:#7e8c8d"><em>Ngày xửa ngày xưa, có một vị vua rất giàu có và tốt bụng, ngài luôn lo lắng về những kỳ vọng tương lai cho Vương Quốc của mình. Lo ngại về<strong> những tham vọng</strong> của <strong>các quan lại</strong> của mình, ông đặt một<strong> tảng đá</strong> lớn ở giữa con đường dẫn đến cung điện. Tò mò xem <strong>chướng ngại vật</strong> này sẽ ảnh hưởng gì đến chuyến đi ban ngày của họ, ông đã trốn gần đó để xem có ai sẽ dừng lại để bỏ <strong>chướng ngại</strong> ra khỏi con đường không.</em></span></p>
+              <p>The first people to stumble upon it were some of the King’s richest <strong>merchants</strong>, but instead of moving the boulder, they walked around it. A few, even laughed, blaming the King for not maintaining the roads properly. Not one of them, however, attempted to move it, making it easier for those who would surely stumble upon it later.<br>
+              <span style="color:#7e8c8d"><em>Những người đầu tiên vấp ngã lên nó là một số<strong> thương gia</strong> giàu có nhất của nhà vua, nhưng thay vì di chuyển tảng đá, họ đi vòng quanh nó. Một số ít, thậm chí còn cười, đổ lỗi cho nhà vua không bảo trì tốt các con đường. Tuy nhiên, không một ai trong số họ, cố gắng di chuyển nó, để khiến mọi thứ dễ dàng hơn cho những người chắc chắn sẽ vấp ngã vào nó sau này.</em></span></p>
+              <p>Finally, a <strong>peasant</strong> whose arms were burdened with heavy vegetables that would later become part of the King’s feast, came upon the obstacle in his path. Putting his vegetables gently to the side of the road, he made a noble attempt to remove it. It was an <strong>extraordinary</strong> <strong>achievement</strong> for any man, let alone this one, and his <strong>weariness</strong> showed. Gathering up the King’s feast, he continued on his way when he saw a satchel in the road where the boulder had been. Covered in dirt, he wiped it clean and looked inside. <strong>Blinded by the brilliance of something shiny</strong>, he found out it was stuffed with gold coins and a note from the King that read: “To the man who <strong>doth</strong> pass on a golden opportunity, he has lost his way in the world, to the man who <strong>hath</strong> helped to improve the human condition, the riches of the kingdom will be yours forever more.<br>
+              Love,</p>
+              <p>The King”<br>
+              <span style="color:#7e8c8d"><em>Cuối cùng, một <strong>nông dân</strong>, cánh tay ông ấy đang gánh nặng với đầy rau quả, chúng sẽ trở thành một phần bữa ăn của nhà vua, cũng gặp phải trở ngại trên con đường của mình. Đặt chỗ rau của mình nhẹ nhàng bên đường, ông ấy đã thực hiện một nỗ lực cao quý để bê nó ra. Đó là một <strong>thành tựu phi thường</strong> cho bất cứ ai, chưa nói đến người này, và <strong>sự kiệt sức</strong> của ông ấy lộ rõ. Bê lại thức ăn của nhà vua, ông tiếp tục đi trên con đường của mình và nhìn thấy một <strong>chiếc túi đeo</strong> trên đường ở chỗ cũ của tảng đá. Chiếc túi phủ đầy bụi đất, ông lau sạch và nhìn vào bên trong. <strong>Bị lóa mắt bởi thứ gì đó sáng rực</strong>, ông phát hiện ra rằng nó được nhồi đầy các đồng tiền vàng và lời nhắn từ nhà vua nói rằng: “Gửi đến người đàn ông đã bỏ qua cơ hội vàng này, ông đã lạc lối trong thế giới này, gửi đến người đàn ông đã giúp cải thiện tình trạng của con người, sự giàu sang của Vương Quốc này sẽ ở bên ông mãi mãi.”</em></span><br>
+              <span style="color:#7e8c8d"><em>Trân trọng,</em></span></p>
+              <p><span style="color:#7e8c8d"><em>Nhà vua”</em></span></p>
+              </div>`
+                    }
+                ]
+            },
+            {
+                case: `Day 3`,
+                title: `Phản xạ đa chiều - Introducing a Friend`,
+            },
+            {
+                case: `Day 4`,
+                title: `Phản xạ đa chiều - Where Do You Live?`,
+            },
+            {
+                case: `Day 5`,
+                title: `Phản xạ đa chiều - What is Your Job?`,
+            },
+            {
+                case: `Day 6`,
+                title: `Thử thách`,
             }
         ]
     }
