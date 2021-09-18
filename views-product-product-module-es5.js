@@ -9673,21 +9673,14 @@
 
         _createClass2(ListenReadContentComponent, [{
           key: "ngOnInit",
-          value: function ngOnInit() {} // Mute a singular HTML5 element
-
-        }, {
-          key: "stopMe",
-          value: function stopMe(elem) {
-            elem.load();
-          } // Try to mute all video and audio elements on the page
+          value: function ngOnInit() {} // Try to mute all video and audio elements on the page
 
         }, {
           key: "stopAll",
           value: function stopAll() {
-            var _this17 = this;
-
             document.querySelectorAll("video, audio").forEach(function (elem) {
-              return _this17.stopMe(elem);
+              // Mute a singular HTML5 element
+              elem.load();
             });
           }
         }]);
@@ -9733,6 +9726,1162 @@
     },
 
     /***/
+    "12jx":
+    /*!***********************************************************************!*\
+      !*** ./node_modules/ng-block-ui/__ivy_ngcc__/fesm2015/ng-block-ui.js ***!
+      \***********************************************************************/
+
+    /*! exports provided: BLOCKUI_DEFAULT, BlockUI, BlockUIComponent, BlockUIContentComponent, BlockUIModule, BlockUIService, ɵa, ɵb, ɵc, ɵd, ɵe, ɵf */
+
+    /***/
+    function jx(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "BLOCKUI_DEFAULT", function () {
+        return BlockUIDefaultName;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "BlockUI", function () {
+        return BlockUI;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "BlockUIComponent", function () {
+        return BlockUIComponent;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "BlockUIContentComponent", function () {
+        return BlockUIContentComponent;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "BlockUIModule", function () {
+        return BlockUIModule;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "BlockUIService", function () {
+        return BlockUIService;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ɵa", function () {
+        return BlockUIModuleSettings;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ɵb", function () {
+        return provideInstance;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ɵc", function () {
+        return BlockUIInstanceService;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ɵd", function () {
+        return template;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ɵe", function () {
+        return styles;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ɵf", function () {
+        return BlockUIDirective;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "5lcw");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "8Y7J");
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/common */
+      "SVse");
+      /* harmony import */
+
+
+      var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! rxjs */
+      "qCKp");
+
+      var _c0 = ["*"];
+      var _c1 = ["templateOutlet"];
+
+      function BlockUIContentComponent_div_1_div_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", ctx_r2.message || ctx_r2.defaultMessage, " ");
+        }
+      }
+
+      function BlockUIContentComponent_div_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "div", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, BlockUIContentComponent_div_1_div_2_Template, 2, 1, "div", 5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r0.message || ctx_r0.defaultMessage);
+        }
+      }
+
+      function BlockUIContentComponent_2_ng_template_0_Template(rf, ctx) {}
+
+      function BlockUIContentComponent_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](0, BlockUIContentComponent_2_ng_template_0_Template, 0, 0, "ng-template", null, 7, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplateRefExtractor"]);
+        }
+      }
+
+      var _c2 = function _c2(a0) {
+        return {
+          "active": a0
+        };
+      };
+
+      var BlockUIActions = function BlockUIActions() {
+        _classCallCheck2(this, BlockUIActions);
+      };
+
+      BlockUIActions.START = 'start';
+      BlockUIActions.STOP = 'stop';
+      BlockUIActions.UPDATE = 'update';
+      BlockUIActions.RESET = 'reset';
+      BlockUIActions.RESET_GLOBAL = 'reset_global';
+      BlockUIActions.UNSUBSCRIBE = 'unsubscribe';
+      var BlockUIDefaultName = 'block-ui-main';
+
+      var BlockUIInstanceService = /*#__PURE__*/function () {
+        function BlockUIInstanceService() {
+          _classCallCheck2(this, BlockUIInstanceService);
+
+          this.blockUISettings = {};
+          this.blockUIInstances = {};
+          this.blockUISubject = new rxjs__WEBPACK_IMPORTED_MODULE_3__["ReplaySubject"](1);
+          this.blockUIObservable = this.blockUISubject.asObservable();
+          this.blockUIObservable.subscribe(this.blockUIMiddleware.bind(this));
+        }
+
+        _createClass2(BlockUIInstanceService, [{
+          key: "getSettings",
+          value: function getSettings() {
+            return this.blockUISettings;
+          }
+        }, {
+          key: "updateSettings",
+          value: function updateSettings() {
+            var settings = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+            this.blockUISettings = Object.assign(Object.assign({}, this.blockUISettings), settings);
+          }
+        }, {
+          key: "decorate",
+          value: function decorate() {
+            var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : BlockUIDefaultName;
+            var blockUI = {
+              name: name,
+              isActive: false,
+              blockCount: 0,
+              start: this.dispatch(this.blockUISubject, BlockUIActions.START, name),
+              update: this.dispatch(this.blockUISubject, BlockUIActions.UPDATE, name),
+              stop: this.dispatch(this.blockUISubject, BlockUIActions.STOP, name),
+              reset: this.dispatch(this.blockUISubject, BlockUIActions.RESET, name),
+              resetGlobal: this.dispatch(this.blockUISubject, BlockUIActions.RESET_GLOBAL, name),
+              unsubscribe: this.dispatch(this.blockUISubject, BlockUIActions.UNSUBSCRIBE, name)
+            };
+            this.blockUIInstances[name] = this.blockUIInstances[name] || blockUI;
+            return blockUI;
+          }
+        }, {
+          key: "observe",
+          value: function observe() {
+            return this.blockUIObservable;
+          }
+        }, {
+          key: "clearInstance",
+          value: function clearInstance(instanceName) {
+            this.dispatch(this.blockUISubject, BlockUIActions.RESET, instanceName);
+          }
+        }, {
+          key: "blockUIMiddleware",
+          value: function blockUIMiddleware(_ref20) {
+            var action = _ref20.action,
+                name = _ref20.name;
+            var isActive = null;
+
+            switch (action) {
+              case BlockUIActions.START:
+                isActive = true;
+                break;
+
+              case BlockUIActions.STOP:
+              case BlockUIActions.RESET:
+                isActive = false;
+                break;
+            }
+
+            if (isActive !== null) {
+              this.blockUIInstances[name].isActive = isActive;
+            }
+          }
+        }, {
+          key: "dispatch",
+          value: function dispatch(subject, action) {
+            var name = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : BlockUIDefaultName;
+            return function (message) {
+              subject.next({
+                name: name,
+                action: action,
+                message: message
+              });
+            };
+          }
+        }]);
+
+        return BlockUIInstanceService;
+      }();
+
+      BlockUIInstanceService.ɵfac = function BlockUIInstanceService_Factory(t) {
+        return new (t || BlockUIInstanceService)();
+      };
+
+      BlockUIInstanceService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
+        token: BlockUIInstanceService,
+        factory: function factory(t) {
+          return BlockUIInstanceService.ɵfac(t);
+        }
+      });
+
+      var BlockUIComponent = /*#__PURE__*/function () {
+        function BlockUIComponent(blockUI) {
+          _classCallCheck2(this, BlockUIComponent);
+
+          this.blockUI = blockUI;
+        }
+
+        _createClass2(BlockUIComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.name = this.name || BlockUIDefaultName;
+            this.template = this.template || this.blockUI.blockUISettings.template;
+          }
+        }]);
+
+        return BlockUIComponent;
+      }();
+
+      BlockUIComponent.ɵfac = function BlockUIComponent_Factory(t) {
+        return new (t || BlockUIComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](BlockUIInstanceService));
+      };
+
+      BlockUIComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+        type: BlockUIComponent,
+        selectors: [["block-ui"]],
+        inputs: {
+          name: "name",
+          template: "template",
+          message: "message",
+          delayStart: "delayStart",
+          delayStop: "delayStop"
+        },
+        ngContentSelectors: _c0,
+        decls: 2,
+        vars: 5,
+        consts: [[3, "name", "message", "template", "delayStart", "delayStop"]],
+        template: function BlockUIComponent_Template(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵprojectionDef"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵprojection"](0);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "block-ui-content", 0);
+          }
+
+          if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("name", ctx.name)("message", ctx.message)("template", ctx.template)("delayStart", ctx.delayStart)("delayStop", ctx.delayStop);
+          }
+        },
+        directives: function directives() {
+          return [BlockUIContentComponent];
+        },
+        encapsulation: 2
+      });
+
+      BlockUIComponent.ctorParameters = function () {
+        return [{
+          type: BlockUIInstanceService
+        }];
+      };
+
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], BlockUIComponent.prototype, "name", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], BlockUIComponent.prototype, "message", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], BlockUIComponent.prototype, "delayStart", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], BlockUIComponent.prototype, "delayStop", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], BlockUIComponent.prototype, "template", void 0); // Spinner style - https://github.com/lukehaas/css-loaders
+
+      var styles = "\n.block-ui-wrapper {\n  display: none;\n  position: fixed;\n  height: 100%;\n  width: 100%;\n  top: 0;\n  left: 0;\n  background: rgba(0, 0, 0, 0.70);\n  z-index: 30000;\n  cursor: wait;\n}\n\n.block-ui-wrapper.block-ui-wrapper--element {\n  position: absolute;\n}\n\n.block-ui-wrapper.active {\n  display: block;\n}\n\n.block-ui-wrapper.block-ui-main {\n  position: fixed;\n}\n\n.block-ui-spinner,\n.block-ui-template {\n  position: absolute;\n  top: 40%;\n  margin: 0 auto;\n  left: 0;\n  right: 0;\n  transform: translateY(-50%);\n}\n\n.block-ui-spinner > .message {\n  font-size: 1.3em;\n  text-align: center;\n  color: #fff;\n}\n\n.block-ui__element {\n  position: relative;\n}\n\n.loader,\n.loader:after {\n  border-radius: 50%;\n  width: 10em;\n  height: 10em;\n}\n.loader {\n  margin: 7px auto;\n  font-size: 5px;\n  position: relative;\n  text-indent: -9999em;\n  border-top: 1.1em solid rgba(255, 255, 255, 0.2);\n  border-right: 1.1em solid rgba(255, 255, 255, 0.2);\n  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);\n  border-left: 1.1em solid #ffffff;\n  -webkit-transform: translateZ(0);\n  -ms-transform: translateZ(0);\n  transform: translateZ(0);\n  -webkit-animation: load8 1.1s infinite linear;\n  animation: load8 1.1s infinite linear;\n}\n\n@-webkit-keyframes load8 {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n@keyframes load8 {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n";
+      var template = "\n<div class=\"block-ui-wrapper {{name}} {{className}}\" [ngClass]=\"{ 'active': state.blockCount > 0 }\">\n  <div class=\"block-ui-spinner\" *ngIf=\"!templateCmp\">\n    <div class=\"loader\"></div>\n    <div *ngIf=\"message || defaultMessage\" class=\"message\">\n      {{ message || defaultMessage }}\n    </div>\n  </div>\n  <ng-template *ngIf=\"templateCmp\" #templateOutlet></ng-template>\n</div>\n";
+
+      var BlockUIContentComponent = /*#__PURE__*/function () {
+        function BlockUIContentComponent(blockUI, resolver, changeDetectionRef) {
+          _classCallCheck2(this, BlockUIContentComponent);
+
+          this.blockUI = blockUI;
+          this.resolver = resolver;
+          this.changeDetectionRef = changeDetectionRef;
+          this.name = BlockUIDefaultName;
+          this.defaultBlockState = {
+            startTimeouts: [],
+            stopTimeouts: [],
+            updateTimeouts: [],
+            blockCount: 0,
+            startCallCount: 0,
+            stopCallCount: 0
+          };
+          this.state = Object.assign({}, this.defaultBlockState);
+        }
+
+        _createClass2(BlockUIContentComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.settings = this.blockUI.getSettings();
+            this.blockUISubscription = this.subscribeToBlockUI(this.blockUI.observe());
+          }
+        }, {
+          key: "ngAfterViewInit",
+          value: function ngAfterViewInit() {
+            try {
+              if (!this.templateCmp) {
+                return false;
+              }
+
+              if (this.templateCmp instanceof _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]) {
+                this.templateOutlet.createEmbeddedView(this.templateCmp);
+              } else {
+                var templateComp = this.resolver.resolveComponentFactory(this.templateCmp);
+                this.templateCompRef = this.templateOutlet.createComponent(templateComp);
+                this.updateBlockTemplate(this.message);
+              }
+            } catch (error) {
+              console.error('ng-block-ui:', error);
+            }
+          }
+        }, {
+          key: "ngAfterViewChecked",
+          value: function ngAfterViewChecked() {
+            this.detectChanges();
+          }
+        }, {
+          key: "subscribeToBlockUI",
+          value: function subscribeToBlockUI(blockUI$) {
+            var _this17 = this;
+
+            return blockUI$.subscribe(function (event) {
+              return _this17.onDispatchedEvent(event);
+            });
+          }
+        }, {
+          key: "onDispatchedEvent",
+          value: function onDispatchedEvent(event) {
+            switch (event.action) {
+              case BlockUIActions.START:
+                this.onStart(event);
+                break;
+
+              case BlockUIActions.STOP:
+                this.onStop(event);
+                break;
+
+              case BlockUIActions.UPDATE:
+                this.onUpdate(event);
+                break;
+
+              case BlockUIActions.RESET:
+                this.onReset(event);
+                break;
+
+              case BlockUIActions.RESET_GLOBAL:
+                this.resetState();
+                break;
+
+              case BlockUIActions.UNSUBSCRIBE:
+                this.onStop(event);
+                this.onUnsubscribe(event.name);
+                break;
+            }
+          }
+        }, {
+          key: "onStart",
+          value: function onStart(_ref21) {
+            var _this18 = this;
+
+            var name = _ref21.name,
+                message = _ref21.message;
+
+            if (name === this.name) {
+              var delay = this.delayStart || this.settings.delayStart || 0;
+              this.state.startCallCount += 1;
+              var startTimeout = setTimeout(function () {
+                _this18.state.blockCount += 1;
+
+                _this18.showBlock(message);
+
+                _this18.updateInstanceBlockCount();
+              }, delay);
+              this.state.startTimeouts.push(startTimeout);
+            }
+          }
+        }, {
+          key: "onStop",
+          value: function onStop(_ref22) {
+            var _this19 = this;
+
+            var name = _ref22.name;
+
+            if (name === this.name) {
+              var stopCount = this.state.stopCallCount + 1;
+
+              if (this.state.startCallCount - stopCount >= 0) {
+                var delay = this.delayStop || this.settings.delayStop || 0;
+                this.state.stopCallCount = stopCount;
+                var stopTimeout = setTimeout(function () {
+                  _this19.state.blockCount -= 1;
+
+                  _this19.updateInstanceBlockCount();
+
+                  _this19.detectChanges();
+                }, delay);
+                this.state.stopTimeouts.push(stopTimeout);
+              }
+            }
+          }
+        }, {
+          key: "onUpdate",
+          value: function onUpdate(_ref23) {
+            var _this20 = this;
+
+            var name = _ref23.name,
+                message = _ref23.message;
+
+            if (name === this.name) {
+              var delay = this.delayStart || this.settings.delayStart || 0;
+              clearTimeout(this.state.updateTimeouts[0]);
+              var updateTimeout = setTimeout(function () {
+                _this20.updateMessage(message);
+              }, delay);
+              this.state.updateTimeouts.push(updateTimeout);
+            }
+          }
+        }, {
+          key: "onReset",
+          value: function onReset(_ref24) {
+            var name = _ref24.name;
+
+            if (name === this.name) {
+              this.resetState();
+            }
+          }
+        }, {
+          key: "updateMessage",
+          value: function updateMessage(message) {
+            this.showBlock(message);
+          }
+        }, {
+          key: "showBlock",
+          value: function showBlock(message) {
+            this.message = message || this.defaultMessage || this.settings.message;
+            this.updateBlockTemplate(this.message);
+            this.detectChanges();
+          }
+        }, {
+          key: "updateBlockTemplate",
+          value: function updateBlockTemplate(msg) {
+            if (this.templateCompRef && this.templateCompRef instanceof _angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentRef"]) {
+              this.templateCompRef.instance.message = msg;
+            }
+          }
+        }, {
+          key: "resetState",
+          value: function resetState() {
+            [].concat(_toConsumableArray2(this.state.startTimeouts), _toConsumableArray2(this.state.stopTimeouts), _toConsumableArray2(this.state.updateTimeouts)).forEach(clearTimeout);
+            this.state = Object.assign({}, this.defaultBlockState);
+            this.updateInstanceBlockCount();
+            this.detectChanges();
+          }
+        }, {
+          key: "onUnsubscribe",
+          value: function onUnsubscribe(name) {
+            if (this.blockUISubscription && name === this.name) {
+              this.blockUISubscription.unsubscribe();
+            }
+          }
+        }, {
+          key: "updateInstanceBlockCount",
+          value: function updateInstanceBlockCount() {
+            if (this.blockUI.blockUIInstances[this.name]) {
+              var blockCount = this.state.blockCount;
+              this.blockUI.blockUIInstances[this.name].blockCount = blockCount;
+            }
+          }
+        }, {
+          key: "detectChanges",
+          value: function detectChanges() {
+            if (!this.changeDetectionRef['destroyed']) {
+              this.changeDetectionRef.detectChanges();
+            }
+          }
+        }, {
+          key: "ngOnDestroy",
+          value: function ngOnDestroy() {
+            this.resetState();
+            this.onUnsubscribe(this.name);
+            this.blockUI.clearInstance(this.name);
+          }
+        }]);
+
+        return BlockUIContentComponent;
+      }();
+
+      BlockUIContentComponent.ɵfac = function BlockUIContentComponent_Factory(t) {
+        return new (t || BlockUIContentComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](BlockUIInstanceService), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentFactoryResolver"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]));
+      };
+
+      BlockUIContentComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+        type: BlockUIContentComponent,
+        selectors: [["block-ui-content"]],
+        viewQuery: function BlockUIContentComponent_Query(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c1, 1, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"]);
+          }
+
+          if (rf & 2) {
+            var _t;
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.templateOutlet = _t.first);
+          }
+        },
+        inputs: {
+          name: "name",
+          delayStart: "delayStart",
+          delayStop: "delayStop",
+          defaultMessage: ["message", "defaultMessage"],
+          templateCmp: ["template", "templateCmp"]
+        },
+        decls: 3,
+        vars: 9,
+        consts: [[3, "ngClass"], ["class", "block-ui-spinner", 4, "ngIf"], [4, "ngIf"], [1, "block-ui-spinner"], [1, "loader"], ["class", "message", 4, "ngIf"], [1, "message"], ["templateOutlet", ""]],
+        template: function BlockUIContentComponent_Template(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, BlockUIContentComponent_div_1_Template, 3, 1, "div", 1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, BlockUIContentComponent_2_Template, 2, 0, undefined, 2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          }
+
+          if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassMapInterpolate2"]("block-ui-wrapper ", ctx.name, " ", ctx.className, "");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](7, _c2, ctx.state.blockCount > 0));
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.templateCmp);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.templateCmp);
+          }
+        },
+        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"]],
+        styles: ["\n.block-ui-wrapper {\n  display: none;\n  position: fixed;\n  height: 100%;\n  width: 100%;\n  top: 0;\n  left: 0;\n  background: rgba(0, 0, 0, 0.70);\n  z-index: 30000;\n  cursor: wait;\n}\n\n.block-ui-wrapper.block-ui-wrapper--element {\n  position: absolute;\n}\n\n.block-ui-wrapper.active {\n  display: block;\n}\n\n.block-ui-wrapper.block-ui-main {\n  position: fixed;\n}\n\n.block-ui-spinner,\n.block-ui-template {\n  position: absolute;\n  top: 40%;\n  margin: 0 auto;\n  left: 0;\n  right: 0;\n  transform: translateY(-50%);\n}\n\n.block-ui-spinner > .message {\n  font-size: 1.3em;\n  text-align: center;\n  color: #fff;\n}\n\n.block-ui__element {\n  position: relative;\n}\n\n.loader,\n.loader:after {\n  border-radius: 50%;\n  width: 10em;\n  height: 10em;\n}\n.loader {\n  margin: 7px auto;\n  font-size: 5px;\n  position: relative;\n  text-indent: -9999em;\n  border-top: 1.1em solid rgba(255, 255, 255, 0.2);\n  border-right: 1.1em solid rgba(255, 255, 255, 0.2);\n  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);\n  border-left: 1.1em solid #ffffff;\n  -webkit-transform: translateZ(0);\n  -ms-transform: translateZ(0);\n  transform: translateZ(0);\n  -webkit-animation: load8 1.1s infinite linear;\n  animation: load8 1.1s infinite linear;\n}\n\n@-webkit-keyframes load8 {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n@keyframes load8 {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n"],
+        encapsulation: 2
+      });
+
+      BlockUIContentComponent.ctorParameters = function () {
+        return [{
+          type: BlockUIInstanceService
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentFactoryResolver"]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
+        }];
+      };
+
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], BlockUIContentComponent.prototype, "name", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], BlockUIContentComponent.prototype, "delayStart", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], BlockUIContentComponent.prototype, "delayStop", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('message')], BlockUIContentComponent.prototype, "defaultMessage", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('template')], BlockUIContentComponent.prototype, "templateCmp", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('templateOutlet', {
+        read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"]
+      })], BlockUIContentComponent.prototype, "templateOutlet", void 0);
+
+      var BlockUIService = /*#__PURE__*/function () {
+        function BlockUIService(blockUIInstance) {
+          _classCallCheck2(this, BlockUIService);
+
+          this.blockUIInstance = blockUIInstance;
+          this.globalDispatch = this.blockUIInstance.decorate();
+        }
+        /**
+        * Starts blocking for given BlockUI instance or instances
+        */
+
+
+        _createClass2(BlockUIService, [{
+          key: "start",
+          value: function start(target, message) {
+            this.dispatch(target, BlockUIActions.START, message);
+          }
+          /**
+          * Stops blocking for given BlockUI instance or instances
+          */
+
+        }, {
+          key: "stop",
+          value: function stop(target) {
+            this.dispatch(target, BlockUIActions.STOP);
+          }
+          /**
+          * Reset blocking for given BlockUI instance or instances
+          */
+
+        }, {
+          key: "reset",
+          value: function reset(target) {
+            this.dispatch(target, BlockUIActions.RESET);
+          }
+          /**
+          * Reset blocking for all BlockUI instances
+          */
+
+        }, {
+          key: "resetGlobal",
+          value: function resetGlobal() {
+            this.globalDispatch.resetGlobal();
+          }
+          /**
+          * Updates message for given BlockUI instance or instances
+          */
+
+        }, {
+          key: "update",
+          value: function update(target, message) {
+            this.dispatch(target, BlockUIActions.UPDATE, message);
+          }
+          /**
+          * Unsubscribes for given BlockUI instance or instances
+          */
+
+        }, {
+          key: "unsubscribe",
+          value: function unsubscribe(target) {
+            this.dispatch(target, BlockUIActions.UNSUBSCRIBE);
+          }
+          /**
+          * Checks if BlockUI is actively blocking
+          */
+
+        }, {
+          key: "isActive",
+          value: function isActive() {
+            var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+            var targets = target ? this.toArray(target) : null;
+            var instances = this.blockUIInstance.blockUIInstances;
+            return Object.keys(instances).some(function (key) {
+              if (!targets) {
+                return instances[key].isActive;
+              }
+
+              return targets.indexOf(instances[key].name) >= 0 && instances[key].isActive;
+            });
+          }
+        }, {
+          key: "dispatch",
+          value: function dispatch() {
+            var _this21 = this;
+
+            var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+            var type = arguments.length > 1 ? arguments[1] : undefined;
+            var message = arguments.length > 2 ? arguments[2] : undefined;
+            var instances = this.toArray(target);
+            instances.forEach(function (i) {
+              return _this21.blockUIInstance.decorate(i)[type](message);
+            });
+          }
+        }, {
+          key: "toArray",
+          value: function toArray() {
+            var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+            return typeof target === 'string' ? [target] : target;
+          }
+        }]);
+
+        return BlockUIService;
+      }();
+
+      BlockUIService.ɵfac = function BlockUIService_Factory(t) {
+        return new (t || BlockUIService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](BlockUIInstanceService));
+      };
+
+      BlockUIService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
+        token: BlockUIService,
+        factory: function factory(t) {
+          return BlockUIService.ɵfac(t);
+        }
+      });
+
+      BlockUIService.ctorParameters = function () {
+        return [{
+          type: BlockUIInstanceService
+        }];
+      };
+
+      var BlockUIDirective = /*#__PURE__*/function () {
+        function BlockUIDirective(blockUIService, blockUIInstanceService, viewRef, templateRef, renderer, componentFactoryResolver) {
+          _classCallCheck2(this, BlockUIDirective);
+
+          this.blockUIService = blockUIService;
+          this.blockUIInstanceService = blockUIInstanceService;
+          this.viewRef = viewRef;
+          this.templateRef = templateRef;
+          this.renderer = renderer;
+          this.componentFactoryResolver = componentFactoryResolver;
+        }
+
+        _createClass2(BlockUIDirective, [{
+          key: "blockUI",
+          set: function set(name) {
+            this.blockTarget = name;
+          }
+        }, {
+          key: "blockUIMessage",
+          set: function set(message) {
+            this.message = message;
+          }
+        }, {
+          key: "blockUITemplate",
+          set: function set(template) {
+            this.template = template;
+          }
+        }, {
+          key: "blockUIDelayStart",
+          set: function set(delayStart) {
+            this.delayStart = delayStart ? Number(delayStart) : null;
+          }
+        }, {
+          key: "blockUIDelayStop",
+          set: function set(delayStop) {
+            this.delayStop = delayStop ? Number(delayStop) : null;
+          }
+        }, {
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            try {
+              this.viewRef.createEmbeddedView(this.templateRef);
+              var parentElement = this.getParentElement();
+
+              if (parentElement && !this.isComponentInTemplate(parentElement)) {
+                this.renderer.addClass(parentElement, 'block-ui__element');
+                this.blockUIComponentRef = this.createComponent();
+                var blockUIContent = this.findContentNode(this.viewRef.element.nativeElement);
+
+                if (blockUIContent) {
+                  var settings = this.blockUIInstanceService.getSettings();
+                  parentElement.appendChild(blockUIContent);
+                  this.blockUIComponentRef.instance.className = 'block-ui-wrapper--element';
+                  this.blockUIComponentRef.instance.name = this.blockTarget || BlockUIDefaultName;
+                  if (this.message) this.blockUIComponentRef.instance.defaultMessage = this.message;
+                  if (this.delayStart) this.blockUIComponentRef.instance.delayStart = this.delayStart;
+                  if (this.delayStop) this.blockUIComponentRef.instance.delayStop = this.delayStop;
+                  if (this.template || settings.template) this.blockUIComponentRef.instance.templateCmp = this.template || settings.template;
+                }
+              }
+            } catch (error) {
+              console.error('ng-block-ui:', error);
+            }
+          }
+        }, {
+          key: "isComponentInTemplate",
+          value: function isComponentInTemplate(element) {
+            // Needed because of https://github.com/microsoft/TypeScript/issues/26235
+            var targetElement = element || {};
+            var children = targetElement.children;
+            children = Array.from(children || []).reverse();
+            return children.some(function (el) {
+              return el && el.localName === 'block-ui';
+            });
+          }
+        }, {
+          key: "getParentElement",
+          value: function getParentElement() {
+            var embeddedView = this.viewRef.get(0);
+            return embeddedView.rootNodes[0];
+          } // Needed for IE (#17)
+
+        }, {
+          key: "findContentNode",
+          value: function findContentNode(element) {
+            var nextSibling = element.nextSibling || {};
+            var previousSibling = element.previousSibling || {};
+            return [nextSibling, nextSibling.nextSibling, previousSibling, previousSibling.previousSibling].find(function (e) {
+              return e && e.localName === 'block-ui-content';
+            });
+          }
+        }, {
+          key: "createComponent",
+          value: function createComponent() {
+            var resolvedBlockUIComponent = this.componentFactoryResolver.resolveComponentFactory(BlockUIContentComponent);
+            return this.viewRef.createComponent(resolvedBlockUIComponent);
+          }
+        }, {
+          key: "ngOnDestroy",
+          value: function ngOnDestroy() {
+            if (this.blockTarget) {
+              this.blockUIService.reset(this.blockTarget);
+            }
+          }
+        }]);
+
+        return BlockUIDirective;
+      }();
+
+      BlockUIDirective.ɵfac = function BlockUIDirective_Factory(t) {
+        return new (t || BlockUIDirective)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](BlockUIService), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](BlockUIInstanceService), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentFactoryResolver"]));
+      };
+
+      BlockUIDirective.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
+        type: BlockUIDirective,
+        selectors: [["", "blockUI", ""]],
+        inputs: {
+          blockUI: "blockUI",
+          blockUIMessage: "blockUIMessage",
+          blockUITemplate: "blockUITemplate",
+          blockUIDelayStart: "blockUIDelayStart",
+          blockUIDelayStop: "blockUIDelayStop"
+        }
+      });
+
+      BlockUIDirective.ctorParameters = function () {
+        return [{
+          type: BlockUIService
+        }, {
+          type: BlockUIInstanceService
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentFactoryResolver"]
+        }];
+      };
+
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], BlockUIDirective.prototype, "blockUI", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], BlockUIDirective.prototype, "blockUIMessage", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], BlockUIDirective.prototype, "blockUITemplate", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], BlockUIDirective.prototype, "blockUIDelayStart", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], BlockUIDirective.prototype, "blockUIDelayStop", null);
+      var BlockUIModule_1;
+      var BlockUIServiceInstance = new BlockUIInstanceService(); // Needed for AOT compiling
+
+      var BlockUIModuleSettings = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["InjectionToken"]('BlockUIModuleSettings');
+
+      function provideInstance(settings) {
+        BlockUIServiceInstance.updateSettings(settings);
+        return BlockUIServiceInstance;
+      }
+
+      var BlockUIModule = BlockUIModule_1 = /*#__PURE__*/function () {
+        function BlockUIModule() {
+          _classCallCheck2(this, BlockUIModule);
+        }
+
+        _createClass2(BlockUIModule, null, [{
+          key: "forRoot",
+          value: function forRoot() {
+            var settings = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+            return {
+              ngModule: BlockUIModule_1,
+              providers: [{
+                provide: BlockUIModuleSettings,
+                useValue: settings
+              }, {
+                provide: BlockUIInstanceService,
+                useFactory: provideInstance,
+                deps: [BlockUIModuleSettings]
+              }, BlockUIService]
+            };
+          }
+        }]);
+
+        return BlockUIModule;
+      }();
+
+      BlockUIModule.ɵfac = function BlockUIModule_Factory(t) {
+        return new (t || BlockUIModule)();
+      };
+
+      BlockUIModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
+        type: BlockUIModule
+      });
+      BlockUIModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
+        imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]]]
+      });
+
+      (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](BlockUIInstanceService, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"]
+        }], function () {
+          return [];
+        }, null);
+      })();
+
+      (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](BlockUIComponent, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+          args: [{
+            selector: 'block-ui',
+            template: "\n    <ng-content></ng-content>\n    <block-ui-content\n      [name]=\"name\"\n      [message]=\"message\"\n      [template]=\"template\"\n      [delayStart]=\"delayStart\"\n      [delayStop]=\"delayStop\"\n    >\n    </block-ui-content>\n  ",
+            encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None
+          }]
+        }], function () {
+          return [{
+            type: BlockUIInstanceService
+          }];
+        }, {
+          name: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }],
+          template: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }],
+          message: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }],
+          delayStart: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }],
+          delayStop: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }]
+        });
+      })();
+
+      (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](BlockUIContentComponent, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+          args: [{
+            selector: 'block-ui-content',
+            template: template,
+            encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
+            styles: [styles]
+          }]
+        }], function () {
+          return [{
+            type: BlockUIInstanceService
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentFactoryResolver"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
+          }];
+        }, {
+          name: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }],
+          delayStart: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }],
+          delayStop: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }],
+          defaultMessage: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['message']
+          }],
+          templateCmp: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['template']
+          }],
+          templateOutlet: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
+            args: ['templateOutlet', {
+              read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"]
+            }]
+          }]
+        });
+      })();
+
+      (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](BlockUIService, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"]
+        }], function () {
+          return [{
+            type: BlockUIInstanceService
+          }];
+        }, null);
+      })();
+
+      (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](BlockUIDirective, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
+          args: [{
+            selector: '[blockUI]'
+          }]
+        }], function () {
+          return [{
+            type: BlockUIService
+          }, {
+            type: BlockUIInstanceService
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentFactoryResolver"]
+          }];
+        }, {
+          blockUI: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }],
+          blockUIMessage: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }],
+          blockUITemplate: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }],
+          blockUIDelayStart: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }],
+          blockUIDelayStop: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }]
+        });
+      })();
+
+      (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](BlockUIModule, {
+          declarations: function declarations() {
+            return [BlockUIComponent, BlockUIDirective, BlockUIContentComponent];
+          },
+          imports: function imports() {
+            return [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]];
+          },
+          exports: function exports() {
+            return [BlockUIComponent, BlockUIDirective, BlockUIContentComponent];
+          }
+        });
+      })();
+
+      (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](BlockUIModule, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
+          args: [{
+            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]],
+            entryComponents: [BlockUIComponent, BlockUIContentComponent],
+            declarations: [BlockUIComponent, BlockUIDirective, BlockUIContentComponent],
+            exports: [BlockUIComponent, BlockUIDirective, BlockUIContentComponent]
+          }]
+        }], null, null);
+      })();
+
+      var blockInstanceGuid = 1;
+
+      function BlockUI(blockName) {
+        var settings = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+        if (!settings.scopeToInstance) {
+          return function (target, propertyKey) {
+            target[propertyKey] = BlockUIServiceInstance.decorate(blockName);
+          };
+        }
+
+        return function (target, key) {
+          var secret = "_".concat(key, "-block-ui");
+          Object.defineProperty(target, key, {
+            get: function get() {
+              if (this[secret]) {
+                return this[secret];
+              }
+
+              var instanceName = "".concat(blockName, "-").concat(blockInstanceGuid++);
+              this[secret] = BlockUIServiceInstance.decorate(instanceName);
+              return this[secret];
+            },
+            set: function set(value) {
+              this[secret] = value;
+            }
+          });
+        };
+      }
+      /**
+       * Generated bundle index. Do not edit.
+       */
+      //# sourceMappingURL=ng-block-ui.js.map
+
+      /***/
+
+    },
+
+    /***/
     "2zWu":
     /*!***********************************************************************************************************!*\
       !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/views/product/lesson/grammar/grammar.component.html ***!
@@ -9748,7 +10897,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<div class=\"animated fadeIn\">\n  <div class=\"pb-3\">\n    <select style=\"width: 200px;\" [value]=\"selectedLesson\" (change)=\"onChangeLesson($event)\" class=\"form-control\">\n      <option [value]=\"1\">1</option>\n      <option [value]=\"2\">2</option>\n      <option [value]=\"3\">3</option>\n      <option [value]=\"4\">4</option>\n      <option [value]=\"5\">5</option>\n      <option [value]=\"6\">6</option>\n      <option [value]=\"7\">7</option>\n      <option [value]=\"8\">8</option>\n      <option [value]=\"9\">9</option>\n      <option [value]=\"10\">10</option>\n      <option [value]=\"11\">11</option>\n      <option [value]=\"12\">12</option>\n    </select>\n  </div>\n  <div *ngFor=\"let item of fakeLessons\" class=\"card\">\n    <div class=\"card-header\">\n      <button type=\"button\" class=\"btn btn-info text-light\"\n              (click)=\"item.openCollapse = !item.openCollapse\">{{item.title}}\n      </button>\n      <div class=\"card-header-actions\">\n        <button type=\"button\" class=\"btn btn-success\"\n                (click)=\"item.openCollapse = !item.openCollapse\">Try it\n        </button>\n      </div>\n    </div>\n    <div class=\"card-body\"\n         (collapsed)=\"collapsed($event)\"\n         (expanded)=\"expanded($event)\"\n         [collapse]=\"item.openCollapse\">\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <div [innerHTML]=\"item.data\"></div>\n        </div>\n        <div class=\"col-4 text-right pt-2 d-flex flex-column text-right\">\n          <span class=\"badge badge-danger badge-pill p-1 mb-2\" style=\"position: static;\">Further practice</span>\n          <audio controls>\n            <source src=\"{{item.audioLink}}\" type=\"audio/mpeg\">\n          </audio>\n          <button type=\"button\" class=\"btn btn-info text-light p-1 mt-3\"\n                  (click)=\"stopAll()\">Reload all audio\n          </button>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
+      __webpack_exports__["default"] = "<div class=\"animated fadeIn\">\r\n  <div class=\"pb-3\">\r\n    <select style=\"width: 200px;\" [value]=\"selectedLesson\" (change)=\"onChangeLesson($event)\" class=\"form-control\">\r\n      <option value=\"0\">All Lessons</option>\r\n      <option value=\"1\">Lesson 1</option>\r\n      <option value=\"2\">Lesson 2</option>\r\n      <option value=\"3\">Lesson 3</option>\r\n      <option value=\"4\">Lesson 4</option>\r\n      <option value=\"5\">Lesson 5</option>\r\n      <option value=\"6\">Lesson 6</option>\r\n      <option value=\"7\">Lesson 7</option>\r\n      <option value=\"8\">Lesson 8</option>\r\n      <option value=\"9\">Lesson 9</option>\r\n      <option value=\"10\">Lesson 10</option>\r\n      <option value=\"11\">Lesson 11</option>\r\n      <option value=\"12\">Lesson 12</option>\r\n    </select>\r\n  </div>\r\n  <div *ngFor=\"let item of fakeLessons\" class=\"card\">\r\n    <div class=\"card-header\">\r\n      <button type=\"button\" class=\"btn btn-info text-light\"\r\n              (click)=\"item.openCollapse = !item.openCollapse\">{{item.title}}\r\n      </button>\r\n      <div class=\"card-header-actions\">\r\n        <button type=\"button\" class=\"btn btn-success\"\r\n                (click)=\"item.openCollapse = !item.openCollapse\">Try it\r\n        </button>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-body\"\r\n         (collapsed)=\"collapsed($event)\"\r\n         (expanded)=\"expanded($event)\"\r\n         [collapse]=\"item.openCollapse\">\r\n      <div class=\"row\">\r\n        <div class=\"col-8\">\r\n          <div [innerHTML]=\"item.data\"></div>\r\n        </div>\r\n        <div class=\"col-4 text-right pt-2 d-flex flex-column text-right\">\r\n          <span class=\"badge badge-danger badge-pill p-1 mb-2\" style=\"position: static;\">Further practice</span>\r\n          <audio controls>\r\n            <source src=\"{{item.audioLink}}\" type=\"audio/mpeg\">\r\n          </audio>\r\n          <button type=\"button\" class=\"btn btn-info text-light p-1 mt-3\"\r\n                  (click)=\"stopAll()\">Reload all audio\r\n          </button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -9826,14 +10975,15 @@
         function ListenReadComponent() {
           _classCallCheck2(this, ListenReadComponent);
 
-          this.selectedLesson = '1';
+          this.selectedLesson = '0';
         }
 
         _createClass2(ListenReadComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
+            console.log('selectedLesson1', this.selectedLesson);
             this.getLessons();
-            this.fakeLessons = this.lessons;
+            this.defaultLesson();
           }
         }, {
           key: "getLessons",
@@ -9851,12 +11001,22 @@
         }, {
           key: "onChangeLesson",
           value: function onChangeLesson(e) {
-            var _this18 = this;
+            var _this22 = this;
 
             this.selectedLesson = e.target.value;
-            this.fakeLessons = this.lessons.filter(function (x) {
-              return x.id === parseInt(_this18.selectedLesson, 10);
-            });
+
+            if (this.selectedLesson === '0') {
+              this.defaultLesson();
+            } else {
+              this.fakeLessons = this.lessons.filter(function (x) {
+                return x.id === parseInt(_this22.selectedLesson, 10);
+              });
+            }
+          }
+        }, {
+          key: "defaultLesson",
+          value: function defaultLesson() {
+            this.fakeLessons = this.lessons;
           }
         }]);
 
@@ -9979,19 +11139,14 @@
         function GrammarComponent() {
           _classCallCheck2(this, GrammarComponent);
 
-          this.selectedLesson = '1';
+          this.selectedLesson = '0';
         }
 
         _createClass2(GrammarComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
             this.getLessons();
-            this.fakeLessons = this.lessons;
-          }
-        }, {
-          key: "getLessons",
-          value: function getLessons() {
-            this.lessons = _grammar__WEBPACK_IMPORTED_MODULE_4__["Grammars"];
+            this.defaultLesson();
           }
         }, {
           key: "collapsed",
@@ -10000,32 +11155,40 @@
         }, {
           key: "expanded",
           value: function expanded(event) {// console.log(event);
-          } // Mute a singular HTML5 element
-
-        }, {
-          key: "stopMe",
-          value: function stopMe(elem) {
-            elem.load();
           } // Try to mute all video and audio elements on the page
 
         }, {
           key: "stopAll",
           value: function stopAll() {
-            var _this19 = this;
-
             document.querySelectorAll("video, audio").forEach(function (elem) {
-              return _this19.stopMe(elem);
+              // Mute a singular HTML5 element
+              elem.load();
             });
           }
         }, {
           key: "onChangeLesson",
           value: function onChangeLesson(e) {
-            var _this20 = this;
+            var _this23 = this;
 
             this.selectedLesson = e.target.value;
-            this.fakeLessons = this.lessons.filter(function (x) {
-              return x.id === parseInt(_this20.selectedLesson, 10);
-            });
+
+            if (this.selectedLesson === '0') {
+              this.defaultLesson();
+            } else {
+              this.fakeLessons = this.lessons.filter(function (x) {
+                return x.id === parseInt(_this23.selectedLesson, 10);
+              });
+            }
+          }
+        }, {
+          key: "getLessons",
+          value: function getLessons() {
+            this.lessons = _grammar__WEBPACK_IMPORTED_MODULE_4__["Grammars"];
+          }
+        }, {
+          key: "defaultLesson",
+          value: function defaultLesson() {
+            this.fakeLessons = this.lessons;
           }
         }]);
 
@@ -10389,7 +11552,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = ":host ::ng-deep #pdfViewer .ng2-pdf-viewer-container {\n  width: 800px !important;\n  height: calc(100vh - 200px) !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXC4uXFwuLlxcZS1ib29rLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNFO0VBQ0UsdUJBQUE7RUFDQSxzQ0FBQTtBQUFKIiwiZmlsZSI6ImUtYm9vay5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjpob3N0IDo6bmctZGVlcCB7XG4gICNwZGZWaWV3ZXIgLm5nMi1wZGYtdmlld2VyLWNvbnRhaW5lciB7XG4gICAgd2lkdGg6IDgwMHB4ICFpbXBvcnRhbnQ7XG4gICAgaGVpZ2h0OiBjYWxjKDEwMHZoIC0gMjAwcHgpICFpbXBvcnRhbnQ7XG4gIH1cbn1cblxuIl19 */";
+      __webpack_exports__["default"] = ":host ::ng-deep #pdfViewer .ng2-pdf-viewer-container {\n  height: calc(100vh - 200px) !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXC4uXFwuLlxcZS1ib29rLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNFO0VBQ0Usc0NBQUE7QUFBSiIsImZpbGUiOiJlLWJvb2suY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCA6Om5nLWRlZXAge1xyXG4gICNwZGZWaWV3ZXIgLm5nMi1wZGYtdmlld2VyLWNvbnRhaW5lciB7XHJcbiAgICBoZWlnaHQ6IGNhbGMoMTAwdmggLSAyMDBweCkgIWltcG9ydGFudDtcclxuICB9XHJcbn1cclxuIl19 */";
       /***/
     },
 
@@ -10529,7 +11692,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<div class=\"animated fadeIn\">\n  <div class=\"pb-3\">\n    <select style=\"width: 200px;\" [value]=\"selectedLesson\" (change)=\"onChangeLesson($event)\" class=\"form-control\">\n      <option [value]=\"1\">1</option>\n      <option [value]=\"2\">2</option>\n      <option [value]=\"3\">3</option>\n      <option [value]=\"4\">4</option>\n      <option [value]=\"5\">5</option>\n      <option [value]=\"6\">6</option>\n      <option [value]=\"7\">7</option>\n      <option [value]=\"8\">8</option>\n      <option [value]=\"9\">9</option>\n      <option [value]=\"10\">10</option>\n      <option [value]=\"11\">11</option>\n      <option [value]=\"12\">12</option>\n    </select>\n  </div>\n  <div *ngFor=\"let item of fakeLessons\" class=\"card\">\n    <div class=\"card-header\">\n      <button type=\"button\" class=\"btn btn-info text-light\"\n              (click)=\"item.openCollapse = !item.openCollapse\">{{item.title}}\n      </button>\n      <div class=\"card-header-actions\">\n        <button type=\"button\" class=\"btn btn-success\"\n              (click)=\"item.openCollapse = !item.openCollapse\">Try it\n        </button>\n      </div>\n    </div>\n    <div class=\"card-body\"\n         (collapsed)=\"collapsed($event)\"\n         (expanded)=\"expanded($event)\"\n         [collapse]=\"item.openCollapse\">\n      <p [innerHTML]=\"item.description\"></p>\n      <app-listen-read-content [contents]=\"item.contents\"></app-listen-read-content>\n    </div>\n  </div>\n</div>\n";
+      __webpack_exports__["default"] = "<div class=\"animated fadeIn\">\r\n  <div class=\"pb-3\">\r\n    <select style=\"width: 200px;\" [value]=\"selectedLesson\" (change)=\"onChangeLesson($event)\" class=\"form-control\">\r\n      <option value=\"0\">All Lessons</option>\r\n      <option value=\"1\">Lesson 1</option>\r\n      <option value=\"2\">Lesson 2</option>\r\n      <option value=\"3\">Lesson 3</option>\r\n      <option value=\"4\">Lesson 4</option>\r\n      <option value=\"5\">Lesson 5</option>\r\n      <option value=\"6\">Lesson 6</option>\r\n      <option value=\"7\">Lesson 7</option>\r\n      <option value=\"8\">Lesson 8</option>\r\n      <option value=\"9\">Lesson 9</option>\r\n      <option value=\"10\">Lesson 10</option>\r\n      <option value=\"11\">Lesson 11</option>\r\n      <option value=\"12\">Lesson 12</option>\r\n    </select>\r\n  </div>\r\n  <div *ngFor=\"let item of fakeLessons\" class=\"card\">\r\n    <div class=\"card-header\">\r\n      <button type=\"button\" class=\"btn btn-info text-light\"\r\n              (click)=\"item.openCollapse = !item.openCollapse\">{{item.title}}\r\n      </button>\r\n      <div class=\"card-header-actions\">\r\n        <button type=\"button\" class=\"btn btn-success\"\r\n              (click)=\"item.openCollapse = !item.openCollapse\">Try it\r\n        </button>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-body\"\r\n         (collapsed)=\"collapsed($event)\"\r\n         (expanded)=\"expanded($event)\"\r\n         [collapse]=\"item.openCollapse\">\r\n      <p [innerHTML]=\"item.description\"></p>\r\n      <app-listen-read-content [contents]=\"item.contents\"></app-listen-read-content>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -10582,12 +11745,20 @@
       var _e_book__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! ./e-book */
       "/cXb");
+      /* harmony import */
+
+
+      var ng_block_ui__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! ng-block-ui */
+      "12jx"); // Import BlockUI decorator & optional NgBlockUI type
+
 
       var EBookComponent = /*#__PURE__*/function () {
         function EBookComponent() {
           _classCallCheck2(this, EBookComponent);
 
           this.ebooks = _e_book__WEBPACK_IMPORTED_MODULE_4__["EBooks"];
+          this.pdfSrc = "";
         }
 
         _createClass2(EBookComponent, [{
@@ -10595,7 +11766,9 @@
           value: function ngOnInit() {}
         }, {
           key: "onChangeEbook",
-          value: function onChangeEbook(event) {// alert(event.target.value);
+          value: function onChangeEbook(event) {
+            this.blockUI.start('Loading...');
+            this.selectedEbook = event.target.value;
           }
         }]);
 
@@ -10606,6 +11779,7 @@
         return [];
       };
 
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(ng_block_ui__WEBPACK_IMPORTED_MODULE_5__["BlockUI"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], EBookComponent.prototype, "blockUI", void 0);
       EBookComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
         selector: 'app-e-book',
         template: _raw_loader_e_book_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
@@ -10966,7 +12140,7 @@
       var HttpHeaders = /*#__PURE__*/function () {
         /**  Constructs a new HTTP header object with the given values.*/
         function HttpHeaders(headers) {
-          var _this21 = this;
+          var _this24 = this;
 
           _classCallCheck2(this, HttpHeaders);
 
@@ -10985,7 +12159,7 @@
             this.headers = new Map();
           } else if (typeof headers === 'string') {
             this.lazyInit = function () {
-              _this21.headers = new Map();
+              _this24.headers = new Map();
               headers.split('\n').forEach(function (line) {
                 var index = line.indexOf(':');
 
@@ -10994,19 +12168,19 @@
                   var key = name.toLowerCase();
                   var value = line.slice(index + 1).trim();
 
-                  _this21.maybeSetNormalizedName(name, key);
+                  _this24.maybeSetNormalizedName(name, key);
 
-                  if (_this21.headers.has(key)) {
-                    _this21.headers.get(key).push(value);
+                  if (_this24.headers.has(key)) {
+                    _this24.headers.get(key).push(value);
                   } else {
-                    _this21.headers.set(key, [value]);
+                    _this24.headers.set(key, [value]);
                   }
                 }
               });
             };
           } else {
             this.lazyInit = function () {
-              _this21.headers = new Map();
+              _this24.headers = new Map();
               Object.keys(headers).forEach(function (name) {
                 var values = headers[name];
                 var key = name.toLowerCase();
@@ -11016,9 +12190,9 @@
                 }
 
                 if (values.length > 0) {
-                  _this21.headers.set(key, values);
+                  _this24.headers.set(key, values);
 
-                  _this21.maybeSetNormalizedName(name, key);
+                  _this24.maybeSetNormalizedName(name, key);
                 }
               });
             };
@@ -11147,7 +12321,7 @@
         }, {
           key: "init",
           value: function init() {
-            var _this22 = this;
+            var _this25 = this;
 
             if (!!this.lazyInit) {
               if (this.lazyInit instanceof HttpHeaders) {
@@ -11160,7 +12334,7 @@
 
               if (!!this.lazyUpdate) {
                 this.lazyUpdate.forEach(function (update) {
-                  return _this22.applyUpdate(update);
+                  return _this25.applyUpdate(update);
                 });
                 this.lazyUpdate = null;
               }
@@ -11169,13 +12343,13 @@
         }, {
           key: "copyFrom",
           value: function copyFrom(other) {
-            var _this23 = this;
+            var _this26 = this;
 
             other.init();
             Array.from(other.headers.keys()).forEach(function (key) {
-              _this23.headers.set(key, other.headers.get(key));
+              _this26.headers.set(key, other.headers.get(key));
 
-              _this23.normalizedNames.set(key, other.normalizedNames.get(key));
+              _this26.normalizedNames.set(key, other.normalizedNames.get(key));
             });
           }
         }, {
@@ -11245,11 +12419,11 @@
         }, {
           key: "forEach",
           value: function forEach(fn) {
-            var _this24 = this;
+            var _this27 = this;
 
             this.init();
             Array.from(this.normalizedNames.keys()).forEach(function (key) {
-              return fn(_this24.normalizedNames.get(key), _this24.headers.get(key));
+              return fn(_this27.normalizedNames.get(key), _this27.headers.get(key));
             });
           }
         }]);
@@ -11341,10 +12515,10 @@
           params.forEach(function (param) {
             var eqIdx = param.indexOf('=');
 
-            var _ref20 = eqIdx == -1 ? [codec.decodeKey(param), ''] : [codec.decodeKey(param.slice(0, eqIdx)), codec.decodeValue(param.slice(eqIdx + 1))],
-                _ref21 = _slicedToArray2(_ref20, 2),
-                key = _ref21[0],
-                val = _ref21[1];
+            var _ref25 = eqIdx == -1 ? [codec.decodeKey(param), ''] : [codec.decodeKey(param.slice(0, eqIdx)), codec.decodeValue(param.slice(eqIdx + 1))],
+                _ref26 = _slicedToArray2(_ref25, 2),
+                key = _ref26[0],
+                val = _ref26[1];
 
             var list = map.get(key) || [];
             list.push(val);
@@ -11370,7 +12544,7 @@
 
       var HttpParams = /*#__PURE__*/function () {
         function HttpParams() {
-          var _this25 = this;
+          var _this28 = this;
 
           var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
@@ -11391,7 +12565,7 @@
             Object.keys(options.fromObject).forEach(function (key) {
               var value = options.fromObject[key];
 
-              _this25.map.set(key, Array.isArray(value) ? value : [value]);
+              _this28.map.set(key, Array.isArray(value) ? value : [value]);
             });
           } else {
             this.map = null;
@@ -11537,17 +12711,17 @@
         }, {
           key: "toString",
           value: function toString() {
-            var _this26 = this;
+            var _this29 = this;
 
             this.init();
             return this.keys().map(function (key) {
-              var eKey = _this26.encoder.encodeKey(key); // `a: ['1']` produces `'a=1'`
+              var eKey = _this29.encoder.encodeKey(key); // `a: ['1']` produces `'a=1'`
               // `b: []` produces `''`
               // `c: ['1', '2']` produces `'c=1&c=2'`
 
 
-              return _this26.map.get(key).map(function (value) {
-                return eKey + '=' + _this26.encoder.encodeValue(value);
+              return _this29.map.get(key).map(function (value) {
+                return eKey + '=' + _this29.encoder.encodeValue(value);
               }).join('&');
             }) // filter out empty values because `b: []` produces `''`
             // which results in `a=1&&c=1&c=2` instead of `a=1&c=1&c=2` if we don't
@@ -11568,7 +12742,7 @@
         }, {
           key: "init",
           value: function init() {
-            var _this27 = this;
+            var _this30 = this;
 
             if (this.map === null) {
               this.map = new Map();
@@ -11577,22 +12751,22 @@
             if (this.cloneFrom !== null) {
               this.cloneFrom.init();
               this.cloneFrom.keys().forEach(function (key) {
-                return _this27.map.set(key, _this27.cloneFrom.map.get(key));
+                return _this30.map.set(key, _this30.cloneFrom.map.get(key));
               });
               this.updates.forEach(function (update) {
                 switch (update.op) {
                   case 'a':
                   case 's':
-                    var base = (update.op === 'a' ? _this27.map.get(update.param) : undefined) || [];
+                    var base = (update.op === 'a' ? _this30.map.get(update.param) : undefined) || [];
                     base.push(update.value);
 
-                    _this27.map.set(update.param, base);
+                    _this30.map.set(update.param, base);
 
                     break;
 
                   case 'd':
                     if (update.value !== undefined) {
-                      var _base = _this27.map.get(update.param) || [];
+                      var _base = _this30.map.get(update.param) || [];
 
                       var idx = _base.indexOf(update.value);
 
@@ -11601,12 +12775,12 @@
                       }
 
                       if (_base.length > 0) {
-                        _this27.map.set(update.param, _base);
+                        _this30.map.set(update.param, _base);
                       } else {
-                        _this27.map["delete"](update.param);
+                        _this30.map["delete"](update.param);
                       }
                     } else {
-                      _this27.map["delete"](update.param);
+                      _this30.map["delete"](update.param);
 
                       break;
                     }
@@ -12020,15 +13194,15 @@
          * Create a new `HttpHeaderResponse` with the given parameters.
          */
         function HttpHeaderResponse() {
-          var _this28;
+          var _this31;
 
           var init = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
           _classCallCheck2(this, HttpHeaderResponse);
 
-          _this28 = _super24.call(this, init);
-          _this28.type = HttpEventType.ResponseHeader;
-          return _this28;
+          _this31 = _super24.call(this, init);
+          _this31.type = HttpEventType.ResponseHeader;
+          return _this31;
         }
         /**
          * Copy this `HttpHeaderResponse`, overriding its contents with the
@@ -12073,16 +13247,16 @@
          * Construct a new `HttpResponse`.
          */
         function HttpResponse() {
-          var _this29;
+          var _this32;
 
           var init = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
           _classCallCheck2(this, HttpResponse);
 
-          _this29 = _super25.call(this, init);
-          _this29.type = HttpEventType.Response;
-          _this29.body = init.body !== undefined ? init.body : null;
-          return _this29;
+          _this32 = _super25.call(this, init);
+          _this32.type = HttpEventType.Response;
+          _this32.body = init.body !== undefined ? init.body : null;
+          return _this32;
         }
 
         _createClass2(HttpResponse, [{
@@ -12122,29 +13296,29 @@
         var _super26 = _createSuper2(HttpErrorResponse);
 
         function HttpErrorResponse(init) {
-          var _this30;
+          var _this33;
 
           _classCallCheck2(this, HttpErrorResponse);
 
           // Initialize with a default status of 0 / Unknown Error.
-          _this30 = _super26.call(this, init, 0, 'Unknown Error');
-          _this30.name = 'HttpErrorResponse';
+          _this33 = _super26.call(this, init, 0, 'Unknown Error');
+          _this33.name = 'HttpErrorResponse';
           /**
            * Errors are never okay, even when the status code is in the 2xx success range.
            */
 
-          _this30.ok = false; // If the response was successful, then this was a parse error. Otherwise, it was
+          _this33.ok = false; // If the response was successful, then this was a parse error. Otherwise, it was
           // a protocol-level failure of some sort. Either the request failed in transit
           // or the server returned an unsuccessful status code.
 
-          if (_this30.status >= 200 && _this30.status < 300) {
-            _this30.message = "Http failure during parsing for ".concat(init.url || '(unknown url)');
+          if (_this33.status >= 200 && _this33.status < 300) {
+            _this33.message = "Http failure during parsing for ".concat(init.url || '(unknown url)');
           } else {
-            _this30.message = "Http failure response for ".concat(init.url || '(unknown url)', ": ").concat(init.status, " ").concat(init.statusText);
+            _this33.message = "Http failure response for ".concat(init.url || '(unknown url)', ": ").concat(init.status, " ").concat(init.statusText);
           }
 
-          _this30.error = init.error || null;
-          return _this30;
+          _this33.error = init.error || null;
+          return _this33;
         }
 
         return HttpErrorResponse;
@@ -12274,7 +13448,7 @@
         _createClass2(HttpClient, [{
           key: "request",
           value: function request(first, url) {
-            var _this31 = this;
+            var _this34 = this;
 
             var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
             var req; // First, check whether the primary argument is an instance of `HttpRequest`.
@@ -12325,7 +13499,7 @@
 
 
             var events$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(req).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["concatMap"])(function (req) {
-              return _this31.handler.handle(req);
+              return _this34.handler.handle(req);
             })); // If coming via the API signature which accepts a previously constructed HttpRequest,
             // the only option is to get the event stream. Otherwise, return the event stream if
             // that is what was requested.
@@ -12693,7 +13867,7 @@
         }, {
           key: "handle",
           value: function handle(req) {
-            var _this32 = this;
+            var _this35 = this;
 
             // Firstly, check both the method and response type. If either doesn't match
             // then the request was improperly routed here and cannot be handled.
@@ -12708,11 +13882,11 @@
               // The first step to make a request is to generate the callback name, and replace the
               // callback placeholder in the URL with the name. Care has to be taken here to ensure
               // a trailing &, if matched, gets inserted back into the URL in the correct place.
-              var callback = _this32.nextCallback();
+              var callback = _this35.nextCallback();
 
               var url = req.urlWithParams.replace(/=JSONP_CALLBACK(&|$)/, "=".concat(callback, "$1")); // Construct the <script> tag and point it at the URL.
 
-              var node = _this32.document.createElement('script');
+              var node = _this35.document.createElement('script');
 
               node.src = url; // A JSONP request requires waiting for multiple callbacks. These variables
               // are closed over and track state across those callbacks.
@@ -12727,9 +13901,9 @@
               // object in the browser. The script being loaded via the <script> tag will
               // eventually call this callback.
 
-              _this32.callbackMap[callback] = function (data) {
+              _this35.callbackMap[callback] = function (data) {
                 // Data has been received from the JSONP script. Firstly, delete this callback.
-                delete _this32.callbackMap[callback]; // Next, make sure the request wasn't cancelled in the meantime.
+                delete _this35.callbackMap[callback]; // Next, make sure the request wasn't cancelled in the meantime.
 
                 if (cancelled) {
                   return;
@@ -12751,7 +13925,7 @@
                 // browser).
 
 
-                delete _this32.callbackMap[callback];
+                delete _this35.callbackMap[callback];
               }; // onLoad() is the success callback which runs after the response callback
               // if the JSONP script loads successfully. The event itself is unimportant.
               // If something went wrong, onLoad() may run without the response callback
@@ -12767,7 +13941,7 @@
                 // which is not guaranteed in Internet Explorer and EdgeHTML. See issue #39496
 
 
-                _this32.resolvedPromise.then(function () {
+                _this35.resolvedPromise.then(function () {
                   // Cleanup the page.
                   cleanup(); // Check whether the response callback has run.
 
@@ -12820,7 +13994,7 @@
               node.addEventListener('load', onLoad);
               node.addEventListener('error', onError);
 
-              _this32.document.body.appendChild(node); // The request has now been successfully sent.
+              _this35.document.body.appendChild(node); // The request has now been successfully sent.
 
 
               observer.next({
@@ -13045,7 +14219,7 @@
         _createClass2(HttpXhrBackend, [{
           key: "handle",
           value: function handle(req) {
-            var _this33 = this;
+            var _this36 = this;
 
             // Quick check to give a better error message when a user attempts to use
             // HttpClient.jsonp() without installing the HttpClientJsonpModule
@@ -13056,7 +14230,7 @@
 
             return new rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"](function (observer) {
               // Start by setting up the XHR object with request method, URL, and withCredentials flag.
-              var xhr = _this33.xhrFactory.build();
+              var xhr = _this36.xhrFactory.build();
 
               xhr.open(req.method, req.urlWithParams);
 
@@ -14001,10 +15175,10 @@
           event.initCustomEvent('documentload', true, true, {});
           window.dispatchEvent(event);
         });
-        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'pagerendered').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref22) {
-          var pageNumber = _ref22.pageNumber,
-              cssTransform = _ref22.cssTransform,
-              source = _ref22.source;
+        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'pagerendered').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref27) {
+          var pageNumber = _ref27.pageNumber,
+              cssTransform = _ref27.cssTransform,
+              source = _ref27.source;
           var event = document.createEvent('CustomEvent');
           event.initCustomEvent('pagerendered', true, true, {
             pageNumber: pageNumber,
@@ -14012,18 +15186,18 @@
           });
           source.div.dispatchEvent(event);
         });
-        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'textlayerrendered').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref23) {
-          var pageNumber = _ref23.pageNumber,
-              source = _ref23.source;
+        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'textlayerrendered').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref28) {
+          var pageNumber = _ref28.pageNumber,
+              source = _ref28.source;
           var event = document.createEvent('CustomEvent');
           event.initCustomEvent('textlayerrendered', true, true, {
             pageNumber: pageNumber
           });
           source.textLayerDiv.dispatchEvent(event);
         });
-        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'pagechanging').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref24) {
-          var pageNumber = _ref24.pageNumber,
-              source = _ref24.source;
+        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'pagechanging').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref29) {
+          var pageNumber = _ref29.pageNumber,
+              source = _ref29.source;
           var event = document.createEvent('UIEvents');
           event.initEvent('pagechanging', true, true);
           /* tslint:disable:no-string-literal */
@@ -14031,25 +15205,25 @@
           event['pageNumber'] = pageNumber;
           source.container.dispatchEvent(event);
         });
-        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'pagesinit').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref25) {
-          var source = _ref25.source;
+        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'pagesinit').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref30) {
+          var source = _ref30.source;
           var event = document.createEvent('CustomEvent');
           event.initCustomEvent('pagesinit', true, true, null);
           source.container.dispatchEvent(event);
         });
-        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'pagesloaded').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref26) {
-          var pagesCount = _ref26.pagesCount,
-              source = _ref26.source;
+        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'pagesloaded').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref31) {
+          var pagesCount = _ref31.pagesCount,
+              source = _ref31.source;
           var event = document.createEvent('CustomEvent');
           event.initCustomEvent('pagesloaded', true, true, {
             pagesCount: pagesCount
           });
           source.container.dispatchEvent(event);
         });
-        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'scalechange').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref27) {
-          var scale = _ref27.scale,
-              presetValue = _ref27.presetValue,
-              source = _ref27.source;
+        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'scalechange').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref32) {
+          var scale = _ref32.scale,
+              presetValue = _ref32.presetValue,
+              source = _ref32.source;
           var event = document.createEvent('UIEvents');
           event.initEvent('scalechange', true, true);
           /* tslint:disable:no-string-literal */
@@ -14060,22 +15234,22 @@
           event['presetValue'] = presetValue;
           source.container.dispatchEvent(event);
         });
-        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'updateviewarea').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref28) {
-          var location = _ref28.location,
-              source = _ref28.source;
+        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'updateviewarea').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref33) {
+          var location = _ref33.location,
+              source = _ref33.source;
           var event = document.createEvent('UIEvents');
           event.initEvent('updateviewarea', true, true);
           event['location'] = location;
           source.container.dispatchEvent(event);
         });
-        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'find').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref29) {
-          var source = _ref29.source,
-              type = _ref29.type,
-              query = _ref29.query,
-              phraseSearch = _ref29.phraseSearch,
-              caseSensitive = _ref29.caseSensitive,
-              highlightAll = _ref29.highlightAll,
-              findPrevious = _ref29.findPrevious;
+        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'find').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref34) {
+          var source = _ref34.source,
+              type = _ref34.type,
+              query = _ref34.query,
+              phraseSearch = _ref34.phraseSearch,
+              caseSensitive = _ref34.caseSensitive,
+              highlightAll = _ref34.highlightAll,
+              findPrevious = _ref34.findPrevious;
 
           if (source === window) {
             return; // event comes from FirefoxCom, no need to replicate
@@ -14091,45 +15265,45 @@
           });
           window.dispatchEvent(event);
         });
-        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'attachmentsloaded').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref30) {
-          var attachmentsCount = _ref30.attachmentsCount,
-              source = _ref30.source;
+        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'attachmentsloaded').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref35) {
+          var attachmentsCount = _ref35.attachmentsCount,
+              source = _ref35.source;
           var event = document.createEvent('CustomEvent');
           event.initCustomEvent('attachmentsloaded', true, true, {
             attachmentsCount: attachmentsCount
           });
           source.container.dispatchEvent(event);
         });
-        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'sidebarviewchanged').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref31) {
-          var view = _ref31.view,
-              source = _ref31.source;
+        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'sidebarviewchanged').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref36) {
+          var view = _ref36.view,
+              source = _ref36.source;
           var event = document.createEvent('CustomEvent');
           event.initCustomEvent('sidebarviewchanged', true, true, {
             view: view
           });
           source.outerContainer.dispatchEvent(event);
         });
-        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'pagemode').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref32) {
-          var mode = _ref32.mode,
-              source = _ref32.source;
+        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'pagemode').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref37) {
+          var mode = _ref37.mode,
+              source = _ref37.source;
           var event = document.createEvent('CustomEvent');
           event.initCustomEvent('pagemode', true, true, {
             mode: mode
           });
           source.pdfViewer.container.dispatchEvent(event);
         });
-        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'namedaction').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref33) {
-          var action = _ref33.action,
-              source = _ref33.source;
+        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'namedaction').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref38) {
+          var action = _ref38.action,
+              source = _ref38.source;
           var event = document.createEvent('CustomEvent');
           event.initCustomEvent('namedaction', true, true, {
             action: action
           });
           source.pdfViewer.container.dispatchEvent(event);
         });
-        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'presentationmodechanged').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref34) {
-          var active = _ref34.active,
-              switchInProgress = _ref34.switchInProgress;
+        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'presentationmodechanged').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref39) {
+          var active = _ref39.active,
+              switchInProgress = _ref39.switchInProgress;
           var event = document.createEvent('CustomEvent');
           event.initCustomEvent('presentationmodechanged', true, true, {
             active: active,
@@ -14137,9 +15311,9 @@
           });
           window.dispatchEvent(event);
         });
-        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'outlineloaded').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref35) {
-          var outlineCount = _ref35.outlineCount,
-              source = _ref35.source;
+        Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'outlineloaded').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(destroy$)).subscribe(function (_ref40) {
+          var outlineCount = _ref40.outlineCount,
+              source = _ref40.source;
           var event = document.createEvent('CustomEvent');
           event.initCustomEvent('outlineloaded', true, true, {
             outlineCount: outlineCount
@@ -14319,7 +15493,7 @@
         }, {
           key: "ngAfterViewChecked",
           value: function ngAfterViewChecked() {
-            var _this34 = this;
+            var _this37 = this;
 
             if (this.isInitialized) {
               return;
@@ -14335,10 +15509,10 @@
             if (this.isVisible === false && offset != null) {
               this.isVisible = true;
               setTimeout(function () {
-                _this34.initialize();
+                _this37.initialize();
 
-                _this34.ngOnChanges({
-                  src: _this34.src
+                _this37.ngOnChanges({
+                  src: _this37.src
                 });
               });
             }
@@ -14408,26 +15582,26 @@
         }, {
           key: "updateSize",
           value: function updateSize() {
-            var _this35 = this;
+            var _this38 = this;
 
             var currentViewer = this.getCurrentViewer();
             Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["from"])(this._pdf.getPage(currentViewer.currentPageNumber)).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(this.destroy$)).subscribe({
               next: function next(page) {
-                var rotation = _this35._rotation || page.rotate;
+                var rotation = _this38._rotation || page.rotate;
                 var viewportWidth = page.getViewport({
-                  scale: _this35._zoom,
+                  scale: _this38._zoom,
                   rotation: rotation
                 }).width * PdfViewerComponent.CSS_UNITS;
-                var scale = _this35._zoom;
+                var scale = _this38._zoom;
                 var stickToPage = true; // Scale the document when it shouldn't be in original size or doesn't fit into the viewport
 
-                if (!_this35._originalSize || _this35._fitToPage && viewportWidth > _this35.pdfViewerContainer.nativeElement.clientWidth) {
+                if (!_this38._originalSize || _this38._fitToPage && viewportWidth > _this38.pdfViewerContainer.nativeElement.clientWidth) {
                   var viewPort = page.getViewport({
                     scale: 1,
                     rotation: rotation
                   });
-                  scale = _this35.getScale(viewPort.width, viewPort.height);
-                  stickToPage = !_this35._stickToPage;
+                  scale = _this38.getScale(viewPort.width, viewPort.height);
+                  stickToPage = !_this38._stickToPage;
                 }
 
                 currentViewer._setScale(scale, stickToPage);
@@ -14468,31 +15642,31 @@
         }, {
           key: "setupMultiPageViewer",
           value: function setupMultiPageViewer() {
-            var _this36 = this;
+            var _this39 = this;
 
             assign(pdfjs_dist_es5_build_pdf__WEBPACK_IMPORTED_MODULE_3__, "disableTextLayer", !this._renderText);
             var eventBus = createEventBus(pdfjs_dist_es5_web_pdf_viewer__WEBPACK_IMPORTED_MODULE_4__, this.destroy$);
             Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'pagerendered').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(this.destroy$)).subscribe(function (event) {
-              _this36.pageRendered.emit(event);
+              _this39.pageRendered.emit(event);
             });
             Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'pagesinit').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(this.destroy$)).subscribe(function (event) {
-              _this36.pageInitialized.emit(event);
+              _this39.pageInitialized.emit(event);
             });
-            Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'pagechanging').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(this.destroy$)).subscribe(function (_ref36) {
-              var pageNumber = _ref36.pageNumber;
+            Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'pagechanging').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(this.destroy$)).subscribe(function (_ref41) {
+              var pageNumber = _ref41.pageNumber;
 
-              if (_this36.pageScrollTimeout) {
-                clearTimeout(_this36.pageScrollTimeout);
+              if (_this39.pageScrollTimeout) {
+                clearTimeout(_this39.pageScrollTimeout);
               }
 
-              _this36.pageScrollTimeout = window.setTimeout(function () {
-                _this36._latestScrolledPage = pageNumber;
+              _this39.pageScrollTimeout = window.setTimeout(function () {
+                _this39._latestScrolledPage = pageNumber;
 
-                _this36.pageChange.emit(pageNumber);
+                _this39.pageChange.emit(pageNumber);
               }, 100);
             });
             Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'textlayerrendered').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(this.destroy$)).subscribe(function (event) {
-              _this36.textLayerRendered.emit(event);
+              _this39.textLayerRendered.emit(event);
             });
             this.pdfMultiPageLinkService = new pdfjs_dist_es5_web_pdf_viewer__WEBPACK_IMPORTED_MODULE_4__["PDFLinkService"](Object.assign({
               eventBus: eventBus
@@ -14516,25 +15690,25 @@
         }, {
           key: "setupSinglePageViewer",
           value: function setupSinglePageViewer() {
-            var _this37 = this;
+            var _this40 = this;
 
             assign(pdfjs_dist_es5_build_pdf__WEBPACK_IMPORTED_MODULE_3__, "disableTextLayer", !this._renderText);
             var eventBus = createEventBus(pdfjs_dist_es5_web_pdf_viewer__WEBPACK_IMPORTED_MODULE_4__, this.destroy$);
-            Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'pagechanging').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(this.destroy$)).subscribe(function (_ref37) {
-              var pageNumber = _ref37.pageNumber;
+            Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'pagechanging').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(this.destroy$)).subscribe(function (_ref42) {
+              var pageNumber = _ref42.pageNumber;
 
-              if (pageNumber !== _this37._page) {
-                _this37.page = pageNumber;
+              if (pageNumber !== _this40._page) {
+                _this40.page = pageNumber;
               }
             });
             Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'pagerendered').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(this.destroy$)).subscribe(function (event) {
-              _this37.pageRendered.emit(event);
+              _this40.pageRendered.emit(event);
             });
             Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'pagesinit').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(this.destroy$)).subscribe(function (event) {
-              _this37.pageInitialized.emit(event);
+              _this40.pageInitialized.emit(event);
             });
             Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(eventBus, 'textlayerrendered').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(this.destroy$)).subscribe(function (event) {
-              _this37.textLayerRendered.emit(event);
+              _this40.textLayerRendered.emit(event);
             });
             this.pdfSinglePageLinkService = new pdfjs_dist_es5_web_pdf_viewer__WEBPACK_IMPORTED_MODULE_4__["PDFLinkService"](Object.assign({
               eventBus: eventBus
@@ -14598,7 +15772,7 @@
         }, {
           key: "loadPDF",
           value: function loadPDF() {
-            var _this38 = this;
+            var _this41 = this;
 
             if (!this.src) {
               return;
@@ -14613,29 +15787,29 @@
             this.loadingTask = pdfjs_dist_es5_build_pdf__WEBPACK_IMPORTED_MODULE_3__["getDocument"](this.getDocumentParams());
 
             this.loadingTask.onProgress = function (progressData) {
-              _this38.onProgress.emit(progressData);
+              _this41.onProgress.emit(progressData);
             };
 
             var src = this.src;
             Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["from"])(this.loadingTask.promise).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(this.destroy$)).subscribe({
               next: function next(pdf) {
-                _this38._pdf = pdf;
-                _this38.lastLoaded = src;
+                _this41._pdf = pdf;
+                _this41.lastLoaded = src;
 
-                _this38.afterLoadComplete.emit(pdf);
+                _this41.afterLoadComplete.emit(pdf);
 
-                if (!_this38.pdfMultiPageViewer) {
-                  _this38.setupMultiPageViewer();
+                if (!_this41.pdfMultiPageViewer) {
+                  _this41.setupMultiPageViewer();
 
-                  _this38.setupSinglePageViewer();
+                  _this41.setupSinglePageViewer();
                 }
 
-                _this38.resetPdfDocument();
+                _this41.resetPdfDocument();
 
-                _this38.update();
+                _this41.update();
               },
               error: function error(_error2) {
-                _this38.onError.emit(_error2);
+                _this41.onError.emit(_error2);
               }
             });
           }
@@ -14648,20 +15822,20 @@
         }, {
           key: "render",
           value: function render() {
-            var _this39 = this;
+            var _this42 = this;
 
             this._page = this.getValidPageNumber(this._page);
             var currentViewer = this.getCurrentViewer();
 
             if (this._rotation !== 0 || currentViewer.pagesRotation !== this._rotation) {
               setTimeout(function () {
-                currentViewer.pagesRotation = _this39._rotation;
+                currentViewer.pagesRotation = _this42._rotation;
               });
             }
 
             if (this._stickToPage) {
               setTimeout(function () {
-                currentViewer.currentPageNumber = _this39._page;
+                currentViewer.currentPageNumber = _this42._page;
               });
             }
 
@@ -14733,7 +15907,7 @@
         }, {
           key: "setupResizeListener",
           value: function setupResizeListener() {
-            var _this40 = this;
+            var _this43 = this;
 
             if (isSSR()) {
               return;
@@ -14741,9 +15915,9 @@
 
             this.ngZone.runOutsideAngular(function () {
               Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(window, 'resize').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["debounceTime"])(100), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function () {
-                return _this40._canAutoResize && !!_this40._pdf;
-              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(_this40.destroy$)).subscribe(function () {
-                _this40.updateSize();
+                return _this43._canAutoResize && !!_this43._pdf;
+              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(_this43.destroy$)).subscribe(function () {
+                _this43.updateSize();
               });
             });
           }
@@ -15181,11 +16355,11 @@
         }, {
           key: "getList",
           value: function getList(tableName) {
-            var _this41 = this;
+            var _this44 = this;
 
             this.db.list(tableName).valueChanges().subscribe(function (users) {
-              _this41.users = users;
-              console.log(_this41.users);
+              _this44.users = users;
+              console.log(_this44.users);
             });
           }
         }, {
@@ -15225,12 +16399,12 @@
         }, {
           key: "sendLoginCode",
           value: function sendLoginCode() {
-            var _this42 = this;
+            var _this45 = this;
 
             var appVerifier = this.windowRef.recaptchaVerifier;
             var num = this.e164();
             firebase__WEBPACK_IMPORTED_MODULE_6__["auth"]().signInWithPhoneNumber(num, appVerifier).then(function (result) {
-              _this42.windowRef.confirmationResult = result;
+              _this45.windowRef.confirmationResult = result;
             })["catch"](function (error) {
               return console.log(error);
             });
@@ -15238,10 +16412,10 @@
         }, {
           key: "verifyLoginCode",
           value: function verifyLoginCode() {
-            var _this43 = this;
+            var _this46 = this;
 
             this.windowRef.confirmationResult.confirm(this.verificationCode).then(function (result) {
-              _this43.user = result.user;
+              _this46.user = result.user;
             })["catch"](function (error) {
               return console.log(error, 'Incorrect code entered?');
             });
@@ -15534,7 +16708,19 @@
 
       var ng2_pdf_viewer__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(
       /*! ng2-pdf-viewer */
-      "IkSl"); // Angular
+      "IkSl");
+      /* harmony import */
+
+
+      var ng_block_ui__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(
+      /*! ng-block-ui */
+      "12jx");
+      /* harmony import */
+
+
+      var _BlockTemplateTmp_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(
+      /*! ./BlockTemplateTmp.component */
+      "i9Kw"); // Angular
       // Notifications Routing
       // Collapse Module
       // Lesson Component
@@ -15545,8 +16731,11 @@
       };
 
       ProductModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _product_routing_module__WEBPACK_IMPORTED_MODULE_3__["ProductRoutingModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_8__["AppSidebarModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_8__["AppBreadcrumbModule"], ngx_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_9__["PerfectScrollbarModule"], ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_10__["BsDropdownModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_8__["AppHeaderModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_8__["AppAsideModule"], ngx_bootstrap_tabs__WEBPACK_IMPORTED_MODULE_11__["TabsModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_8__["AppFooterModule"], ngx_bootstrap_collapse__WEBPACK_IMPORTED_MODULE_4__["CollapseModule"], _angular_fire__WEBPACK_IMPORTED_MODULE_14__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_15__["environment"].firebase), _angular_fire_database__WEBPACK_IMPORTED_MODULE_16__["AngularFireDatabaseModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_17__["FormsModule"], ng_chat__WEBPACK_IMPORTED_MODULE_18__["NgChatModule"], ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_21__["ModalModule"], ng2_pdf_viewer__WEBPACK_IMPORTED_MODULE_23__["PdfViewerModule"]],
-        declarations: [_lesson_lesson_component__WEBPACK_IMPORTED_MODULE_5__["LessonComponent"], _lesson_listen_read_listen_read_component__WEBPACK_IMPORTED_MODULE_7__["ListenReadComponent"], _lesson_grammar_grammar_component__WEBPACK_IMPORTED_MODULE_6__["GrammarComponent"], _lesson_listen_read_listen_read_content_listen_read_content_component__WEBPACK_IMPORTED_MODULE_12__["ListenReadContentComponent"], _firebase_demo_firebase_demo_component__WEBPACK_IMPORTED_MODULE_13__["FirebaseDemoComponent"], _lesson_chat_chat_component__WEBPACK_IMPORTED_MODULE_19__["ChatComponent"], _happy_birthday_bx_happy_birthday_bx_component__WEBPACK_IMPORTED_MODULE_20__["HappyBirthdayBxComponent"], _e_book_e_book_component__WEBPACK_IMPORTED_MODULE_22__["EBookComponent"]]
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _product_routing_module__WEBPACK_IMPORTED_MODULE_3__["ProductRoutingModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_8__["AppSidebarModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_8__["AppBreadcrumbModule"], ngx_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_9__["PerfectScrollbarModule"], ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_10__["BsDropdownModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_8__["AppHeaderModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_8__["AppAsideModule"], ngx_bootstrap_tabs__WEBPACK_IMPORTED_MODULE_11__["TabsModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_8__["AppFooterModule"], ngx_bootstrap_collapse__WEBPACK_IMPORTED_MODULE_4__["CollapseModule"], _angular_fire__WEBPACK_IMPORTED_MODULE_14__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_15__["environment"].firebase), _angular_fire_database__WEBPACK_IMPORTED_MODULE_16__["AngularFireDatabaseModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_17__["FormsModule"], ng_chat__WEBPACK_IMPORTED_MODULE_18__["NgChatModule"], ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_21__["ModalModule"], ng2_pdf_viewer__WEBPACK_IMPORTED_MODULE_23__["PdfViewerModule"], ng_block_ui__WEBPACK_IMPORTED_MODULE_24__["BlockUIModule"].forRoot({
+          template: _BlockTemplateTmp_component__WEBPACK_IMPORTED_MODULE_25__["BlockTemplateCmp"]
+        }), ng_block_ui__WEBPACK_IMPORTED_MODULE_24__["BlockUIModule"].forRoot()],
+        declarations: [_lesson_lesson_component__WEBPACK_IMPORTED_MODULE_5__["LessonComponent"], _lesson_listen_read_listen_read_component__WEBPACK_IMPORTED_MODULE_7__["ListenReadComponent"], _lesson_grammar_grammar_component__WEBPACK_IMPORTED_MODULE_6__["GrammarComponent"], _lesson_listen_read_listen_read_content_listen_read_content_component__WEBPACK_IMPORTED_MODULE_12__["ListenReadContentComponent"], _firebase_demo_firebase_demo_component__WEBPACK_IMPORTED_MODULE_13__["FirebaseDemoComponent"], _lesson_chat_chat_component__WEBPACK_IMPORTED_MODULE_19__["ChatComponent"], _happy_birthday_bx_happy_birthday_bx_component__WEBPACK_IMPORTED_MODULE_20__["HappyBirthdayBxComponent"], _e_book_e_book_component__WEBPACK_IMPORTED_MODULE_22__["EBookComponent"], _BlockTemplateTmp_component__WEBPACK_IMPORTED_MODULE_25__["BlockTemplateCmp"]],
+        entryComponents: [_BlockTemplateTmp_component__WEBPACK_IMPORTED_MODULE_25__["BlockTemplateCmp"]]
       })], ProductModule);
       /***/
     },
@@ -47491,6 +48680,51 @@
     },
 
     /***/
+    "i9Kw":
+    /*!*************************************************************!*\
+      !*** ./src/app/views/product/BlockTemplateTmp.component.ts ***!
+      \*************************************************************/
+
+    /*! exports provided: BlockTemplateCmp */
+
+    /***/
+    function i9Kw(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "BlockTemplateCmp", function () {
+        return BlockTemplateCmp;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "mrSG");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "8Y7J"); // Template component
+      // Use block-ui-template class to center div if desired
+
+
+      var BlockTemplateCmp = function BlockTemplateCmp() {
+        _classCallCheck2(this, BlockTemplateCmp);
+      };
+
+      BlockTemplateCmp = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        template: "\n    <div class=\"block-ui-template\">\n      <h1 class=\"text-white\">{{ 'hello b\xE0 x\xE3 k\xEDnh y\xEAu' }}</h1>\n    </div>\n  "
+      }) // tslint:disable-next-line:component-class-suffix
+      ], BlockTemplateCmp);
+      /***/
+    },
+
+    /***/
     "ieBf":
     /*!***************************************************!*\
       !*** ./src/app/views/product/lesson/MyAdapter.ts ***!
@@ -47566,7 +48800,7 @@
         }, {
           key: "sendMessage",
           value: function sendMessage(message) {
-            var _this44 = this;
+            var _this47 = this;
 
             setTimeout(function () {
               var replyMessage = new ng_chat__WEBPACK_IMPORTED_MODULE_0__["Message"]();
@@ -47582,7 +48816,7 @@
                 replyMessage.fromId = group.chattingTo[randomParticipantIndex].id;
                 replyMessage.toId = message.toId;
 
-                _this44.onMessageReceived(group, replyMessage);
+                _this47.onMessageReceived(group, replyMessage);
               } else {
                 replyMessage.fromId = message.toId;
                 replyMessage.toId = message.fromId;
@@ -47590,14 +48824,14 @@
                   return x.id === replyMessage.fromId;
                 });
 
-                _this44.onMessageReceived(user, replyMessage);
+                _this47.onMessageReceived(user, replyMessage);
               }
             }, 1000);
           }
         }, {
           key: "groupCreated",
           value: function groupCreated(group) {
-            var _this45 = this;
+            var _this48 = this;
 
             MyAdapter.mockedParticipants.push(group);
             MyAdapter.mockedParticipants = MyAdapter.mockedParticipants.sort(function (first, second) {
@@ -47605,7 +48839,7 @@
             }); // Trigger update of friends list
 
             this.listFriends().subscribe(function (response) {
-              _this45.onFriendsListChanged(response);
+              _this48.onFriendsListChanged(response);
             });
           }
         }]);
@@ -48192,10 +49426,10 @@
         var loaded$ = loadedData(query, scheduler);
         return loaded$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["withLatestFrom"])(action$), // Get the latest values from the "loaded" and "child" datasets
         // We can use both datasets to form an array of the latest values.
-        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (_ref38) {
-          var _ref39 = _slicedToArray2(_ref38, 2),
-              loaded = _ref39[0],
-              actions = _ref39[1];
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (_ref43) {
+          var _ref44 = _slicedToArray2(_ref43, 2),
+              loaded = _ref44[0],
+              actions = _ref44[1];
 
           // Store the last key in the data set
           var lastKeyToLoad = loaded.lastKeyToLoad; // Store all child keys loaded at this point
@@ -48360,10 +49594,10 @@
         _createClass2(AngularFireDatabase, [{
           key: "list",
           value: function list(pathOrRef, queryFn) {
-            var _this46 = this;
+            var _this49 = this;
 
             var ref = this.schedulers.ngZone.runOutsideAngular(function () {
-              return getRef(_this46.database, pathOrRef);
+              return getRef(_this49.database, pathOrRef);
             });
             var query = ref;
 
@@ -48376,20 +49610,20 @@
         }, {
           key: "object",
           value: function object(pathOrRef) {
-            var _this47 = this;
+            var _this50 = this;
 
             var ref = this.schedulers.ngZone.runOutsideAngular(function () {
-              return getRef(_this47.database, pathOrRef);
+              return getRef(_this50.database, pathOrRef);
             });
             return createObjectReference(ref, this);
           }
         }, {
           key: "createPushId",
           value: function createPushId() {
-            var _this48 = this;
+            var _this51 = this;
 
             var ref = this.schedulers.ngZone.runOutsideAngular(function () {
-              return _this48.database.ref();
+              return _this51.database.ref();
             });
             return ref.push().key;
           }
@@ -48715,10 +49949,10 @@
               // work is executed in the correct zone
 
               var workInZone = function workInZone(state) {
-                var _this49 = this;
+                var _this52 = this;
 
                 targetZone.runGuarded(function () {
-                  work.apply(_this49, [state]);
+                  work.apply(_this52, [state]);
                 });
               }; // Scheduling itself needs to be run in zone to ensure setInterval calls for async scheduling are done
               // inside the correct zone. This scheduler needs to schedule asynchronously always to ensure that
@@ -48757,15 +49991,15 @@
           }, {
             key: "unscheduleTask",
             value: function unscheduleTask() {
-              var _this50 = this;
+              var _this53 = this;
 
               // maybe this is a race condition, invoke in a timeout
               // hold for 10ms while I try to figure out what is going on
               setTimeout(function () {
-                if (_this50.task != null && _this50.task.state === 'scheduled') {
-                  _this50.task.invoke();
+                if (_this53.task != null && _this53.task.state === 'scheduled') {
+                  _this53.task.invoke();
 
-                  _this50.task = null;
+                  _this53.task = null;
                 }
               }, 10);
             }
@@ -48939,10 +50173,10 @@
         globalThis.ɵAngularfireInstanceCache || (globalThis.ɵAngularfireInstanceCache = new Map());
 
         function ɵfetchInstance(cacheKey, moduleName, app, fn, args) {
-          var _ref40 = globalThis.ɵAngularfireInstanceCache.get(cacheKey) || [],
-              _ref41 = _toArray(_ref40),
-              instance = _ref41[0],
-              cachedArgs = _ref41.slice(1);
+          var _ref45 = globalThis.ɵAngularfireInstanceCache.get(cacheKey) || [],
+              _ref46 = _toArray(_ref45),
+              instance = _ref46[0],
+              cachedArgs = _ref46.slice(1);
 
           if (instance) {
             try {
@@ -49541,7 +50775,7 @@
         }]
       }, {
         id: 8,
-        title: 'LESSON 08 - TRAVEL',
+        title: 'Lesson 08 - TRAVEL',
         name: "Travel",
         displayOrder: 8,
         description: "MY NAME IS DAO DAO, this lesson is tell you about people.",
@@ -49727,7 +50961,7 @@
         }]
       }, {
         id: 11,
-        title: 'LESSON 11 - Life experience',
+        title: 'Lesson 11 - Life experience',
         name: "Life experience",
         displayOrder: 11,
         description: "MY NAME IS DAO DAO, this lesson is tell you about people.",
@@ -49785,7 +51019,7 @@
         }]
       }, {
         id: 12,
-        title: 'LESSON 12 - Future goal',
+        title: 'Lesson 12 - Future goal',
         name: "Future goal",
         display_Order: 12,
         description: "MY NAME IS DAO DAO, this lesson is tell you about people.",
@@ -49861,7 +51095,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<div class=\"animated fadeIn text-center container\">\n    <select style=\"width: 100%;\" [value]=\"selectedEbook\"\n            (change)=\"onChangeEbook($event)\" class=\"form-control\"\n            aria-label=\"abc\">\n        <option *ngFor=\"let ebook of ebooks\" [value]=\"ebook.url\">{{ebook.title}}</option>\n    </select>\n  <pdf-viewer *ngIf=\"selectedEbook\" id=\"pdfViewer\"\n              [src]=\"selectedEbook\"\n              [render-text]=\"true\"\n              style=\"display: block;\"\n  ></pdf-viewer>\n</div>\n\n";
+      __webpack_exports__["default"] = "<div class=\"animated fadeIn text-center\">\r\n  <block-ui message=\"Default Message\">\r\n    <div class=\"row\">\r\n      <div class=\"col-12 col-sm-3\">\r\n        <select style=\"width: 100%;\" [value]=\"selectedEbook\"\r\n                (change)=\"onChangeEbook($event)\" class=\"form-control\"\r\n                aria-label=\"Select e-book\">\r\n          <option *ngFor=\"let ebook of ebooks\" [value]=\"ebook.url\">{{ebook.title}}</option>\r\n        </select>\r\n      </div>\r\n      <div class=\"col-12 col-sm-9\">\r\n        <pdf-viewer id=\"pdfViewer\"\r\n                    [src]=\"selectedEbook\"\r\n                    [render-text]=\"true\"\r\n                    (after-load-complete)=\"this.blockUI.stop();\"\r\n        ></pdf-viewer>\r\n      </div>\r\n    </div>\r\n  </block-ui>\r\n</div>\r\n\r\n";
       /***/
     },
 
@@ -51661,7 +52895,7 @@
         }, {
           key: "bootstrapChat",
           value: function bootstrapChat() {
-            var _this51 = this;
+            var _this54 = this;
 
             var initializationException = null;
 
@@ -51673,11 +52907,11 @@
                 this.initializeBrowserNotifications(); // Binding event listeners
 
                 this.adapter.messageReceivedHandler = function (participant, msg) {
-                  return _this51.onMessageReceived(participant, msg);
+                  return _this54.onMessageReceived(participant, msg);
                 };
 
                 this.adapter.friendsListChangedHandler = function (participantsResponse) {
-                  return _this51.onFriendsListChanged(participantsResponse);
+                  return _this54.onFriendsListChanged(participantsResponse);
                 };
 
                 this.activateFriendListFetch();
@@ -51715,7 +52949,7 @@
         }, {
           key: "activateFriendListFetch",
           value: function activateFriendListFetch() {
-            var _this52 = this;
+            var _this55 = this;
 
             if (this.adapter) {
               // Loading current users list
@@ -51723,7 +52957,7 @@
                 // Setting a long poll interval to update the friends list
                 this.fetchFriendsList(true);
                 this.pollingIntervalWindowInstance = window.setInterval(function () {
-                  return _this52.fetchFriendsList(false);
+                  return _this55.fetchFriendsList(false);
                 }, this.pollingInterval);
               } else {
                 // Since polling was disabled, a friends list update mechanism will have to be implemented in the ChatAdapter.
@@ -51795,48 +53029,48 @@
         }, {
           key: "fetchFriendsList",
           value: function fetchFriendsList(isBootstrapping) {
-            var _this53 = this;
+            var _this56 = this;
 
             this.adapter.listFriends().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (participantsResponse) {
-              _this53.participantsResponse = participantsResponse;
-              _this53.participants = participantsResponse.map(function (response) {
+              _this56.participantsResponse = participantsResponse;
+              _this56.participants = participantsResponse.map(function (response) {
                 return response.participant;
               });
             })).subscribe(function () {
               if (isBootstrapping) {
-                _this53.restoreWindowsState();
+                _this56.restoreWindowsState();
               }
             });
           }
         }, {
           key: "fetchMessageHistory",
           value: function fetchMessageHistory(window) {
-            var _this54 = this;
+            var _this57 = this;
 
             // Not ideal but will keep this until we decide if we are shipping pagination with the default adapter
             if (this.adapter instanceof PagedHistoryChatAdapter) {
               window.isLoadingHistory = true;
               this.adapter.getMessageHistoryByPage(window.participant.id, this.historyPageSize, ++window.historyPage).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (result) {
                 result.forEach(function (message) {
-                  return _this54.assertMessageType(message);
+                  return _this57.assertMessageType(message);
                 });
                 window.messages = result.concat(window.messages);
                 window.isLoadingHistory = false;
                 var direction = window.historyPage == 1 ? ScrollDirection.Bottom : ScrollDirection.Top;
-                window.hasMoreMessages = result.length == _this54.historyPageSize;
+                window.hasMoreMessages = result.length == _this57.historyPageSize;
                 setTimeout(function () {
-                  return _this54.onFetchMessageHistoryLoaded(result, window, direction, true);
+                  return _this57.onFetchMessageHistoryLoaded(result, window, direction, true);
                 });
               })).subscribe();
             } else {
               this.adapter.getMessageHistory(window.participant.id).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (result) {
                 result.forEach(function (message) {
-                  return _this54.assertMessageType(message);
+                  return _this57.assertMessageType(message);
                 });
                 window.messages = result.concat(window.messages);
                 window.isLoadingHistory = false;
                 setTimeout(function () {
-                  return _this54.onFetchMessageHistoryLoaded(result, window, ScrollDirection.Bottom);
+                  return _this57.onFetchMessageHistoryLoaded(result, window, ScrollDirection.Bottom);
                 });
               })).subscribe();
             }
@@ -51980,15 +53214,15 @@
         }, {
           key: "focusOnWindow",
           value: function focusOnWindow(window) {
-            var _this55 = this;
+            var _this58 = this;
 
             var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function () {};
             var windowIndex = this.windows.indexOf(window);
 
             if (windowIndex >= 0) {
               setTimeout(function () {
-                if (_this55.chatWindows) {
-                  var chatWindowToFocus = _this55.chatWindows.toArray()[windowIndex];
+                if (_this58.chatWindows) {
+                  var chatWindowToFocus = _this58.chatWindows.toArray()[windowIndex];
 
                   chatWindowToFocus.chatWindowInput.nativeElement.focus();
                 }
@@ -52061,7 +53295,7 @@
         }, {
           key: "restoreWindowsState",
           value: function restoreWindowsState() {
-            var _this56 = this;
+            var _this59 = this;
 
             try {
               if (this.persistWindowsState) {
@@ -52073,7 +53307,7 @@
                     return participantIds.indexOf(u.id) >= 0;
                   });
                   participantsToRestore.forEach(function (participant) {
-                    _this56.openChatWindow(participant);
+                    _this59.openChatWindow(participant);
                   });
                 }
               }
@@ -52131,7 +53365,7 @@
         }, {
           key: "onWindowChatClosed",
           value: function onWindowChatClosed(payload) {
-            var _this57 = this;
+            var _this60 = this;
 
             var closedWindow = payload.closedWindow,
                 closedViaEscapeKey = payload.closedViaEscapeKey;
@@ -52141,7 +53375,7 @@
 
               if (closestWindow) {
                 this.focusOnWindow(closestWindow, function () {
-                  _this57.closeWindow(closedWindow);
+                  _this60.closeWindow(closedWindow);
                 });
               } else {
                 this.closeWindow(closedWindow);
@@ -52941,7 +54175,7 @@
 
       var NgChatFriendsListComponent = /*#__PURE__*/function () {
         function NgChatFriendsListComponent() {
-          var _this58 = this;
+          var _this61 = this;
 
           _classCallCheck2(this, NgChatFriendsListComponent);
 
@@ -52956,7 +54190,7 @@
           this.chatParticipantStatusDescriptor = chatParticipantStatusDescriptor;
 
           this.cleanUpUserSelection = function () {
-            return _this58.selectedUsersFromFriendsList = [];
+            return _this61.selectedUsersFromFriendsList = [];
           };
         }
 
@@ -52977,12 +54211,12 @@
         }, {
           key: "filteredParticipants",
           get: function get() {
-            var _this59 = this;
+            var _this62 = this;
 
             if (this.searchInput.length > 0) {
               // Searches in the friend list by the inputted search string
               return this.participants.filter(function (x) {
-                return x.displayName.toUpperCase().includes(_this59.searchInput.toUpperCase());
+                return x.displayName.toUpperCase().includes(_this62.searchInput.toUpperCase());
               });
             }
 
@@ -52998,7 +54232,7 @@
         }, {
           key: "unreadMessagesTotalByParticipant",
           value: function unreadMessagesTotalByParticipant(participant) {
-            var _this60 = this;
+            var _this63 = this;
 
             var openedWindow = this.windows.find(function (x) {
               return x.participant.id == participant.id;
@@ -53008,7 +54242,7 @@
               return MessageCounter.unreadMessagesTotal(openedWindow, this.userId);
             } else {
               var totalUnreadMessages = this.participantsResponse.filter(function (x) {
-                return x.participant.id == participant.id && !_this60.participantsInteractedWith.find(function (u) {
+                return x.participant.id == participant.id && !_this63.participantsInteractedWith.find(function (u) {
                   return u.id == participant.id;
                 }) && x.metadata && x.metadata.totalUnreadMessages > 0;
               }).map(function (participantResponse) {
@@ -53296,12 +54530,12 @@
         }, {
           key: "scrollChatWindow",
           value: function scrollChatWindow(window, direction) {
-            var _this61 = this;
+            var _this64 = this;
 
             if (!window.isCollapsed) {
               setTimeout(function () {
-                if (_this61.chatMessages) {
-                  var element = _this61.chatMessages.nativeElement;
+                if (_this64.chatMessages) {
+                  var element = _this64.chatMessages.nativeElement;
                   var position = direction === ScrollDirection.Top ? 0 : element.scrollHeight;
                   element.scrollTop = position;
                 }
@@ -53325,13 +54559,13 @@
         }, {
           key: "toggleWindowFocus",
           value: function toggleWindowFocus(window) {
-            var _this62 = this;
+            var _this65 = this;
 
             window.hasFocus = !window.hasFocus;
 
             if (window.hasFocus) {
               var unreadMessages = window.messages.filter(function (message) {
-                return message.dateSeen == null && (message.toId == _this62.userId || window.participant.participantType === ChatParticipantType.Group);
+                return message.dateSeen == null && (message.toId == _this65.userId || window.participant.participantType === ChatParticipantType.Group);
               });
 
               if (unreadMessages && unreadMessages.length > 0) {
@@ -53420,7 +54654,7 @@
         }, {
           key: "onFileChosen",
           value: function onFileChosen(window) {
-            var _this63 = this;
+            var _this66 = this;
 
             var fileUploadInstanceId = this.getUniqueFileUploadInstanceId(window);
             var uploadElementRef = this.nativeFileInput;
@@ -53429,20 +54663,20 @@
               var file = uploadElementRef.nativeElement.files[0];
               this.fileUploadersInUse.push(fileUploadInstanceId);
               this.fileUploadAdapter.uploadFile(file, window.participant.id).subscribe(function (fileMessage) {
-                _this63.clearInUseFileUploader(fileUploadInstanceId);
+                _this66.clearInUseFileUploader(fileUploadInstanceId);
 
-                fileMessage.fromId = _this63.userId; // Push file message to current user window   
+                fileMessage.fromId = _this66.userId; // Push file message to current user window   
 
                 window.messages.push(fileMessage);
 
-                _this63.onMessageSent.emit(fileMessage);
+                _this66.onMessageSent.emit(fileMessage);
 
-                _this63.scrollChatWindow(window, ScrollDirection.Bottom); // Resets the file upload element
+                _this66.scrollChatWindow(window, ScrollDirection.Bottom); // Resets the file upload element
 
 
                 uploadElementRef.nativeElement.value = '';
               }, function (error) {
-                _this63.clearInUseFileUploader(fileUploadInstanceId); // Resets the file upload element
+                _this66.clearInUseFileUploader(fileUploadInstanceId); // Resets the file upload element
 
 
                 uploadElementRef.nativeElement.value = ''; // TODO: Invoke a file upload adapter error here

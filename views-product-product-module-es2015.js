@@ -8523,13 +8523,12 @@ let ListenReadContentComponent = class ListenReadContentComponent {
     constructor() { }
     ngOnInit() {
     }
-    // Mute a singular HTML5 element
-    stopMe(elem) {
-        elem.load();
-    }
     // Try to mute all video and audio elements on the page
     stopAll() {
-        document.querySelectorAll(`video, audio`).forEach(elem => this.stopMe(elem));
+        document.querySelectorAll(`video, audio`).forEach((elem) => {
+            // Mute a singular HTML5 element
+            elem.load();
+        });
     }
 };
 ListenReadContentComponent.ctorParameters = () => [];
@@ -8562,6 +8561,816 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "12jx":
+/*!***********************************************************************!*\
+  !*** ./node_modules/ng-block-ui/__ivy_ngcc__/fesm2015/ng-block-ui.js ***!
+  \***********************************************************************/
+/*! exports provided: BLOCKUI_DEFAULT, BlockUI, BlockUIComponent, BlockUIContentComponent, BlockUIModule, BlockUIService, ɵa, ɵb, ɵc, ɵd, ɵe, ɵf */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BLOCKUI_DEFAULT", function() { return BlockUIDefaultName; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BlockUI", function() { return BlockUI; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BlockUIComponent", function() { return BlockUIComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BlockUIContentComponent", function() { return BlockUIContentComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BlockUIModule", function() { return BlockUIModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BlockUIService", function() { return BlockUIService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵa", function() { return BlockUIModuleSettings; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵb", function() { return provideInstance; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵc", function() { return BlockUIInstanceService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵd", function() { return template; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵe", function() { return styles; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵf", function() { return BlockUIDirective; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "5lcw");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "8Y7J");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "SVse");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "qCKp");
+
+
+
+
+
+
+
+
+const _c0 = ["*"];
+const _c1 = ["templateOutlet"];
+function BlockUIContentComponent_div_1_div_2_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", ctx_r2.message || ctx_r2.defaultMessage, " ");
+} }
+function BlockUIContentComponent_div_1_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "div", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, BlockUIContentComponent_div_1_div_2_Template, 2, 1, "div", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r0.message || ctx_r0.defaultMessage);
+} }
+function BlockUIContentComponent_2_ng_template_0_Template(rf, ctx) { }
+function BlockUIContentComponent_2_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](0, BlockUIContentComponent_2_ng_template_0_Template, 0, 0, "ng-template", null, 7, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplateRefExtractor"]);
+} }
+const _c2 = function (a0) { return { "active": a0 }; };
+class BlockUIActions {
+}
+BlockUIActions.START = 'start';
+BlockUIActions.STOP = 'stop';
+BlockUIActions.UPDATE = 'update';
+BlockUIActions.RESET = 'reset';
+BlockUIActions.RESET_GLOBAL = 'reset_global';
+BlockUIActions.UNSUBSCRIBE = 'unsubscribe';
+
+const BlockUIDefaultName = 'block-ui-main';
+
+let BlockUIInstanceService = class BlockUIInstanceService {
+    constructor() {
+        this.blockUISettings = {};
+        this.blockUIInstances = {};
+        this.blockUISubject = new rxjs__WEBPACK_IMPORTED_MODULE_3__["ReplaySubject"](1);
+        this.blockUIObservable = this.blockUISubject.asObservable();
+        this.blockUIObservable.subscribe(this.blockUIMiddleware.bind(this));
+    }
+    getSettings() {
+        return this.blockUISettings;
+    }
+    updateSettings(settings = {}) {
+        this.blockUISettings = Object.assign(Object.assign({}, this.blockUISettings), settings);
+    }
+    decorate(name = BlockUIDefaultName) {
+        const blockUI = {
+            name,
+            isActive: false,
+            blockCount: 0,
+            start: this.dispatch(this.blockUISubject, BlockUIActions.START, name),
+            update: this.dispatch(this.blockUISubject, BlockUIActions.UPDATE, name),
+            stop: this.dispatch(this.blockUISubject, BlockUIActions.STOP, name),
+            reset: this.dispatch(this.blockUISubject, BlockUIActions.RESET, name),
+            resetGlobal: this.dispatch(this.blockUISubject, BlockUIActions.RESET_GLOBAL, name),
+            unsubscribe: this.dispatch(this.blockUISubject, BlockUIActions.UNSUBSCRIBE, name)
+        };
+        this.blockUIInstances[name] = this.blockUIInstances[name] || blockUI;
+        return blockUI;
+    }
+    observe() {
+        return this.blockUIObservable;
+    }
+    clearInstance(instanceName) {
+        this.dispatch(this.blockUISubject, BlockUIActions.RESET, instanceName);
+    }
+    blockUIMiddleware({ action, name }) {
+        let isActive = null;
+        switch (action) {
+            case (BlockUIActions.START):
+                isActive = true;
+                break;
+            case (BlockUIActions.STOP):
+            case (BlockUIActions.RESET):
+                isActive = false;
+                break;
+        }
+        if (isActive !== null) {
+            this.blockUIInstances[name].isActive = isActive;
+        }
+    }
+    dispatch(subject, action, name = BlockUIDefaultName) {
+        return (message) => {
+            subject.next({
+                name,
+                action,
+                message
+            });
+        };
+    }
+};
+BlockUIInstanceService.ɵfac = function BlockUIInstanceService_Factory(t) { return new (t || BlockUIInstanceService)(); };
+BlockUIInstanceService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: BlockUIInstanceService, factory: function (t) { return BlockUIInstanceService.ɵfac(t); } });
+
+let BlockUIComponent = class BlockUIComponent {
+    constructor(blockUI) {
+        this.blockUI = blockUI;
+    }
+    ngOnInit() {
+        this.name = this.name || BlockUIDefaultName;
+        this.template = this.template || this.blockUI.blockUISettings.template;
+    }
+};
+BlockUIComponent.ɵfac = function BlockUIComponent_Factory(t) { return new (t || BlockUIComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](BlockUIInstanceService)); };
+BlockUIComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: BlockUIComponent, selectors: [["block-ui"]], inputs: { name: "name", template: "template", message: "message", delayStart: "delayStart", delayStop: "delayStop" }, ngContentSelectors: _c0, decls: 2, vars: 5, consts: [[3, "name", "message", "template", "delayStart", "delayStop"]], template: function BlockUIComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵprojectionDef"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵprojection"](0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "block-ui-content", 0);
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("name", ctx.name)("message", ctx.message)("template", ctx.template)("delayStart", ctx.delayStart)("delayStop", ctx.delayStop);
+    } }, directives: function () { return [BlockUIContentComponent]; }, encapsulation: 2 });
+BlockUIComponent.ctorParameters = () => [
+    { type: BlockUIInstanceService }
+];
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], BlockUIComponent.prototype, "name", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], BlockUIComponent.prototype, "message", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], BlockUIComponent.prototype, "delayStart", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], BlockUIComponent.prototype, "delayStop", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], BlockUIComponent.prototype, "template", void 0);
+
+// Spinner style - https://github.com/lukehaas/css-loaders
+const styles = `
+.block-ui-wrapper {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.70);
+  z-index: 30000;
+  cursor: wait;
+}
+
+.block-ui-wrapper.block-ui-wrapper--element {
+  position: absolute;
+}
+
+.block-ui-wrapper.active {
+  display: block;
+}
+
+.block-ui-wrapper.block-ui-main {
+  position: fixed;
+}
+
+.block-ui-spinner,
+.block-ui-template {
+  position: absolute;
+  top: 40%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.block-ui-spinner > .message {
+  font-size: 1.3em;
+  text-align: center;
+  color: #fff;
+}
+
+.block-ui__element {
+  position: relative;
+}
+
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+.loader {
+  margin: 7px auto;
+  font-size: 5px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+`;
+
+const template = `
+<div class="block-ui-wrapper {{name}} {{className}}" [ngClass]="{ 'active': state.blockCount > 0 }">
+  <div class="block-ui-spinner" *ngIf="!templateCmp">
+    <div class="loader"></div>
+    <div *ngIf="message || defaultMessage" class="message">
+      {{ message || defaultMessage }}
+    </div>
+  </div>
+  <ng-template *ngIf="templateCmp" #templateOutlet></ng-template>
+</div>
+`;
+
+let BlockUIContentComponent = class BlockUIContentComponent {
+    constructor(blockUI, resolver, changeDetectionRef) {
+        this.blockUI = blockUI;
+        this.resolver = resolver;
+        this.changeDetectionRef = changeDetectionRef;
+        this.name = BlockUIDefaultName;
+        this.defaultBlockState = {
+            startTimeouts: [],
+            stopTimeouts: [],
+            updateTimeouts: [],
+            blockCount: 0,
+            startCallCount: 0,
+            stopCallCount: 0
+        };
+        this.state = Object.assign({}, this.defaultBlockState);
+    }
+    ngOnInit() {
+        this.settings = this.blockUI.getSettings();
+        this.blockUISubscription = this.subscribeToBlockUI(this.blockUI.observe());
+    }
+    ngAfterViewInit() {
+        try {
+            if (!this.templateCmp) {
+                return false;
+            }
+            if (this.templateCmp instanceof _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]) {
+                this.templateOutlet.createEmbeddedView(this.templateCmp);
+            }
+            else {
+                const templateComp = this.resolver.resolveComponentFactory(this.templateCmp);
+                this.templateCompRef = this.templateOutlet.createComponent(templateComp);
+                this.updateBlockTemplate(this.message);
+            }
+        }
+        catch (error) {
+            console.error('ng-block-ui:', error);
+        }
+    }
+    ngAfterViewChecked() {
+        this.detectChanges();
+    }
+    subscribeToBlockUI(blockUI$) {
+        return blockUI$.subscribe(event => this.onDispatchedEvent(event));
+    }
+    onDispatchedEvent(event) {
+        switch (event.action) {
+            case BlockUIActions.START:
+                this.onStart(event);
+                break;
+            case BlockUIActions.STOP:
+                this.onStop(event);
+                break;
+            case BlockUIActions.UPDATE:
+                this.onUpdate(event);
+                break;
+            case BlockUIActions.RESET:
+                this.onReset(event);
+                break;
+            case BlockUIActions.RESET_GLOBAL:
+                this.resetState();
+                break;
+            case BlockUIActions.UNSUBSCRIBE:
+                this.onStop(event);
+                this.onUnsubscribe(event.name);
+                break;
+        }
+    }
+    onStart({ name, message }) {
+        if (name === this.name) {
+            const delay = this.delayStart || this.settings.delayStart || 0;
+            this.state.startCallCount += 1;
+            const startTimeout = setTimeout(() => {
+                this.state.blockCount += 1;
+                this.showBlock(message);
+                this.updateInstanceBlockCount();
+            }, delay);
+            this.state.startTimeouts.push(startTimeout);
+        }
+    }
+    onStop({ name }) {
+        if (name === this.name) {
+            const stopCount = this.state.stopCallCount + 1;
+            if (this.state.startCallCount - stopCount >= 0) {
+                const delay = this.delayStop || this.settings.delayStop || 0;
+                this.state.stopCallCount = stopCount;
+                const stopTimeout = setTimeout(() => {
+                    this.state.blockCount -= 1;
+                    this.updateInstanceBlockCount();
+                    this.detectChanges();
+                }, delay);
+                this.state.stopTimeouts.push(stopTimeout);
+            }
+        }
+    }
+    onUpdate({ name, message }) {
+        if (name === this.name) {
+            const delay = this.delayStart || this.settings.delayStart || 0;
+            clearTimeout(this.state.updateTimeouts[0]);
+            const updateTimeout = setTimeout(() => {
+                this.updateMessage(message);
+            }, delay);
+            this.state.updateTimeouts.push(updateTimeout);
+        }
+    }
+    onReset({ name }) {
+        if (name === this.name) {
+            this.resetState();
+        }
+    }
+    updateMessage(message) {
+        this.showBlock(message);
+    }
+    showBlock(message) {
+        this.message = message || this.defaultMessage || this.settings.message;
+        this.updateBlockTemplate(this.message);
+        this.detectChanges();
+    }
+    updateBlockTemplate(msg) {
+        if (this.templateCompRef && this.templateCompRef instanceof _angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentRef"]) {
+            this.templateCompRef.instance.message = msg;
+        }
+    }
+    resetState() {
+        [
+            ...this.state.startTimeouts,
+            ...this.state.stopTimeouts,
+            ...this.state.updateTimeouts
+        ].forEach(clearTimeout);
+        this.state = Object.assign({}, this.defaultBlockState);
+        this.updateInstanceBlockCount();
+        this.detectChanges();
+    }
+    onUnsubscribe(name) {
+        if (this.blockUISubscription && name === this.name) {
+            this.blockUISubscription.unsubscribe();
+        }
+    }
+    updateInstanceBlockCount() {
+        if (this.blockUI.blockUIInstances[this.name]) {
+            const { blockCount } = this.state;
+            this.blockUI.blockUIInstances[this.name].blockCount = blockCount;
+        }
+    }
+    detectChanges() {
+        if (!this.changeDetectionRef['destroyed']) {
+            this.changeDetectionRef.detectChanges();
+        }
+    }
+    ngOnDestroy() {
+        this.resetState();
+        this.onUnsubscribe(this.name);
+        this.blockUI.clearInstance(this.name);
+    }
+};
+BlockUIContentComponent.ɵfac = function BlockUIContentComponent_Factory(t) { return new (t || BlockUIContentComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](BlockUIInstanceService), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentFactoryResolver"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"])); };
+BlockUIContentComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: BlockUIContentComponent, selectors: [["block-ui-content"]], viewQuery: function BlockUIContentComponent_Query(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c1, 1, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"]);
+    } if (rf & 2) {
+        let _t;
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.templateOutlet = _t.first);
+    } }, inputs: { name: "name", delayStart: "delayStart", delayStop: "delayStop", defaultMessage: ["message", "defaultMessage"], templateCmp: ["template", "templateCmp"] }, decls: 3, vars: 9, consts: [[3, "ngClass"], ["class", "block-ui-spinner", 4, "ngIf"], [4, "ngIf"], [1, "block-ui-spinner"], [1, "loader"], ["class", "message", 4, "ngIf"], [1, "message"], ["templateOutlet", ""]], template: function BlockUIContentComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, BlockUIContentComponent_div_1_Template, 3, 1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, BlockUIContentComponent_2_Template, 2, 0, undefined, 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassMapInterpolate2"]("block-ui-wrapper ", ctx.name, " ", ctx.className, "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](7, _c2, ctx.state.blockCount > 0));
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.templateCmp);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.templateCmp);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"]], styles: ["\n.block-ui-wrapper {\n  display: none;\n  position: fixed;\n  height: 100%;\n  width: 100%;\n  top: 0;\n  left: 0;\n  background: rgba(0, 0, 0, 0.70);\n  z-index: 30000;\n  cursor: wait;\n}\n\n.block-ui-wrapper.block-ui-wrapper--element {\n  position: absolute;\n}\n\n.block-ui-wrapper.active {\n  display: block;\n}\n\n.block-ui-wrapper.block-ui-main {\n  position: fixed;\n}\n\n.block-ui-spinner,\n.block-ui-template {\n  position: absolute;\n  top: 40%;\n  margin: 0 auto;\n  left: 0;\n  right: 0;\n  transform: translateY(-50%);\n}\n\n.block-ui-spinner > .message {\n  font-size: 1.3em;\n  text-align: center;\n  color: #fff;\n}\n\n.block-ui__element {\n  position: relative;\n}\n\n.loader,\n.loader:after {\n  border-radius: 50%;\n  width: 10em;\n  height: 10em;\n}\n.loader {\n  margin: 7px auto;\n  font-size: 5px;\n  position: relative;\n  text-indent: -9999em;\n  border-top: 1.1em solid rgba(255, 255, 255, 0.2);\n  border-right: 1.1em solid rgba(255, 255, 255, 0.2);\n  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);\n  border-left: 1.1em solid #ffffff;\n  -webkit-transform: translateZ(0);\n  -ms-transform: translateZ(0);\n  transform: translateZ(0);\n  -webkit-animation: load8 1.1s infinite linear;\n  animation: load8 1.1s infinite linear;\n}\n\n@-webkit-keyframes load8 {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n@keyframes load8 {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n"], encapsulation: 2 });
+BlockUIContentComponent.ctorParameters = () => [
+    { type: BlockUIInstanceService },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentFactoryResolver"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] }
+];
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], BlockUIContentComponent.prototype, "name", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], BlockUIContentComponent.prototype, "delayStart", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], BlockUIContentComponent.prototype, "delayStop", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('message')
+], BlockUIContentComponent.prototype, "defaultMessage", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('template')
+], BlockUIContentComponent.prototype, "templateCmp", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('templateOutlet', { read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"] })
+], BlockUIContentComponent.prototype, "templateOutlet", void 0);
+
+let BlockUIService = class BlockUIService {
+    constructor(blockUIInstance) {
+        this.blockUIInstance = blockUIInstance;
+        this.globalDispatch = this.blockUIInstance.decorate();
+    }
+    /**
+    * Starts blocking for given BlockUI instance or instances
+    */
+    start(target, message) {
+        this.dispatch(target, BlockUIActions.START, message);
+    }
+    /**
+    * Stops blocking for given BlockUI instance or instances
+    */
+    stop(target) {
+        this.dispatch(target, BlockUIActions.STOP);
+    }
+    /**
+    * Reset blocking for given BlockUI instance or instances
+    */
+    reset(target) {
+        this.dispatch(target, BlockUIActions.RESET);
+    }
+    /**
+    * Reset blocking for all BlockUI instances
+    */
+    resetGlobal() {
+        this.globalDispatch.resetGlobal();
+    }
+    /**
+    * Updates message for given BlockUI instance or instances
+    */
+    update(target, message) {
+        this.dispatch(target, BlockUIActions.UPDATE, message);
+    }
+    /**
+    * Unsubscribes for given BlockUI instance or instances
+    */
+    unsubscribe(target) {
+        this.dispatch(target, BlockUIActions.UNSUBSCRIBE);
+    }
+    /**
+    * Checks if BlockUI is actively blocking
+    */
+    isActive(target = null) {
+        const targets = target ? this.toArray(target) : null;
+        const instances = this.blockUIInstance.blockUIInstances;
+        return Object.keys(instances).some((key) => {
+            if (!targets) {
+                return instances[key].isActive;
+            }
+            return targets.indexOf(instances[key].name) >= 0 && instances[key].isActive;
+        });
+    }
+    dispatch(target = [], type, message) {
+        const instances = this.toArray(target);
+        instances.forEach(i => this.blockUIInstance.decorate(i)[type](message));
+    }
+    toArray(target = []) {
+        return typeof target === 'string' ? [target] : target;
+    }
+};
+BlockUIService.ɵfac = function BlockUIService_Factory(t) { return new (t || BlockUIService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](BlockUIInstanceService)); };
+BlockUIService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: BlockUIService, factory: function (t) { return BlockUIService.ɵfac(t); } });
+BlockUIService.ctorParameters = () => [
+    { type: BlockUIInstanceService }
+];
+
+let BlockUIDirective = class BlockUIDirective {
+    constructor(blockUIService, blockUIInstanceService, viewRef, templateRef, renderer, componentFactoryResolver) {
+        this.blockUIService = blockUIService;
+        this.blockUIInstanceService = blockUIInstanceService;
+        this.viewRef = viewRef;
+        this.templateRef = templateRef;
+        this.renderer = renderer;
+        this.componentFactoryResolver = componentFactoryResolver;
+    }
+    set blockUI(name) { this.blockTarget = name; }
+    ;
+    set blockUIMessage(message) { this.message = message; }
+    ;
+    set blockUITemplate(template) { this.template = template; }
+    ;
+    set blockUIDelayStart(delayStart) {
+        this.delayStart = delayStart ? Number(delayStart) : null;
+    }
+    ;
+    set blockUIDelayStop(delayStop) {
+        this.delayStop = delayStop ? Number(delayStop) : null;
+    }
+    ;
+    ngOnInit() {
+        try {
+            this.viewRef.createEmbeddedView(this.templateRef);
+            const parentElement = this.getParentElement();
+            if (parentElement && !this.isComponentInTemplate(parentElement)) {
+                this.renderer.addClass(parentElement, 'block-ui__element');
+                this.blockUIComponentRef = this.createComponent();
+                let blockUIContent = this.findContentNode(this.viewRef.element.nativeElement);
+                if (blockUIContent) {
+                    const settings = this.blockUIInstanceService.getSettings();
+                    parentElement.appendChild(blockUIContent);
+                    this.blockUIComponentRef.instance.className = 'block-ui-wrapper--element';
+                    this.blockUIComponentRef.instance.name = this.blockTarget || BlockUIDefaultName;
+                    if (this.message)
+                        this.blockUIComponentRef.instance.defaultMessage = this.message;
+                    if (this.delayStart)
+                        this.blockUIComponentRef.instance.delayStart = this.delayStart;
+                    if (this.delayStop)
+                        this.blockUIComponentRef.instance.delayStop = this.delayStop;
+                    if (this.template || settings.template)
+                        this.blockUIComponentRef.instance.templateCmp = this.template || settings.template;
+                }
+            }
+        }
+        catch (error) {
+            console.error('ng-block-ui:', error);
+        }
+    }
+    isComponentInTemplate(element) {
+        // Needed because of https://github.com/microsoft/TypeScript/issues/26235
+        const targetElement = element || {};
+        let { children } = targetElement;
+        children = Array.from(children || []).reverse();
+        return children.some((el) => el && el.localName === 'block-ui');
+    }
+    getParentElement() {
+        const embeddedView = this.viewRef.get(0);
+        return embeddedView.rootNodes[0];
+    }
+    // Needed for IE (#17)
+    findContentNode(element) {
+        const nextSibling = element.nextSibling || {};
+        const previousSibling = element.previousSibling || {};
+        return [
+            nextSibling,
+            nextSibling.nextSibling,
+            previousSibling,
+            previousSibling.previousSibling
+        ].find((e) => e && e.localName === 'block-ui-content');
+    }
+    createComponent() {
+        const resolvedBlockUIComponent = this.componentFactoryResolver.resolveComponentFactory(BlockUIContentComponent);
+        return this.viewRef.createComponent(resolvedBlockUIComponent);
+    }
+    ngOnDestroy() {
+        if (this.blockTarget) {
+            this.blockUIService.reset(this.blockTarget);
+        }
+    }
+};
+BlockUIDirective.ɵfac = function BlockUIDirective_Factory(t) { return new (t || BlockUIDirective)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](BlockUIService), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](BlockUIInstanceService), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentFactoryResolver"])); };
+BlockUIDirective.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({ type: BlockUIDirective, selectors: [["", "blockUI", ""]], inputs: { blockUI: "blockUI", blockUIMessage: "blockUIMessage", blockUITemplate: "blockUITemplate", blockUIDelayStart: "blockUIDelayStart", blockUIDelayStop: "blockUIDelayStop" } });
+BlockUIDirective.ctorParameters = () => [
+    { type: BlockUIService },
+    { type: BlockUIInstanceService },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentFactoryResolver"] }
+];
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], BlockUIDirective.prototype, "blockUI", null);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], BlockUIDirective.prototype, "blockUIMessage", null);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], BlockUIDirective.prototype, "blockUITemplate", null);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], BlockUIDirective.prototype, "blockUIDelayStart", null);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], BlockUIDirective.prototype, "blockUIDelayStop", null);
+
+var BlockUIModule_1;
+const BlockUIServiceInstance = new BlockUIInstanceService();
+// Needed for AOT compiling
+const BlockUIModuleSettings = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["InjectionToken"]('BlockUIModuleSettings');
+function provideInstance(settings) {
+    BlockUIServiceInstance.updateSettings(settings);
+    return BlockUIServiceInstance;
+}
+let BlockUIModule = BlockUIModule_1 = class BlockUIModule {
+    static forRoot(settings = {}) {
+        return {
+            ngModule: BlockUIModule_1,
+            providers: [
+                {
+                    provide: BlockUIModuleSettings,
+                    useValue: settings
+                },
+                {
+                    provide: BlockUIInstanceService,
+                    useFactory: provideInstance,
+                    deps: [BlockUIModuleSettings]
+                },
+                BlockUIService
+            ]
+        };
+    }
+};
+BlockUIModule.ɵfac = function BlockUIModule_Factory(t) { return new (t || BlockUIModule)(); };
+BlockUIModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: BlockUIModule });
+BlockUIModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ imports: [[
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]
+        ]] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](BlockUIInstanceService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"]
+    }], function () { return []; }, null); })();
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](BlockUIComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+        args: [{
+                selector: 'block-ui',
+                template: `
+    <ng-content></ng-content>
+    <block-ui-content
+      [name]="name"
+      [message]="message"
+      [template]="template"
+      [delayStart]="delayStart"
+      [delayStop]="delayStop"
+    >
+    </block-ui-content>
+  `,
+                encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None
+            }]
+    }], function () { return [{ type: BlockUIInstanceService }]; }, { name: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }], template: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }], message: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }], delayStart: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }], delayStop: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }] }); })();
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](BlockUIContentComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+        args: [{
+                selector: 'block-ui-content',
+                template: template,
+                encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
+                styles: [styles]
+            }]
+    }], function () { return [{ type: BlockUIInstanceService }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentFactoryResolver"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] }]; }, { name: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }], delayStart: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }], delayStop: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }], defaultMessage: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['message']
+        }], templateCmp: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['template']
+        }], templateOutlet: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
+            args: ['templateOutlet', { read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"] }]
+        }] }); })();
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](BlockUIService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"]
+    }], function () { return [{ type: BlockUIInstanceService }]; }, null); })();
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](BlockUIDirective, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
+        args: [{ selector: '[blockUI]' }]
+    }], function () { return [{ type: BlockUIService }, { type: BlockUIInstanceService }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentFactoryResolver"] }]; }, { blockUI: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }], blockUIMessage: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }], blockUITemplate: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }], blockUIDelayStart: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }], blockUIDelayStop: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](BlockUIModule, { declarations: function () { return [BlockUIComponent, BlockUIDirective, BlockUIContentComponent]; }, imports: function () { return [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]]; }, exports: function () { return [BlockUIComponent, BlockUIDirective, BlockUIContentComponent]; } }); })();
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](BlockUIModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
+        args: [{
+                imports: [
+                    _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]
+                ],
+                entryComponents: [
+                    BlockUIComponent,
+                    BlockUIContentComponent
+                ],
+                declarations: [
+                    BlockUIComponent,
+                    BlockUIDirective,
+                    BlockUIContentComponent
+                ],
+                exports: [
+                    BlockUIComponent,
+                    BlockUIDirective,
+                    BlockUIContentComponent
+                ]
+            }]
+    }], null, null); })();
+
+let blockInstanceGuid = 1;
+function BlockUI(blockName, settings = {}) {
+    if (!settings.scopeToInstance) {
+        return function (target, propertyKey) {
+            target[propertyKey] = BlockUIServiceInstance.decorate(blockName);
+        };
+    }
+    return function (target, key) {
+        const secret = `_${key}-block-ui`;
+        Object.defineProperty(target, key, {
+            get: function () {
+                if (this[secret]) {
+                    return this[secret];
+                }
+                const instanceName = `${blockName}-${blockInstanceGuid++}`;
+                this[secret] = BlockUIServiceInstance.decorate(instanceName);
+                return this[secret];
+            },
+            set: function (value) {
+                this[secret] = value;
+            },
+        });
+    };
+}
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+
+//# sourceMappingURL=ng-block-ui.js.map
+
+/***/ }),
+
 /***/ "2zWu":
 /*!***********************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/views/product/lesson/grammar/grammar.component.html ***!
@@ -8571,7 +9380,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"animated fadeIn\">\n  <div class=\"pb-3\">\n    <select style=\"width: 200px;\" [value]=\"selectedLesson\" (change)=\"onChangeLesson($event)\" class=\"form-control\">\n      <option [value]=\"1\">1</option>\n      <option [value]=\"2\">2</option>\n      <option [value]=\"3\">3</option>\n      <option [value]=\"4\">4</option>\n      <option [value]=\"5\">5</option>\n      <option [value]=\"6\">6</option>\n      <option [value]=\"7\">7</option>\n      <option [value]=\"8\">8</option>\n      <option [value]=\"9\">9</option>\n      <option [value]=\"10\">10</option>\n      <option [value]=\"11\">11</option>\n      <option [value]=\"12\">12</option>\n    </select>\n  </div>\n  <div *ngFor=\"let item of fakeLessons\" class=\"card\">\n    <div class=\"card-header\">\n      <button type=\"button\" class=\"btn btn-info text-light\"\n              (click)=\"item.openCollapse = !item.openCollapse\">{{item.title}}\n      </button>\n      <div class=\"card-header-actions\">\n        <button type=\"button\" class=\"btn btn-success\"\n                (click)=\"item.openCollapse = !item.openCollapse\">Try it\n        </button>\n      </div>\n    </div>\n    <div class=\"card-body\"\n         (collapsed)=\"collapsed($event)\"\n         (expanded)=\"expanded($event)\"\n         [collapse]=\"item.openCollapse\">\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <div [innerHTML]=\"item.data\"></div>\n        </div>\n        <div class=\"col-4 text-right pt-2 d-flex flex-column text-right\">\n          <span class=\"badge badge-danger badge-pill p-1 mb-2\" style=\"position: static;\">Further practice</span>\n          <audio controls>\n            <source src=\"{{item.audioLink}}\" type=\"audio/mpeg\">\n          </audio>\n          <button type=\"button\" class=\"btn btn-info text-light p-1 mt-3\"\n                  (click)=\"stopAll()\">Reload all audio\n          </button>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"animated fadeIn\">\r\n  <div class=\"pb-3\">\r\n    <select style=\"width: 200px;\" [value]=\"selectedLesson\" (change)=\"onChangeLesson($event)\" class=\"form-control\">\r\n      <option value=\"0\">All Lessons</option>\r\n      <option value=\"1\">Lesson 1</option>\r\n      <option value=\"2\">Lesson 2</option>\r\n      <option value=\"3\">Lesson 3</option>\r\n      <option value=\"4\">Lesson 4</option>\r\n      <option value=\"5\">Lesson 5</option>\r\n      <option value=\"6\">Lesson 6</option>\r\n      <option value=\"7\">Lesson 7</option>\r\n      <option value=\"8\">Lesson 8</option>\r\n      <option value=\"9\">Lesson 9</option>\r\n      <option value=\"10\">Lesson 10</option>\r\n      <option value=\"11\">Lesson 11</option>\r\n      <option value=\"12\">Lesson 12</option>\r\n    </select>\r\n  </div>\r\n  <div *ngFor=\"let item of fakeLessons\" class=\"card\">\r\n    <div class=\"card-header\">\r\n      <button type=\"button\" class=\"btn btn-info text-light\"\r\n              (click)=\"item.openCollapse = !item.openCollapse\">{{item.title}}\r\n      </button>\r\n      <div class=\"card-header-actions\">\r\n        <button type=\"button\" class=\"btn btn-success\"\r\n                (click)=\"item.openCollapse = !item.openCollapse\">Try it\r\n        </button>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-body\"\r\n         (collapsed)=\"collapsed($event)\"\r\n         (expanded)=\"expanded($event)\"\r\n         [collapse]=\"item.openCollapse\">\r\n      <div class=\"row\">\r\n        <div class=\"col-8\">\r\n          <div [innerHTML]=\"item.data\"></div>\r\n        </div>\r\n        <div class=\"col-4 text-right pt-2 d-flex flex-column text-right\">\r\n          <span class=\"badge badge-danger badge-pill p-1 mb-2\" style=\"position: static;\">Further practice</span>\r\n          <audio controls>\r\n            <source src=\"{{item.audioLink}}\" type=\"audio/mpeg\">\r\n          </audio>\r\n          <button type=\"button\" class=\"btn btn-info text-light p-1 mt-3\"\r\n                  (click)=\"stopAll()\">Reload all audio\r\n          </button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -8610,11 +9419,12 @@ __webpack_require__.r(__webpack_exports__);
 
 let ListenReadComponent = class ListenReadComponent {
     constructor() {
-        this.selectedLesson = '1';
+        this.selectedLesson = '0';
     }
     ngOnInit() {
+        console.log('selectedLesson1', this.selectedLesson);
         this.getLessons();
-        this.fakeLessons = this.lessons;
+        this.defaultLesson();
     }
     getLessons() {
         this.lessons = _listen_read__WEBPACK_IMPORTED_MODULE_4__["ListenReads"];
@@ -8627,7 +9437,15 @@ let ListenReadComponent = class ListenReadComponent {
     }
     onChangeLesson(e) {
         this.selectedLesson = e.target.value;
-        this.fakeLessons = this.lessons.filter(x => x.id === parseInt(this.selectedLesson, 10));
+        if (this.selectedLesson === '0') {
+            this.defaultLesson();
+        }
+        else {
+            this.fakeLessons = this.lessons.filter(x => x.id === parseInt(this.selectedLesson, 10));
+        }
+    }
+    defaultLesson() {
+        this.fakeLessons = this.lessons;
     }
 };
 ListenReadComponent.ctorParameters = () => [];
@@ -8701,14 +9519,11 @@ __webpack_require__.r(__webpack_exports__);
 
 let GrammarComponent = class GrammarComponent {
     constructor() {
-        this.selectedLesson = '1';
+        this.selectedLesson = '0';
     }
     ngOnInit() {
         this.getLessons();
-        this.fakeLessons = this.lessons;
-    }
-    getLessons() {
-        this.lessons = _grammar__WEBPACK_IMPORTED_MODULE_4__["Grammars"];
+        this.defaultLesson();
     }
     collapsed(event) {
         // console.log(event);
@@ -8716,17 +9531,27 @@ let GrammarComponent = class GrammarComponent {
     expanded(event) {
         // console.log(event);
     }
-    // Mute a singular HTML5 element
-    stopMe(elem) {
-        elem.load();
-    }
     // Try to mute all video and audio elements on the page
     stopAll() {
-        document.querySelectorAll(`video, audio`).forEach(elem => this.stopMe(elem));
+        document.querySelectorAll(`video, audio`).forEach((elem) => {
+            // Mute a singular HTML5 element
+            elem.load();
+        });
     }
     onChangeLesson(e) {
         this.selectedLesson = e.target.value;
-        this.fakeLessons = this.lessons.filter(x => x.id === parseInt(this.selectedLesson, 10));
+        if (this.selectedLesson === '0') {
+            this.defaultLesson();
+        }
+        else {
+            this.fakeLessons = this.lessons.filter(x => x.id === parseInt(this.selectedLesson, 10));
+        }
+    }
+    getLessons() {
+        this.lessons = _grammar__WEBPACK_IMPORTED_MODULE_4__["Grammars"];
+    }
+    defaultLesson() {
+        this.fakeLessons = this.lessons;
     }
 };
 GrammarComponent.ctorParameters = () => [];
@@ -8969,7 +9794,7 @@ ProductRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])(
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (":host ::ng-deep #pdfViewer .ng2-pdf-viewer-container {\n  width: 800px !important;\n  height: calc(100vh - 200px) !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXC4uXFwuLlxcZS1ib29rLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNFO0VBQ0UsdUJBQUE7RUFDQSxzQ0FBQTtBQUFKIiwiZmlsZSI6ImUtYm9vay5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjpob3N0IDo6bmctZGVlcCB7XG4gICNwZGZWaWV3ZXIgLm5nMi1wZGYtdmlld2VyLWNvbnRhaW5lciB7XG4gICAgd2lkdGg6IDgwMHB4ICFpbXBvcnRhbnQ7XG4gICAgaGVpZ2h0OiBjYWxjKDEwMHZoIC0gMjAwcHgpICFpbXBvcnRhbnQ7XG4gIH1cbn1cblxuIl19 */");
+/* harmony default export */ __webpack_exports__["default"] = (":host ::ng-deep #pdfViewer .ng2-pdf-viewer-container {\n  height: calc(100vh - 200px) !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXC4uXFwuLlxcZS1ib29rLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNFO0VBQ0Usc0NBQUE7QUFBSiIsImZpbGUiOiJlLWJvb2suY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCA6Om5nLWRlZXAge1xyXG4gICNwZGZWaWV3ZXIgLm5nMi1wZGYtdmlld2VyLWNvbnRhaW5lciB7XHJcbiAgICBoZWlnaHQ6IGNhbGMoMTAwdmggLSAyMDBweCkgIWltcG9ydGFudDtcclxuICB9XHJcbn1cclxuIl19 */");
 
 /***/ }),
 
@@ -10286,7 +11111,7 @@ let Grammars = [
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"animated fadeIn\">\n  <div class=\"pb-3\">\n    <select style=\"width: 200px;\" [value]=\"selectedLesson\" (change)=\"onChangeLesson($event)\" class=\"form-control\">\n      <option [value]=\"1\">1</option>\n      <option [value]=\"2\">2</option>\n      <option [value]=\"3\">3</option>\n      <option [value]=\"4\">4</option>\n      <option [value]=\"5\">5</option>\n      <option [value]=\"6\">6</option>\n      <option [value]=\"7\">7</option>\n      <option [value]=\"8\">8</option>\n      <option [value]=\"9\">9</option>\n      <option [value]=\"10\">10</option>\n      <option [value]=\"11\">11</option>\n      <option [value]=\"12\">12</option>\n    </select>\n  </div>\n  <div *ngFor=\"let item of fakeLessons\" class=\"card\">\n    <div class=\"card-header\">\n      <button type=\"button\" class=\"btn btn-info text-light\"\n              (click)=\"item.openCollapse = !item.openCollapse\">{{item.title}}\n      </button>\n      <div class=\"card-header-actions\">\n        <button type=\"button\" class=\"btn btn-success\"\n              (click)=\"item.openCollapse = !item.openCollapse\">Try it\n        </button>\n      </div>\n    </div>\n    <div class=\"card-body\"\n         (collapsed)=\"collapsed($event)\"\n         (expanded)=\"expanded($event)\"\n         [collapse]=\"item.openCollapse\">\n      <p [innerHTML]=\"item.description\"></p>\n      <app-listen-read-content [contents]=\"item.contents\"></app-listen-read-content>\n    </div>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"animated fadeIn\">\r\n  <div class=\"pb-3\">\r\n    <select style=\"width: 200px;\" [value]=\"selectedLesson\" (change)=\"onChangeLesson($event)\" class=\"form-control\">\r\n      <option value=\"0\">All Lessons</option>\r\n      <option value=\"1\">Lesson 1</option>\r\n      <option value=\"2\">Lesson 2</option>\r\n      <option value=\"3\">Lesson 3</option>\r\n      <option value=\"4\">Lesson 4</option>\r\n      <option value=\"5\">Lesson 5</option>\r\n      <option value=\"6\">Lesson 6</option>\r\n      <option value=\"7\">Lesson 7</option>\r\n      <option value=\"8\">Lesson 8</option>\r\n      <option value=\"9\">Lesson 9</option>\r\n      <option value=\"10\">Lesson 10</option>\r\n      <option value=\"11\">Lesson 11</option>\r\n      <option value=\"12\">Lesson 12</option>\r\n    </select>\r\n  </div>\r\n  <div *ngFor=\"let item of fakeLessons\" class=\"card\">\r\n    <div class=\"card-header\">\r\n      <button type=\"button\" class=\"btn btn-info text-light\"\r\n              (click)=\"item.openCollapse = !item.openCollapse\">{{item.title}}\r\n      </button>\r\n      <div class=\"card-header-actions\">\r\n        <button type=\"button\" class=\"btn btn-success\"\r\n              (click)=\"item.openCollapse = !item.openCollapse\">Try it\r\n        </button>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-body\"\r\n         (collapsed)=\"collapsed($event)\"\r\n         (expanded)=\"expanded($event)\"\r\n         [collapse]=\"item.openCollapse\">\r\n      <p [innerHTML]=\"item.description\"></p>\r\n      <app-listen-read-content [contents]=\"item.contents\"></app-listen-read-content>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -10305,22 +11130,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _e_book_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./e-book.component.scss */ "BBn4");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "8Y7J");
 /* harmony import */ var _e_book__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./e-book */ "/cXb");
+/* harmony import */ var ng_block_ui__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ng-block-ui */ "12jx");
 
 
 
 
+
+// Import BlockUI decorator & optional NgBlockUI type
 
 let EBookComponent = class EBookComponent {
     constructor() {
         this.ebooks = _e_book__WEBPACK_IMPORTED_MODULE_4__["EBooks"];
+        this.pdfSrc = ``;
     }
     ngOnInit() {
     }
     onChangeEbook(event) {
-        // alert(event.target.value);
+        this.blockUI.start('Loading...');
+        this.selectedEbook = event.target.value;
     }
 };
 EBookComponent.ctorParameters = () => [];
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(ng_block_ui__WEBPACK_IMPORTED_MODULE_5__["BlockUI"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+], EBookComponent.prototype, "blockUI", void 0);
 EBookComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
         selector: 'app-e-book',
@@ -13633,6 +14467,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ngx-bootstrap/modal */ "LqlI");
 /* harmony import */ var _e_book_e_book_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./e-book/e-book.component */ "D64s");
 /* harmony import */ var ng2_pdf_viewer__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ng2-pdf-viewer */ "IkSl");
+/* harmony import */ var ng_block_ui__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ng-block-ui */ "12jx");
+/* harmony import */ var _BlockTemplateTmp_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./BlockTemplateTmp.component */ "i9Kw");
 
 // Angular
 
@@ -13642,6 +14478,8 @@ __webpack_require__.r(__webpack_exports__);
 // Collapse Module
 
 // Lesson Component
+
+
 
 
 
@@ -13682,7 +14520,11 @@ ProductModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
             _angular_forms__WEBPACK_IMPORTED_MODULE_17__["FormsModule"],
             ng_chat__WEBPACK_IMPORTED_MODULE_18__["NgChatModule"],
             ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_21__["ModalModule"],
-            ng2_pdf_viewer__WEBPACK_IMPORTED_MODULE_23__["PdfViewerModule"]
+            ng2_pdf_viewer__WEBPACK_IMPORTED_MODULE_23__["PdfViewerModule"],
+            ng_block_ui__WEBPACK_IMPORTED_MODULE_24__["BlockUIModule"].forRoot({
+                template: _BlockTemplateTmp_component__WEBPACK_IMPORTED_MODULE_25__["BlockTemplateCmp"]
+            }),
+            ng_block_ui__WEBPACK_IMPORTED_MODULE_24__["BlockUIModule"].forRoot()
         ],
         declarations: [
             _lesson_lesson_component__WEBPACK_IMPORTED_MODULE_5__["LessonComponent"],
@@ -13692,8 +14534,10 @@ ProductModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
             _firebase_demo_firebase_demo_component__WEBPACK_IMPORTED_MODULE_13__["FirebaseDemoComponent"],
             _lesson_chat_chat_component__WEBPACK_IMPORTED_MODULE_19__["ChatComponent"],
             _happy_birthday_bx_happy_birthday_bx_component__WEBPACK_IMPORTED_MODULE_20__["HappyBirthdayBxComponent"],
-            _e_book_e_book_component__WEBPACK_IMPORTED_MODULE_22__["EBookComponent"]
-        ]
+            _e_book_e_book_component__WEBPACK_IMPORTED_MODULE_22__["EBookComponent"],
+            _BlockTemplateTmp_component__WEBPACK_IMPORTED_MODULE_25__["BlockTemplateCmp"]
+        ],
+        entryComponents: [_BlockTemplateTmp_component__WEBPACK_IMPORTED_MODULE_25__["BlockTemplateCmp"]]
     })
 ], ProductModule);
 
@@ -41286,6 +42130,39 @@ var create = module.exports.create;
 
 /***/ }),
 
+/***/ "i9Kw":
+/*!*************************************************************!*\
+  !*** ./src/app/views/product/BlockTemplateTmp.component.ts ***!
+  \*************************************************************/
+/*! exports provided: BlockTemplateCmp */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BlockTemplateCmp", function() { return BlockTemplateCmp; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "8Y7J");
+
+// Template component
+// Use block-ui-template class to center div if desired
+
+let BlockTemplateCmp = class BlockTemplateCmp {
+};
+BlockTemplateCmp = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        template: `
+    <div class="block-ui-template">
+      <h1 class="text-white">{{ 'hello bà xã kính yêu' }}</h1>
+    </div>
+  `
+    })
+    // tslint:disable-next-line:component-class-suffix
+], BlockTemplateCmp);
+
+
+
+/***/ }),
+
 /***/ "ieBf":
 /*!***************************************************!*\
   !*** ./src/app/views/product/lesson/MyAdapter.ts ***!
@@ -43931,7 +44808,7 @@ let ListenReads = [
     },
     {
         id: 8,
-        title: 'LESSON 08 - TRAVEL',
+        title: 'Lesson 08 - TRAVEL',
         name: `Travel`,
         displayOrder: 8,
         description: `MY NAME IS DAO DAO, this lesson is tell you about people.`,
@@ -44583,7 +45460,7 @@ let ListenReads = [
     },
     {
         id: 11,
-        title: 'LESSON 11 - Life experience',
+        title: 'Lesson 11 - Life experience',
         name: `Life experience`,
         displayOrder: 11,
         description: `MY NAME IS DAO DAO, this lesson is tell you about people.`,
@@ -44813,7 +45690,7 @@ let ListenReads = [
     },
     {
         id: 12,
-        title: 'LESSON 12 - Future goal',
+        title: 'Lesson 12 - Future goal',
         name: `Future goal`,
         display_Order: 12,
         description: `MY NAME IS DAO DAO, this lesson is tell you about people.`,
@@ -45039,7 +45916,7 @@ let ListenReads = [
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"animated fadeIn text-center container\">\n    <select style=\"width: 100%;\" [value]=\"selectedEbook\"\n            (change)=\"onChangeEbook($event)\" class=\"form-control\"\n            aria-label=\"abc\">\n        <option *ngFor=\"let ebook of ebooks\" [value]=\"ebook.url\">{{ebook.title}}</option>\n    </select>\n  <pdf-viewer *ngIf=\"selectedEbook\" id=\"pdfViewer\"\n              [src]=\"selectedEbook\"\n              [render-text]=\"true\"\n              style=\"display: block;\"\n  ></pdf-viewer>\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"animated fadeIn text-center\">\r\n  <block-ui message=\"Default Message\">\r\n    <div class=\"row\">\r\n      <div class=\"col-12 col-sm-3\">\r\n        <select style=\"width: 100%;\" [value]=\"selectedEbook\"\r\n                (change)=\"onChangeEbook($event)\" class=\"form-control\"\r\n                aria-label=\"Select e-book\">\r\n          <option *ngFor=\"let ebook of ebooks\" [value]=\"ebook.url\">{{ebook.title}}</option>\r\n        </select>\r\n      </div>\r\n      <div class=\"col-12 col-sm-9\">\r\n        <pdf-viewer id=\"pdfViewer\"\r\n                    [src]=\"selectedEbook\"\r\n                    [render-text]=\"true\"\r\n                    (after-load-complete)=\"this.blockUI.stop();\"\r\n        ></pdf-viewer>\r\n      </div>\r\n    </div>\r\n  </block-ui>\r\n</div>\r\n\r\n");
 
 /***/ }),
 
