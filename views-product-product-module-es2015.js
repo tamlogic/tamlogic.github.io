@@ -9585,8 +9585,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MyAdapter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./MyAdapter */ "ieBf");
 /* harmony import */ var _services_authenticate_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../services/authenticate.service */ "DtyL");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "iInd");
-/* harmony import */ var canvas_confetti__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! canvas-confetti */ "cSmn");
-
 
 
 
@@ -9610,45 +9608,11 @@ let LessonComponent = class LessonComponent {
             const authUser = JSON.parse(localStorage.getItem('authUser'));
         }
     }
-    showVideo() {
-        this.largeModal.show();
-        const duration = 15 * 1000;
-        const animationEnd = Date.now() + duration;
-        let skew = 1;
-        const end = Date.now() + (15 * 1000);
-        // go Buckeyes!
-        const colors = ['#90EE90', '#ffffff'];
-        (function frame() {
-            const timeLeft = animationEnd - Date.now();
-            const ticks = Math.max(200, 500 * (timeLeft / duration));
-            skew = Math.max(0.8, skew - 0.001);
-            Object(canvas_confetti__WEBPACK_IMPORTED_MODULE_7__["default"])({
-                particleCount: 2,
-                angle: 60,
-                spread: 1000,
-                origin: { x: 0 },
-                colors: colors
-            });
-            Object(canvas_confetti__WEBPACK_IMPORTED_MODULE_7__["default"])({
-                particleCount: 2,
-                angle: 120,
-                spread: 1000,
-                origin: { x: 1 },
-                colors: colors
-            });
-            if (Date.now() < end) {
-                requestAnimationFrame(frame);
-            }
-        }());
-    }
 };
 LessonComponent.ctorParameters = () => [
     { type: _services_authenticate_service__WEBPACK_IMPORTED_MODULE_5__["AuthenticateService"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] }
 ];
-LessonComponent.propDecorators = {
-    largeModal: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"], args: ['largeModal',] }]
-};
 LessonComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
         selector: 'app-lesson',
@@ -9764,9 +9728,9 @@ const routes = [
         children: []
     },
     {
-        path: 'happy-birthday-ba-xa',
+        path: 'happy-birthday-bx',
         data: {
-            title: 'Happy birthday bà xã'
+            title: 'Gift_For_My_Love_💖'
         },
         component: _happy_birthday_bx_happy_birthday_bx_component__WEBPACK_IMPORTED_MODULE_6__["HappyBirthdayBxComponent"],
         children: []
@@ -14410,6 +14374,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _raw_loader_happy_birthday_bx_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./happy-birthday-bx.component.html */ "qcOx");
 /* harmony import */ var _happy_birthday_bx_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./happy-birthday-bx.component.scss */ "WUq3");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "8Y7J");
+/* harmony import */ var canvas_confetti__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! canvas-confetti */ "cSmn");
+
 
 
 
@@ -14418,8 +14384,42 @@ let HappyBirthdayBxComponent = class HappyBirthdayBxComponent {
     constructor() { }
     ngOnInit() {
     }
+    showVideo() {
+        this.largeModal.show();
+        const duration = 15 * 1000;
+        const animationEnd = Date.now() + duration;
+        let skew = 1;
+        const end = Date.now() + (15 * 1000);
+        // go Buckeyes!
+        const colors = ['#90EE90', '#ffffff'];
+        (function frame() {
+            const timeLeft = animationEnd - Date.now();
+            const ticks = Math.max(200, 500 * (timeLeft / duration));
+            skew = Math.max(0.8, skew - 0.001);
+            Object(canvas_confetti__WEBPACK_IMPORTED_MODULE_4__["default"])({
+                particleCount: 2,
+                angle: 60,
+                spread: 1000,
+                origin: { x: 0 },
+                colors: colors
+            });
+            Object(canvas_confetti__WEBPACK_IMPORTED_MODULE_4__["default"])({
+                particleCount: 2,
+                angle: 120,
+                spread: 1000,
+                origin: { x: 1 },
+                colors: colors
+            });
+            if (Date.now() < end) {
+                requestAnimationFrame(frame);
+            }
+        }());
+    }
 };
 HappyBirthdayBxComponent.ctorParameters = () => [];
+HappyBirthdayBxComponent.propDecorators = {
+    largeModal: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"], args: ['largeModal',] }]
+};
 HappyBirthdayBxComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
         selector: 'app-happy-birthday-bx',
@@ -42357,7 +42357,7 @@ WindowService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>happy-birthday-bx works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<button type=\"button\" class=\"btn btn-success mr-1\" data-toggle=\"modal\" (click)=\"showVideo()\">\r\n    Gửi bà xã\r\n</button>\r\n<button type=\"button\" class=\"btn btn-success mr-1\" data-toggle=\"modal\">\r\n  <a href=\"https://www.youtube.com/watch?v=ogeZ5JyDR4w\">Gửi Ông xã</a>\r\n</button>\r\n\r\n  <div bsModal #largeModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\r\n    <div class=\"modal-dialog modal-lg\" role=\"document\">\r\n      <div class=\"modal-content text-center\">\r\n        <div class=\"modal-header\">\r\n          <h4 class=\"font-weight-bold font-italic\"\r\n              style=\"color: dodgerblue;\">💖💖💖 Happy birthday bà xã 💖💖💖</h4>\r\n          <button type=\"button\" class=\"close\" (click)=\"largeModal.hide()\" aria-label=\"Close\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n          </button>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n  <!--        <video width=\"320\" height=\"240\" controls autoplay loop>-->\r\n  <!--          <source src=\"assets/video/happy_birthday_bx.mp4\" type=\"video/mp4\">-->\r\n  <!--          Your browser does not support the video tag.-->\r\n  <!--        </video>-->\r\n          <iframe src=\"https://www.youtube.com/embed/guOcPdleXws\" allow=\"fullscreen\"\r\n                  width=\"100%\" height=\"500\">\r\n          </iframe>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button type=\"button\" class=\"btn btn-primary\" (click)=\"largeModal.hide()\">Close</button>\r\n        </div>\r\n      </div><!-- /.modal-content -->\r\n    </div><!-- /.modal-dialog -->\r\n  </div><!-- /.modal -->\r\n");
 
 /***/ }),
 
@@ -45916,7 +45916,7 @@ let ListenReads = [
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"animated fadeIn text-center\">\r\n  <block-ui message=\"Default Message\">\r\n    <div class=\"row\">\r\n      <div class=\"col-12 col-sm-3\">\r\n        <select style=\"width: 100%;\" [value]=\"selectedEbook\"\r\n                (change)=\"onChangeEbook($event)\" class=\"form-control\"\r\n                aria-label=\"Select e-book\">\r\n          <option *ngFor=\"let ebook of ebooks\" [value]=\"ebook.url\">{{ebook.title}}</option>\r\n        </select>\r\n      </div>\r\n      <div class=\"col-12 col-sm-9\">\r\n        <pdf-viewer id=\"pdfViewer\"\r\n                    [src]=\"selectedEbook\"\r\n                    [render-text]=\"true\"\r\n                    (after-load-complete)=\"this.blockUI.stop();\"\r\n        ></pdf-viewer>\r\n      </div>\r\n    </div>\r\n  </block-ui>\r\n</div>\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"animated fadeIn text-center\">\n  <block-ui message=\"Default Message\">\n    <div class=\"row\">\n      <div class=\"col-12 col-sm-3\">\n        <select style=\"width: 100%;\" [value]=\"selectedEbook\"\n                (change)=\"onChangeEbook($event)\" class=\"form-control\"\n                aria-label=\"Select e-book\">\n          <option *ngFor=\"let ebook of ebooks\" [value]=\"ebook.url\">{{ebook.title}}</option>\n        </select>\n      </div>\n      <div class=\"col-12 col-sm-9\">\n        <pdf-viewer id=\"pdfViewer\"\n                    [src]=\"selectedEbook\"\n                    [render-text]=\"true\"\n                    (after-load-complete)=\"this.blockUI.stop();\"\n        ></pdf-viewer>\n      </div>\n\n      <div class=\"col-3\">\n        <img\n          src=\"assets/img/svg/undraw_my_files_swob.svg\"\n          alt=\"triangle with all three sides equal\"\n          height=\"400\"\n          width=\"350\" />\n      </div>\n    </div>\n  </block-ui>\n</div>\n\n");
 
 /***/ }),
 
@@ -45929,7 +45929,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"animated fadeIn\">\n  <div class=\"row\">\n    <div class=\"col-md-12 mb-4\">\n      <!-- Nav tabs -->\n      <tabset>\n        <tab>\n          <ng-template tabHeading><i class=\"icon-user\"></i> Listen and read document &nbsp;<span class=\"badge badge-success\">Pro</span></ng-template>\n          <app-listen-read></app-listen-read>\n        </tab>\n        <tab>\n          <ng-template tabHeading><i class=\"icon-layers\"></i> Grammar &nbsp;<span class=\"badge badge-pill badge-danger\">Basic</span></ng-template>\n          <app-grammar></app-grammar>\n        </tab>\n      </tabset>\n    </div><!--/.col-->\n  </div><!--/.row-->\n</div>\n\n<div *ngIf=\"false\">\n  <ng-chat class=\"chat-custom\" [adapter]=\"adapter\" [userId]=\"userId\"></ng-chat>\n</div>\n\n<button type=\"button\" class=\"btn btn-success mr-1\" data-toggle=\"modal\" (click)=\"showVideo()\">\n  Gửi bà xã\n</button>\n\n<div bsModal #largeModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-lg\" role=\"document\">\n    <div class=\"modal-content text-center\">\n      <div class=\"modal-header\">\n        <h4 class=\"font-weight-bold font-italic\"\n            style=\"color: dodgerblue;\">💖💖💖 Happy birthday bà xã 💖💖💖</h4>\n        <button type=\"button\" class=\"close\" (click)=\"largeModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\">&times;</span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n<!--        <video width=\"320\" height=\"240\" controls autoplay loop>-->\n<!--          <source src=\"assets/video/happy_birthday_bx.mp4\" type=\"video/mp4\">-->\n<!--          Your browser does not support the video tag.-->\n<!--        </video>-->\n        <iframe src=\"https://www.youtube.com/embed/guOcPdleXws\" allow=\"fullscreen\"\n                width=\"100%\" height=\"500\">\n        </iframe>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"largeModal.hide()\">Close</button>\n      </div>\n    </div><!-- /.modal-content -->\n  </div><!-- /.modal-dialog -->\n</div><!-- /.modal -->\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"animated fadeIn\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12 mb-4\">\r\n      <!-- Nav tabs -->\r\n      <tabset>\r\n        <tab>\r\n          <ng-template tabHeading><i class=\"icon-user\"></i> Listen and read document &nbsp;<span class=\"badge badge-success\">Pro</span></ng-template>\r\n          <app-listen-read></app-listen-read>\r\n        </tab>\r\n        <tab>\r\n          <ng-template tabHeading><i class=\"icon-layers\"></i> Grammar &nbsp;<span class=\"badge badge-pill badge-danger\">Basic</span></ng-template>\r\n          <app-grammar></app-grammar>\r\n        </tab>\r\n      </tabset>\r\n    </div><!--/.col-->\r\n  </div><!--/.row-->\r\n</div>\r\n\r\n<div *ngIf=\"false\">\r\n  <ng-chat class=\"chat-custom\" [adapter]=\"adapter\" [userId]=\"userId\"></ng-chat>\r\n</div>");
 
 /***/ }),
 

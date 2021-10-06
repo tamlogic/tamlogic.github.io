@@ -993,6 +993,11 @@ const navItems = [
         icon: 'cil-book'
     },
     {
+        name: 'Surprise',
+        url: '/product/happy-birthday-bx',
+        icon: 'cil-gift'
+    },
+    {
         title: true,
         name: 'Theme'
     },
