@@ -9482,7 +9482,7 @@ ListenReadComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div *ngFor=\"let user of users\">\n  {{user | json}}<br/>\n</div>\n\n<div [hidden]=\"user\">\n  <h1>Sign In with Your Phone Number</h1>\n  <input type=\"text\" [(ngModel)]=\"phoneNumber.country\" class=\"input\" placeholder=\"1\">\n  <input type=\"text\" [(ngModel)]=\"phoneNumber.area\" class=\"input\" placeholder=\"1\">\n  <input type=\"text\" [(ngModel)]=\"phoneNumber.prefix\" class=\"input\" placeholder=\"1\">\n  <input type=\"text\" [(ngModel)]=\"phoneNumber.line\" class=\"input\" placeholder=\"1\">\n\n  <div id=\"recaptcha-container\"></div>\n\n<!--  <button (click)=\"sendLoginCode()\">SMS Text Login Code</button>-->\n\n<!--  <div *ngIf=\"windowRef.confirmationResult\">-->\n<!--    <label for=\"code\">Enter your Verification Code Here</label><br/>-->\n<!--    <input type=\"text\" id=\"code\" name=\"code\" [(ngModel)]=\"verificationCode\" class=\"input\">-->\n<!--    <button (click)=\"verifyLoginCode()\">Verify</button>-->\n<!--  </div>-->\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngFor=\"let user of users\">\n  {{user | json}}<br/>\n</div>\n\n<div [hidden]=\"user\">\n  <h1>Sign In with Your Phone Number</h1>\n  <input type=\"text\" [(ngModel)]=\"phoneNumber.country\" class=\"input\" placeholder=\"1\">\n  <input type=\"text\" [(ngModel)]=\"phoneNumber.area\" class=\"input\" placeholder=\"1\">\n  <input type=\"text\" [(ngModel)]=\"phoneNumber.prefix\" class=\"input\" placeholder=\"1\">\n  <input type=\"text\" [(ngModel)]=\"phoneNumber.line\" class=\"input\" placeholder=\"1\">\n\n  <div id=\"recaptcha-container\"></div>\n\n<!--  <button (click)=\"sendLoginCode()\">SMS Text Login Code</button>-->\n\n<!--  <div *ngIf=\"windowRef.confirmationResult\">-->\n<!--    <label for=\"code\">Enter your Verification Code Here</label><br/>-->\n<!--    <input type=\"text\" id=\"code\" name=\"code\" [(ngModel)]=\"verificationCode\" class=\"input\">-->\n<!--    <button (click)=\"verifyLoginCode()\">Verify</button>-->\n<!--  </div>-->\n</div>\n<div>\n  <button class=\"js-push-button\" disabled>\n    Enable Push Messages\n  </button>\n</div>\n");
 
 /***/ }),
 
@@ -14255,7 +14255,210 @@ let FirebaseDemoComponent = class FirebaseDemoComponent {
         // this.windowRef.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
         // this.windowRef.recaptchaVerifier.render();
         this.sendMessaging();
+        this.registWorker();
     }
+    registWorker() {
+        const isPushEnabled = false;
+        const thisGlobal = this;
+        window.addEventListener('load', function () {
+            const { initialiseState: initialiseState1, subscribe: subscribe1, unsubscribe: unsubscribe1 } = thisGlobal;
+            const pushButton = document.querySelector('.js-push-button');
+            pushButton.addEventListener('click', function () {
+                if (isPushEnabled) {
+                    unsubscribe1();
+                }
+                else {
+                    subscribe1();
+                }
+            });
+            // Check that service workers are supported, if so, progressively
+            // enhance and add push messaging support, otherwise continue without it.
+            if ('serviceWorker' in navigator) {
+                // @ts-ignore
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(initialiseState1);
+            }
+            else {
+                console.warn('Service workers aren\'t supported in this browser.');
+            }
+        });
+    }
+    // Once the service worker is registered set the initial state
+    initialiseState() {
+        // Are Notifications supported in the service worker?
+        if (!('showNotification' in ServiceWorkerRegistration.prototype)) {
+            console.warn('Notifications aren\'t supported.');
+            return;
+        }
+        // Check the current Notification permission.
+        // If its denied, it's a permanent block until the
+        // user changes the permission
+        if (Notification.permission === 'denied') {
+            console.warn('The user has blocked notifications.');
+            return;
+        }
+        // Check if push messaging is supported
+        if (!('PushManager' in window)) {
+            console.warn('Push messaging isn\'t supported.');
+            return;
+        }
+        const thisGlobal = this;
+        // We need the service worker registration to check for a subscription
+        navigator.serviceWorker.ready.then(function (serviceWorkerRegistration) {
+            // Do we already have a push message subscription?
+            serviceWorkerRegistration.pushManager.getSubscription()
+                .then(function (subscription) {
+                // Enable any UI which subscribes / unsubscribes from
+                // push messages.
+                const pushButton = document.querySelector('.js-push-button');
+                pushButton.disabled = false;
+                if (!subscription) {
+                    // We aren't subscribed to push, so set UI
+                    // to allow the user to enable push
+                    return;
+                }
+                // Keep your server in sync with the latest subscriptionId
+                // thisGlobal.sendSubscriptionToServer(subscription);
+                // Set your UI to show they have subscribed for
+                // push messages
+                pushButton.textContent = 'Disable Push Messages';
+                this.isPushEnabled = true;
+            })
+                .catch(function (err) {
+                console.warn('Error during getSubscription()', err);
+            });
+        });
+    }
+    subscribe() {
+        // Disable the button so it can't be changed while
+        // we process the permission request
+        const pushButton = document.querySelector('.js-push-button');
+        pushButton.disabled = true;
+        const thisGlobal = this;
+        navigator.serviceWorker.ready.then(function (serviceWorkerRegistration) {
+            serviceWorkerRegistration.pushManager.subscribe()
+                .then(function (subscription) {
+                // The subscription was successful
+                this.isPushEnabled = true;
+                pushButton.textContent = 'Disable Push Messages';
+                pushButton.disabled = false;
+                // TODO: Send the subscription.endpoint to your server
+                // and save it to send a push message at a later date
+                // return thisGlobal.sendSubscriptionToServer(subscription);
+            })
+                .catch(function (e) {
+                if (Notification.permission === 'denied') {
+                    // The user denied the notification permission which
+                    // means we failed to subscribe and the user will need
+                    // to manually change the notification permission to
+                    // subscribe to push messages
+                    console.warn('Permission for Notifications was denied');
+                    pushButton.disabled = true;
+                }
+                else {
+                    // A problem occurred with the subscription; common reasons
+                    // include network errors, and lacking gcm_sender_id and/or
+                    // gcm_user_visible_only in the manifest.
+                    console.error('Unable to subscribe to push.', e);
+                    pushButton.disabled = false;
+                    pushButton.textContent = 'Enable Push Messages';
+                }
+            });
+        });
+    }
+    unsubscribe() {
+        const pushButton = document.querySelector('.js-push-button');
+        pushButton.disabled = true;
+        const thisGlobal = this;
+        navigator.serviceWorker.ready.then(function (serviceWorkerRegistration) {
+            // To unsubscribe from push messaging, you need get the
+            // subscription object, which you can call unsubscribe() on.
+            const thisGlobal1 = thisGlobal;
+            serviceWorkerRegistration.pushManager.getSubscription().then(function (pushSubscription) {
+                // Check we have a subscription to unsubscribe
+                if (!pushSubscription) {
+                    // No subscription object, so set the state
+                    // to allow the user to subscribe to push
+                    this.isPushEnabled = false;
+                    pushButton.disabled = false;
+                    pushButton.textContent = 'Enable Push Messages';
+                    return;
+                }
+                const thisGLobal2 = thisGlobal1;
+                const subscriptionId = pushSubscription.subscriptionId;
+                // TODO: Make a request to your server to remove
+                // the subscriptionId from your data store so you
+                // don\'t attempt to send them push messages anymore
+                // We have a subscription, so call unsubscribe on it
+                pushSubscription.unsubscribe().then(function (successful) {
+                    pushButton.disabled = false;
+                    pushButton.textContent = 'Enable Push Messages';
+                    // @ts-ignore
+                    thisGLobal2.isPushEnabled = false;
+                }).catch(function (e) {
+                    console.log('Unsubscription error: ', e);
+                    pushButton.disabled = false;
+                    pushButton.textContent = 'Enable Push Messages';
+                });
+            }).catch(function (e) {
+                console.error('Error thrown while unsubscribing from push messaging.', e);
+            });
+        });
+    }
+    // sendSubscriptionToServer(subscription) {
+    //   self.addEventListener('push', function(event: any) {
+    //     const apiPath = 'browser_push_notification?endpoint=';
+    //
+    //     event.waitUntil(
+    //       registration.pushManager.getSubscription()
+    //         .then(function(subscription) {
+    //           if (!subscription || !subscription.endpoint) {
+    //             throw new Error();
+    //           }
+    //
+    //           apiPath = apiPath + encodeURI(subscription.endpoint);
+    //
+    //           return fetch(apiPath)
+    //             .then(function(response) {
+    //               if (response.status !== 200) {
+    //                 console.log('Problem Occurred:'+ response.status);
+    //                 throw new Error();
+    //               }
+    //
+    //               return response.json();
+    //             })
+    //             .then(function(data) {
+    //               if (data.status == 0) {
+    //                 console.error('The API returned an error.', data.error.message);
+    //                 throw new Error();
+    //               }
+    //               var data = data.data;
+    //               var title = data.notification.title;
+    //               var message = data.notification.message;
+    //               var icon = data.notification.icon;
+    //               var data = {
+    //                 url: data.notification.url
+    //               };
+    //
+    //               return self.registration.showNotification(title, {
+    //                 body: message,
+    //                 icon: icon,
+    //                 data: data
+    //               });
+    //             })
+    //             .catch(function(err) {
+    //               return self.registration.showNotification('Notification', {
+    //                 body: 'Có một sự kiện sắp diễn ra',
+    //                 icon: 'image/pn_logo.png',
+    //                 data: {
+    //                   url: '/'
+    //                 }
+    //               });
+    //             });
+    //         })
+    //     );
+    //   });
+    // }
     getList(tableName) {
         this.db.list(tableName).valueChanges().subscribe(users => {
             this.users = users;
