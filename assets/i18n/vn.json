@@ -1,0 +1,38 @@
+{
+  "app_title": "Hệ thống quản lý nhân sự",
+  "left_menu": {
+    "dashboard": "Trang chủ",
+    "goods_demo": "Danh sách sản phẩm",
+    "initial_declaration": "Khai báo ban đầu",
+    "province": "Tỉnh",
+    "personnel": "Nhân sự",
+    "labor_in_the_country": "Lao động trong nước",
+    "labor_in_the_foreigner": "Lao động ngoài nước",
+    "recruiter": "Nhà tuyển dụng"
+  },
+  "label": {
+    "sign_in_to_continue": "Đăng nhập để tiếp tục",
+    "username": "Tên đăng nhập",
+    "password": "Mật khẩu",
+    "remember_me": "Nhớ tài khoản",
+    "forgot_password": "Đặt lại mật khẩu"
+  },
+  "button": {
+    "sign_in": "Đăng nhập"
+  },
+  "type": {
+
+  },
+  "success": {
+
+  },
+  "error": {
+
+  },
+  "info": {
+
+  },
+  "warning": {
+
+  }
+}

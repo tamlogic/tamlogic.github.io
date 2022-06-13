@@ -1,1 +1,9 @@
 // Suggested location to add your overrides so that migration would be easy by just updating the SASS folder in the future
+.layout-topbar .layout-topbar-logo {
+    width: auto !important;
+}
+
+.p-speeddial-button.p-button.p-button-icon-only {
+    width: 2rem;
+    height: 2rem;
+}

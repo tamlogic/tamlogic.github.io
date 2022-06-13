@@ -1,0 +1,38 @@
+{
+  "app_title": "[KO]Personnel management system",
+  "left_menu": {
+    "dashboard": "[KO]Dashboard",
+    "goods_demo": "[KO]Goods demo",
+    "initial_declaration": "[KO]Initial declaration",
+    "province": "[KO]Province",
+    "personnel": "[KO]Personnel",
+    "labor_in_the_country": "[KO]Labor in the country",
+    "labor_in_the_foreigner": "[KO]Labor in the foreigner",
+    "recruiter": "[KO]Recruiter"
+  },
+  "label": {
+    "sign_in_to_continue": "[KO]Sign in to continue",
+    "username": "[KO]Username",
+    "password": "[KO]Password",
+    "remember_me": "[KO]Remember me",
+    "forgot_password": "[KO]Forgot password"
+  },
+  "button": {
+    "sign_in": "[KO]Sign In"
+  },
+  "type": {
+
+  },
+  "success": {
+
+  },
+  "error": {
+
+  },
+  "info": {
+
+  },
+  "warning": {
+
+  }
+}

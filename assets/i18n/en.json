@@ -1,0 +1,38 @@
+{
+  "app_title": "Personnel management system",
+  "left_menu": {
+    "dashboard": "Dashboard",
+    "goods_demo": "Goods demo",
+    "initial_declaration": "Initial declaration",
+    "province": "Province",
+    "personnel": "Personnel",
+    "labor_in_the_country": "Labor in the country",
+    "labor_in_the_foreigner": "Labor in the foreigner",
+    "recruiter": "Recruiter"
+  },
+  "label": {
+    "sign_in_to_continue": "Sign in to continue",
+    "username": "Username",
+    "password": "Password",
+    "remember_me": "Remember me",
+    "forgot_password": "Forgotten password"
+  },
+  "button": {
+    "sign_in": "Sign In"
+  },
+  "type": {
+
+  },
+  "success": {
+
+  },
+  "error": {
+
+  },
+  "info": {
+
+  },
+  "warning": {
+
+  }
+}
