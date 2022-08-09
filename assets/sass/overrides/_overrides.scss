@@ -1,36 +1,3 @@
-html {
-    scroll-behavior: smooth;
-}
-
-.layout-config .layout-config-button {
-    display: none;
-}
-
-.p-inputtext,
-.p-checkbox .p-checkbox-box,
-.p-multiselect,
-.p-dropdown {
-    border-color: var(--primary-color);
-}
-
-.p-button-label {
-    font-size: 13px;
-}
-
-.layout-sidebar {
-    z-index: 1000;
-}
-
-.p-datatable.p-datatable-gridlines .p-datatable-header {
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-}
-
-.p-datatable.p-datatable-gridlines .p-paginator-bottom {
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-}
-
 // Suggested location to add your overrides so that migration would be easy by just updating the SASS folder in the future
 @media screen and (max-width: 769px) {
     .p-dialog .p-dialog-footer {
@@ -48,33 +15,20 @@ html {
     }
 }
 
-.p-carousel .p-carousel-content .p-carousel-prev,
-.p-carousel .p-carousel-content .p-carousel-next {
-    display: none;
-}
-
-.p-carousel .p-carousel-indicators .p-carousel-indicator button {
-    margin-left: 8px;
-    border-radius: 4px;
-    height: 8px;
-}
-
-h1, h2, h3, h4, h5, h6, .p-dialog .p-dialog-header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.p-dialog .p-dialog-header,
 .p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-month,
 .p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-year,
-.p-datepicker table th>span, .p-datepicker .p-datepicker-header .p-datepicker-prev,
+.p-datepicker table th>span,
+.p-datepicker .p-datepicker-header .p-datepicker-prev,
 .p-datepicker .p-datepicker-header .p-datepicker-next {
     color: var(--primary-color);
     font-weight: bold;
-}
-
-.p-input-icon-right>i:last-of-type {
-    cursor: pointer;
-}
-
-.p-menubar .p-menubar-button,
-.layout-topbar .layout-topbar-menu-button {
-    display: none;
 }
 
 .layout-menu li a.router-link-exact-active {
@@ -85,10 +39,6 @@ h1, h2, h3, h4, h5, h6, .p-dialog .p-dialog-header,
 
 .layout-menu li a {
     border-radius: 8px;
-}
-
-.p-menubar-end {
-    min-width: 200px;
 }
 
 .p-component {
@@ -141,10 +91,6 @@ h1, h2, h3, h4, h5, h6, .p-dialog .p-dialog-header,
     min-height: 38px !important;
 }
 
-.p-inputtext, .p-chips {
-    width: 100%;
-}
-
 .p-inputgroup .p-inputtext,
 .p-fluid .p-inputgroup .p-inputtext,
 .p-inputgroup .p-inputwrapper,
@@ -162,7 +108,8 @@ h1, h2, h3, h4, h5, h6, .p-dialog .p-dialog-header,
 }
 
 .p-datatable .p-datatable-thead>tr>th,
-.field>label, .p-column-title {
+.field>label,
+.p-column-title {
     color: var(--primary-color);
     font-weight: normal;
 }
@@ -210,7 +157,7 @@ h1, h2, h3, h4, h5, h6, .p-dialog .p-dialog-header,
     background-image: -webkit-gradient(linear,
             left top,
             right bottom,
-            color-stop(0.76, var(--primary-color-200)),
+            color-stop(0.76, var(--light-primary-color)),
             color-stop(0.52, var(--primary-color-text)),
             color-stop(0.44, var(--primary-color)));
 }
@@ -233,7 +180,7 @@ h1, h2, h3, h4, h5, h6, .p-dialog .p-dialog-header,
             left top,
             color-stop(0.76, var(--primary-color)),
             color-stop(0.52, var(--primary-color-text)),
-            color-stop(0.44, var(--primary-color-200)));
+            color-stop(0.44, var(--light-primary-color)));
 }
 
 .p-dropdown-items-wrapper::-webkit-scrollbar-track {
@@ -254,7 +201,7 @@ h1, h2, h3, h4, h5, h6, .p-dialog .p-dialog-header,
             left top,
             color-stop(0.76, var(--primary-color)),
             color-stop(0.52, var(--primary-color-text)),
-            color-stop(0.44, var(--primary-color-200)));
+            color-stop(0.44, var(--light-primary-color)));
 }
 
 .p-dropdown {
@@ -322,65 +269,4 @@ h1, h2, h3, h4, h5, h6, .p-dialog .p-dialog-header,
 
 .country-item-value div .icon-flag {
     margin-top: 1.5px;
-}
-
-.p-menubar-root-list>.p-menuitem-active>p-menubarsub>.p-submenu-list {
-    z-index: 10000;
-}
-
-// .p-menubar {
-//     background-color: var(--primary-color);
-// }
-
-//custom tab-view
-.p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link:not(.p-disabled):focus {
-    outline: 0 none;
-    outline-offset: 0;
-    // box-shadow: inset 0 0 0 0.2rem #a6d5fa;
-    box-shadow: none !important;
-}
-
-.p-multiselect {
-    width: 100%;
-}
-
-.p-tabview .p-tabview-nav {
-    border: none;
-}
-
-.p-focus {
-    box-shadow: none !important;
-}
-
-//editor
-.p-editor-container {
-    border: 1px solid var(--primary-color);
-    border-radius: 6px;
-}
-
-.p-editor-container .p-editor-toolbar.ql-snow {
-    border-bottom: 1px solid var(--primary-color);
-}
-
-p-editor.ng-dirty.ng-invalid .p-editor-container,
-p-editor.ng-dirty.ng-invalid .p-editor-container .p-editor-toolbar.ql-snow {
-    border: 1px solid rgba(255, 64, 64, 255) !important;
-}
-
-.container {
-    width: 100%;
-    max-width: 1280px;
-}
-
-.header-top {
-    background-color: var(--primary-color);
-    max-height: 65px;
-}
-
-.footer {
-    background-color: var(--primary-color);
-}
-
-.page-content {
-    background-color: var(--primary-color);
 }
