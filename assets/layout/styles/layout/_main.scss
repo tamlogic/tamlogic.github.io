@@ -30,7 +30,8 @@ a {
 h1, h2, h3, h4, h5, h6, .layout-menu .layout-root-menuitem>.layout-menuitem-root-text, .p-datatable .p-datatable-thead>tr>th,
 .p-datepicker table th>span, .p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-year,
 .p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-month, .p-datepicker .p-datepicker-header .p-datepicker-prev,
-.p-datepicker .p-datepicker-header .p-datepicker-next, .p-dialog .p-dialog-header {
+.p-datepicker .p-datepicker-header .p-datepicker-next, .p-dialog .p-dialog-header,
+.p-steps .p-steps-item .p-steps-title {
     color: var(--primary-color) !important;
 }
 
@@ -39,8 +40,9 @@ h1, h2, h3, h4, h5, h6, .layout-menu .layout-root-menuitem>.layout-menuitem-root
 .p-datepicker table td>span.p-highlight,
 .p-listbox .p-listbox-list .p-listbox-item.p-highlight,
 .p-paginator .p-paginator-pages .p-paginator-page.p-highlight,
-.p-chips .p-chips-multiple-container .p-chips-token {
-    color: var(--surface-a);
+.p-chips .p-chips-multiple-container .p-chips-token,
+.p-steps .p-steps-item.p-highlight .p-steps-number {
+    color: var(--surface-a) !important;
     background-color: var(--primary-color) !important;
 }
 
@@ -71,4 +73,13 @@ h1, h2, h3, h4, h5, h6, .layout-menu .layout-root-menuitem>.layout-menuitem-root
 
 .p-fluid .p-inputtextarea {
     resize: none !important;
+}
+
+.p-steps .p-steps-item .p-menuitem-link {
+    background: transparent !important;
+}
+
+.p-steps .p-steps-item .p-menuitem-link .p-steps-number {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
 }
