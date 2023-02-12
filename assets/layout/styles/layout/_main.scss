@@ -41,7 +41,8 @@ h1, h2, h3, h4, h5, h6, .layout-menu .layout-root-menuitem>.layout-menuitem-root
 .p-listbox .p-listbox-list .p-listbox-item.p-highlight,
 .p-paginator .p-paginator-pages .p-paginator-page.p-highlight,
 .p-chips .p-chips-multiple-container .p-chips-token,
-.p-steps .p-steps-item.p-highlight .p-steps-number {
+.p-steps .p-steps-item.p-highlight .p-steps-number,
+.p-button:enabled:active {
     color: var(--surface-a) !important;
     background-color: var(--primary-color) !important;
 }
@@ -82,4 +83,20 @@ h1, h2, h3, h4, h5, h6, .layout-menu .layout-root-menuitem>.layout-menuitem-root
 .p-steps .p-steps-item .p-menuitem-link .p-steps-number {
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
+}
+
+.p-badge {
+    height: 100%;
+}
+
+.p-badge,
+.p-badge.p-badge-info,
+.p-badge.p-badge-success,
+.p-badge.p-badge-warning {
+    color: white;
+}
+
+.field-checkbox {
+    padding-top: 10px;
+    margin-bottom: 0 !important;
 }
