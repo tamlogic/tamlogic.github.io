@@ -42,7 +42,9 @@ h1, h2, h3, h4, h5, h6, .layout-menu .layout-root-menuitem>.layout-menuitem-root
 .p-paginator .p-paginator-pages .p-paginator-page.p-highlight,
 .p-chips .p-chips-multiple-container .p-chips-token,
 .p-steps .p-steps-item.p-highlight .p-steps-number,
-.p-button:enabled:active {
+.p-button:enabled:active,
+.p-datatable .p-sortable-column.p-highlight,
+.p-datatable .p-sortable-column.p-highlight .p-sortable-column-icon {
     color: var(--surface-a) !important;
     background-color: var(--primary-color) !important;
 }
@@ -99,4 +101,9 @@ h1, h2, h3, h4, h5, h6, .layout-menu .layout-root-menuitem>.layout-menuitem-root
 .field-checkbox {
     padding-top: 10px;
     margin-bottom: 0 !important;
+}
+
+.field {
+    margin-bottom: 0 !important;
+    padding: 1rem 1rem 0.25rem 1rem !important;
 }
