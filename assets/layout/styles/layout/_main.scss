@@ -18,6 +18,24 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+::-webkit-scrollbar {
+    max-width: 10px;
+    max-height: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    box-shadow: 0px 0px 0px 100000vh var(--primary-color-text);
+    border: 4px solid transparent;
+    border-radius: 8px;
+    background-clip: padding-box;
+}
+
 a {
     text-decoration: none;
     color: var(--primary-color);
@@ -30,7 +48,7 @@ a {
 h1, h2, h3, h4, h5, h6, .layout-menu .layout-root-menuitem>.layout-menuitem-root-text, .p-datatable .p-datatable-thead>tr>th,
 .p-datepicker table th>span, .p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-year,
 .p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-month, .p-datepicker .p-datepicker-header .p-datepicker-prev,
-.p-datepicker .p-datepicker-header .p-datepicker-next, .p-dialog .p-dialog-header,
+.p-datepicker .p-datepicker-header .p-datepicker-next,
 .p-steps .p-steps-item .p-steps-title, .p-card .p-card-title {
     color: var(--primary-color) !important;
 }
@@ -43,8 +61,10 @@ h1, h2, h3, h4, h5, h6, .layout-menu .layout-root-menuitem>.layout-menuitem-root
 .p-chips .p-chips-multiple-container .p-chips-token,
 .p-steps .p-steps-item.p-highlight .p-steps-number,
 .p-button:enabled:active,
+.p-dialog .p-dialog-header,
 .p-datatable .p-sortable-column.p-highlight,
-.p-datatable .p-sortable-column.p-highlight .p-sortable-column-icon {
+.p-datatable .p-sortable-column.p-highlight .p-sortable-column-icon,
+.p-dialog .p-dialog-header .p-dialog-header-icon {
     color: var(--surface-a) !important;
     background-color: var(--primary-color) !important;
 }
@@ -91,13 +111,6 @@ h1, h2, h3, h4, h5, h6, .layout-menu .layout-root-menuitem>.layout-menuitem-root
     height: 100%;
 }
 
-.p-badge,
-.p-badge.p-badge-info,
-.p-badge.p-badge-success,
-.p-badge.p-badge-warning {
-    color: white;
-}
-
 .field-checkbox {
     padding-top: 10px;
     margin-bottom: 0 !important;
@@ -106,4 +119,16 @@ h1, h2, h3, h4, h5, h6, .layout-menu .layout-root-menuitem>.layout-menuitem-root
 .field {
     margin-bottom: 0 !important;
     padding: 1rem 1rem 0.25rem 1rem !important;
+}
+
+.layout-config-sidebar.p-sidebar .p-sidebar-content {
+    overflow: hidden;
+}
+
+.layout-config-sidebar {
+    &.p-sidebar {
+        .p-sidebar-content {
+            padding-right: 0.1rem !important;
+        }
+    }
 }
