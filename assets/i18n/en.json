@@ -1,0 +1,27 @@
+{
+    "APP_NAME": "[EN] MC v5.0",
+    "LEFT_MENU": {},
+    "LABEL": {
+        "ADD": "Add",
+        "EDIT": "Edit",
+        "CONFIRM": "Confirm",
+        "ACTION": "Action",
+        "ID": "ID",
+        "MA_CHI_NHANH": "[EN]Mã chi nhánh",
+        "TEN_CHI_NHANH": "[EN]Tên chi nhánh",
+        "MA_DU_AN": "[EN]Mã dự án",
+        "TEN_DU_AN": "[EN]Tên dự án"
+    },
+    "BUTTON": {},
+    "TYPE": {},
+    "QUESTION": {},
+    "SUCCESS": {},
+    "ERROR": {
+        "0": "Something was wrong.",
+        "400": "Bad request.",
+        "401": "The session has expired. Please login again.",
+        "500": "Internal Server Error."
+    },
+    "INFO": {},
+    "WARNING": {}
+}

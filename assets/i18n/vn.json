@@ -1,0 +1,38 @@
+{
+    "APP_NAME": "[VN] MC v5.0",
+    "LEFT_MENU": {},
+    "LABEL": {
+        "ADD": "Thêm mới",
+        "EDIT": "Chỉnh sửa",
+        "CONFIRM": "Xác nhận",
+        "ACTION": "Hành động",
+        "ID": "ID",
+        "MA_CHI_NHANH": "Mã chi nhánh",
+        "TEN_CHI_NHANH": "Tên chi nhánh",
+        "MA_DU_AN": "Mã dự án",
+        "TEN_DU_AN": "Tên dự án",
+        "MA_THANH_PHAN": "Mã đối tượng",
+        "TEN_THANH_PHAN": "Tên đối tượng"
+    },
+    "BUTTON": {
+        "CANCEL": "Hủy bỏ",
+        "SAVE": "Lưu",
+        "ACCEPT": "Chấp nhận"
+    },
+    "TYPE": {},
+    "QUESTION": {},
+    "SUCCESS": {},
+    "ERROR": {
+        "0": "Có lỗi phát sinh xảy ra. Vui lòng liên hệ người quản trị.",
+        "400": "Kết nối không ổn định.",
+        "401": "Đã kết thúc phiên. Vui lòng đăng nhập để tiếp tục.",
+        "500": "Lỗi máy chủ phát sinh."
+    },
+    "INFO": {
+        "ARE_YOUR_SURE_DELETE_RECORD": "Bạn có chắc chắn muốn xóa dữ liệu này không?"
+    },
+    "WARNING": {
+        "MA_CHI_NHANH_TRONG": "Mã chi nhánh đang trống",
+        "TEN_CHI_NHANH_TRONG": "Tên chi nhánh đang trống"
+    }
+}

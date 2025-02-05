@@ -10,10 +10,7 @@
     top: 50%;
     right: 0;
     margin-top: -1.5rem;
-    border-top-left-radius: var(--border-radius);
-    border-bottom-left-radius: var(--border-radius);
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
     transition: background-color var(--transition-duration);
     overflow: hidden;
     cursor: pointer;
@@ -39,4 +36,66 @@
             padding-right: 2rem;
         }
     }
+}
+
+.p-dialog {
+    .p-dialog-header {
+        padding: 1.5rem 1.25rem;
+        background-color: var(--primary-color);
+        color: var(--primary-color-text);
+
+        .p-dialog-header-icon {
+            color: var(--primary-color-text);
+        }
+
+        .p-dialog-header-icon:enabled:hover {
+            background-color: var(--primary-300);
+        }
+    }
+
+    .p-dialog-content {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .p-dialog-footer {
+        gap: 0.5rem;
+        display: flex;
+        justify-content: flex-end;
+        button {
+            margin: 0;
+        }
+    }
+}
+
+.p-confirm-dialog .p-dialog-content {
+    padding: 1.5rem;
+}
+
+.field {
+    margin-top: 0.75rem;
+    padding: 0 !important;
+}
+
+.card {
+    padding: 0.75rem 1.5rem !important;
+}
+
+.require-label {
+    &::after {
+        position: absolute;
+        font-size: 0.75rem;
+        color: var(--red-400);
+        margin-left: 0.25rem;
+        top: 1px;
+        content: "(*)";
+    }
+}
+
+.p-float-label input:focus ~ label,
+.p-float-label input.p-filled ~ label,
+.p-float-label textarea:focus ~ label,
+.p-float-label textarea.p-filled ~ label,
+.p-float-label .p-inputwrapper-focus ~ label,
+.p-float-label .p-inputwrapper-filled ~ label {
+    top: -0.75rem;
 }
