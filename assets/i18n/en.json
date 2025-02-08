@@ -1,27 +1,43 @@
 {
     "APP_NAME": "[EN] MC v5.0",
-    "LEFT_MENU": {},
-    "LABEL": {
-        "ADD": "Add",
-        "EDIT": "Edit",
-        "CONFIRM": "Confirm",
-        "ACTION": "Action",
-        "ID": "ID",
-        "MA_CHI_NHANH": "[EN]Mã chi nhánh",
-        "TEN_CHI_NHANH": "[EN]Tên chi nhánh",
-        "MA_DU_AN": "[EN]Mã dự án",
-        "TEN_DU_AN": "[EN]Tên dự án"
+    "LEFT_MENU": {
+        "DASHBOARD": "[EN] Trang chủ",
+        "BRANCH": "[EN] Chi nhánh",
+        "PROJECT": "[EN] Dự án",
+        "INGREDIENT": "[EN] Đối tượng"
     },
-    "BUTTON": {},
+    "LABEL": {
+        "ADD": "[EN] Thêm mới",
+        "EDIT": "[EN] Chỉnh sửa",
+        "CONFIRM": "[EN] Xác nhận",
+        "ACTION": "[EN] Hành động",
+        "ID": "[EN] ID",
+        "BRANCH_CODE": "[EN] Mã chi nhánh",
+        "BRANCH_NAME": "[EN] Tên chi nhánh",
+        "PROJECT_CODE": "[EN] Mã dự án",
+        "PROJECT_NAME": "[EN] Tên dự án",
+        "INGREDIENT_CODE": "[EN] Mã đối tượng",
+        "INGREDIENT_NAME": "[EN] Tên đối tượng"
+    },
+    "BUTTON": {
+        "CANCEL": "[EN] Hủy bỏ",
+        "SAVE": "[EN] Lưu",
+        "ACCEPT": "[EN] Chấp nhận"
+    },
     "TYPE": {},
     "QUESTION": {},
     "SUCCESS": {},
     "ERROR": {
-        "0": "Something was wrong.",
-        "400": "Bad request.",
-        "401": "The session has expired. Please login again.",
-        "500": "Internal Server Error."
+        "0": "[EN] Có lỗi phát sinh xảy ra. Vui lòng liên hệ người quản trị.",
+        "400": "[EN] Kết nối không ổn định.",
+        "401": "[EN] Đã kết thúc phiên. Vui lòng đăng nhập để tiếp tục.",
+        "500": "[EN] Lỗi máy chủ phát sinh."
     },
-    "INFO": {},
-    "WARNING": {}
+    "INFO": {
+        "ARE_YOUR_SURE_DELETE_RECORD": "[EN] Bạn có chắc chắn muốn xóa dữ liệu này không?"
+    },
+    "WARNING": {
+        "BRANCH_CODE_REQUIRED": "[EN] Mã chi nhánh đang trống",
+        "BRANCH_NAME_REQUIRED": "[EN] Tên chi nhánh đang trống"
+    }
 }
