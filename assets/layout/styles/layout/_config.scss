@@ -1,3 +1,25 @@
+$scrollSize: 6px;
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 $scrollSize rgba(0, 0, 0, 0.3) !important;
+    background-color: var(--surface-100) !important;
+    border-radius: $scrollSize !important;
+}
+
+::-webkit-scrollbar {
+    width: $scrollSize !important;
+    background-color: var(--surface-100) !important;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: $scrollSize !important;
+    background-color: var(--primary-color) !important;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: $scrollSize !important;
+    background-color: var(--surface-100) !important;
+}
+
 .layout-config-button {
     display: block;
     position: fixed;
@@ -40,7 +62,7 @@
 
 .p-dialog {
     .p-dialog-header {
-        padding: 1.5rem 1.25rem;
+        padding: 1rem 1.25rem;
         background-color: var(--primary-color);
         color: var(--primary-color-text);
 
@@ -54,7 +76,7 @@
     }
 
     .p-dialog-content {
-        padding: 1.5rem 1.25rem;
+        padding: 1.25rem;
     }
 
     .p-dialog-footer {
@@ -72,12 +94,13 @@
 }
 
 .field {
-    margin-top: 0.75rem;
+    margin-top: 0.75rem !important;
     padding: 0 !important;
 }
 
 .card {
-    padding: 0.75rem 1.5rem !important;
+    padding: 0.75rem !important;
+    border-radius: 0.25rem !important;
 }
 
 .require-label {
@@ -109,7 +132,7 @@
     padding: 0;
 }
 
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 991px) {
     .p-megamenu-horizontal .p-megamenu-root-list {
         max-width: 30rem;
     }
@@ -153,7 +176,7 @@ fieldset {
 }
 
 .p-fieldset .p-fieldset-content {
-    padding: 0;
+    padding: 0.25rem;
 }
 
 .p-menuitem-link-active .p-menuitem-icon,
@@ -167,12 +190,12 @@ fieldset {
 }
 
 .global-loading {
+    top: -0.95rem;
+    left: -0.95rem;
     position: absolute;
-    border-radius: 0.5rem;
-    width: 100%;
+    width: 102%;
     height: 100%;
-    z-index: 9999;
-    opacity: 0.9;
+    z-index: 998;
     background-color: var(--surface-d);
     backdrop-filter: blur(30px);
 
@@ -201,4 +224,44 @@ fieldset {
 
 p-dropdown:not(.p-disabled).p-focus {
     display: none;
+}
+
+.p-fieldset .p-fieldset-legend {
+    padding: 0.25rem;
+}
+
+.p-button {
+    min-width: 2.25rem;
+    min-height: 2.25rem;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+    padding: 0.75rem;
+}
+
+.p-fieldset .p-fieldset-legend {
+    color: var(--primary-color);
+}
+
+.layout-main-container {
+    padding-bottom: 0 !important;
+}
+
+.layout-sidebar {
+    top: 6rem;
+    height: calc(100vh - 7rem);
+}
+
+@media (max-width: 991px) {
+    .layout-main {
+        flex: none !important;
+    }
+
+    .p-dialog .p-dialog-header .p-dialog-title {
+        font-size: 1rem;
+    }
+}
+
+.p-datatable>.p-datatable-wrapper {
+    max-height: 66vh;
 }

@@ -7,7 +7,8 @@
         "INGREDIENT": "Đối tượng",
         "PURPOSE": "Mục đích",
         "LOCAL": "Địa phương",
-        "LOCAL_UNIT": "Đơn vị"
+        "LOCAL_UNIT": "Đơn vị",
+        "MEMBER": "Thành viên"
     },
     "LABEL": {
         "OPTION_ALL": "----- Tất cả -----",
@@ -24,6 +25,7 @@
         "PROJECT_NAME": "Tên dự án",
         "SELECT_LENDING_INFO": "Chọn thông tin đợt vay",
         "BASIC_LENDING_LIST": "Danh sách cho vay",
+        "INGREDIENT_LOCAL_UNIT_LIST": "Danh sách đối tượng, cấp liên nhiệm",
         "INGREDIENT_LIST": "Danh sách đối tượng",
         "PURPOSE_LIST": "Danh sách mục đích",
         "LOCAL_LIST": "Danh sách địa phương",
@@ -52,6 +54,9 @@
         "LOCAL_CODE": "Mã địa phương",
         "SIGNAL_NUMBER": "Số hiệu",
         "LENDING_DATE": "Ngày đợt vay",
+        "LENDING_PREV": "Đợt vay trước",
+        "NUMBER_OF_LENDING": "Số vòng vay",
+        "NUMBER_OF_INSTALLMENTS": "Số đợt vay",
         "MANAGER": "Cán bộ quản lý",
         "TITLE": "Tiêu đề",
         "STATUS": "Trạng thái",
@@ -79,11 +84,30 @@
         "ACCOUNT_TYPE": "Loại",
         "DISPLAY_ORDER": "Thứ tự hiển thị",
         "ORIGIN_ACCOUNT": " --- Tài khoản gốc ---",
-        "ROLE_NAME": "Tên quyền"
+        "ROLE_NAME": "Tên quyền",
+        "MANAGER_STAFF_LIST": "Danh sách cán bộ quản lý",
+        "ADDRESS": "Địa chỉ",
+        "JOINT_DATE": "Ngày Th.Gia",
+        "GROUP": "Nhóm",
+        "BIRTH_DATE": "Năm sinh",
+        "CCCD_NUMBER": "Số CMND",
+        "MEMBER_NUMBER": "Mã thành viên",
+        "MEMBER_NAME": "Tên thành viên",
+        "MEMBER_LIST": "Danh sách thành viên",
+        "SURNAME_MIDDLE_NAME": "Họ và tên đệm",
+        "NAME": "Tên",
+        "BOY": "Nam",
+        "GIRL": "Nữ",
+        "WHERE_ISSUED": "Nơi cấp",
+        "NUMBER_OF_MEMBER": "Số thành viên",
+        "POSITION": "Chức vụ",
+        "IS_BUSINESS": "Là doanh nghiệp"
+
     },
     "BUTTON": {
         "CANCEL": "Hủy bỏ",
         "SAVE": "Lưu",
+        "CONTINUE": "Tiếp tục",
         "ACCEPT": "Chấp nhận",
         "FILTER": "Lọc",
         "UNIT_DETAIL": "Chi tiết đơn vị"
@@ -101,6 +125,7 @@
         "ARE_YOUR_SURE_DELETE_RECORD": "Bạn có chắc chắn muốn xóa dữ liệu này không?"
     },
     "WARNING": {
+        "LENDING_PREV": "*Chọn đợt vay trước nếu số vòng lớn hơn 1",
         "BRANCH_CODE_REQUIRED": "Mã chi nhánh đang trống",
         "BRANCH_NAME_REQUIRED": "Tên chi nhánh đang trống",
         "BRANCH_CODE_INVALID": "Mã chi nhánh không hợp lệ",
@@ -124,7 +149,12 @@
         "ACCOUNT_TYPE_REQUIRED": "Loại đang trống",
         "DISPLAY_ORDER_REQUIRED": "Thứ tự hiển thị đang trống",
         "ACCOUNT_NAME_REQUIRED": "Tên tài khoản đang trống",
-        "ROLE_NAME_REQUIRED": "Tên quyền đang trống"
-        
+        "ROLE_NAME_REQUIRED": "Tên quyền đang trống",
+        "TYPE_RULE_REQUIRED": "Loại quyền đang trống",
+        "MANAGER_NUMBER_REQUIRED": "Mã số quản lý đang trống",
+        "MANAGER_NUMBER_INVALID": "Mã số quản lý không hợp lệ",
+        "NAME_REQUIRED": "Tên đang trống",
+        "MEMBER_NUMBER_REQUIRED": "Mã thành viên đang trống",
+        "SURNAME_MIDDLE_NAME_REQUIRED": "Họ và tên đệm đang trống"
     }
 }
