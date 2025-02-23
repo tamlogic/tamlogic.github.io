@@ -21,7 +21,7 @@
         color: var(--surface-900);
         font-size: 1.5rem;
         font-weight: 500;
-        width: 300px;
+        width: 15rem;
         border-radius: 12px;
 
         img {
@@ -91,8 +91,6 @@
 
 @media (max-width: 991px) {
     .layout-topbar {
-        justify-content: space-between;
-
         .layout-topbar-logo {
             width: auto;
             order: 2;

@@ -125,37 +125,58 @@ $scrollSize: 6px;
 .p-float-label .p-inputwrapper-focus ~ label,
 .p-float-label .p-inputwrapper-filled ~ label {
     top: -0.5rem;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .p-megamenu {
     padding: 0;
 }
 
+.p-megamenu.p-megamenu-horizontal .p-megamenu-root-list > .p-menuitem > .p-menuitem-content .p-menuitem-link {
+    padding: 0.5rem 1rem;
+}
+
 @media screen and (max-width: 991px) {
-    .p-megamenu-horizontal .p-megamenu-root-list {
-        max-width: 30rem;
+    .p-megamenu.p-megamenu-horizontal .p-megamenu-root-list > .p-menuitem > .p-menuitem-content .p-menuitem-link {
+        padding: 1rem 0.5rem;
     }
 
-    .p-megamenu.p-megamenu-horizontal .p-megamenu-root-list > .p-menuitem > .p-menuitem-content .p-menuitem-link {
-        width: 15rem;
+    .p-button .p-button-label {
+        font-size: 0.85rem;
+    }
+    .p-overlaypanel .p-overlaypanel-content {
+        max-width: 20rem;
+    }
+    .p-megamenu-horizontal .p-megamenu-root-list {
+        max-width: 30rem;
     }
 
     .p-megamenu-grid {
         flex-direction: column;
     }
 
-    .p-megamenu-vertical .p-megamenu-root-list>.p-menuitem-active>.p-megamenu-panel {
+    .p-megamenu.p-megamenu-horizontal .p-megamenu-root-list > .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-text {
+        flex-grow: 1;
+    }
+
+    .p-megamenu-vertical
+        .p-megamenu-root-list
+        > .p-menuitem-active
+        > .p-megamenu-panel {
         left: 0;
         top: 2.75rem;
     }
 
+    .p-megamenu-root-list>.p-menuitem,
     .p-megamenu-panel {
         width: 100%;
     }
 }
 
-.p-paginator .p-paginator-first, .p-paginator .p-paginator-prev, .p-paginator .p-paginator-next, .p-paginator .p-paginator-last {
+.p-paginator .p-paginator-first,
+.p-paginator .p-paginator-prev,
+.p-paginator .p-paginator-next,
+.p-paginator .p-paginator-last {
     min-width: 2rem;
     width: 2rem;
     height: 2rem;
@@ -195,6 +216,7 @@ fieldset {
     position: absolute;
     width: 102%;
     height: 100%;
+    opacity: 0.4;
     z-index: 998;
     background-color: var(--surface-d);
     backdrop-filter: blur(30px);
@@ -230,13 +252,22 @@ p-dropdown:not(.p-disabled).p-focus {
     padding: 0.25rem;
 }
 
+.p-button.p-button-icon-only.p-button-rounded {
+    width: 2.75rem;
+}
+
+.p-calendar-w-btn .p-inputtext,
+.p-inputtext,
 .p-button {
-    min-width: 2.25rem;
-    min-height: 2.25rem;
+    height: 2.75rem;
+}
+
+.p-inputtextarea {
+    height: auto;
 }
 
 .p-datatable .p-datatable-tbody > tr > td {
-    padding: 0.75rem;
+    padding: 0.5rem 0.75rem;
 }
 
 .p-fieldset .p-fieldset-legend {
@@ -247,11 +278,6 @@ p-dropdown:not(.p-disabled).p-focus {
     padding-bottom: 0 !important;
 }
 
-.layout-sidebar {
-    top: 6rem;
-    height: calc(100vh - 7rem);
-}
-
 @media (max-width: 991px) {
     .layout-main {
         flex: none !important;
@@ -260,8 +286,52 @@ p-dropdown:not(.p-disabled).p-focus {
     .p-dialog .p-dialog-header .p-dialog-title {
         font-size: 1rem;
     }
+
+    p-dynamicdialog {
+        .p-dialog-mask.p-component-overlay {
+            .p-dialog {
+                width: 90vw !important;
+            }
+        }
+    }
 }
 
-.p-datatable>.p-datatable-wrapper {
-    max-height: 66vh;
+.p-datatable > .p-datatable-wrapper {
+    max-height: calc(100vh - 17.5rem);
+}
+
+.p-paginator {
+    padding: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+.p-tabview .p-tabview-nav li .p-tabview-nav-link {
+    padding: 0.25rem 0.5rem;
+}
+
+.radio-label {
+    color: #6b7280;
+    top: -1.75rem;
+    left: 0.75rem;
+    font-size: 0.75rem;
+}
+
+.p-readonly,
+.p-disabled {
+    background-color: var(--surface-200);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.w-full {
+    .p-dropdown {
+        width: 100%;
+    }
+}
+
+.p-megamenu .p-submenu-list {
+    width: auto;
 }
