@@ -33,7 +33,6 @@
         "serial_number": "Imei name",
         "model_name": "Model name",
         "model_number": "Model number",
-        "serial_number": "Serial number",
         "color": "Color",
         "capacity": "Capacity",
         "carrier_lock": "Carrier lock",

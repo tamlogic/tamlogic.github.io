@@ -33,7 +33,6 @@
         "serial_number": "Tên sản phẩm",
         "model_name": "Tên kiểu máy",
         "model_number": "Số máy",
-        "serial_number": "Số serial",
         "color": "Màu",
         "capacity": "Dung lượng",
         "carrier_lock": "Máy lock",
