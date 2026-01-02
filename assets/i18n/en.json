@@ -2,6 +2,7 @@
     "app_title": "Website Di Dong Hieu Vu Insurance",
     "app_name": "Di Dong Hieu Vu",
     "left_menu": {
+        "dashboard": "Dashboard",
         "category": "Category",
         "landing": "Landing",
         "customer": "Customer",

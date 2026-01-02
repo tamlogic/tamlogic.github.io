@@ -2,6 +2,7 @@
     "app_title": "Website bảo hành Di Động Hiếu Vũ",
     "app_name": "Di Động Hiếu Vũ",
     "left_menu": {
+        "dashboard": "Trang chủ",
         "category": "Danh mục",
         "landing": "Tìm kiếm bảo hành",
         "customer": "Khách hàng",
